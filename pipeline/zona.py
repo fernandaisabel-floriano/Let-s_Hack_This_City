@@ -108,7 +108,20 @@ def evaluation_polygon(cfg: dict):
     # linemerge junta troços contíguos (a rotunda fica um anel fechado), para que
     # as pontas planas só existam onde as vias acabam e não nas junções.
     lines = linemerge(unary_union([transform(fwd, LineString(ln)) for _, ln in _lines(cfg)]))
-    poly = lines.buffer(float(z["buffer_avaliacao_m"]), cap_style=2 if z["pontas"] == "planas" else 1)
+    buf = float(z["buffer_avaliacao_m"])
+    poly = lines.buffer(buf, cap_style=2 if z["pontas"] == "planas" else 1)
+    # Pontas redondas só em extremos escolhidos (p.ex. para incluir um ecoponto
+    # logo a seguir ao fim de uma via): círculo de raio = buffer no extremo.
+    from shapely.geometry import Point
+    direc = {"norte": (0, 1), "sul": (0, -1), "este": (1, 0), "oeste": (-1, 0),
+             "nordeste": (1, 1), "noroeste": (-1, 1), "sudeste": (1, -1), "sudoeste": (-1, -1)}
+    for pr in z.get("pontas_redondas") or []:
+        pts = [c for via, ln in _lines(cfg) if via == pr["via"] for c in ln]
+        if not pts:
+            raise SystemExit(f"pontas_redondas: via desconhecida {pr['via']!r}")
+        dx, dy = direc[pr["extremo"]]
+        lon, lat = max(pts, key=lambda c: c[0] * dx + c[1] * dy)
+        poly = poly.union(transform(fwd, Point(lon, lat)).buffer(buf))
     return transform(inv, poly)
 
 

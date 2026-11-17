@@ -22,6 +22,8 @@ zona_piloto:
   heading_tol_graus: 35     # ...e heading alinhado com a via mais próxima (± X°, qualquer sentido)
   buffer_avaliacao_m: 15    # M10 e catálogo final: só elementos dentro das vias + X m
   pontas: planas            # planas = a zona acaba onde as vias acabam; redondas = buffer clássico
+  pontas_redondas:          # exceções: ponta redonda (raio = buffer) neste extremo
+    - {via: Rua dos Santos Mártires, extremo: nordeste}   # inclui o ecoponto OSM a 11,5 m do fim da rua
   rotunda_raio_m: 25        # rotundas: também entra a câmara a ≤ X m do centro...
   rotunda_tol_graus: 45     # ...a olhar para ele (± X°). null desliga (só alinhamento)
 zona_avaliacao_geojson: config/ruas/santos-martires-v3-zona.geojson
@@ -71,3 +73,34 @@ m8:
   limiar_auto: 0.9
   calibracao: config/calibracao.json
   min_rotulos_por_lado: 10   # classe com menos reais OU falsos do que isto: tudo para a fila
+
+# M3 — deteção com YOLO-World (pipeline/detect.py). prompt: limiar mínimo.
+m3:
+  modelo: models/yolov8s-worldv2.pt
+  imgsz: 1280
+  nms_iou: 0.5              # caixas do mesmo grupo sobrepostas → fica a de maior confiança
+  prompts:
+    sinal: {"traffic sign": 0.05, "stop sign": 0.05, "road sign": 0.05}
+    candeeiro: {"street lamp": 0.10}
+    contentor: {"underground waste bin": 0.05, "trash can": 0.10}
+
+# M4 — classificação de sinais (pipeline/classify_signs.py)
+m4:
+  limiar: 0.25              # confiança da classe (soma das suas frases) abaixo disto → outro_sinal
+
+# M5 — coordenadas de cada deteção (pipeline/geolocate.py)
+m5:
+  sinal_tamanho_m: 0.7      # lado da placa assumido
+  camera_altura_m:          # candeeiros/contentores: ponto de contacto com o chão
+    default: 2.5
+    mapillary: 1.4          # imagens Mapillary da zona são de dashcam (tablier de carro)
+  dist_min_m: 2
+  dist_max_m: 40
+
+# M6 — fusão entre vistas e fontes (pipeline/fuse.py)
+m6:
+  raio_fusao_m: 8
+
+# M9 — exportação (pipeline/export.py)
+m9:
+  so_dentro_da_zona: true   # catálogo só com elementos dentro do polígono de avaliação

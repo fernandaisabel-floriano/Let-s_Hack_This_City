@@ -15,7 +15,7 @@
 "amenity": "waste_basket",
 "recycling_type": null,
 "tipos": "",
-"dentro_zona": false,
+"dentro_zona": true,
 "dist_zona_m": 3,
 "via_mais_proxima": "Rua dos Santos Mártires",
 "dist_via_m": 7
@@ -75,7 +75,7 @@
 "amenity": "recycling",
 "recycling_type": "container",
 "tipos": "cans,glass_bottles,paper,plastic",
-"dentro_zona": false,
+"dentro_zona": true,
 "dist_zona_m": 10,
 "via_mais_proxima": "Rua dos Santos Mártires",
 "dist_via_m": 12

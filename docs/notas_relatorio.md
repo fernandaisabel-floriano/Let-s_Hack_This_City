@@ -301,6 +301,29 @@ passa a ter entrada direta quando tem pelo menos 10 rótulos reais e 10 falsos.
 
 *Repetir a simulação com os dados reais da M6.*
 
+## 7b. Percurso de ponta a ponta v0 (17/11, 15:52)
+
+`python pipeline/run_all.py` — 68 imagens Mapillary da zona → catálogo
+exportado em **61 s** num portátil sem GPU.
+
+| Passo | Resultado |
+|---|---|
+| M3 deteção (YOLO-World, prompts fixados) | 552 deteções (147 sinais, 278 candeeiros, 127 contentores), 0,6 s/imagem |
+| M4 classificação de sinais (CLIP sem treino) | 5 STOP, 2 cedência, 4 limites; o resto "outro_sinal" |
+| M5 coordenadas | 308 de 552 com posição válida (136 com a caixa acima do horizonte, 108 fora de 2–40 m) |
+| M6 fusão (≤ 8 m, mesma classe, nunca duas caixas da mesma imagem) | 152 elementos; 72 vistos em 2 ou mais imagens |
+| M8 entrada direta (P(real) ≥ 0,9, ≥ 2 vistas) | 15 auto, 92 pendentes (dentro da zona) |
+| M9 exportação (só dentro da zona) | **107 elementos**: 47 candeeiros, 28 sinais, 32 contentores |
+
+Ainda tosco, por decisão (correr de ponta a ponta antes de afinar):
+- M4 usa CLIP sem treino em vez do GTSRB (o GTSRB não tem 40 km/h nem a
+  passadeira portuguesa); falha cedências óbvias.
+- M5 assume câmara horizontal; candeeiros cuja caixa só apanha a luminária
+  não têm ponto de contacto com o chão e ficam sem posição.
+- Contentores: os 32 do catálogo estão todos na fila (sem calibração); muitos
+  serão falsos (motas, armários).
+- Referência para a M10: o OSM tem 1 ecoponto e 1 papeleira dentro da zona.
+
 ## 8. Licenças a mencionar
 
 - Imagens Mapillary: CC BY-SA 4.0 (atribuição ao autor em cada registo).

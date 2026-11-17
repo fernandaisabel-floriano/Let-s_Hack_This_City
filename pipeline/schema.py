@@ -82,7 +82,8 @@ class Detection:
 
 # ----------------------------------------------------------------- exportação
 
-ESTADOS = ("auto", "validado", "corrigido", "rejeitado")
+# pendente = na fila do técnico (ainda não validado); auto = entrou direto (M8)
+ESTADOS = ("auto", "pendente", "validado", "corrigido", "rejeitado")
 
 EXPORT_FIELDS = [
     "id", "tipo", "subtipo", "lat", "lon", "x", "y", "epsg_local",
