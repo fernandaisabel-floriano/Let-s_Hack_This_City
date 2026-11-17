@@ -1,0 +1,1516 @@
+{
+ "rotulos": [
+  {
+   "classe": "candeeiro",
+   "f": 0.8702,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.8789,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.813,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.2657,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7714,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7948,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7186,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.8146,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7341,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6992,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7095,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6821,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7998,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7894,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6799,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.7756,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5697,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5857,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.765,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7658,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7552,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7574,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5356,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7489,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6597,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1734,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6634,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4903,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.7055,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6086,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6353,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6824,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4285,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5819,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.6389,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.6382,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4636,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4537,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4259,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.5928,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5446,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3657,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.5688,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.5567,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3741,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5287,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3646,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4712,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3645,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3939,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4569,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3895,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4413,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1013,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.418,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4158,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4132,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4055,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3847,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3365,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.3628,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.3477,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2102,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1705,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.3356,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1391,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2286,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2914,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1568,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1386,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1854,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2341,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2605,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.121,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1427,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1479,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2487,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.167,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1084,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2407,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2076,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1025,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2299,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2281,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.225,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1137,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2116,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2093,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1538,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2006,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1226,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1984,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1961,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1941,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1729,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1816,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1785,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1339,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1768,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1247,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1088,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1445,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1356,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1346,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1147,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1309,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1296,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1293,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1279,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1274,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1135,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1078,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1097,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1096,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1073,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1036,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0994,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0976,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0975,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0967,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0934,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0916,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0908,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0885,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0878,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0788,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0763,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0722,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0676,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0661,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0655,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0648,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0627,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0567,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.055,
+   "real": true,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0529,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0525,
+   "real": false,
+   "fonte": "teste:v1_amostra_larga"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.8193,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.8048,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6733,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.724,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4766,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3613,
+   "real": false,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1428,
+   "real": false,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2677,
+   "real": false,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2501,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2025,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1887,
+   "real": false,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1184,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0618,
+   "real": true,
+   "fonte": "teste:v2_rua"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.8271,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.8366,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7488,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7275,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.74,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.673,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.811,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.8052,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6713,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7929,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6638,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5725,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7186,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6515,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5333,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.7446,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5659,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.7204,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5811,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.7071,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.6955,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5507,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4657,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6544,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5248,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.676,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.6657,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5849,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5091,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.6414,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5716,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4004,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4158,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4604,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.172,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.5412,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.5674,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.447,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3085,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4598,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3234,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2837,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.4446,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3683,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4425,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2422,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.4087,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2577,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.2075,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.347,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.3484,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1315,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.3357,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1344,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.3075,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2994,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1788,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1658,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2919,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1552,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2861,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2848,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2619,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2475,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2394,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1832,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1671,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1305,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1561,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2203,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1083,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1816,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1743,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1331,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.2061,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1428,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.141,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1327,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1844,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1728,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1706,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "contentor",
+   "f": 0.1599,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1637,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1567,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1083,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1481,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "candeeiro",
+   "f": 0.1187,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1284,
+   "real": false,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1259,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.1142,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0939,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0916,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0857,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0689,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0611,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0593,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0559,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0536,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  },
+  {
+   "classe": "sinal",
+   "f": 0.0526,
+   "real": true,
+   "fonte": "teste:v3_zona"
+  }
+ ],
+ "classes": {
+  "candeeiro": {
+   "a": 1.6831,
+   "b": 0.9781,
+   "n_reais": 106,
+   "n_falsos": 39,
+   "media_top_k_para_limiar": 0.628
+  },
+  "sinal": {
+   "a": 2.788,
+   "b": 0.7689,
+   "n_reais": 76,
+   "n_falsos": 17,
+   "media_top_k_para_limiar": 0.317
+  }
+ },
+ "atualizado_em": "2026-11-17T15:29:18+00:00",
+ "ultima_fonte": "testes YOLO-World"
+}

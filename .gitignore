@@ -1,0 +1,39 @@
+# --- Segredos -----------------------------------------------------------------
+.env
+
+# --- Dados e imagens (partilha via Google Drive, não via git) -----------------
+# data/clean tem imagens Mapillary (CC BY-SA, exige atribuição) e frames do
+# vídeo próprio; mesmo desfocadas, não vão para o repositório.
+data/
+
+# --- Modelos (descarregados automaticamente para models/ na 1.ª execução) -----
+models/
+# CLIP do YOLO-World (338 MB) — passa o limite de 100 MB do GitHub
+weights/
+*.pt
+*.onnx
+
+# --- Relatórios: entram os números (JSON), não as imagens ---------------------
+# As imagens anotadas e as folhas de rotulagem são recortes de imagens
+# Mapillary (CC BY-SA) e pesam ~29 MB; regeneram-se com
+#   python pipeline/test_yolo_world_prompts.py score
+reports/**/*.jpg
+reports/**/_rotular/
+
+# --- Ambiente Python ----------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Ultralytics (pastas que cria quando corre sem caminho de saída) ----------
+runs/
+
+# --- Temporários --------------------------------------------------------------
+*.part
+*.log
+
+# --- Editor / sistema ---------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store

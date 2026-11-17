@@ -1,0 +1,1910 @@
+{
+ "sinal": [
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.05,
+   "tp": 36,
+   "fp": 13,
+   "cobertura": 0.86,
+   "precisao": 0.73
+  },
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.1,
+   "tp": 25,
+   "fp": 6,
+   "cobertura": 0.6,
+   "precisao": 0.81
+  },
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.15,
+   "tp": 18,
+   "fp": 2,
+   "cobertura": 0.43,
+   "precisao": 0.9
+  },
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.2,
+   "tp": 15,
+   "fp": 1,
+   "cobertura": 0.36,
+   "precisao": 0.94
+  },
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.25,
+   "tp": 12,
+   "fp": 0,
+   "cobertura": 0.29,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign"
+   ],
+   "limiar": 0.3,
+   "tp": 9,
+   "fp": 0,
+   "cobertura": 0.21,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.05,
+   "tp": 25,
+   "fp": 3,
+   "cobertura": 0.6,
+   "precisao": 0.89
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.1,
+   "tp": 14,
+   "fp": 0,
+   "cobertura": 0.33,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.15,
+   "tp": 11,
+   "fp": 0,
+   "cobertura": 0.26,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.2,
+   "tp": 10,
+   "fp": 0,
+   "cobertura": 0.24,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.25,
+   "tp": 7,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign"
+   ],
+   "limiar": 0.3,
+   "tp": 7,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.05,
+   "tp": 28,
+   "fp": 8,
+   "cobertura": 0.67,
+   "precisao": 0.78
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.1,
+   "tp": 16,
+   "fp": 4,
+   "cobertura": 0.38,
+   "precisao": 0.8
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.15,
+   "tp": 14,
+   "fp": 3,
+   "cobertura": 0.33,
+   "precisao": 0.82
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.2,
+   "tp": 12,
+   "fp": 0,
+   "cobertura": 0.29,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.25,
+   "tp": 5,
+   "fp": 0,
+   "cobertura": 0.12,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "road sign"
+   ],
+   "limiar": 0.3,
+   "tp": 4,
+   "fp": 0,
+   "cobertura": 0.1,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.05,
+   "tp": 41,
+   "fp": 15,
+   "cobertura": 0.98,
+   "precisao": 0.73
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.1,
+   "tp": 30,
+   "fp": 6,
+   "cobertura": 0.71,
+   "precisao": 0.83
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.15,
+   "tp": 25,
+   "fp": 2,
+   "cobertura": 0.6,
+   "precisao": 0.93
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.2,
+   "tp": 22,
+   "fp": 1,
+   "cobertura": 0.52,
+   "precisao": 0.96
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.25,
+   "tp": 18,
+   "fp": 0,
+   "cobertura": 0.43,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign"
+   ],
+   "limiar": 0.3,
+   "tp": 15,
+   "fp": 0,
+   "cobertura": 0.36,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.05,
+   "tp": 38,
+   "fp": 13,
+   "cobertura": 0.9,
+   "precisao": 0.75
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.1,
+   "tp": 25,
+   "fp": 6,
+   "cobertura": 0.6,
+   "precisao": 0.81
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.15,
+   "tp": 18,
+   "fp": 3,
+   "cobertura": 0.43,
+   "precisao": 0.86
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.2,
+   "tp": 16,
+   "fp": 1,
+   "cobertura": 0.38,
+   "precisao": 0.94
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.25,
+   "tp": 12,
+   "fp": 0,
+   "cobertura": 0.29,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "road sign"
+   ],
+   "limiar": 0.3,
+   "tp": 10,
+   "fp": 0,
+   "cobertura": 0.24,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.05,
+   "tp": 39,
+   "fp": 10,
+   "cobertura": 0.93,
+   "precisao": 0.8
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.1,
+   "tp": 25,
+   "fp": 4,
+   "cobertura": 0.6,
+   "precisao": 0.86
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.15,
+   "tp": 22,
+   "fp": 3,
+   "cobertura": 0.52,
+   "precisao": 0.88
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.2,
+   "tp": 20,
+   "fp": 0,
+   "cobertura": 0.48,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.25,
+   "tp": 11,
+   "fp": 0,
+   "cobertura": 0.26,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.3,
+   "tp": 10,
+   "fp": 0,
+   "cobertura": 0.24,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.05,
+   "tp": 42,
+   "fp": 15,
+   "cobertura": 1.0,
+   "precisao": 0.74
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.1,
+   "tp": 30,
+   "fp": 6,
+   "cobertura": 0.71,
+   "precisao": 0.83
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.15,
+   "tp": 25,
+   "fp": 3,
+   "cobertura": 0.6,
+   "precisao": 0.89
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.2,
+   "tp": 23,
+   "fp": 1,
+   "cobertura": 0.55,
+   "precisao": 0.96
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.25,
+   "tp": 18,
+   "fp": 0,
+   "cobertura": 0.43,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "traffic sign",
+    "stop sign",
+    "road sign"
+   ],
+   "limiar": 0.3,
+   "tp": 16,
+   "fp": 0,
+   "cobertura": 0.38,
+   "precisao": 1.0
+  }
+ ],
+ "candeeiro": [
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.05,
+   "tp": 61,
+   "fp": 41,
+   "cobertura": 0.92,
+   "precisao": 0.6
+  },
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.1,
+   "tp": 53,
+   "fp": 24,
+   "cobertura": 0.8,
+   "precisao": 0.69
+  },
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.15,
+   "tp": 44,
+   "fp": 14,
+   "cobertura": 0.67,
+   "precisao": 0.76
+  },
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.2,
+   "tp": 40,
+   "fp": 10,
+   "cobertura": 0.61,
+   "precisao": 0.8
+  },
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.25,
+   "tp": 37,
+   "fp": 7,
+   "cobertura": 0.56,
+   "precisao": 0.84
+  },
+  {
+   "prompts": [
+    "street lamp"
+   ],
+   "limiar": 0.3,
+   "tp": 37,
+   "fp": 7,
+   "cobertura": 0.56,
+   "precisao": 0.84
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.05,
+   "tp": 49,
+   "fp": 18,
+   "cobertura": 0.74,
+   "precisao": 0.73
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.1,
+   "tp": 39,
+   "fp": 8,
+   "cobertura": 0.59,
+   "precisao": 0.83
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.15,
+   "tp": 33,
+   "fp": 6,
+   "cobertura": 0.5,
+   "precisao": 0.85
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.2,
+   "tp": 28,
+   "fp": 2,
+   "cobertura": 0.42,
+   "precisao": 0.93
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.25,
+   "tp": 25,
+   "fp": 2,
+   "cobertura": 0.38,
+   "precisao": 0.93
+  },
+  {
+   "prompts": [
+    "lamp post"
+   ],
+   "limiar": 0.3,
+   "tp": 24,
+   "fp": 2,
+   "cobertura": 0.36,
+   "precisao": 0.92
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.05,
+   "tp": 65,
+   "fp": 60,
+   "cobertura": 0.98,
+   "precisao": 0.52
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.1,
+   "tp": 56,
+   "fp": 36,
+   "cobertura": 0.85,
+   "precisao": 0.61
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.15,
+   "tp": 50,
+   "fp": 27,
+   "cobertura": 0.76,
+   "precisao": 0.65
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.2,
+   "tp": 45,
+   "fp": 20,
+   "cobertura": 0.68,
+   "precisao": 0.69
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.25,
+   "tp": 41,
+   "fp": 14,
+   "cobertura": 0.62,
+   "precisao": 0.75
+  },
+  {
+   "prompts": [
+    "street light"
+   ],
+   "limiar": 0.3,
+   "tp": 39,
+   "fp": 9,
+   "cobertura": 0.59,
+   "precisao": 0.81
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.05,
+   "tp": 61,
+   "fp": 41,
+   "cobertura": 0.92,
+   "precisao": 0.6
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.1,
+   "tp": 53,
+   "fp": 24,
+   "cobertura": 0.8,
+   "precisao": 0.69
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.15,
+   "tp": 44,
+   "fp": 14,
+   "cobertura": 0.67,
+   "precisao": 0.76
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.2,
+   "tp": 40,
+   "fp": 10,
+   "cobertura": 0.61,
+   "precisao": 0.8
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.25,
+   "tp": 37,
+   "fp": 7,
+   "cobertura": 0.56,
+   "precisao": 0.84
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post"
+   ],
+   "limiar": 0.3,
+   "tp": 37,
+   "fp": 7,
+   "cobertura": 0.56,
+   "precisao": 0.84
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.05,
+   "tp": 66,
+   "fp": 60,
+   "cobertura": 1.0,
+   "precisao": 0.52
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.1,
+   "tp": 59,
+   "fp": 36,
+   "cobertura": 0.89,
+   "precisao": 0.62
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.15,
+   "tp": 52,
+   "fp": 27,
+   "cobertura": 0.79,
+   "precisao": 0.66
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.2,
+   "tp": 46,
+   "fp": 20,
+   "cobertura": 0.7,
+   "precisao": 0.7
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.25,
+   "tp": 41,
+   "fp": 14,
+   "cobertura": 0.62,
+   "precisao": 0.75
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "street light"
+   ],
+   "limiar": 0.3,
+   "tp": 39,
+   "fp": 9,
+   "cobertura": 0.59,
+   "precisao": 0.81
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.05,
+   "tp": 65,
+   "fp": 60,
+   "cobertura": 0.98,
+   "precisao": 0.52
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.1,
+   "tp": 56,
+   "fp": 36,
+   "cobertura": 0.85,
+   "precisao": 0.61
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.15,
+   "tp": 50,
+   "fp": 27,
+   "cobertura": 0.76,
+   "precisao": 0.65
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.2,
+   "tp": 45,
+   "fp": 20,
+   "cobertura": 0.68,
+   "precisao": 0.69
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.25,
+   "tp": 41,
+   "fp": 14,
+   "cobertura": 0.62,
+   "precisao": 0.75
+  },
+  {
+   "prompts": [
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.3,
+   "tp": 39,
+   "fp": 9,
+   "cobertura": 0.59,
+   "precisao": 0.81
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.05,
+   "tp": 66,
+   "fp": 60,
+   "cobertura": 1.0,
+   "precisao": 0.52
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.1,
+   "tp": 59,
+   "fp": 36,
+   "cobertura": 0.89,
+   "precisao": 0.62
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.15,
+   "tp": 52,
+   "fp": 27,
+   "cobertura": 0.79,
+   "precisao": 0.66
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.2,
+   "tp": 46,
+   "fp": 20,
+   "cobertura": 0.7,
+   "precisao": 0.7
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.25,
+   "tp": 41,
+   "fp": 14,
+   "cobertura": 0.62,
+   "precisao": 0.75
+  },
+  {
+   "prompts": [
+    "street lamp",
+    "lamp post",
+    "street light"
+   ],
+   "limiar": 0.3,
+   "tp": 39,
+   "fp": 9,
+   "cobertura": 0.59,
+   "precisao": 0.81
+  }
+ ],
+ "contentor": [
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.05,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.1,
+   "tp": 1,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.15,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.2,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.25,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "recycling container"
+   ],
+   "limiar": 0.3,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.05,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.15,
+   "tp": 1,
+   "fp": 1,
+   "cobertura": 0.17,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.2,
+   "tp": 1,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.25,
+   "tp": 1,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "waste container"
+   ],
+   "limiar": 0.3,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.05,
+   "tp": 3,
+   "fp": 10,
+   "cobertura": 0.5,
+   "precisao": 0.23
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 5,
+   "cobertura": 0.33,
+   "precisao": 0.29
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "garbage bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.05,
+   "tp": 2,
+   "fp": 3,
+   "cobertura": 0.33,
+   "precisao": 0.4
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.15,
+   "tp": 1,
+   "fp": 1,
+   "cobertura": 0.17,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.2,
+   "tp": 1,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.25,
+   "tp": 1,
+   "fp": 0,
+   "cobertura": 0.17,
+   "precisao": 1.0
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container"
+   ],
+   "limiar": 0.3,
+   "tp": 0,
+   "fp": 0,
+   "cobertura": 0.0,
+   "precisao": 0.0
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.05,
+   "tp": 3,
+   "fp": 10,
+   "cobertura": 0.5,
+   "precisao": 0.23
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 5,
+   "cobertura": 0.33,
+   "precisao": 0.29
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.05,
+   "tp": 3,
+   "fp": 10,
+   "cobertura": 0.5,
+   "precisao": 0.23
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 5,
+   "cobertura": 0.33,
+   "precisao": 0.29
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.05,
+   "tp": 3,
+   "fp": 10,
+   "cobertura": 0.5,
+   "precisao": 0.23
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.1,
+   "tp": 2,
+   "fp": 5,
+   "cobertura": 0.33,
+   "precisao": 0.29
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 2,
+   "cobertura": 0.33,
+   "precisao": 0.5
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 1,
+   "cobertura": 0.33,
+   "precisao": 0.67
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.05,
+   "tp": 6,
+   "fp": 24,
+   "cobertura": 1.0,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.1,
+   "tp": 3,
+   "fp": 14,
+   "cobertura": 0.5,
+   "precisao": 0.18
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.15,
+   "tp": 2,
+   "fp": 12,
+   "cobertura": 0.33,
+   "precisao": 0.14
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.2,
+   "tp": 2,
+   "fp": 8,
+   "cobertura": 0.33,
+   "precisao": 0.2
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.25,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  },
+  {
+   "prompts": [
+    "recycling container",
+    "waste container",
+    "garbage bin",
+    "underground waste bin"
+   ],
+   "limiar": 0.3,
+   "tp": 2,
+   "fp": 6,
+   "cobertura": 0.33,
+   "precisao": 0.25
+  }
+ ]
+}

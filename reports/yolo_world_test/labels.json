@@ -1,0 +1,4575 @@
+{
+"criterios": {
+"sinal": "certo = sinal de trânsito vertical (inclui vistos de costas, placas de direção e painéis adicionais); errado = placas toponímicas, montras, toldos, janelas, veículos, caixas mal localizadas",
+"candeeiro": "certo = poste de iluminação com luminária, ou a luminária sozinha; errado = postes só de sinais, postes elétricos, antenas, chaminés, troncos, reflexos, faixas/placas azuis",
+"contentor": "certo = contentor/caixote de resíduos (qualquer tipo); errado = armários elétricos, marcos de incêndio, motas, pessoas, máquinas"
+},
+"rotulado_por": "Claude, a partir de recortes 200 px — rever casos ambíguos (recortes finos de postes)",
+"caixas": [
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+1188.6,
+263.5,
+1211.2,
+330.5
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "sinal",
+"bbox": [
+1756.2,
+151.8,
+2048.0,
+446.6
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+966.4,
+150.4,
+1037.0,
+444.6
+],
+"real": true
+},
+{
+"image": "1428507540881609",
+"grupo": "contentor",
+"bbox": [
+0.1,
+912.6,
+29.3,
+1006.0
+],
+"real": true
+},
+{
+"image": "1454909068222766",
+"grupo": "candeeiro",
+"bbox": [
+1301.1,
+394.9,
+1341.2,
+556.6
+],
+"real": true
+},
+{
+"image": "262929075567708",
+"grupo": "candeeiro",
+"bbox": [
+35.2,
+538.4,
+151.4,
+995.7
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1339.8,
+334.7,
+1389.7,
+560.4
+],
+"real": true
+},
+{
+"image": "756290478377054",
+"grupo": "candeeiro",
+"bbox": [
+262.1,
+446.3,
+388.4,
+990.7
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+1178.6,
+725.0,
+1224.7,
+852.8
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+704.0,
+384.4,
+744.1,
+599.7
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+933.4,
+501.2,
+964.2,
+694.0
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "candeeiro",
+"bbox": [
+903.3,
+225.7,
+966.6,
+455.1
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+1386.5,
+1.2,
+1476.4,
+511.6
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+990.9,
+75.9,
+1142.9,
+648.3
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1437.2,
+550.8,
+1452.7,
+631.5
+],
+"real": true
+},
+{
+"image": "333571651607552",
+"grupo": "sinal",
+"bbox": [
+1913.0,
+359.0,
+2048.0,
+523.4
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+1009.0,
+230.9,
+1054.7,
+688.8
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+132.5,
+80.1,
+173.1,
+265.4
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+1309.0,
+223.4,
+1397.2,
+785.6
+],
+"real": true
+},
+{
+"image": "1454909068222766",
+"grupo": "candeeiro",
+"bbox": [
+1373.7,
+424.6,
+1405.1,
+537.4
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+465.9,
+426.7,
+586.3,
+1016.6
+],
+"real": true
+},
+{
+"image": "378453726848214",
+"grupo": "candeeiro",
+"bbox": [
+1242.5,
+231.3,
+1399.1,
+1010.4
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1698.6,
+200.4,
+1746.7,
+604.4
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1053.1,
+524.8,
+1069.7,
+607.6
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+737.9,
+227.7,
+752.4,
+299.7
+],
+"real": true
+},
+{
+"image": "333571651607552",
+"grupo": "contentor",
+"bbox": [
+1977.3,
+627.0,
+2048.0,
+1145.7
+],
+"real": false
+},
+{
+"image": "1454909068222766",
+"grupo": "candeeiro",
+"bbox": [
+715.3,
+146.4,
+807.1,
+626.1
+],
+"real": true
+},
+{
+"image": "378453726848214",
+"grupo": "candeeiro",
+"bbox": [
+1146.1,
+648.0,
+1204.7,
+916.1
+],
+"real": true
+},
+{
+"image": "1428507540881609",
+"grupo": "sinal",
+"bbox": [
+1615.6,
+536.5,
+1726.8,
+639.8
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+1266.9,
+760.5,
+1305.3,
+884.6
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+764.4,
+478.7,
+794.6,
+602.0
+],
+"real": true
+},
+{
+"image": "333571651607552",
+"grupo": "candeeiro",
+"bbox": [
+34.0,
+334.7,
+247.8,
+1166.4
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+981.1,
+395.8,
+1038.4,
+646.2
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "contentor",
+"bbox": [
+1327.0,
+459.8,
+1347.1,
+500.2
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+959.0,
+251.1,
+973.6,
+311.9
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+1337.4,
+238.7,
+1493.9,
+376.9
+],
+"real": true
+},
+{
+"image": "512376593282609",
+"grupo": "sinal",
+"bbox": [
+1747.4,
+472.7,
+1899.4,
+664.6
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "candeeiro",
+"bbox": [
+1209.2,
+159.9,
+1269.0,
+329.2
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+51.6,
+168.6,
+110.7,
+649.3
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+336.7,
+155.7,
+379.7,
+303.5
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "sinal",
+"bbox": [
+1471.8,
+640.4,
+1546.6,
+711.9
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+1096.0,
+250.1,
+1116.8,
+305.2
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+91.7,
+581.9,
+102.3,
+610.3
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "sinal",
+"bbox": [
+57.4,
+833.2,
+142.1,
+857.6
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "sinal",
+"bbox": [
+1225.7,
+127.0,
+1320.4,
+272.0
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+513.6,
+395.0,
+561.0,
+681.3
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1107.9,
+419.7,
+1137.6,
+515.7
+],
+"real": false
+},
+{
+"image": "314768113426345",
+"grupo": "candeeiro",
+"bbox": [
+518.2,
+623.8,
+625.9,
+889.9
+],
+"real": false
+},
+{
+"image": "314768113426345",
+"grupo": "candeeiro",
+"bbox": [
+89.0,
+460.5,
+163.5,
+888.3
+],
+"real": true
+},
+{
+"image": "512376593282609",
+"grupo": "candeeiro",
+"bbox": [
+1156.6,
+562.5,
+1229.5,
+917.0
+],
+"real": true
+},
+{
+"image": "1428507540881609",
+"grupo": "candeeiro",
+"bbox": [
+334.6,
+528.8,
+477.6,
+1048.8
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+1598.6,
+170.6,
+1717.7,
+772.6
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "contentor",
+"bbox": [
+1530.0,
+445.9,
+1628.0,
+624.2
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+102.5,
+203.3,
+225.3,
+791.1
+],
+"real": false
+},
+{
+"image": "262929075567708",
+"grupo": "sinal",
+"bbox": [
+1407.0,
+619.4,
+1519.0,
+720.3
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "contentor",
+"bbox": [
+494.2,
+922.8,
+586.7,
+1001.5
+],
+"real": true
+},
+{
+"image": "861102281195934",
+"grupo": "sinal",
+"bbox": [
+1220.1,
+295.2,
+1295.3,
+374.4
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+1606.3,
+467.4,
+1873.4,
+628.1
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+694.2,
+511.7,
+721.9,
+544.9
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "sinal",
+"bbox": [
+815.2,
+300.6,
+899.0,
+385.1
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "candeeiro",
+"bbox": [
+0.0,
+500.2,
+56.8,
+1037.3
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "contentor",
+"bbox": [
+209.6,
+543.5,
+330.3,
+805.8
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+120.9,
+181.4,
+148.1,
+265.8
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+927.5,
+611.6,
+949.8,
+636.0
+],
+"real": true
+},
+{
+"image": "262929075567708",
+"grupo": "sinal",
+"bbox": [
+1486.3,
+646.6,
+1626.1,
+690.2
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+644.3,
+366.6,
+707.7,
+630.5
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+285.3,
+447.4,
+331.7,
+625.7
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "sinal",
+"bbox": [
+1558.9,
+463.0,
+1591.4,
+495.2
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "contentor",
+"bbox": [
+466.0,
+584.6,
+485.0,
+622.1
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "contentor",
+"bbox": [
+1936.0,
+707.5,
+1956.2,
+763.0
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1416.2,
+319.6,
+1492.9,
+629.6
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+593.5,
+267.4,
+600.7,
+292.5
+],
+"real": true
+},
+{
+"image": "333571651607552",
+"grupo": "sinal",
+"bbox": [
+420.6,
+730.4,
+455.1,
+795.5
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1485.8,
+606.2,
+1491.6,
+628.4
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1372.4,
+605.3,
+1377.7,
+627.1
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+590.3,
+548.0,
+616.1,
+653.8
+],
+"real": false
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+244.9,
+212.9,
+311.0,
+1001.9
+],
+"real": false
+},
+{
+"image": "1428507540881609",
+"grupo": "sinal",
+"bbox": [
+545.1,
+753.7,
+568.8,
+804.1
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1137.5,
+581.7,
+1147.7,
+638.6
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "candeeiro",
+"bbox": [
+866.0,
+256.2,
+935.5,
+367.1
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+736.0,
+472.3,
+758.8,
+592.6
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+1206.4,
+549.6,
+1269.5,
+603.9
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1348.4,
+335.8,
+1389.2,
+432.8
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1258.5,
+602.3,
+1263.3,
+626.5
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "sinal",
+"bbox": [
+1059.7,
+327.4,
+1099.7,
+390.5
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "contentor",
+"bbox": [
+1641.8,
+706.7,
+1657.6,
+735.5
+],
+"real": false
+},
+{
+"image": "262929075567708",
+"grupo": "candeeiro",
+"bbox": [
+936.3,
+786.4,
+971.1,
+954.1
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+58.0,
+127.7,
+93.2,
+259.2
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "candeeiro",
+"bbox": [
+887.8,
+293.1,
+915.7,
+454.9
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+1793.3,
+611.6,
+1827.6,
+651.5
+],
+"real": true
+},
+{
+"image": "262929075567708",
+"grupo": "sinal",
+"bbox": [
+1999.6,
+667.9,
+2048.0,
+774.2
+],
+"real": false
+},
+{
+"image": "151050097036700",
+"grupo": "contentor",
+"bbox": [
+970.0,
+915.4,
+994.7,
+942.5
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+1972.8,
+598.0,
+2009.3,
+749.5
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+283.6,
+249.5,
+289.6,
+268.5
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+1774.2,
+254.8,
+1813.0,
+320.0
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+257.4,
+167.2,
+302.4,
+208.0
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+1039.5,
+295.2,
+1047.1,
+323.6
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+257.2,
+583.2,
+267.0,
+613.9
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+1608.0,
+172.4,
+1716.8,
+211.3
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+1478.0,
+0.0,
+1600.8,
+625.8
+],
+"real": false
+},
+{
+"image": "333571651607552",
+"grupo": "sinal",
+"bbox": [
+71.5,
+563.9,
+199.5,
+694.9
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "candeeiro",
+"bbox": [
+0.0,
+503.1,
+56.2,
+538.3
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "candeeiro",
+"bbox": [
+924.2,
+773.0,
+960.4,
+879.0
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "contentor",
+"bbox": [
+1609.0,
+312.8,
+1655.7,
+368.5
+],
+"real": false
+},
+{
+"image": "1454909068222766",
+"grupo": "contentor",
+"bbox": [
+1322.0,
+543.6,
+1341.3,
+581.4
+],
+"real": false
+},
+{
+"image": "1362535060784292",
+"grupo": "candeeiro",
+"bbox": [
+1169.2,
+322.8,
+1290.3,
+609.1
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1138.4,
+582.4,
+1146.6,
+610.4
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+1924.5,
+490.6,
+1975.0,
+543.5
+],
+"real": true
+},
+{
+"image": "1454909068222766",
+"grupo": "candeeiro",
+"bbox": [
+1173.0,
+339.7,
+1225.0,
+521.0
+],
+"real": false
+},
+{
+"image": "1362535060784292",
+"grupo": "sinal",
+"bbox": [
+1745.7,
+274.9,
+2043.3,
+536.2
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+757.4,
+549.8,
+774.2,
+601.6
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+1469.2,
+308.4,
+1520.5,
+503.4
+],
+"real": false
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+1593.8,
+470.3,
+1868.6,
+533.1
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+2.3,
+585.4,
+9.7,
+610.3
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1749.5,
+436.4,
+1763.4,
+538.0
+],
+"real": false
+},
+{
+"image": "1194235824337950",
+"grupo": "candeeiro",
+"bbox": [
+50.4,
+642.1,
+179.7,
+863.4
+],
+"real": false
+},
+{
+"image": "1194235824337950",
+"grupo": "contentor",
+"bbox": [
+1779.2,
+221.6,
+2047.9,
+509.5
+],
+"real": false
+},
+{
+"image": "151050097036700",
+"grupo": "contentor",
+"bbox": [
+1260.2,
+888.3,
+1334.4,
+963.1
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+54.8,
+201.5,
+75.5,
+258.4
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+1015.9,
+658.6,
+1084.7,
+933.5
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+707.6,
+273.5,
+715.6,
+295.5
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "sinal",
+"bbox": [
+811.9,
+386.1,
+895.5,
+467.2
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "contentor",
+"bbox": [
+1621.7,
+628.7,
+1640.2,
+664.7
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "contentor",
+"bbox": [
+1371.4,
+513.0,
+1417.9,
+557.6
+],
+"real": true
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+981.4,
+395.6,
+1032.8,
+408.6
+],
+"real": true
+},
+{
+"image": "1454909068222766",
+"grupo": "contentor",
+"bbox": [
+1016.8,
+547.6,
+1042.0,
+584.7
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+1485.2,
+1.1,
+1604.1,
+86.4
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+936.1,
+283.6,
+942.2,
+305.4
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+1297.9,
+404.4,
+1326.7,
+437.7
+],
+"real": false
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+1759.8,
+471.7,
+1867.2,
+531.8
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1449.4,
+322.4,
+1490.6,
+337.3
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "candeeiro",
+"bbox": [
+932.1,
+828.8,
+949.1,
+877.0
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1391.5,
+596.2,
+1399.4,
+626.1
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "candeeiro",
+"bbox": [
+1506.1,
+1.0,
+1593.6,
+989.0
+],
+"real": false
+},
+{
+"image": "1428507540881609",
+"grupo": "sinal",
+"bbox": [
+373.7,
+749.7,
+426.5,
+775.3
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+126.6,
+421.2,
+172.6,
+636.2
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+368.4,
+183.8,
+384.6,
+307.5
+],
+"real": true
+},
+{
+"image": "333571651607552",
+"grupo": "candeeiro",
+"bbox": [
+1014.2,
+684.4,
+1024.6,
+722.4
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+714.5,
+499.2,
+749.9,
+676.0
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+367.4,
+599.6,
+408.5,
+619.9
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1466.1,
+322.9,
+1490.5,
+332.2
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "candeeiro",
+"bbox": [
+0.0,
+502.0,
+56.4,
+612.3
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+1164.9,
+524.6,
+1247.0,
+544.3
+],
+"real": false
+},
+{
+"image": "512376593282609",
+"grupo": "sinal",
+"bbox": [
+1281.1,
+664.4,
+1326.6,
+699.4
+],
+"real": false
+},
+{
+"image": "1454909068222766",
+"grupo": "candeeiro",
+"bbox": [
+911.7,
+164.1,
+950.7,
+235.1
+],
+"real": false
+},
+{
+"image": "333571651607552",
+"grupo": "candeeiro",
+"bbox": [
+1014.1,
+640.4,
+1079.8,
+722.8
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+160.5,
+596.7,
+184.4,
+625.3
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "candeeiro",
+"bbox": [
+720.7,
+360.2,
+753.6,
+458.7
+],
+"real": false
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+1603.1,
+553.0,
+1685.5,
+613.8
+],
+"real": true
+},
+{
+"image": "1428507540881609",
+"grupo": "candeeiro",
+"bbox": [
+764.8,
+644.3,
+792.4,
+701.7
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+1266.0,
+627.3,
+1323.5,
+642.2
+],
+"real": false
+},
+{
+"image": "333571651607552",
+"grupo": "sinal",
+"bbox": [
+86.7,
+689.9,
+169.3,
+738.2
+],
+"real": false
+},
+{
+"image": "1454909068222766",
+"grupo": "sinal",
+"bbox": [
+1400.9,
+490.2,
+1422.9,
+513.1
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "sinal",
+"bbox": [
+517.5,
+625.3,
+625.9,
+655.0
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+662.5,
+444.1,
+703.7,
+598.5
+],
+"real": false
+},
+{
+"image": "314768113426345",
+"grupo": "candeeiro",
+"bbox": [
+1060.1,
+695.9,
+1074.8,
+745.6
+],
+"real": false
+},
+{
+"image": "1194235824337950",
+"grupo": "candeeiro",
+"bbox": [
+0.0,
+349.1,
+34.8,
+754.4
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "sinal",
+"bbox": [
+1206.1,
+488.1,
+1269.9,
+550.8
+],
+"real": true
+},
+{
+"image": "1454909068222766",
+"grupo": "contentor",
+"bbox": [
+738.7,
+563.4,
+804.5,
+625.6
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+257.3,
+123.3,
+301.9,
+167.7
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+817.0,
+277.5,
+825.9,
+300.4
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+945.4,
+242.5,
+978.4,
+444.3
+],
+"real": false
+},
+{
+"image": "1194235824337950",
+"grupo": "candeeiro",
+"bbox": [
+1970.4,
+107.7,
+2016.2,
+241.2
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+1694.1,
+196.5,
+1839.0,
+299.5
+],
+"real": false
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+922.4,
+774.7,
+962.9,
+818.5
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+1037.4,
+659.2,
+1084.0,
+690.1
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+1137.7,
+426.2,
+1186.3,
+725.4
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "contentor",
+"bbox": [
+1554.9,
+271.1,
+1632.5,
+360.1
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+1344.1,
+266.5,
+1393.4,
+445.1
+],
+"real": false
+},
+{
+"image": "756290478377054",
+"grupo": "candeeiro",
+"bbox": [
+1341.6,
+721.4,
+1389.0,
+968.6
+],
+"real": false
+},
+{
+"image": "608010640585505",
+"grupo": "candeeiro",
+"bbox": [
+670.6,
+533.5,
+694.9,
+691.8
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "contentor",
+"bbox": [
+1788.1,
+564.1,
+1820.2,
+590.8
+],
+"real": false
+},
+{
+"image": "1454909068222766",
+"grupo": "sinal",
+"bbox": [
+169.7,
+295.0,
+243.6,
+381.7
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+457.8,
+245.4,
+468.5,
+298.5
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+121.3,
+182.2,
+144.1,
+217.2
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+1622.2,
+628.7,
+1639.3,
+664.9
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "candeeiro",
+"bbox": [
+1536.1,
+614.7,
+1543.0,
+631.1
+],
+"real": true
+},
+{
+"image": "608010640585505",
+"grupo": "contentor",
+"bbox": [
+894.7,
+684.0,
+920.0,
+719.7
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "contentor",
+"bbox": [
+409.9,
+568.8,
+421.2,
+599.4
+],
+"real": true
+},
+{
+"image": "262929075567708",
+"grupo": "sinal",
+"bbox": [
+936.8,
+787.6,
+971.7,
+825.9
+],
+"real": true
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+822.6,
+325.6,
+850.3,
+439.6
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "candeeiro",
+"bbox": [
+1007.9,
+0.0,
+1341.1,
+573.5
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+379.2,
+428.7,
+407.3,
+548.6
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "contentor",
+"bbox": [
+554.4,
+445.5,
+576.7,
+511.7
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "candeeiro",
+"bbox": [
+414.4,
+386.8,
+475.4,
+599.0
+],
+"real": false
+},
+{
+"image": "1428507540881609",
+"grupo": "candeeiro",
+"bbox": [
+734.7,
+349.6,
+759.7,
+486.1
+],
+"real": false
+},
+{
+"image": "262929075567708",
+"grupo": "candeeiro",
+"bbox": [
+122.9,
+691.3,
+154.6,
+969.6
+],
+"real": false
+},
+{
+"image": "345941120216633",
+"grupo": "sinal",
+"bbox": [
+1538.8,
+523.4,
+2046.0,
+807.5
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+1122.7,
+113.0,
+1149.8,
+172.9
+],
+"real": false
+},
+{
+"image": "909391203345659",
+"grupo": "sinal",
+"bbox": [
+1337.7,
+82.3,
+1497.2,
+236.2
+],
+"real": true
+},
+{
+"image": "151050097036700",
+"grupo": "contentor",
+"bbox": [
+538.1,
+926.9,
+568.9,
+999.7
+],
+"real": true
+},
+{
+"image": "807789379917576",
+"grupo": "sinal",
+"bbox": [
+1037.6,
+407.5,
+1064.2,
+428.7
+],
+"real": false
+},
+{
+"image": "151050097036700",
+"grupo": "sinal",
+"bbox": [
+287.5,
+673.7,
+430.6,
+810.7
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+458.9,
+246.0,
+467.4,
+271.9
+],
+"real": false
+},
+{
+"image": "1194235824337950",
+"grupo": "contentor",
+"bbox": [
+2017.6,
+189.1,
+2047.8,
+237.4
+],
+"real": false
+},
+{
+"image": "151050097036700",
+"grupo": "candeeiro",
+"bbox": [
+1030.0,
+819.6,
+1046.3,
+940.3
+],
+"real": false
+},
+{
+"image": "161620725985969",
+"grupo": "sinal",
+"bbox": [
+1781.5,
+196.0,
+1815.8,
+255.1
+],
+"real": true
+},
+{
+"image": "161620725985969",
+"grupo": "candeeiro",
+"bbox": [
+1134.0,
+279.9,
+1142.3,
+319.3
+],
+"real": true
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1548.9,
+420.3,
+1565.2,
+556.0
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "sinal",
+"bbox": [
+700.0,
+304.7,
+742.0,
+353.0
+],
+"real": true
+},
+{
+"image": "861102281195934",
+"grupo": "contentor",
+"bbox": [
+1699.2,
+276.3,
+1739.1,
+328.0
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "candeeiro",
+"bbox": [
+1943.1,
+0.9,
+2037.9,
+237.3
+],
+"real": false
+},
+{
+"image": "1428507540881609",
+"grupo": "sinal",
+"bbox": [
+360.2,
+651.1,
+449.5,
+745.7
+],
+"real": true
+},
+{
+"image": "314768113426345",
+"grupo": "candeeiro",
+"bbox": [
+958.4,
+682.9,
+984.9,
+727.7
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "candeeiro",
+"bbox": [
+1445.7,
+322.6,
+1491.2,
+367.9
+],
+"real": true
+},
+{
+"image": "909391203345659",
+"grupo": "contentor",
+"bbox": [
+637.1,
+599.5,
+678.5,
+654.6
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+1507.1,
+308.5,
+1518.5,
+317.9
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "sinal",
+"bbox": [
+1674.5,
+454.4,
+1827.9,
+476.2
+],
+"real": false
+},
+{
+"image": "357199595741657",
+"grupo": "contentor",
+"bbox": [
+1547.3,
+533.8,
+1561.2,
+555.2
+],
+"real": false
+},
+{
+"image": "333571651607552",
+"grupo": "contentor",
+"bbox": [
+316.3,
+909.6,
+339.0,
+996.0
+],
+"real": false
+},
+{
+"image": "1428507540881609",
+"grupo": "sinal",
+"bbox": [
+334.1,
+534.3,
+478.8,
+572.4
+],
+"real": false
+},
+{
+"image": "464745681158829",
+"grupo": "candeeiro",
+"bbox": [
+294.4,
+239.3,
+361.7,
+607.3
+],
+"real": false
+},
+{
+"image": "861102281195934",
+"grupo": "contentor",
+"bbox": [
+1721.5,
+258.5,
+1791.1,
+314.9
+],
+"real": false
+},
+{
+"image": "948680345953651",
+"grupo": "candeeiro",
+"bbox": [
+1160.5,
+110.9,
+1359.1,
+1006.7
+],
+"real": true
+},
+{
+"image": "942301526622581",
+"grupo": "candeeiro",
+"bbox": [
+171.1,
+442.2,
+299.9,
+996.0
+],
+"real": true
+},
+{
+"image": "313424997017820",
+"grupo": "candeeiro",
+"bbox": [
+1197.2,
+499.7,
+1297.5,
+925.5
+],
+"real": true
+},
+{
+"image": "305249601261906",
+"grupo": "candeeiro",
+"bbox": [
+1752.3,
+545.4,
+1847.7,
+892.3
+],
+"real": true
+},
+{
+"image": "313424997017820",
+"grupo": "candeeiro",
+"bbox": [
+1162.3,
+697.5,
+1213.0,
+920.5
+],
+"real": true
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1407.4,
+921.2,
+1458.0,
+975.2
+],
+"real": false
+},
+{
+"image": "330531765257647",
+"grupo": "contentor",
+"bbox": [
+1623.0,
+843.5,
+1661.8,
+930.7
+],
+"real": false
+},
+{
+"image": "313424997017820",
+"grupo": "contentor",
+"bbox": [
+793.7,
+941.8,
+848.2,
+1036.4
+],
+"real": false
+},
+{
+"image": "256905882882652",
+"grupo": "candeeiro",
+"bbox": [
+1190.9,
+753.1,
+1247.8,
+977.6
+],
+"real": false
+},
+{
+"image": "2273214606145254",
+"grupo": "contentor",
+"bbox": [
+1336.0,
+237.5,
+1425.9,
+369.9
+],
+"real": false
+},
+{
+"image": "256905882882652",
+"grupo": "contentor",
+"bbox": [
+1258.1,
+894.6,
+1312.6,
+991.0
+],
+"real": false
+},
+{
+"image": "313424997017820",
+"grupo": "contentor",
+"bbox": [
+852.5,
+922.5,
+884.4,
+1006.0
+],
+"real": false
+},
+{
+"image": "256905882882652",
+"grupo": "contentor",
+"bbox": [
+2014.7,
+823.2,
+2048.0,
+968.3
+],
+"real": false
+},
+{
+"image": "948680345953651",
+"grupo": "contentor",
+"bbox": [
+624.4,
+950.7,
+659.4,
+1027.8
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1438.7,
+922.0,
+1469.0,
+972.3
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+2015.1,
+904.4,
+2047.9,
+1025.2
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "candeeiro",
+"bbox": [
+328.4,
+76.1,
+548.6,
+1080.8
+],
+"real": false
+},
+{
+"image": "396281794755874",
+"grupo": "candeeiro",
+"bbox": [
+1154.2,
+498.7,
+1241.0,
+916.0
+],
+"real": true
+},
+{
+"image": "378453726848214",
+"grupo": "contentor",
+"bbox": [
+1378.6,
+822.6,
+1686.7,
+1025.2
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "candeeiro",
+"bbox": [
+1733.5,
+706.0,
+1780.3,
+765.5
+],
+"real": true
+},
+{
+"image": "305249601261906",
+"grupo": "candeeiro",
+"bbox": [
+1734.3,
+707.0,
+1785.6,
+920.7
+],
+"real": true
+},
+{
+"image": "313424997017820",
+"grupo": "contentor",
+"bbox": [
+814.2,
+889.0,
+849.4,
+936.9
+],
+"real": false
+},
+{
+"image": "330531765257647",
+"grupo": "candeeiro",
+"bbox": [
+1501.5,
+897.0,
+1521.4,
+1075.0
+],
+"real": false
+},
+{
+"image": "2273214606145254",
+"grupo": "contentor",
+"bbox": [
+1388.3,
+238.6,
+1506.8,
+367.7
+],
+"real": false
+},
+{
+"image": "396281794755874",
+"grupo": "candeeiro",
+"bbox": [
+1155.2,
+497.8,
+1240.7,
+646.2
+],
+"real": true
+},
+{
+"image": "796403697687751",
+"grupo": "contentor",
+"bbox": [
+173.1,
+941.3,
+202.1,
+968.7
+],
+"real": false
+},
+{
+"image": "313424997017820",
+"grupo": "candeeiro",
+"bbox": [
+1162.9,
+697.2,
+1210.0,
+763.1
+],
+"real": true
+},
+{
+"image": "942301526622581",
+"grupo": "candeeiro",
+"bbox": [
+1246.2,
+716.6,
+1293.3,
+957.9
+],
+"real": false
+},
+{
+"image": "256905882882652",
+"grupo": "candeeiro",
+"bbox": [
+1238.6,
+764.5,
+1263.5,
+937.6
+],
+"real": false
+},
+{
+"image": "396281794755874",
+"grupo": "contentor",
+"bbox": [
+1942.5,
+885.1,
+2019.5,
+1063.1
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+2034.5,
+892.3,
+2048.0,
+1040.1
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1624.9,
+889.0,
+1635.5,
+916.3
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1646.0,
+879.5,
+1662.5,
+906.6
+],
+"real": false
+},
+{
+"image": "948680345953651",
+"grupo": "contentor",
+"bbox": [
+1141.6,
+902.2,
+1173.5,
+938.0
+],
+"real": false
+},
+{
+"image": "330531765257647",
+"grupo": "candeeiro",
+"bbox": [
+1417.5,
+800.2,
+1432.7,
+881.0
+],
+"real": false
+},
+{
+"image": "330531765257647",
+"grupo": "contentor",
+"bbox": [
+695.0,
+917.6,
+739.8,
+965.3
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1662.8,
+882.4,
+1677.6,
+910.0
+],
+"real": false
+},
+{
+"image": "942301526622581",
+"grupo": "sinal",
+"bbox": [
+1247.0,
+715.7,
+1297.7,
+769.7
+],
+"real": true
+},
+{
+"image": "313424997017820",
+"grupo": "contentor",
+"bbox": [
+1057.1,
+890.2,
+1066.9,
+917.2
+],
+"real": false
+},
+{
+"image": "262929075567708",
+"grupo": "contentor",
+"bbox": [
+0.0,
+947.8,
+15.8,
+1003.8
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1772.3,
+877.8,
+1796.0,
+924.7
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+608.8,
+605.7,
+686.9,
+893.6
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+1213.6,
+331.7,
+1235.8,
+399.4
+],
+"real": true
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+558.4,
+569.5,
+642.4,
+870.9
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "candeeiro",
+"bbox": [
+683.4,
+658.2,
+744.7,
+885.4
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+710.5,
+681.8,
+767.3,
+879.7
+],
+"real": true
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+742.7,
+709.5,
+793.9,
+878.9
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+405.0,
+465.3,
+520.8,
+865.0
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "sinal",
+"bbox": [
+240.5,
+832.7,
+276.2,
+869.7
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+850.7,
+301.3,
+894.9,
+506.7
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "candeeiro",
+"bbox": [
+243.1,
+355.0,
+386.1,
+848.4
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1643.4,
+366.9,
+1732.8,
+624.9
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+634.7,
+684.4,
+690.0,
+882.5
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+482.0,
+508.2,
+588.5,
+879.4
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1543.6,
+370.8,
+1627.7,
+621.2
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+227.7,
+167.8,
+269.8,
+342.6
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+2008.0,
+617.8,
+2035.9,
+668.4
+],
+"real": false
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+386.3,
+768.1,
+421.1,
+882.7
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+1115.6,
+317.5,
+1141.4,
+376.6
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+276.4,
+786.6,
+316.7,
+931.8
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "sinal",
+"bbox": [
+1166.2,
+792.2,
+1194.9,
+822.7
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "sinal",
+"bbox": [
+1408.5,
+458.9,
+1524.6,
+486.5
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+77.0,
+97.1,
+125.2,
+403.8
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+34.8,
+159.3,
+66.2,
+295.5
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+978.3,
+313.9,
+993.5,
+374.0
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+717.5,
+751.9,
+754.6,
+876.8
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+134.3,
+775.7,
+174.6,
+875.9
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "sinal",
+"bbox": [
+1379.1,
+695.2,
+1436.4,
+750.6
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+365.4,
+229.4,
+380.8,
+316.9
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+783.2,
+778.9,
+825.0,
+880.8
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+398.0,
+469.7,
+511.5,
+1050.2
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+749.8,
+282.0,
+766.7,
+357.6
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+7.0,
+753.3,
+57.9,
+960.3
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "candeeiro",
+"bbox": [
+628.5,
+675.5,
+711.2,
+872.2
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "candeeiro",
+"bbox": [
+779.4,
+771.7,
+824.6,
+880.1
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "contentor",
+"bbox": [
+1574.1,
+571.5,
+1632.1,
+623.7
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+1214.2,
+60.0,
+1271.7,
+635.3
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "sinal",
+"bbox": [
+1148.0,
+798.9,
+1174.8,
+828.3
+],
+"real": true
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+338.1,
+793.0,
+369.9,
+858.9
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+756.8,
+740.7,
+805.0,
+908.6
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+616.5,
+322.6,
+623.3,
+347.7
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+767.5,
+765.6,
+817.9,
+885.6
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+559.1,
+310.8,
+613.2,
+530.1
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+699.0,
+536.0,
+734.3,
+592.8
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1068.0,
+198.5,
+1153.6,
+600.4
+],
+"real": false
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+504.9,
+791.7,
+529.8,
+855.8
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "sinal",
+"bbox": [
+1429.4,
+511.8,
+1572.7,
+654.2
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+441.3,
+786.4,
+473.6,
+914.0
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "sinal",
+"bbox": [
+185.1,
+838.5,
+258.6,
+858.5
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "candeeiro",
+"bbox": [
+95.3,
+687.8,
+160.3,
+972.7
+],
+"real": true
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+789.3,
+786.4,
+828.3,
+885.7
+],
+"real": true
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+459.1,
+293.3,
+469.0,
+334.3
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "sinal",
+"bbox": [
+139.0,
+843.0,
+176.5,
+876.3
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+353.8,
+809.3,
+380.6,
+937.4
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "sinal",
+"bbox": [
+599.8,
+405.8,
+624.2,
+446.3
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "contentor",
+"bbox": [
+171.2,
+905.9,
+234.4,
+974.8
+],
+"real": true
+},
+{
+"image": "526295568403021",
+"grupo": "candeeiro",
+"bbox": [
+1088.9,
+8.4,
+1272.1,
+425.0
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "contentor",
+"bbox": [
+130.1,
+914.2,
+158.7,
+958.6
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "sinal",
+"bbox": [
+1204.8,
+784.3,
+1236.0,
+817.4
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "candeeiro",
+"bbox": [
+486.8,
+788.6,
+512.6,
+873.5
+],
+"real": true
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+715.9,
+278.9,
+818.3,
+391.0
+],
+"real": true
+},
+{
+"image": "4223581927673228",
+"grupo": "sinal",
+"bbox": [
+344.6,
+722.3,
+384.9,
+797.0
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+427.1,
+616.7,
+471.7,
+878.0
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "sinal",
+"bbox": [
+1108.6,
+780.7,
+1146.8,
+820.1
+],
+"real": true
+},
+{
+"image": "179684627401981",
+"grupo": "sinal",
+"bbox": [
+341.6,
+841.9,
+371.7,
+878.1
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+1034.7,
+538.8,
+1058.6,
+606.7
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "sinal",
+"bbox": [
+101.9,
+119.1,
+160.2,
+171.8
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "sinal",
+"bbox": [
+282.5,
+840.2,
+316.8,
+875.0
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "sinal",
+"bbox": [
+10.9,
+830.9,
+54.2,
+875.5
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "candeeiro",
+"bbox": [
+1421.0,
+174.2,
+1473.4,
+515.6
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "contentor",
+"bbox": [
+456.1,
+893.1,
+478.6,
+927.1
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+1029.4,
+675.0,
+1094.5,
+876.4
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+1435.3,
+524.3,
+1480.8,
+846.0
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "contentor",
+"bbox": [
+1184.8,
+876.2,
+1236.9,
+960.8
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1761.3,
+468.1,
+1809.3,
+608.8
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "sinal",
+"bbox": [
+820.2,
+437.0,
+852.7,
+475.6
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+1237.1,
+480.1,
+1258.1,
+883.9
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+22.6,
+233.8,
+42.4,
+292.6
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+630.4,
+237.4,
+655.1,
+288.7
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "candeeiro",
+"bbox": [
+500.1,
+205.2,
+641.2,
+539.5
+],
+"real": false
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+536.3,
+799.2,
+557.3,
+870.1
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "sinal",
+"bbox": [
+1126.9,
+770.9,
+1166.4,
+813.5
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "candeeiro",
+"bbox": [
+1197.7,
+521.3,
+1213.7,
+865.4
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+515.8,
+718.5,
+546.1,
+926.8
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+776.0,
+808.5,
+807.8,
+884.0
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+467.6,
+645.8,
+506.8,
+897.1
+],
+"real": false
+},
+{
+"image": "1924321491055960",
+"grupo": "sinal",
+"bbox": [
+1244.6,
+766.1,
+1279.5,
+802.5
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "sinal",
+"bbox": [
+1841.1,
+531.6,
+1882.7,
+571.3
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "sinal",
+"bbox": [
+979.9,
+815.3,
+1005.3,
+843.1
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "contentor",
+"bbox": [
+175.5,
+919.2,
+190.2,
+953.3
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "candeeiro",
+"bbox": [
+149.3,
+427.7,
+306.1,
+771.4
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "sinal",
+"bbox": [
+100.9,
+172.2,
+158.5,
+223.9
+],
+"real": true
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+727.6,
+535.8,
+758.4,
+579.5
+],
+"real": false
+},
+{
+"image": "847954139411909",
+"grupo": "candeeiro",
+"bbox": [
+407.6,
+355.8,
+454.4,
+380.9
+],
+"real": false
+},
+{
+"image": "179684627401981",
+"grupo": "sinal",
+"bbox": [
+1084.4,
+795.5,
+1117.8,
+831.8
+],
+"real": true
+},
+{
+"image": "139830181467436",
+"grupo": "contentor",
+"bbox": [
+1134.0,
+870.7,
+1183.9,
+943.2
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "candeeiro",
+"bbox": [
+1496.4,
+2.1,
+1569.0,
+262.5
+],
+"real": false
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+717.5,
+322.5,
+790.0,
+365.2
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "sinal",
+"bbox": [
+624.9,
+677.9,
+710.1,
+702.0
+],
+"real": false
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+1152.6,
+640.6,
+1214.7,
+867.2
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "sinal",
+"bbox": [
+361.4,
+849.1,
+386.8,
+876.8
+],
+"real": true
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1296.9,
+440.8,
+1341.2,
+620.0
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+1639.7,
+379.2,
+1676.8,
+671.8
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+956.8,
+347.8,
+962.6,
+372.5
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "contentor",
+"bbox": [
+206.3,
+911.7,
+248.4,
+971.6
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+525.9,
+671.2,
+557.3,
+855.7
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "sinal",
+"bbox": [
+1824.0,
+549.9,
+1845.8,
+580.5
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+182.4,
+790.9,
+217.3,
+949.4
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+1030.7,
+664.1,
+1051.0,
+876.6
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+1060.3,
+360.5,
+1069.1,
+388.5
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+725.6,
+322.3,
+828.6,
+688.0
+],
+"real": false
+},
+{
+"image": "847954139411909",
+"grupo": "contentor",
+"bbox": [
+1940.2,
+285.4,
+2015.8,
+410.0
+],
+"real": false
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+1275.8,
+420.0,
+1301.7,
+893.6
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+448.5,
+509.9,
+480.2,
+567.7
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+821.6,
+379.1,
+834.1,
+387.8
+],
+"real": false
+},
+{
+"image": "526295568403021",
+"grupo": "candeeiro",
+"bbox": [
+716.7,
+338.8,
+756.8,
+502.8
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+1179.4,
+361.8,
+1185.0,
+382.7
+],
+"real": true
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+1182.4,
+621.3,
+1244.2,
+865.1
+],
+"real": false
+},
+{
+"image": "1924321491055960",
+"grupo": "sinal",
+"bbox": [
+758.2,
+792.3,
+794.8,
+832.6
+],
+"real": true
+},
+{
+"image": "847954139411909",
+"grupo": "contentor",
+"bbox": [
+1464.0,
+247.3,
+1552.4,
+359.8
+],
+"real": false
+},
+{
+"image": "305249601261906",
+"grupo": "contentor",
+"bbox": [
+1450.3,
+897.5,
+1471.7,
+971.5
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+393.1,
+357.1,
+434.4,
+546.9
+],
+"real": false
+},
+{
+"image": "565606381092155",
+"grupo": "sinal",
+"bbox": [
+1225.2,
+189.5,
+1355.5,
+329.9
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+509.5,
+813.1,
+524.0,
+924.8
+],
+"real": false
+},
+{
+"image": "1346415209085203",
+"grupo": "candeeiro",
+"bbox": [
+1177.2,
+542.1,
+1194.8,
+774.0
+],
+"real": false
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+439.2,
+468.6,
+570.9,
+691.8
+],
+"real": false
+},
+{
+"image": "179684627401981",
+"grupo": "sinal",
+"bbox": [
+1122.2,
+810.6,
+1146.7,
+835.3
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+732.7,
+833.0,
+754.8,
+874.2
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "contentor",
+"bbox": [
+188.1,
+919.2,
+207.8,
+953.7
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "contentor",
+"bbox": [
+0.0,
+333.1,
+26.1,
+459.7
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1463.9,
+426.8,
+1478.2,
+444.8
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1464.2,
+426.1,
+1508.7,
+443.6
+],
+"real": false
+},
+{
+"image": "1115955858888401",
+"grupo": "contentor",
+"bbox": [
+1921.4,
+981.8,
+2047.9,
+1054.7
+],
+"real": false
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+1060.0,
+207.5,
+1144.8,
+417.7
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "candeeiro",
+"bbox": [
+630.6,
+360.8,
+660.3,
+523.2
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1785.8,
+527.6,
+1802.9,
+609.6
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "contentor",
+"bbox": [
+1442.5,
+302.6,
+1479.3,
+351.0
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "candeeiro",
+"bbox": [
+1569.5,
+372.0,
+1625.7,
+475.6
+],
+"real": true
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+714.7,
+294.8,
+840.8,
+566.3
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "contentor",
+"bbox": [
+1204.9,
+846.9,
+1223.9,
+880.4
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "contentor",
+"bbox": [
+1121.5,
+543.9,
+1153.0,
+617.1
+],
+"real": false
+},
+{
+"image": "176303467780098",
+"grupo": "sinal",
+"bbox": [
+444.9,
+251.4,
+505.4,
+376.0
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+1199.3,
+608.6,
+1257.4,
+874.1
+],
+"real": false
+},
+{
+"image": "526295568403021",
+"grupo": "contentor",
+"bbox": [
+1888.9,
+214.2,
+1945.9,
+291.3
+],
+"real": false
+},
+{
+"image": "759446278037143",
+"grupo": "candeeiro",
+"bbox": [
+659.7,
+744.9,
+697.0,
+871.5
+],
+"real": false
+},
+{
+"image": "549710842916356",
+"grupo": "candeeiro",
+"bbox": [
+1468.6,
+412.8,
+1484.1,
+469.6
+],
+"real": false
+},
+{
+"image": "526295568403021",
+"grupo": "candeeiro",
+"bbox": [
+500.3,
+113.6,
+676.9,
+313.6
+],
+"real": true
+},
+{
+"image": "1924321491055960",
+"grupo": "sinal",
+"bbox": [
+1204.6,
+717.9,
+1264.7,
+782.0
+],
+"real": true
+},
+{
+"image": "556053389113045",
+"grupo": "sinal",
+"bbox": [
+775.6,
+808.4,
+808.3,
+844.8
+],
+"real": true
+},
+{
+"image": "1115955858888401",
+"grupo": "candeeiro",
+"bbox": [
+356.8,
+808.3,
+387.3,
+1053.6
+],
+"real": false
+},
+{
+"image": "759446278037143",
+"grupo": "sinal",
+"bbox": [
+285.1,
+808.8,
+307.3,
+848.6
+],
+"real": true
+},
+{
+"image": "1401895673523017",
+"grupo": "candeeiro",
+"bbox": [
+947.9,
+141.4,
+1092.2,
+449.8
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "candeeiro",
+"bbox": [
+958.5,
+773.2,
+986.5,
+880.5
+],
+"real": false
+},
+{
+"image": "556053389113045",
+"grupo": "sinal",
+"bbox": [
+1163.0,
+752.3,
+1212.2,
+804.3
+],
+"real": true
+},
+{
+"image": "759446278037143",
+"grupo": "candeeiro",
+"bbox": [
+1028.9,
+712.7,
+1039.5,
+746.1
+],
+"real": false
+},
+{
+"image": "1401895673523017",
+"grupo": "sinal",
+"bbox": [
+617.1,
+486.5,
+650.8,
+518.2
+],
+"real": true
+},
+{
+"image": "1401895673523017",
+"grupo": "contentor",
+"bbox": [
+994.1,
+396.1,
+1022.7,
+446.4
+],
+"real": false
+},
+{
+"image": "179684627401981",
+"grupo": "candeeiro",
+"bbox": [
+1193.5,
+642.0,
+1212.2,
+687.8
+],
+"real": false
+},
+{
+"image": "1924321491055960",
+"grupo": "candeeiro",
+"bbox": [
+1012.8,
+732.1,
+1022.1,
+760.9
+],
+"real": false
+},
+{
+"image": "565606381092155",
+"grupo": "candeeiro",
+"bbox": [
+441.1,
+469.5,
+465.8,
+491.9
+],
+"real": false
+},
+{
+"image": "127103002827974",
+"grupo": "candeeiro",
+"bbox": [
+477.2,
+312.2,
+486.9,
+336.0
+],
+"real": false
+},
+{
+"image": "526295568403021",
+"grupo": "candeeiro",
+"bbox": [
+498.6,
+107.8,
+709.2,
+612.7
+],
+"real": false
+}
+]
+}

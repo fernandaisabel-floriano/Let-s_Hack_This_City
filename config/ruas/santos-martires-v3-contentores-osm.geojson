@@ -1,0 +1,745 @@
+{
+"type": "FeatureCollection",
+"features": [
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6569544,
+40.6388526
+]
+},
+"properties": {
+"osm": "node/2810669638",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 3,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 7
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6583075,
+40.6394862
+]
+},
+"properties": {
+"osm": "node/2906984061",
+"amenity": "recycling",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 4,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 4
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.657076,
+40.639032
+]
+},
+"properties": {
+"osm": "node/13722147875",
+"amenity": "recycling",
+"recycling_type": "reverse_vending_machine",
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 6,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 17
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568957,
+40.6388973
+]
+},
+"properties": {
+"osm": "node/2810669663",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "cans,glass_bottles,paper,plastic",
+"dentro_zona": false,
+"dist_zona_m": 10,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 12
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6579971,
+40.637674
+]
+},
+"properties": {
+"osm": "node/11970755563",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 30,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 45
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.657903,
+40.6399516
+]
+},
+"properties": {
+"osm": "node/2810669685",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 44,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 59
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6583482,
+40.6400737
+]
+},
+"properties": {
+"osm": "node/2810669622",
+"amenity": "recycling",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 52,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 66
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6583214,
+40.6401104
+]
+},
+"properties": {
+"osm": "node/2810669672",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 56,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 70
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6567469,
+40.6394692
+]
+},
+"properties": {
+"osm": "node/2810669681",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 62,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 69
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6563198,
+40.6392502
+]
+},
+"properties": {
+"osm": "node/1699814773",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 73,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 73
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568231,
+40.6396081
+]
+},
+"properties": {
+"osm": "node/1699814776",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 73,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 82
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6573719,
+40.6400045
+]
+},
+"properties": {
+"osm": "node/2810675921",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 76,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 91
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6574523,
+40.6404218
+]
+},
+"properties": {
+"osm": "node/2810669627",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 108,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 123
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6570557,
+40.6369954
+]
+},
+"properties": {
+"osm": "node/1699746995",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "cans,clothes,food_waste,glass_bottles,green_waste,paper,plastic_packaging,shoes",
+"dentro_zona": false,
+"dist_zona_m": 137,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 152
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568569,
+40.6405907
+]
+},
+"properties": {
+"osm": "node/2810669651",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 153,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 168
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6573021,
+40.6408675
+]
+},
+"properties": {
+"osm": "node/2810669653",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 157,
+"via_mais_proxima": "Cais dos Santos Mártires",
+"dist_via_m": 173
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568907,
+40.6366953
+]
+},
+"properties": {
+"osm": "node/13479516651",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 169,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 184
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6569205,
+40.6366758
+]
+},
+"properties": {
+"osm": "node/13479516653",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "cardboard,cartons,magazines,newspaper,paper,paper_bags,paper_packaging",
+"dentro_zona": false,
+"dist_zona_m": 169,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 184
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568833,
+40.6366887
+]
+},
+"properties": {
+"osm": "node/13479516649",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 170,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 185
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.656887,
+40.636692
+]
+},
+"properties": {
+"osm": "node/13479516650",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 170,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 185
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6569099,
+40.6366682
+]
+},
+"properties": {
+"osm": "node/13479516654",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "PET,aerosol_cans,aluminium_cans,beverage_cartons,cans,cleaning_product_packaging,foil,metal_packaging,pet_drink_bottles,plastic_bags,plastic_bottle_caps,plastic_bottles,plastic_caps,plastic_packaging,tetrapak",
+"dentro_zona": false,
+"dist_zona_m": 170,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 185
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568759,
+40.6366821
+]
+},
+"properties": {
+"osm": "node/13479516647",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 171,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 186
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568796,
+40.6366854
+]
+},
+"properties": {
+"osm": "node/13479516648",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 171,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 186
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568992,
+40.6366606
+]
+},
+"properties": {
+"osm": "node/13479516652",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "glass_bottles",
+"dentro_zona": false,
+"dist_zona_m": 171,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 186
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6568722,
+40.6366788
+]
+},
+"properties": {
+"osm": "node/13479516646",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 172,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 187
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6552119,
+40.6401654
+]
+},
+"properties": {
+"osm": "node/2845596674",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 208,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 210
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6551797,
+40.640141
+]
+},
+"properties": {
+"osm": "node/2845596678",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 208,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 210
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6551663,
+40.6401165
+]
+},
+"properties": {
+"osm": "node/2845596679",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 208,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 209
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6545691,
+40.6394467
+]
+},
+"properties": {
+"osm": "node/1799472578",
+"amenity": "recycling",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 213,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 217
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6543518,
+40.6384276
+]
+},
+"properties": {
+"osm": "node/1699814764",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 222,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 232
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6541965,
+40.6388434
+]
+},
+"properties": {
+"osm": "node/1799473301",
+"amenity": "recycling",
+"recycling_type": "container",
+"tipos": "cans,glass_bottles,paper,plastic",
+"dentro_zona": false,
+"dist_zona_m": 231,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 240
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6556822,
+40.6409245
+]
+},
+"properties": {
+"osm": "node/2845596677",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 247,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 254
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6547988,
+40.6406722
+]
+},
+"properties": {
+"osm": "node/2845596671",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 271,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 274
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6546432,
+40.6407007
+]
+},
+"properties": {
+"osm": "node/2845596673",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 283,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 286
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6559307,
+40.6359306
+]
+},
+"properties": {
+"osm": "node/11898995290",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 287,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 302
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6558835,
+40.6358977
+]
+},
+"properties": {
+"osm": "node/13479516457",
+"amenity": "waste_disposal",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 292,
+"via_mais_proxima": "Rotunda",
+"dist_via_m": 307
+}
+},
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+-8.6548846,
+40.641067
+]
+},
+"properties": {
+"osm": "node/2845596675",
+"amenity": "waste_basket",
+"recycling_type": null,
+"tipos": "",
+"dentro_zona": false,
+"dist_zona_m": 298,
+"via_mais_proxima": "Rua dos Santos Mártires",
+"dist_via_m": 303
+}
+}
+]
+}

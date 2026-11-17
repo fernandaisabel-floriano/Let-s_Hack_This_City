@@ -1,0 +1,7229 @@
+{
+ "imagens": 37,
+ "objetos_reais_encontrados": {
+  "sinal": 64,
+  "candeeiro": 99,
+  "contentor": 7
+ },
+ "segundos_por_imagem": 0.7,
+ "por_prompt": {
+  "traffic sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 52,
+    "fp": 13,
+    "dup": 2
+   },
+   "0.1": {
+    "tp": 39,
+    "fp": 7,
+    "dup": 2
+   },
+   "0.15": {
+    "tp": 29,
+    "fp": 3,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 23,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 11,
+    "fp": 1,
+    "dup": 0
+   }
+  },
+  "stop sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 30,
+    "fp": 2,
+    "dup": 1
+   },
+   "0.1": {
+    "tp": 19,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 17,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 15,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 11,
+    "fp": 0,
+    "dup": 0
+   }
+  },
+  "road sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 37,
+    "fp": 7,
+    "dup": 2
+   },
+   "0.1": {
+    "tp": 23,
+    "fp": 5,
+    "dup": 1
+   },
+   "0.15": {
+    "tp": 18,
+    "fp": 4,
+    "dup": 1
+   },
+   "0.2": {
+    "tp": 13,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 4,
+    "fp": 1,
+    "dup": 0
+   }
+  },
+  "street lamp": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 92,
+    "fp": 60,
+    "dup": 5
+   },
+   "0.1": {
+    "tp": 85,
+    "fp": 30,
+    "dup": 2
+   },
+   "0.15": {
+    "tp": 75,
+    "fp": 21,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 68,
+    "fp": 14,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 60,
+    "fp": 10,
+    "dup": 0
+   }
+  },
+  "lamp post": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 77,
+    "fp": 21,
+    "dup": 2
+   },
+   "0.1": {
+    "tp": 60,
+    "fp": 12,
+    "dup": 1
+   },
+   "0.15": {
+    "tp": 53,
+    "fp": 10,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 46,
+    "fp": 4,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 34,
+    "fp": 1,
+    "dup": 0
+   }
+  },
+  "street light": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 98,
+    "fp": 101,
+    "dup": 6
+   },
+   "0.1": {
+    "tp": 90,
+    "fp": 57,
+    "dup": 4
+   },
+   "0.15": {
+    "tp": 82,
+    "fp": 35,
+    "dup": 1
+   },
+   "0.2": {
+    "tp": 78,
+    "fp": 27,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 67,
+    "fp": 13,
+    "dup": 0
+   }
+  },
+  "recycling container": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 1,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   }
+  },
+  "waste container": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 1,
+    "fp": 3,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 1,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 1,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   }
+  },
+  "garbage bin": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 4,
+    "fp": 10,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 2,
+    "fp": 4,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 2,
+    "fp": 4,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 2,
+    "fp": 3,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 1,
+    "fp": 2,
+    "dup": 0
+   }
+  },
+  "underground waste bin": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 7,
+    "fp": 44,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 6,
+    "fp": 25,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 4,
+    "fp": 19,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 4,
+    "fp": 13,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 3,
+    "fp": 10,
+    "dup": 0
+   }
+  },
+  "trash can": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 3,
+    "fp": 9,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 3,
+    "fp": 5,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 2,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0
+   }
+  },
+  "dumpster": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 0,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   }
+  },
+  "recycling bins": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 1,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 1,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   }
+  },
+  "igloo recycling container": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 2,
+    "fp": 5,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 1,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 1,
+    "dup": 0
+   }
+  },
+  "colored recycling containers": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.1": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.15": {
+    "tp": 0,
+    "fp": 2,
+    "dup": 0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0
+   }
+  }
+ },
+ "combinacoes": {
+  "sinal": [
+   {
+    "prompts": [
+     "traffic sign"
+    ],
+    "limiar": 0.05,
+    "tp": 52,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "traffic sign"
+    ],
+    "limiar": 0.1,
+    "tp": 39,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "traffic sign"
+    ],
+    "limiar": 0.15,
+    "tp": 29,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "traffic sign"
+    ],
+    "limiar": 0.2,
+    "tp": 23,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "traffic sign"
+    ],
+    "limiar": 0.3,
+    "tp": 11,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "stop sign"
+    ],
+    "limiar": 0.05,
+    "tp": 30,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "stop sign"
+    ],
+    "limiar": 0.1,
+    "tp": 19,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "stop sign"
+    ],
+    "limiar": 0.15,
+    "tp": 17,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "stop sign"
+    ],
+    "limiar": 0.2,
+    "tp": 15,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "stop sign"
+    ],
+    "limiar": 0.3,
+    "tp": 11,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "road sign"
+    ],
+    "limiar": 0.05,
+    "tp": 37,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "road sign"
+    ],
+    "limiar": 0.1,
+    "tp": 23,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "road sign"
+    ],
+    "limiar": 0.15,
+    "tp": 18,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "road sign"
+    ],
+    "limiar": 0.2,
+    "tp": 13,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "road sign"
+    ],
+    "limiar": 0.3,
+    "tp": 4,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign"
+    ],
+    "limiar": 0.05,
+    "tp": 63,
+    "fp": 14
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign"
+    ],
+    "limiar": 0.1,
+    "tp": 47,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign"
+    ],
+    "limiar": 0.15,
+    "tp": 41,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign"
+    ],
+    "limiar": 0.2,
+    "tp": 34,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign"
+    ],
+    "limiar": 0.3,
+    "tp": 20,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "road sign"
+    ],
+    "limiar": 0.05,
+    "tp": 53,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "road sign"
+    ],
+    "limiar": 0.1,
+    "tp": 39,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "road sign"
+    ],
+    "limiar": 0.15,
+    "tp": 29,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "road sign"
+    ],
+    "limiar": 0.2,
+    "tp": 24,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "road sign"
+    ],
+    "limiar": 0.3,
+    "tp": 12,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.05,
+    "tp": 54,
+    "fp": 8
+   },
+   {
+    "prompts": [
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.1,
+    "tp": 36,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.15,
+    "tp": 31,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.2,
+    "tp": 25,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.3,
+    "tp": 14,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.05,
+    "tp": 64,
+    "fp": 14
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.1,
+    "tp": 47,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.15,
+    "tp": 41,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.2,
+    "tp": 35,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "traffic sign",
+     "stop sign",
+     "road sign"
+    ],
+    "limiar": 0.3,
+    "tp": 21,
+    "fp": 1
+   }
+  ],
+  "candeeiro": [
+   {
+    "prompts": [
+     "street lamp"
+    ],
+    "limiar": 0.05,
+    "tp": 92,
+    "fp": 59
+   },
+   {
+    "prompts": [
+     "street lamp"
+    ],
+    "limiar": 0.1,
+    "tp": 85,
+    "fp": 30
+   },
+   {
+    "prompts": [
+     "street lamp"
+    ],
+    "limiar": 0.15,
+    "tp": 75,
+    "fp": 21
+   },
+   {
+    "prompts": [
+     "street lamp"
+    ],
+    "limiar": 0.2,
+    "tp": 68,
+    "fp": 14
+   },
+   {
+    "prompts": [
+     "street lamp"
+    ],
+    "limiar": 0.3,
+    "tp": 60,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "lamp post"
+    ],
+    "limiar": 0.05,
+    "tp": 77,
+    "fp": 21
+   },
+   {
+    "prompts": [
+     "lamp post"
+    ],
+    "limiar": 0.1,
+    "tp": 60,
+    "fp": 12
+   },
+   {
+    "prompts": [
+     "lamp post"
+    ],
+    "limiar": 0.15,
+    "tp": 53,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "lamp post"
+    ],
+    "limiar": 0.2,
+    "tp": 46,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "lamp post"
+    ],
+    "limiar": 0.3,
+    "tp": 34,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "street light"
+    ],
+    "limiar": 0.05,
+    "tp": 98,
+    "fp": 95
+   },
+   {
+    "prompts": [
+     "street light"
+    ],
+    "limiar": 0.1,
+    "tp": 90,
+    "fp": 54
+   },
+   {
+    "prompts": [
+     "street light"
+    ],
+    "limiar": 0.15,
+    "tp": 82,
+    "fp": 35
+   },
+   {
+    "prompts": [
+     "street light"
+    ],
+    "limiar": 0.2,
+    "tp": 78,
+    "fp": 27
+   },
+   {
+    "prompts": [
+     "street light"
+    ],
+    "limiar": 0.3,
+    "tp": 67,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post"
+    ],
+    "limiar": 0.05,
+    "tp": 92,
+    "fp": 59
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post"
+    ],
+    "limiar": 0.1,
+    "tp": 85,
+    "fp": 30
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post"
+    ],
+    "limiar": 0.15,
+    "tp": 75,
+    "fp": 21
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post"
+    ],
+    "limiar": 0.2,
+    "tp": 68,
+    "fp": 14
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post"
+    ],
+    "limiar": 0.3,
+    "tp": 60,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "street light"
+    ],
+    "limiar": 0.05,
+    "tp": 99,
+    "fp": 96
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "street light"
+    ],
+    "limiar": 0.1,
+    "tp": 92,
+    "fp": 54
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "street light"
+    ],
+    "limiar": 0.15,
+    "tp": 84,
+    "fp": 35
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "street light"
+    ],
+    "limiar": 0.2,
+    "tp": 79,
+    "fp": 27
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "street light"
+    ],
+    "limiar": 0.3,
+    "tp": 67,
+    "fp": 14
+   },
+   {
+    "prompts": [
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.05,
+    "tp": 98,
+    "fp": 95
+   },
+   {
+    "prompts": [
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.1,
+    "tp": 90,
+    "fp": 54
+   },
+   {
+    "prompts": [
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.15,
+    "tp": 82,
+    "fp": 35
+   },
+   {
+    "prompts": [
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.2,
+    "tp": 78,
+    "fp": 27
+   },
+   {
+    "prompts": [
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.3,
+    "tp": 67,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.05,
+    "tp": 99,
+    "fp": 96
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.1,
+    "tp": 92,
+    "fp": 54
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.15,
+    "tp": 84,
+    "fp": 35
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.2,
+    "tp": 79,
+    "fp": 27
+   },
+   {
+    "prompts": [
+     "street lamp",
+     "lamp post",
+     "street light"
+    ],
+    "limiar": 0.3,
+    "tp": 67,
+    "fp": 14
+   }
+  ],
+  "contentor": [
+   {
+    "prompts": [
+     "recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "garbage bin"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "garbage bin"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "waste container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "underground waste bin"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "garbage bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "waste container",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "waste container",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "trash can"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "underground waste bin",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 12
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 4,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "garbage bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 2
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "dumpster"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "trash can",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 19
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 43
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 20
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 7,
+    "fp": 44
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 6,
+    "fp": 25
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 4,
+    "fp": 21
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 4,
+    "fp": 13
+   },
+   {
+    "prompts": [
+     "underground waste bin",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "recycling bins"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 10
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "dumpster",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 9
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 3,
+    "fp": 11
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 3,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 2,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "trash can",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 1,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 6
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "igloo recycling container"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 3
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "recycling bins",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 0
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 0,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 0,
+    "fp": 5
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "dumpster",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.05,
+    "tp": 2,
+    "fp": 7
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.1,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.15,
+    "tp": 1,
+    "fp": 4
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.2,
+    "tp": 0,
+    "fp": 1
+   },
+   {
+    "prompts": [
+     "recycling bins",
+     "igloo recycling container",
+     "colored recycling containers"
+    ],
+    "limiar": 0.3,
+    "tp": 0,
+    "fp": 1
+   }
+  ]
+ }
+}

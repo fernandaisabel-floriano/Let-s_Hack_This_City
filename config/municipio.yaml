@@ -1,0 +1,73 @@
+# Configuração por município. Mudar de município = mudar este ficheiro.
+# Todos os caminhos são relativos à raiz do repositório.
+municipio: aveiro
+
+# Nome da zona (rua piloto). Saída em <saida>/<municipio>/<zona>/<fonte>/
+zona: santos-martires
+saida: data/clean
+
+# Zona piloto v3 ("bairro"): Rua dos Santos Mártires (181 m) + rotunda da ponta
+# sul + Cais dos Santos Mártires (119 m), junto à Fábrica Centro Ciência Viva.
+# Geometria OSM (ODbL) em config/ruas/santos-martires-v3.geojson (propriedade "via").
+# bbox = extensão das três vias + 30 m de margem. [oeste, sul, este, norte] WGS84
+# v2 (só a rua), para referência: bbox [-8.658917, 40.637622, -8.656677, 40.639154],
+#   config/ruas/santos-martires.geojson e santos-martires-zona.geojson
+bbox: [-8.65901, 40.637523, -8.656677, 40.639757]
+rua_geojson: config/ruas/santos-martires-v3.geojson
+buffer_rua_m: 30          # recolha: imagens com a câmara a ≤ X m de qualquer via
+
+# Zona piloto (pipeline/zona.py)
+zona_piloto:
+  dist_max_m: 10            # "imagem da zona": câmara a ≤ X m de uma via...
+  heading_tol_graus: 35     # ...e heading alinhado com a via mais próxima (± X°, qualquer sentido)
+  buffer_avaliacao_m: 15    # M10 e catálogo final: só elementos dentro das vias + X m
+  pontas: planas            # planas = a zona acaba onde as vias acabam; redondas = buffer clássico
+  rotunda_raio_m: 25        # rotundas: também entra a câmara a ≤ X m do centro...
+  rotunda_tol_graus: 45     # ...a olhar para ele (± X°). null desliga (só alinhamento)
+zona_avaliacao_geojson: config/ruas/santos-martires-v3-zona.geojson
+crs_local: EPSG:3763      # PT-TM06, para buffers em metros e exportação x/y
+
+# Só imagens capturadas a partir desta data (AAAA-MM-DD). null = sem limite.
+# 2023+ dava 0 imagens na rua (v2); 2019+ dava 54 a ≤30 m da rua.
+desde: "2019-01-01"
+
+incluir_panoramicas: true
+panoramicas:
+  fov_deg: 90
+  vistas: [0, 90, 180, 270]   # somadas ao heading da panorâmica
+  tamanho_px: 1024            # lado de cada vista
+  usar_original: true         # equiretangular em resolução original (2048 px dá vistas de 512 px)
+
+mapillary:
+  tile_graus: 0.002     # lado dos quadrados em que a bbox é dividida
+  limit: 2000           # não baixar: com limits pequenos a API trunca ao acaso
+  workers_download: 8
+
+# Desfoque antes de gravar (M2). Modelos locais, descarregados para models/.
+desfoque:
+  margem: 0.25                # alargamento da caixa antes de desfocar
+  rostos:      {confianca: 0.6, altura_max: 0.25}   # rosto > 25% da altura = falso positivo
+  matriculas:                 # filtro de forma contra falsos positivos em fachadas
+    {confianca: 0.25, imgsz: 1280, aspeto_min: 1.2, largura_max: 0.25, altura_max: 0.12}
+  cabecas_pessoas: {ativo: true, confianca: 0.15, imgsz: 1280, fracao_altura: 0.25}
+
+# Vídeo próprio (P1.1): pipeline/ingest_video.py
+video:
+  passo_m: 2.0                # 1 frame a cada X m percorridos
+  fov_horizontal_deg: 68      # FOV horizontal da câmara do telemóvel (ajustar ao modelo)
+  heading_offset_deg: 0       # 0 = câmara a apontar para a frente; 90 = lado direito
+  janela_heading_m: 6         # heading = direção do movimento entre ±X/2 m
+  velocidade_min_ms: 0.5      # abaixo disto o GPS conta como parado (ruído)
+  max_px: 2048                # redimensiona o lado maior
+  autor: equipa
+
+# M8 — entrada direta no catálogo (pipeline/confianca.py)
+# confianca_elemento = P(real) calibrada por classe (Platt) sobre a média das
+# top_k confianças das vistas do elemento fundido (M6). Recalibra com as
+# validações do técnico (P1.3).
+m8:
+  top_k: 3
+  min_vistas: 2
+  limiar_auto: 0.9
+  calibracao: config/calibracao.json
+  min_rotulos_por_lado: 10   # classe com menos reais OU falsos do que isto: tudo para a fila

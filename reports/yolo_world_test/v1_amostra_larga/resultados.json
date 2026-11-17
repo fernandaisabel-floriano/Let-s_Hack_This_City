@@ -1,0 +1,390 @@
+{
+ "objetos_reais_encontrados": {
+  "sinal": 42,
+  "candeeiro": 66,
+  "contentor": 6
+ },
+ "por_prompt": {
+  "traffic sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 36,
+    "fp": 13,
+    "dup": 2,
+    "precisao": 0.71,
+    "cobertura": 0.86
+   },
+   "0.1": {
+    "tp": 25,
+    "fp": 6,
+    "dup": 2,
+    "precisao": 0.76,
+    "cobertura": 0.6
+   },
+   "0.15": {
+    "tp": 18,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.9,
+    "cobertura": 0.43
+   },
+   "0.2": {
+    "tp": 15,
+    "fp": 1,
+    "dup": 0,
+    "precisao": 0.94,
+    "cobertura": 0.36
+   },
+   "0.3": {
+    "tp": 9,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.21
+   }
+  },
+  "stop sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 25,
+    "fp": 3,
+    "dup": 0,
+    "precisao": 0.89,
+    "cobertura": 0.6
+   },
+   "0.1": {
+    "tp": 14,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.33
+   },
+   "0.15": {
+    "tp": 11,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.26
+   },
+   "0.2": {
+    "tp": 10,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.24
+   },
+   "0.3": {
+    "tp": 7,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.17
+   }
+  },
+  "road sign": {
+   "grupo": "sinal",
+   "0.05": {
+    "tp": 28,
+    "fp": 8,
+    "dup": 2,
+    "precisao": 0.74,
+    "cobertura": 0.67
+   },
+   "0.1": {
+    "tp": 16,
+    "fp": 4,
+    "dup": 1,
+    "precisao": 0.76,
+    "cobertura": 0.38
+   },
+   "0.15": {
+    "tp": 14,
+    "fp": 3,
+    "dup": 1,
+    "precisao": 0.78,
+    "cobertura": 0.33
+   },
+   "0.2": {
+    "tp": 12,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.29
+   },
+   "0.3": {
+    "tp": 4,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.1
+   }
+  },
+  "street lamp": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 61,
+    "fp": 42,
+    "dup": 2,
+    "precisao": 0.58,
+    "cobertura": 0.92
+   },
+   "0.1": {
+    "tp": 53,
+    "fp": 24,
+    "dup": 2,
+    "precisao": 0.67,
+    "cobertura": 0.8
+   },
+   "0.15": {
+    "tp": 44,
+    "fp": 14,
+    "dup": 0,
+    "precisao": 0.76,
+    "cobertura": 0.67
+   },
+   "0.2": {
+    "tp": 40,
+    "fp": 10,
+    "dup": 0,
+    "precisao": 0.8,
+    "cobertura": 0.61
+   },
+   "0.3": {
+    "tp": 37,
+    "fp": 7,
+    "dup": 0,
+    "precisao": 0.84,
+    "cobertura": 0.56
+   }
+  },
+  "lamp post": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 49,
+    "fp": 18,
+    "dup": 4,
+    "precisao": 0.69,
+    "cobertura": 0.74
+   },
+   "0.1": {
+    "tp": 39,
+    "fp": 8,
+    "dup": 2,
+    "precisao": 0.8,
+    "cobertura": 0.59
+   },
+   "0.15": {
+    "tp": 33,
+    "fp": 6,
+    "dup": 0,
+    "precisao": 0.85,
+    "cobertura": 0.5
+   },
+   "0.2": {
+    "tp": 28,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.93,
+    "cobertura": 0.42
+   },
+   "0.3": {
+    "tp": 24,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.92,
+    "cobertura": 0.36
+   }
+  },
+  "street light": {
+   "grupo": "candeeiro",
+   "0.05": {
+    "tp": 65,
+    "fp": 65,
+    "dup": 4,
+    "precisao": 0.49,
+    "cobertura": 0.98
+   },
+   "0.1": {
+    "tp": 56,
+    "fp": 38,
+    "dup": 4,
+    "precisao": 0.57,
+    "cobertura": 0.85
+   },
+   "0.15": {
+    "tp": 50,
+    "fp": 27,
+    "dup": 0,
+    "precisao": 0.65,
+    "cobertura": 0.76
+   },
+   "0.2": {
+    "tp": 45,
+    "fp": 20,
+    "dup": 0,
+    "precisao": 0.69,
+    "cobertura": 0.68
+   },
+   "0.3": {
+    "tp": 39,
+    "fp": 9,
+    "dup": 0,
+    "precisao": 0.81,
+    "cobertura": 0.59
+   }
+  },
+  "recycling container": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 2,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.5,
+    "cobertura": 0.33
+   },
+   "0.1": {
+    "tp": 1,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.17
+   },
+   "0.15": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0,
+    "precisao": null,
+    "cobertura": 0.0
+   },
+   "0.2": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0,
+    "precisao": null,
+    "cobertura": 0.0
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0,
+    "precisao": null,
+    "cobertura": 0.0
+   }
+  },
+  "waste container": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 2,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.5,
+    "cobertura": 0.33
+   },
+   "0.1": {
+    "tp": 2,
+    "fp": 1,
+    "dup": 0,
+    "precisao": 0.67,
+    "cobertura": 0.33
+   },
+   "0.15": {
+    "tp": 1,
+    "fp": 1,
+    "dup": 0,
+    "precisao": 0.5,
+    "cobertura": 0.17
+   },
+   "0.2": {
+    "tp": 1,
+    "fp": 0,
+    "dup": 0,
+    "precisao": 1.0,
+    "cobertura": 0.17
+   },
+   "0.3": {
+    "tp": 0,
+    "fp": 0,
+    "dup": 0,
+    "precisao": null,
+    "cobertura": 0.0
+   }
+  },
+  "garbage bin": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 3,
+    "fp": 10,
+    "dup": 0,
+    "precisao": 0.23,
+    "cobertura": 0.5
+   },
+   "0.1": {
+    "tp": 2,
+    "fp": 5,
+    "dup": 0,
+    "precisao": 0.29,
+    "cobertura": 0.33
+   },
+   "0.15": {
+    "tp": 2,
+    "fp": 2,
+    "dup": 0,
+    "precisao": 0.5,
+    "cobertura": 0.33
+   },
+   "0.2": {
+    "tp": 2,
+    "fp": 1,
+    "dup": 0,
+    "precisao": 0.67,
+    "cobertura": 0.33
+   },
+   "0.3": {
+    "tp": 2,
+    "fp": 1,
+    "dup": 0,
+    "precisao": 0.67,
+    "cobertura": 0.33
+   }
+  },
+  "underground waste bin": {
+   "grupo": "contentor",
+   "0.05": {
+    "tp": 6,
+    "fp": 24,
+    "dup": 2,
+    "precisao": 0.19,
+    "cobertura": 1.0
+   },
+   "0.1": {
+    "tp": 3,
+    "fp": 14,
+    "dup": 1,
+    "precisao": 0.17,
+    "cobertura": 0.5
+   },
+   "0.15": {
+    "tp": 2,
+    "fp": 12,
+    "dup": 1,
+    "precisao": 0.13,
+    "cobertura": 0.33
+   },
+   "0.2": {
+    "tp": 2,
+    "fp": 8,
+    "dup": 1,
+    "precisao": 0.18,
+    "cobertura": 0.33
+   },
+   "0.3": {
+    "tp": 2,
+    "fp": 6,
+    "dup": 0,
+    "precisao": 0.25,
+    "cobertura": 0.33
+   }
+  }
+ },
+ "segundos_por_imagem": 0.747
+}

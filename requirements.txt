@@ -1,0 +1,12 @@
+# CPU: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+requests>=2.28
+PyYAML>=6.0
+numpy
+opencv-python-headless>=4.8
+ultralytics>=8.3
+py360convert
+pyproj
+gpxpy
+av
+Pillow
+shapely
