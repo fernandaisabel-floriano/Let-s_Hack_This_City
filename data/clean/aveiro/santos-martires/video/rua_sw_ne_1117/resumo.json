@@ -1,0 +1,62 @@
+{
+  "municipio": "aveiro",
+  "zona": "santos-martires",
+  "fonte": "video_proprio",
+  "sequencia": "rua_sw_ne_1117",
+  "video": "video_1117.mp4",
+  "gpx": "20261117-161405.gpx",
+  "executado_em": "2026-11-18T14:41:47+00:00",
+  "duracao_s": 44.4,
+  "inicio_video": "2026-11-17T16:14:05+00:00",
+  "inicio_fonte": "--inicio",
+  "offset_s": 5.03,
+  "gpx_inicio": "2026-11-17T16:14:05+00:00",
+  "gpx_fim": "2026-11-17T16:16:23+00:00",
+  "gpx_pontos": 137,
+  "gpx_tempo_parado_s": 18.0,
+  "fps": 29.968,
+  "passo_m": 2.0,
+  "frames_lidos": 3628,
+  "fora_do_gpx": 0,
+  "extraidos": 74,
+  "existentes": 0,
+  "sem_heading": 0,
+  "imagens": 74,
+  "distancia_percorrida_m": 146.0,
+  "espacamento_m": {
+    "medio": 2.01,
+    "min": 1.95,
+    "max": 2.72
+  },
+  "heading_fonte": {
+    "movimento": 74
+  },
+  "coord_fonte": {
+    "gpx": 74
+  },
+  "desfoque_total": {
+    "rostos": 4,
+    "matriculas": 37,
+    "cabecas": 49,
+    "imagens_com_desfoque": 54
+  },
+  "problemas": {
+    "frames_tremidos": {
+      "limiar_nitidez": 60.0,
+      "n": 0,
+      "frames": []
+    },
+    "gps_saltos": [],
+    "gps_paragens_s": [
+      [
+        0.0,
+        11.0
+      ],
+      [
+        131.0,
+        138.0
+      ]
+    ],
+    "nitidez_mediana": 435.6
+  }
+}

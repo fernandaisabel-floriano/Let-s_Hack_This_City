@@ -1,0 +1,2793 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587850931909,
+     40.637596109891
+    ]
+   },
+   "properties": {
+    "id": "325387565826990",
+    "image_id": "325387565826990",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 30.470955314248,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:14.903000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/325387565826990.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=325387565826990",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587659936263,
+     40.637618095221
+    ]
+   },
+   "properties": {
+    "id": "358223035931413",
+    "image_id": "358223035931413",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 28.56773937238,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:17.869000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/358223035931413.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=358223035931413",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587441908598,
+     40.637647841966
+    ]
+   },
+   "properties": {
+    "id": "844120776190531",
+    "image_id": "844120776190531",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 27.177119668372,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:21.072000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/844120776190531.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=844120776190531",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587298209237,
+     40.637671221925
+    ]
+   },
+   "properties": {
+    "id": "140402778072748",
+    "image_id": "140402778072748",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 30.082289071745,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:23.406000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/140402778072748.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=140402778072748",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587190150927,
+     40.637689963611
+    ]
+   },
+   "properties": {
+    "id": "357199595741657",
+    "image_id": "357199595741657",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 30.081064653871,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:25.159000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/357199595741657.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=357199595741657",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586992614909,
+     40.6377250538
+    ]
+   },
+   "properties": {
+    "id": "176303467780098",
+    "image_id": "176303467780098",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 24.241489874111,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:28.074000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/176303467780098.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=176303467780098",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586864102514,
+     40.637765628389
+    ]
+   },
+   "properties": {
+    "id": "541325036871456",
+    "image_id": "541325036871456",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 0.30825158973153,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:31.525000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/541325036871456.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=541325036871456",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586909769295,
+     40.637806562492
+    ]
+   },
+   "properties": {
+    "id": "161620725985969",
+    "image_id": "161620725985969",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 343.74356501985,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:35.026000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/161620725985969.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=161620725985969",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587064037294,
+     40.637858485655
+    ]
+   },
+   "properties": {
+    "id": "127103002827974",
+    "image_id": "127103002827974",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 343.02766010199,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:38.734000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/127103002827974.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=127103002827974",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587325384389,
+     40.637900596003
+    ]
+   },
+   "properties": {
+    "id": "4301765876512327",
+    "image_id": "4301765876512327",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 321.12827405736,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:42.361000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/4301765876512327.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=4301765876512327",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587861084676,
+     40.637923849159
+    ]
+   },
+   "properties": {
+    "id": "491355092121556",
+    "image_id": "491355092121556",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 316.34536444773,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:46.079000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/491355092121556.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=491355092121556",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588355479564,
+     40.637948081902
+    ]
+   },
+   "properties": {
+    "id": "345941120216633",
+    "image_id": "345941120216633",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 319.3181813536,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:49.848000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/345941120216633.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=345941120216633",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588853495156,
+     40.637977628497
+    ]
+   },
+   "properties": {
+    "id": "332103931769021",
+    "image_id": "332103931769021",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 316.98317081185,
+    "heading_fonte": "computed",
+    "captured_at": "2021-05-17T15:08:54.201000+00:00",
+    "is_pano": false,
+    "fov_deg": 68.38,
+    "focal_norm": 0.736049,
+    "sequence": "0varwr8j8gxwzsqf9hwv9v",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.736049,
+     0.025492,
+     -0.028482
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/332103931769021.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=332103931769021",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587606857326,
+     40.637947386137
+    ]
+   },
+   "properties": {
+    "id": "909391203345659",
+    "image_id": "909391203345659",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 134.68796171545,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:14.221000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/909391203345659.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=909391203345659",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587018485489,
+     40.637907098954
+    ]
+   },
+   "properties": {
+    "id": "549710842916356",
+    "image_id": "549710842916356",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.02125503024,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:16.126000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/549710842916356.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=549710842916356",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585808178616,
+     40.637816658806
+    ]
+   },
+   "properties": {
+    "id": "807789379917576",
+    "image_id": "807789379917576",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 107.92247721482,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:19.128000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/807789379917576.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=807789379917576",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585150036073,
+     40.637799333757
+    ]
+   },
+   "properties": {
+    "id": "221695656639355",
+    "image_id": "221695656639355",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 104.38896121712,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:20.217000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/221695656639355.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=221695656639355",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584647374918,
+     40.637791405391
+    ]
+   },
+   "properties": {
+    "id": "464745681158829",
+    "image_id": "464745681158829",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 104.86899079212,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:21.023000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/464745681158829.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=464745681158829",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583986000108,
+     40.637779175688
+    ]
+   },
+   "properties": {
+    "id": "251892116797241",
+    "image_id": "251892116797241",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 107.43319423584,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:22.042000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/251892116797241.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=251892116797241",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583360751937,
+     40.637762392313
+    ]
+   },
+   "properties": {
+    "id": "1454909068222766",
+    "image_id": "1454909068222766",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 113.24447618107,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:23.024000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/1454909068222766.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1454909068222766",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582714897489,
+     40.637740018113
+    ]
+   },
+   "properties": {
+    "id": "274401554196891",
+    "image_id": "274401554196891",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 117.57246908414,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:24.058000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/274401554196891.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=274401554196891",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582507405745,
+     40.637731609668
+    ]
+   },
+   "properties": {
+    "id": "832553740780603",
+    "image_id": "832553740780603",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 119.83960133559,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:24.376000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/832553740780603.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=832553740780603",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582073728357,
+     40.637712664858
+    ]
+   },
+   "properties": {
+    "id": "627874648178072",
+    "image_id": "627874648178072",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 120.88257617647,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:25.041000+00:00",
+    "is_pano": false,
+    "fov_deg": 71.09,
+    "focal_norm": 0.699841,
+    "sequence": "7PSuxpnOXVKBfsmIjNElCo",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.699841,
+     0.01211,
+     -0.039537
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/627874648178072.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=627874648178072",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6578308198039,
+     40.639207434397
+    ]
+   },
+   "properties": {
+    "id": "1115955858888401",
+    "image_id": "1115955858888401",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 133.99436584983,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:38:37+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/1115955858888401.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1115955858888401",
+    "rostos": 1,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6577391400452,
+     40.639143551477
+    ]
+   },
+   "properties": {
+    "id": "179684627401981",
+    "image_id": "179684627401981",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 130.87161187899,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:01+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/179684627401981.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=179684627401981",
+    "rostos": 1,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6576967027549,
+     40.63911562326
+    ]
+   },
+   "properties": {
+    "id": "1346415209085203",
+    "image_id": "1346415209085203",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 130.41569193696,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:04+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/1346415209085203.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1346415209085203",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6576707101069,
+     40.639099027932
+    ]
+   },
+   "properties": {
+    "id": "139830181467436",
+    "image_id": "139830181467436",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 130.11273497665,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:05+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/139830181467436.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=139830181467436",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6576225436161,
+     40.639067478751
+    ]
+   },
+   "properties": {
+    "id": "556053389113045",
+    "image_id": "556053389113045",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 129.49984026471,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:06+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/556053389113045.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=556053389113045",
+    "rostos": 1,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6575787683173,
+     40.639039399313
+    ]
+   },
+   "properties": {
+    "id": "1924321491055960",
+    "image_id": "1924321491055960",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.98729620748,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:08+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/1924321491055960.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1924321491055960",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6574624807013,
+     40.638967055303
+    ]
+   },
+   "properties": {
+    "id": "759446278037143",
+    "image_id": "759446278037143",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.42823199068,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:11+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/759446278037143.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=759446278037143",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6574168944836,
+     40.638938633069
+    ]
+   },
+   "properties": {
+    "id": "314768113426345",
+    "image_id": "314768113426345",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.41590398613,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:12+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/314768113426345.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=314768113426345",
+    "rostos": 1,
+    "matriculas": 0,
+    "cabecas": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573729891989,
+     40.638911374654
+    ]
+   },
+   "properties": {
+    "id": "1428507540881609",
+    "image_id": "1428507540881609",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.75045741296,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:13+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/1428507540881609.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1428507540881609",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657332426333,
+     40.638885842696
+    ]
+   },
+   "properties": {
+    "id": "333571651607552",
+    "image_id": "333571651607552",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.75607946673,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:15+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/333571651607552.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=333571651607552",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573127778923,
+     40.638873694991
+    ]
+   },
+   "properties": {
+    "id": "4223581927673228",
+    "image_id": "4223581927673228",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 128.65303626426,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:17+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/4223581927673228.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=4223581927673228",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572879458948,
+     40.638785832195
+    ]
+   },
+   "properties": {
+    "id": "274490701039707",
+    "image_id": "274490701039707",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 134.27036038238,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:21+00:00",
+    "is_pano": false,
+    "fov_deg": 55.55,
+    "focal_norm": 0.94924804842006,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.94924804842006,
+     0.053717582629238,
+     -0.088252044367882
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/274490701039707.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=274490701039707",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572816803563,
+     40.63875649418
+    ]
+   },
+   "properties": {
+    "id": "305249601261906",
+    "image_id": "305249601261906",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 207.84558609839,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:22+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/305249601261906.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=305249601261906",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573461543498,
+     40.638699268239
+    ]
+   },
+   "properties": {
+    "id": "313424997017820",
+    "image_id": "313424997017820",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 222.9584131361,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:24+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/313424997017820.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=313424997017820",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6575003695677,
+     40.638579202928
+    ]
+   },
+   "properties": {
+    "id": "378453726848214",
+    "image_id": "378453726848214",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 223.90832219919,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:26+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/378453726848214.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=378453726848214",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6576454241453,
+     40.638467432209
+    ]
+   },
+   "properties": {
+    "id": "512376593282609",
+    "image_id": "512376593282609",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 224.47934962647,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:28+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/512376593282609.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=512376593282609",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6577334913132,
+     40.638402277547
+    ]
+   },
+   "properties": {
+    "id": "396281794755874",
+    "image_id": "396281794755874",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 224.99456043465,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:29+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/396281794755874.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=396281794755874",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6578599757498,
+     40.63830852969
+    ]
+   },
+   "properties": {
+    "id": "1362535060784292",
+    "image_id": "1362535060784292",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 225.76058042541,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:30+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/1362535060784292.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1362535060784292",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6579448518706,
+     40.638247866612
+    ]
+   },
+   "properties": {
+    "id": "948680345953651",
+    "image_id": "948680345953651",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 226.6967182734,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:32+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/948680345953651.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=948680345953651",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581119294039,
+     40.638132184896
+    ]
+   },
+   "properties": {
+    "id": "330531765257647",
+    "image_id": "330531765257647",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 226.90256269884,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:34+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/330531765257647.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=330531765257647",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582302618038,
+     40.638051725033
+    ]
+   },
+   "properties": {
+    "id": "256905882882652",
+    "image_id": "256905882882652",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 227.28901011782,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:35+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/256905882882652.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=256905882882652",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583511930635,
+     40.637967528145
+    ]
+   },
+   "properties": {
+    "id": "262929075567708",
+    "image_id": "262929075567708",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 226.37338879152,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:37+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/262929075567708.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=262929075567708",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583891598948,
+     40.637940685635
+    ]
+   },
+   "properties": {
+    "id": "796403697687751",
+    "image_id": "796403697687751",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 226.29005388681,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:38+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/796403697687751.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=796403697687751",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584386780316,
+     40.637901009554
+    ]
+   },
+   "properties": {
+    "id": "942301526622581",
+    "image_id": "942301526622581",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 217.54932988634,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:41+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/942301526622581.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=942301526622581",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584414274047,
+     40.637897204837
+    ]
+   },
+   "properties": {
+    "id": "756290478377054",
+    "image_id": "756290478377054",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 215.37480720598,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:44+00:00",
+    "is_pano": false,
+    "fov_deg": 51.39,
+    "focal_norm": 1.0392124933517,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0392124933517,
+     0.054116004331484,
+     -0.088118412417345
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/756290478377054.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=756290478377054",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584838098371,
+     40.637819837963
+    ]
+   },
+   "properties": {
+    "id": "2869257779989123",
+    "image_id": "2869257779989123",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 161.57714708774,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:49+00:00",
+    "is_pano": false,
+    "fov_deg": 56.7,
+    "focal_norm": 0.92664566437635,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.92664566437635,
+     0.053976182902239,
+     -0.088044971902007
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/2869257779989123.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=2869257779989123",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584311273774,
+     40.637767835546
+    ]
+   },
+   "properties": {
+    "id": "885588182171496",
+    "image_id": "885588182171496",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 134.88682344735,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:50+00:00",
+    "is_pano": false,
+    "fov_deg": 56.7,
+    "focal_norm": 0.92664566437635,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.92664566437635,
+     0.053976182902239,
+     -0.088044971902007
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/885588182171496.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=885588182171496",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583684158008,
+     40.637733082287
+    ]
+   },
+   "properties": {
+    "id": "151050097036700",
+    "image_id": "151050097036700",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 121.50833576768,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:51+00:00",
+    "is_pano": false,
+    "fov_deg": 52.76,
+    "focal_norm": 1.0081364050175,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0081364050175,
+     0.053695785157982,
+     -0.088048815501008
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/151050097036700.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=151050097036700",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582252155235,
+     40.637672349034
+    ]
+   },
+   "properties": {
+    "id": "2299135056887122",
+    "image_id": "2299135056887122",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 118.69354547458,
+    "heading_fonte": "computed",
+    "captured_at": "2019-08-09T15:39:53+00:00",
+    "is_pano": false,
+    "fov_deg": 52.76,
+    "focal_norm": 1.0081364050175,
+    "sequence": "9Csb93LfHy5g2b8DiEHwJw",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     1.0081364050175,
+     0.053695785157982,
+     -0.088048815501008
+    ],
+    "width": 2048,
+    "height": 1536,
+    "ficheiro": "images/2299135056887122.jpg",
+    "autor": "msevilla00",
+    "autor_id": "105103945062696",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=2299135056887122",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587012742758,
+     40.637925032111
+    ]
+   },
+   "properties": {
+    "id": "565606381092155",
+    "image_id": "565606381092155",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 89.519079485504,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:21+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/565606381092155.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=565606381092155",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587040025417,
+     40.637925438679
+    ]
+   },
+   "properties": {
+    "id": "861102281195934",
+    "image_id": "861102281195934",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 87.847726500094,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:21+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/861102281195934.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=861102281195934",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586968133787,
+     40.637924798667
+    ]
+   },
+   "properties": {
+    "id": "1401895673523017",
+    "image_id": "1401895673523017",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 93.087334552814,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:22+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/1401895673523017.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1401895673523017",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586990575689,
+     40.637925072883
+    ]
+   },
+   "properties": {
+    "id": "847954139411909",
+    "image_id": "847954139411909",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 88.987712718316,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:22+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/847954139411909.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=847954139411909",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586944404094,
+     40.637924866682
+    ]
+   },
+   "properties": {
+    "id": "1194235824337950",
+    "image_id": "1194235824337950",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 95.659131480345,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:23+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/1194235824337950.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1194235824337950",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586920116663,
+     40.637924788596
+    ]
+   },
+   "properties": {
+    "id": "526295568403021",
+    "image_id": "526295568403021",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 89.211666994148,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:23+00:00",
+    "is_pano": false,
+    "fov_deg": 57.19,
+    "focal_norm": 0.91726732888765,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.91726732888765,
+     -0.0011403651177003,
+     -0.00031750264435639
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/526295568403021.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=526295568403021",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584910991266,
+     40.637819630887
+    ]
+   },
+   "properties": {
+    "id": "2273214606145254",
+    "image_id": "2273214606145254",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 357.49301179139,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:25+00:00",
+    "is_pano": false,
+    "fov_deg": 58.75,
+    "focal_norm": 0.88823876589157,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.88823876589157,
+     9.4730833443819e-07,
+     6.2040953485906e-06
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/2273214606145254.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=2273214606145254",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584911008786,
+     40.637819769109
+    ]
+   },
+   "properties": {
+    "id": "324235699192217",
+    "image_id": "324235699192217",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 0.50698820866074,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:25+00:00",
+    "is_pano": false,
+    "fov_deg": 58.75,
+    "focal_norm": 0.88823876589157,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.88823876589157,
+     9.4730833443819e-07,
+     6.2040953485906e-06
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/324235699192217.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=324235699192217",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583311983624,
+     40.637738006568
+    ]
+   },
+   "properties": {
+    "id": "1117846535368468",
+    "image_id": "1117846535368468",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 112.27856149388,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:27+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/1117846535368468.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1117846535368468",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658357510249,
+     40.637746692558
+    ]
+   },
+   "properties": {
+    "id": "817387765649273",
+    "image_id": "817387765649273",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 109.44108308733,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:27+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/817387765649273.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=817387765649273",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582975821071,
+     40.637728172681
+    ]
+   },
+   "properties": {
+    "id": "393622815295748",
+    "image_id": "393622815295748",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 111.65861267567,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:28+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/393622815295748.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=393622815295748",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658269260802,
+     40.637721586416
+    ]
+   },
+   "properties": {
+    "id": "910982082784724",
+    "image_id": "910982082784724",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 113.10756042834,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:28+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/910982082784724.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=910982082784724",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582220937887,
+     40.637705506828
+    ]
+   },
+   "properties": {
+    "id": "309550724143276",
+    "image_id": "309550724143276",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 110.92839399235,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:29+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/309550724143276.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=309550724143276",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582432328095,
+     40.637712387642
+    ]
+   },
+   "properties": {
+    "id": "332861158210983",
+    "image_id": "332861158210983",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 110.12912145194,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:29+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/332861158210983.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=332861158210983",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581986729547,
+     40.637697463681
+    ]
+   },
+   "properties": {
+    "id": "1202840680156839",
+    "image_id": "1202840680156839",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 110.62137100747,
+    "heading_fonte": "computed",
+    "captured_at": "2020-07-28T21:06:30+00:00",
+    "is_pano": false,
+    "fov_deg": 54.3,
+    "focal_norm": 0.97498980555469,
+    "sequence": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.97498980555469,
+     -0.0024139823023948,
+     -0.001344018777698
+    ],
+    "width": 2048,
+    "height": 1152,
+    "ficheiro": "images/1202840680156839.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=1202840680156839",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588732026844,
+     40.63800415964
+    ]
+   },
+   "properties": {
+    "id": "608010640585505",
+    "image_id": "608010640585505",
+    "view": null,
+    "fonte": "mapillary",
+    "coord_fonte": "computed",
+    "heading": 125.96875044353,
+    "heading_fonte": "computed",
+    "captured_at": "2021-08-28T18:22:12.103000+00:00",
+    "is_pano": false,
+    "fov_deg": 69.95,
+    "focal_norm": 0.714714,
+    "sequence": "yTI8Nu5Zlon6Ki2rHSxwGf",
+    "camera_type": "perspective",
+    "camera_parameters": [
+     0.714714,
+     0.003209,
+     -0.025663
+    ],
+    "width": 2046,
+    "height": 1150,
+    "ficheiro": "images/608010640585505.jpg",
+    "autor": "hedgiept",
+    "autor_id": "106690144902397",
+    "licenca": "CC BY-SA 4.0",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "url_origem": "https://www.mapillary.com/app/?pKey=608010640585505",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+  "municipio": "aveiro",
+  "zona": "santos-martires",
+  "fonte": "mapillary",
+  "bbox": [
+    -8.65901,
+    40.637523,
+    -8.656677,
+    40.639757
+  ],
+  "desde": "2019-01-01",
+  "rua_geojson": "config/ruas/santos-martires-v3.geojson",
+  "buffer_rua_m": 30.0,
+  "incluir_panoramicas": true,
+  "executado_em": "2026-11-17T15:10:59+00:00",
+  "duracao_s": 23.6,
+  "quadrados": 4,
+  "pedidos_api": 8,
+  "subdivisoes": 0,
+  "quadrados_truncados": 0,
+  "tentativas_repetidas": 0,
+  "devolvidas_api": 89,
+  "duplicados_removidos": 0,
+  "excluidas": {
+    "panoramicas": 0,
+    "antes_desde": 0,
+    "sem_coordenadas": 0,
+    "sem_heading": 0,
+    "fora_bbox": 4,
+    "longe_da_rua": 17
+  },
+  "imagens_origem": 68,
+  "imagens_origem_planas": 68,
+  "imagens_origem_panoramicas": 0,
+  "imagens": 68,
+  "sequencias": 5,
+  "autores": {
+    "hedgiept": 39,
+    "msevilla00": 29
+  },
+  "coord_fonte": {
+    "computed": 68
+  },
+  "heading_fonte": {
+    "computed": 68
+  },
+  "camera_type": {
+    "perspective": 68
+  },
+  "captura_de": "2019-08-09T15:38:37+00:00",
+  "captura_ate": "2021-08-28T18:22:25.041000+00:00",
+  "processamento": {
+    "processadas": 15,
+    "existentes": 53,
+    "erro": 0
+  },
+  "desfoque_total": {
+    "rostos": 4,
+    "matriculas": 8,
+    "cabecas": 56,
+    "imagens_com_desfoque": 31
+  },
+  "desfoque_nesta_execucao": {
+    "rostos": 3,
+    "matriculas": 4,
+    "cabecas": 6,
+    "imagens_com_desfoque": 8
+  },
+  "licenca": "CC BY-SA 4.0",
+  "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

@@ -1,0 +1,70 @@
+{
+  "municipio": "aveiro",
+  "zona": "santos-martires",
+  "bbox": [
+    -8.658917,
+    40.637622,
+    -8.656677,
+    40.639154
+  ],
+  "desde": "2023-01-01",
+  "buffer_rua_m": 30.0,
+  "gerado_em": "2026-11-17T13:32:50+00:00",
+  "pedidos_api": 6,
+  "subdivisoes": 0,
+  "quadrados_truncados": 0,
+  "bbox_todas": {
+    "imagens": 72,
+    "planas": 72,
+    "panoramicas": 0,
+    "sequencias": 6,
+    "autores": {
+      "hedgiept": 44,
+      "msevilla00": 27,
+      "waldyrious": 1
+    },
+    "sem_heading": 0,
+    "por_ano": {
+      "2015": {
+        "plana": 1,
+        "panoramica": 0,
+        "sequencias": 1
+      },
+      "2019": {
+        "plana": 27,
+        "panoramica": 0,
+        "sequencias": 1
+      },
+      "2020": {
+        "plana": 20,
+        "panoramica": 0,
+        "sequencias": 1
+      },
+      "2021": {
+        "plana": 24,
+        "panoramica": 0,
+        "sequencias": 3
+      }
+    }
+  },
+  "bbox_desde": {
+    "imagens": 0,
+    "planas": 0,
+    "panoramicas": 0,
+    "sequencias": 0,
+    "autores": {},
+    "sem_heading": 0,
+    "por_ano": {}
+  },
+  "rua_desde": {
+    "imagens": 0,
+    "planas": 0,
+    "panoramicas": 0,
+    "sequencias": 0,
+    "autores": {},
+    "sem_heading": 0,
+    "por_ano": {}
+  },
+  "rua_desde_vistas_planas": 0,
+  "rua_desde_sequencias": []
+}
