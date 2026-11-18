@@ -1,0 +1,1349 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584991,
+     40.6378259
+    ]
+   },
+   "properties": {
+    "id": "sin_0028",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44445.02,
+    "y": 107791.15,
+    "epsg_local": 3763,
+    "confianca": 0.909,
+    "n_vistas": 8,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:14.903000+00:00",
+    "ultima_vista": "2021-08-28T18:22:19.128000+00:00",
+    "imagem": "mapillary/images/176303467780098.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/176303467780098_00078.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582222,
+     40.6377112
+    ]
+   },
+   "properties": {
+    "id": "sin_0032",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44421.67,
+    "y": 107778.28,
+    "epsg_local": 3763,
+    "confianca": 0.923,
+    "n_vistas": 11,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.376000+00:00",
+    "imagem": "mapillary/images/832553740780603.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/832553740780603_00283.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588483,
+     40.6379635
+    ]
+   },
+   "properties": {
+    "id": "sin_0033",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44474.47,
+    "y": 107806.61,
+    "epsg_local": 3763,
+    "confianca": 0.91,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:38.734000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/491355092121556.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/491355092121556_00146.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6590038,
+     40.6380627
+    ]
+   },
+   "properties": {
+    "id": "sin_0035",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44487.56,
+    "y": 107817.7,
+    "epsg_local": 3763,
+    "confianca": 0.936,
+    "n_vistas": 6,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:35.026000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00176.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588477,
+     40.6379854
+    ]
+   },
+   "properties": {
+    "id": "sin_0036",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44474.41,
+    "y": 107809.04,
+    "epsg_local": 3763,
+    "confianca": 0.841,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:49.848000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/608010640585505.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/608010640585505_00538.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6579459,
+     40.6375248
+    ]
+   },
+   "properties": {
+    "id": "sin_0040",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44398.42,
+    "y": 107757.44,
+    "epsg_local": 3763,
+    "confianca": 0.93,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-08-28T18:22:25.041000+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/627874648178072.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/627874648178072_00289.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589462,
+     40.6380234
+    ]
+   },
+   "properties": {
+    "id": "sin_0045",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44482.71,
+    "y": 107813.31,
+    "epsg_local": 3763,
+    "confianca": 0.844,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:35.026000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00177.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585289,
+     40.6378305
+    ]
+   },
+   "properties": {
+    "id": "can_0057",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44447.54,
+    "y": 107791.68,
+    "epsg_local": 3763,
+    "confianca": 0.929,
+    "n_vistas": 12,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:37+00:00",
+    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
+    "imagem": "mapillary/images/549710842916356.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/549710842916356_00214.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588603,
+     40.6379824
+    ]
+   },
+   "properties": {
+    "id": "can_0062",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44475.47,
+    "y": 107808.71,
+    "epsg_local": 3763,
+    "confianca": 0.892,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:31.525000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/608010640585505.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/608010640585505_00544.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588797,
+     40.6379766
+    ]
+   },
+   "properties": {
+    "id": "can_0064",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44477.12,
+    "y": 107808.08,
+    "epsg_local": 3763,
+    "confianca": 0.871,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:35.026000+00:00",
+    "ultima_vista": "2021-05-17T15:08:49.848000+00:00",
+    "imagem": "mapillary/images/345941120216633.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/345941120216633_00165.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589035,
+     40.6380237
+    ]
+   },
+   "properties": {
+    "id": "can_0073",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44479.1,
+    "y": 107813.32,
+    "epsg_local": 3763,
+    "confianca": 0.917,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:42.361000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00179.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582042,
+     40.6376989
+    ]
+   },
+   "properties": {
+    "id": "can_0078",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44420.16,
+    "y": 107776.9,
+    "epsg_local": 3763,
+    "confianca": 0.949,
+    "n_vistas": 8,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.376000+00:00",
+    "imagem": "mapillary/images/832553740780603.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/832553740780603_00286.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581922,
+     40.6376629
+    ]
+   },
+   "properties": {
+    "id": "can_0084",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44419.17,
+    "y": 107772.9,
+    "epsg_local": 3763,
+    "confianca": 0.819,
+    "n_vistas": 4,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2021-08-28T18:22:22.042000+00:00",
+    "imagem": "mapillary/images/464745681158829.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/464745681158829_00246.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588471,
+     40.638004
+    ]
+   },
+   "properties": {
+    "id": "can_0087",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44474.34,
+    "y": 107811.11,
+    "epsg_local": 3763,
+    "confianca": 0.846,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:38.734000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/608010640585505.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/608010640585505_00546.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582242,
+     40.6377156
+    ]
+   },
+   "properties": {
+    "id": "can_0090",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44421.84,
+    "y": 107778.76,
+    "epsg_local": 3763,
+    "confianca": 0.92,
+    "n_vistas": 6,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.376000+00:00",
+    "imagem": "mapillary/images/274401554196891.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/274401554196891_00277.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588959,
+     40.638022
+    ]
+   },
+   "properties": {
+    "id": "can_0094",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44478.46,
+    "y": 107813.13,
+    "epsg_local": 3763,
+    "confianca": 0.825,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:46.079000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00180.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581193,
+     40.6376592
+    ]
+   },
+   "properties": {
+    "id": "can_0095",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44413.0,
+    "y": 107772.45,
+    "epsg_local": 3763,
+    "confianca": 0.948,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00485.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589699,
+     40.6379884
+    ]
+   },
+   "properties": {
+    "id": "can_0099",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44484.74,
+    "y": 107809.44,
+    "epsg_local": 3763,
+    "confianca": 0.617,
+    "n_vistas": 4,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:35.026000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00185.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589113,
+     40.6379646
+    ]
+   },
+   "properties": {
+    "id": "can_0101",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44479.8,
+    "y": 107806.76,
+    "epsg_local": 3763,
+    "confianca": 0.774,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:35.026000+00:00",
+    "ultima_vista": "2021-05-17T15:08:49.848000+00:00",
+    "imagem": "mapillary/images/345941120216633.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/345941120216633_00166.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6588048,
+     40.6379878
+    ]
+   },
+   "properties": {
+    "id": "can_0102",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44470.78,
+    "y": 107809.29,
+    "epsg_local": 3763,
+    "confianca": 0.779,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:42.361000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/491355092121556.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/491355092121556_00148.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581053,
+     40.6376955
+    ]
+   },
+   "properties": {
+    "id": "can_0104",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44411.8,
+    "y": 107776.47,
+    "epsg_local": 3763,
+    "confianca": 0.562,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2020-07-28T21:06:29+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/309550724143276.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/309550724143276_00529.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585727,
+     40.6379187
+    ]
+   },
+   "properties": {
+    "id": "can_0107",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44451.19,
+    "y": 107801.49,
+    "epsg_local": 3763,
+    "confianca": 0.906,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2020-07-28T21:06:23+00:00",
+    "ultima_vista": "2021-05-17T15:08:31.525000+00:00",
+    "imagem": "mapillary/images/526295568403021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/526295568403021_00515.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6590632,
+     40.6381588
+    ]
+   },
+   "properties": {
+    "id": "can_0109",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44492.52,
+    "y": 107828.41,
+    "epsg_local": 3763,
+    "confianca": 0.909,
+    "n_vistas": 2,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:49.848000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/345941120216633.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/345941120216633_00162.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580286,
+     40.6375495
+    ]
+   },
+   "properties": {
+    "id": "can_0112",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44405.4,
+    "y": 107760.22,
+    "epsg_local": 3763,
+    "confianca": 0.929,
+    "n_vistas": 2,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2019-08-09T15:39:53+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00486.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6579855,
+     40.6377011
+    ]
+   },
+   "properties": {
+    "id": "can_0113",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44401.66,
+    "y": 107777.03,
+    "epsg_local": 3763,
+    "confianca": 0.913,
+    "n_vistas": 2,
+    "estado": "auto",
+    "primeira_vista": "2021-08-28T18:22:23.024000+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.058000+00:00",
+    "imagem": "mapillary/images/274401554196891.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/274401554196891_00278.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580065,
+     40.6375329
+    ]
+   },
+   "properties": {
+    "id": "can_0114",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44403.54,
+    "y": 107758.37,
+    "epsg_local": 3763,
+    "confianca": 0.922,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:53+00:00",
+    "ultima_vista": "2019-08-09T15:39:53+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00487.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582104,
+     40.6376396
+    ]
+   },
+   "properties": {
+    "id": "can_0115",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44420.72,
+    "y": 107770.32,
+    "epsg_local": 3763,
+    "confianca": 0.789,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:50+00:00",
+    "ultima_vista": "2019-08-09T15:39:51+00:00",
+    "imagem": "mapillary/images/885588182171496.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/885588182171496_00467.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6590614,
+     40.6381438
+    ]
+   },
+   "properties": {
+    "id": "can_0121",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44492.38,
+    "y": 107826.74,
+    "epsg_local": 3763,
+    "confianca": 0.785,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:49.848000+00:00",
+    "ultima_vista": "2021-05-17T15:08:49.848000+00:00",
+    "imagem": "mapillary/images/345941120216633.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/345941120216633_00167.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658043,
+     40.6375746
+    ]
+   },
+   "properties": {
+    "id": "can_0124",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44406.61,
+    "y": 107763.02,
+    "epsg_local": 3763,
+    "confianca": 0.625,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:53+00:00",
+    "ultima_vista": "2021-08-28T18:22:22.042000+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00489.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658321,
+     40.6377442
+    ]
+   },
+   "properties": {
+    "id": "con_0143",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44430.01,
+    "y": 107781.99,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2020-07-28T21:06:23+00:00",
+    "ultima_vista": "2021-08-28T18:22:23.024000+00:00",
+    "imagem": "mapillary/images/464745681158829.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/464745681158829_00249.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582941,
+     40.6377394
+    ]
+   },
+   "properties": {
+    "id": "con_0144",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44427.74,
+    "y": 107781.44,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2020-07-28T21:06:27+00:00",
+    "ultima_vista": "2021-08-28T18:22:23.024000+00:00",
+    "imagem": "mapillary/images/1117846535368468.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/1117846535368468_00522.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658191,
+     40.6376902
+    ]
+   },
+   "properties": {
+    "id": "con_0146",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44419.05,
+    "y": 107775.93,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 4,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.058000+00:00",
+    "imagem": "mapillary/images/151050097036700.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/151050097036700_00480.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581381,
+     40.6376611
+    ]
+   },
+   "properties": {
+    "id": "con_0148",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44414.59,
+    "y": 107772.67,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.058000+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00491.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582894,
+     40.6377563
+    ]
+   },
+   "properties": {
+    "id": "con_0153",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44427.33,
+    "y": 107783.32,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2021-08-28T18:22:16.126000+00:00",
+    "ultima_vista": "2021-08-28T18:22:23.024000+00:00",
+    "imagem": "mapillary/images/251892116797241.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/251892116797241_00258.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581862,
+     40.6377354
+    ]
+   },
+   "properties": {
+    "id": "con_0159",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44418.61,
+    "y": 107780.94,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2021-08-28T18:22:24.376000+00:00",
+    "imagem": "mapillary/images/1117846535368468.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/1117846535368468_00521.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658171,
+     40.637708
+    ]
+   },
+   "properties": {
+    "id": "con_0160",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44417.34,
+    "y": 107777.89,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 4,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/910982082784724.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/910982082784724_00528.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6579638,
+     40.6376954
+    ]
+   },
+   "properties": {
+    "id": "con_0171",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44399.83,
+    "y": 107776.39,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-08-28T18:22:25.041000+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/627874648178072.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/627874648178072_00295.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6587685,
+     40.6377024
+    ]
+   },
+   "properties": {
+    "id": "con_0176",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44467.89,
+    "y": 107777.57,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:17.869000+00:00",
+    "ultima_vista": "2021-05-17T15:08:17.869000+00:00",
+    "imagem": "mapillary/images/358223035931413.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/358223035931413_00033.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585727,
+     40.6378929
+    ]
+   },
+   "properties": {
+    "id": "con_0177",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44451.2,
+    "y": 107798.63,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2020-07-28T21:06:21+00:00",
+    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
+    "imagem": "mapillary/images/861102281195934.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/861102281195934_00500.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580603,
+     40.6376421
+    ]
+   },
+   "properties": {
+    "id": "con_0180",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44408.02,
+    "y": 107770.52,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:53+00:00",
+    "ultima_vista": "2019-08-09T15:39:53+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00492.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580305,
+     40.6375854
+    ]
+   },
+   "properties": {
+    "id": "con_0183",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44405.54,
+    "y": 107764.21,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:53+00:00",
+    "ultima_vista": "2019-08-09T15:39:53+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00493.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582293,
+     40.6376473
+    ]
+   },
+   "properties": {
+    "id": "con_0185",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44422.32,
+    "y": 107771.18,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:51+00:00",
+    "ultima_vista": "2019-08-09T15:39:51+00:00",
+    "imagem": "mapillary/images/151050097036700.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/151050097036700_00483.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580824,
+     40.6376497
+    ]
+   },
+   "properties": {
+    "id": "con_0186",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44409.89,
+    "y": 107771.38,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:53+00:00",
+    "ultima_vista": "2019-08-09T15:39:53+00:00",
+    "imagem": "mapillary/images/2299135056887122.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/2299135056887122_00494.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6579536,
+     40.6376904
+    ]
+   },
+   "properties": {
+    "id": "con_0189",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44398.97,
+    "y": 107775.83,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-08-28T18:22:25.041000+00:00",
+    "ultima_vista": "2021-08-28T18:22:25.041000+00:00",
+    "imagem": "mapillary/images/627874648178072.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/627874648178072_00296.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589317,
+     40.6379899
+    ]
+   },
+   "properties": {
+    "id": "con_0190",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44481.51,
+    "y": 107809.58,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:54.201000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00190.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6580523,
+     40.6377391
+    ]
+   },
+   "properties": {
+    "id": "con_0191",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44407.28,
+    "y": 107781.29,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-08-28T18:22:23.024000+00:00",
+    "ultima_vista": "2021-08-28T18:22:23.024000+00:00",
+    "imagem": "mapillary/images/1454909068222766.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/1454909068222766_00273.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589335,
+     40.6379888
+    ]
+   },
+   "properties": {
+    "id": "con_0193",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44481.66,
+    "y": 107809.46,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:54.201000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00191.jpg",
+    "espalhamento_m": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6589885,
+     40.6380147
+    ]
+   },
+   "properties": {
+    "id": "con_0195",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44486.3,
+    "y": 107812.37,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2021-05-17T15:08:54.201000+00:00",
+    "ultima_vista": "2021-05-17T15:08:54.201000+00:00",
+    "imagem": "mapillary/images/332103931769021.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/332103931769021_00192.jpg",
+    "espalhamento_m": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,2743 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65841864,
+     40.63797
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000000",
+    "image_id": "rua_sw_ne_1117_000000",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 78.6412636875363,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:10.030000+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000000.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=0.000",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658386390846134,
+     40.63797103436784
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000252",
+    "image_id": "rua_sw_ne_1117_000252",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 73.24620053980041,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:18.529722+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000252.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=8.500",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658364104801258,
+     40.63797669394449
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000303",
+    "image_id": "rua_sw_ne_1117_000303",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 69.28216193408115,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:20.229667+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000303.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=10.200",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658342756318289,
+     40.63798458177989
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000348",
+    "image_id": "rua_sw_ne_1117_000348",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 62.27232981495721,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:21.729622+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000348.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=11.700",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65832344045083,
+     40.63799472497602
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000393",
+    "image_id": "rua_sw_ne_1117_000393",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 58.38195675734663,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:23.229578+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000393.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=13.200",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658304292768845,
+     40.63800528280885
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000439",
+    "image_id": "rua_sw_ne_1117_000439",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 55.74216722089663,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:24.762867+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000439.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=14.733",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6582846905726,
+     40.63801555787323
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000488",
+    "image_id": "rua_sw_ne_1117_000488",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 54.51408169195181,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:26.396156+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000488.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=16.366",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658265045040253,
+     40.63802551923621
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000538",
+    "image_id": "rua_sw_ne_1117_000538",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 52.11082055932799,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:28.064433+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000538.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=18.034",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658245390389208,
+     40.638035886137025
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000591",
+    "image_id": "rua_sw_ne_1117_000591",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 48.6073719663769,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:29.831044+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000591.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=19.801",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658228325440096,
+     40.63804827353028
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000645",
+    "image_id": "rua_sw_ne_1117_000645",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 44.630445534972985,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:31.630989+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000645.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=21.601",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658213331020997,
+     40.638062220620135
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000699",
+    "image_id": "rua_sw_ne_1117_000699",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 40.68558878234601,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:33.430933+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000699.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=23.401",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658199484713839,
+     40.638076684919476
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000748",
+    "image_id": "rua_sw_ne_1117_000748",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 38.40437741777616,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:35.064222+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000748.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=25.034",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658185340450068,
+     40.63809136305365
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000794",
+    "image_id": "rua_sw_ne_1117_000794",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 38.19112490470408,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:36.597511+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000794.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=26.568",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658170729672152,
+     40.638105490223055
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000838",
+    "image_id": "rua_sw_ne_1117_000838",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 38.97263856958606,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:38.064122+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000838.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=28.034",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658155073356381,
+     40.63811904113387
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000880",
+    "image_id": "rua_sw_ne_1117_000880",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 39.81067069722316,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:39.464089+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000880.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=29.434",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658139550748144,
+     40.6381326454912
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000921",
+    "image_id": "rua_sw_ne_1117_000921",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 40.142102344474786,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:40.830711+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000921.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=30.801",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65812406889555,
+     40.63814612296162
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_000963",
+    "image_id": "rua_sw_ne_1117_000963",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 39.671026367824915,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:42.230667+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_000963.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=32.201",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658109223805944,
+     40.63816002321339
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001006",
+    "image_id": "rua_sw_ne_1117_001006",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 39.56598979622507,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:43.663955+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001006.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=33.634",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658094802467316,
+     40.638174180205944
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001050",
+    "image_id": "rua_sw_ne_1117_001050",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 40.08876936612165,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:45.130578+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001050.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=35.101",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65807982988547,
+     40.63818821841967
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001097",
+    "image_id": "rua_sw_ne_1117_001097",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 41.998460003445956,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:46.697189+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001097.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=36.667",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658063837948694,
+     40.63820174498104
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001146",
+    "image_id": "rua_sw_ne_1117_001146",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 45.16804706619255,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:48.330478+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001146.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=38.300",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658046816808355,
+     40.63821406674299
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001193",
+    "image_id": "rua_sw_ne_1117_001193",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 48.47401212618636,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:49.897089+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001193.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=39.867",
+    "rostos": 0,
+    "matriculas": 2,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658028121908254,
+     40.63822489112552
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001240",
+    "image_id": "rua_sw_ne_1117_001240",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 51.07009976060166,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:51.463722+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001240.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=41.434",
+    "rostos": 0,
+    "matriculas": 2,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658008754183633,
+     40.638235405262336
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001289",
+    "image_id": "rua_sw_ne_1117_001289",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 52.25570592636664,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:53.097011+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001289.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=43.067",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657989253810344,
+     40.63824600130576
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001337",
+    "image_id": "rua_sw_ne_1117_001337",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 51.63969466873191,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:54.696944+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001337.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=44.667",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657970997851779,
+     40.6382570656439
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001387",
+    "image_id": "rua_sw_ne_1117_001387",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 49.91338049823693,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:56.363567+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001387.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=46.334",
+    "rostos": 1,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657953207037641,
+     40.638269095322116
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001442",
+    "image_id": "rua_sw_ne_1117_001442",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.984621960655645,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:58.196856+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001442.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=48.167",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65793640070916,
+     40.63828170326269
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001495",
+    "image_id": "rua_sw_ne_1117_001495",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.45988687417723,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:14:59.963455+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001495.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=49.933",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657919755552141,
+     40.63829446191485
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001549",
+    "image_id": "rua_sw_ne_1117_001549",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 45.72757257887708,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:01.763400+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001549.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=51.733",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657902476682283,
+     40.6383070899171
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001599",
+    "image_id": "rua_sw_ne_1117_001599",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.22784803573997,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:03.430011+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001599.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=53.400",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657885594815466,
+     40.638319741610616
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001644",
+    "image_id": "rua_sw_ne_1117_001644",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.456983197948965,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:04.929967+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001644.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=54.900",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657868197823804,
+     40.638331777416155
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001687",
+    "image_id": "rua_sw_ne_1117_001687",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 49.08724401174755,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:06.363256+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001687.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=56.333",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657849795050389,
+     40.63834337218225
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001731",
+    "image_id": "rua_sw_ne_1117_001731",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 51.23546375009327,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:07.829878+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001731.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=57.800",
+    "rostos": 0,
+    "matriculas": 2,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65783149417596,
+     40.638354138858325
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001774",
+    "image_id": "rua_sw_ne_1117_001774",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 52.96534187604407,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:09.263167+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001774.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=59.233",
+    "rostos": 1,
+    "matriculas": 1,
+    "cabecas": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657811764484888,
+     40.6383644888704
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001820",
+    "image_id": "rua_sw_ne_1117_001820",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 53.681809204543406,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:10.796456+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001820.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=60.766",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657792078153983,
+     40.63837478341493
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001866",
+    "image_id": "rua_sw_ne_1117_001866",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 53.95514323227069,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:12.329733+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001866.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=62.300",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657773105534348,
+     40.638385430695344
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001910",
+    "image_id": "rua_sw_ne_1117_001910",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 53.154589001616614,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:13.794689+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001910.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=63.765",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65775405884597,
+     40.63839624117193
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001955",
+    "image_id": "rua_sw_ne_1117_001955",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 51.50081353488534,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:15.294644+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001955.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=65.265",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657735737113768,
+     40.63840750784204
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_001999",
+    "image_id": "rua_sw_ne_1117_001999",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 49.85652540380367,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:16.761267+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_001999.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=66.731",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657718212053439,
+     40.638419459685586
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002042",
+    "image_id": "rua_sw_ne_1117_002042",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 48.09994842769473,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:18.194556+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002042.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=68.165",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657700842027367,
+     40.638431467728815
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002086",
+    "image_id": "rua_sw_ne_1117_002086",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.56282775360184,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:19.661167+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002086.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=69.631",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65768380871885,
+     40.63844404855507
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002133",
+    "image_id": "rua_sw_ne_1117_002133",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 45.19007597742539,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:21.227800+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002133.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=71.198",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657667217638958,
+     40.638457026797866
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002180",
+    "image_id": "rua_sw_ne_1117_002180",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 44.096735927081056,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:22.794411+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002180.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=72.764",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657650864622575,
+     40.63847010044702
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002227",
+    "image_id": "rua_sw_ne_1117_002227",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 43.3503311578943,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:24.394367+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002227.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=74.364",
+    "rostos": 1,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657634999655407,
+     40.638483453717896
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002278",
+    "image_id": "rua_sw_ne_1117_002278",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 42.810410271228335,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:26.094311+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002278.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=76.064",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657618685793059,
+     40.6384966673516
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002324",
+    "image_id": "rua_sw_ne_1117_002324",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 41.667606251931204,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:27.627600+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002324.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=77.598",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657602738971988,
+     40.63850991906398
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002370",
+    "image_id": "rua_sw_ne_1117_002370",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 40.980019120300476,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:29.162544+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002370.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=79.133",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657587599622389,
+     40.638523741390216
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002415",
+    "image_id": "rua_sw_ne_1117_002415",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 39.920366535663916,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:30.662511+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002415.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=80.633",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657572735327765,
+     40.63853750578227
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002459",
+    "image_id": "rua_sw_ne_1117_002459",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 39.46232012581493,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:32.129122+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002459.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=82.099",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657557975303252,
+     40.63855190867928
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002506",
+    "image_id": "rua_sw_ne_1117_002506",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 40.49047564191926,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:33.695755+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002506.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=83.666",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65754342076682,
+     40.638565869287035
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002554",
+    "image_id": "rua_sw_ne_1117_002554",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 42.156364837792154,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:35.294022+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002554.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=85.264",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657527347099576,
+     40.63857888366945
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002604",
+    "image_id": "rua_sw_ne_1117_002604",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 44.07085669218194,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:36.960633+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002604.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=86.931",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65750977978274,
+     40.63859092976531
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002656",
+    "image_id": "rua_sw_ne_1117_002656",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 45.866748877028,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:38.693922+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002656.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=88.664",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65749195090244,
+     40.63860313494009
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002705",
+    "image_id": "rua_sw_ne_1117_002705",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.82903696987791,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:40.327200+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002705.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=90.297",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657474257900773,
+     40.63861521545622
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002752",
+    "image_id": "rua_sw_ne_1117_002752",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.87687039337667,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:41.893822+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002752.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=91.864",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657457295317846,
+     40.63862792555939
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002796",
+    "image_id": "rua_sw_ne_1117_002796",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.248029071360826,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:43.360444+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002796.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=93.330",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657440679661011,
+     40.63864028398099
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002837",
+    "image_id": "rua_sw_ne_1117_002837",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 46.943337138039006,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:44.727067+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002837.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=94.697",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657422963071646,
+     40.63865226586971
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002879",
+    "image_id": "rua_sw_ne_1117_002879",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.0479045767393,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:46.127033+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002879.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=96.097",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657405267430923,
+     40.63866413263308
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002921",
+    "image_id": "rua_sw_ne_1117_002921",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.33404420255648,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:47.526978+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002921.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=97.497",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657387850064918,
+     40.638676700554
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_002964",
+    "image_id": "rua_sw_ne_1117_002964",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 47.53832491033302,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:48.960267+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_002964.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=98.930",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657370699630796,
+     40.63868870159322
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003005",
+    "image_id": "rua_sw_ne_1117_003005",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 48.63318004712233,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:50.326911+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003005.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=100.297",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657353222428261,
+     40.638701202571845
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003047",
+    "image_id": "rua_sw_ne_1117_003047",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 51.07073061659852,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:51.726856+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003047.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=101.697",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657335270148925,
+     40.638712629532385
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003090",
+    "image_id": "rua_sw_ne_1117_003090",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 54.35835353129042,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:53.160133+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003090.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=103.130",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657315586260433,
+     40.63872253066309
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003147",
+    "image_id": "rua_sw_ne_1117_003147",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 57.61614418321627,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:55.060078+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003147.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=105.030",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65729408422989,
+     40.638730698600206
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003186",
+    "image_id": "rua_sw_ne_1117_003186",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 60.239646733708106,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:56.360044+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003186.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=106.330",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65727304403347,
+     40.63873875063328
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003228",
+    "image_id": "rua_sw_ne_1117_003228",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 61.49909776492827,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:57.760000+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003228.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=107.730",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657251980460869,
+     40.63874708277969
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003272",
+    "image_id": "rua_sw_ne_1117_003272",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 63.19423689480622,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:15:59.226622+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003272.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=109.197",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657231872570902,
+     40.638756772768176
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003317",
+    "image_id": "rua_sw_ne_1117_003317",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 64.19031815440155,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:00.726578+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003317.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=110.697",
+    "rostos": 1,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572104259024,
+     40.638763561378575
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003380",
+    "image_id": "rua_sw_ne_1117_003380",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 65.20694342632898,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:02.826522+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003380.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=112.797",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657188580927942,
+     40.638770369372494
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003427",
+    "image_id": "rua_sw_ne_1117_003427",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 65.91822510304345,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:04.393133+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003427.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=114.363",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657166478998446,
+     40.63877685039811
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003471",
+    "image_id": "rua_sw_ne_1117_003471",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 65.17268797902729,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:05.859756+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003471.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=115.830",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65714425756462,
+     40.63878421460828
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003513",
+    "image_id": "rua_sw_ne_1117_003513",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 62.42360886013309,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:07.259711+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003513.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=117.230",
+    "rostos": 0,
+    "matriculas": 1,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6571240990286,
+     40.638792842579754
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003552",
+    "image_id": "rua_sw_ne_1117_003552",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 59.36891241900951,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:08.559667+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003552.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=118.530",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657104226644593,
+     40.638803353891376
+    ]
+   },
+   "properties": {
+    "id": "rua_sw_ne_1117_003593",
+    "image_id": "rua_sw_ne_1117_003593",
+    "view": null,
+    "fonte": "video_proprio",
+    "coord_fonte": "gpx",
+    "heading": 55.710027113993874,
+    "heading_fonte": "movimento",
+    "captured_at": "2026-11-17T16:16:09.926300+00:00",
+    "is_pano": false,
+    "fov_deg": 41.55,
+    "focal_norm": 0.74128048425637,
+    "sequence": "rua_sw_ne_1117",
+    "camera_type": "perspective",
+    "camera_parameters": null,
+    "width": 576,
+    "height": 1024,
+    "ficheiro": "images/rua_sw_ne_1117_003593.jpg",
+    "autor": "equipa",
+    "autor_id": "",
+    "licenca": "",
+    "atribuicao": "",
+    "url_origem": "video:video_1117.mp4#t=119.896",
+    "rostos": 0,
+    "matriculas": 0,
+    "cabecas": 0
+   }
+  }
+ ]
+}

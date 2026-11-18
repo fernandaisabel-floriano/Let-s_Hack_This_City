@@ -1,0 +1,42 @@
+{
+ "vias": {
+  "Cais dos Santos Mártires": [
+   {
+    "fonte": "mapillary",
+    "sequencia": "9Csb93LfHy5g2b8DiEHwJw",
+    "data": "2019-08-09",
+    "imagens": 11
+   }
+  ],
+  "Rotunda": [
+   {
+    "fonte": "mapillary",
+    "sequencia": "Z4Sv6n0ydGjWb7fmWEYQa9",
+    "data": "2020-07-28",
+    "imagens": 6
+   },
+   {
+    "fonte": "mapillary",
+    "sequencia": "0varwr8j8gxwzsqf9hwv9v",
+    "data": "2021-05-17",
+    "imagens": 4
+   },
+   {
+    "fonte": "mapillary",
+    "sequencia": "7PSuxpnOXVKBfsmIjNElCo",
+    "data": "2021-08-28",
+    "imagens": 3
+   }
+  ],
+  "Rua dos Santos Mártires": [
+   {
+    "fonte": "mapillary",
+    "sequencia": "9Csb93LfHy5g2b8DiEHwJw",
+    "data": "2019-08-09",
+    "imagens": 13
+   }
+  ]
+ },
+ "total": 37,
+ "recolhidas": 68
+}
