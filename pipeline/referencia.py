@@ -20,7 +20,10 @@ from __future__ import annotations
 import csv
 import json
 import sys
+import pillow_heif
+from PIL import Image
 from pathlib import Path
+
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
@@ -61,10 +64,10 @@ def _dms(v, ref) -> float:
 
 
 def exif_gps(path: Path) -> tuple[float, float] | None:
-    from PIL import Image
+    
     if path.suffix.lower() in (".heic", ".heif"):
         try:
-            import pillow_heif
+           
             pillow_heif.register_heif_opener()
         except ImportError:
             print(f"  {path.name}: HEIC precisa de `pip install pillow-heif` — ignorada")
@@ -129,15 +132,32 @@ def from_geojsonio(path: Path) -> None:
             lon = next((r[k[c]] for c in ("lon", "lng", "long", "longitude", "x") if c in k), None)
             if lat and lon:
                 pts.append({**r, "lat": float(lat), "lon": float(lon)})
+    ignorados = {"guia": 0, "sem_tipo_valido": 0}
+    validos = []
+    for pt in pts:
+        # o guia.geojson (frames, trajeto, polígono) vem misturado na exportação
+        if str(pt.get("guia", "")).lower() in ("true", "1", "sim"):
+            ignorados["guia"] += 1
+            continue
+        if str(pt.get("tipo") or "").strip().lower() not in ("sinal", "candeeiro", "contentor"):
+            ignorados["sem_tipo_valido"] += 1
+            continue
+        validos.append(pt)
+    pts = validos
     for pt in pts:
         r = {c: str(pt.get(c) or "") for c in COLS if c not in ("id", "lat", "lon")}
+        r["tipo"] = r["tipo"].strip().lower()
         r.update(id=next_id(rows), lat=f"{float(pt['lat']):.7f}", lon=f"{float(pt['lon']):.7f}")
         # geojson.io usa "name"/"description" por omissão
         r["descricao_local"] = r["descricao_local"] or str(pt.get("name") or "")
         r["notas"] = r["notas"] or str(pt.get("description") or "")
         rows.append(r)
     save(p, rows)
-    print(f"{len(pts)} pontos acrescentados de {path.name} → {p.relative_to(ROOT)}")
+    print(f"{len(pts)} pontos acrescentados de {path.name} → {p.relative_to(ROOT)}; "
+          f"ignorados: {ignorados['guia']} do guia, {ignorados['sem_tipo_valido']} sem tipo "
+          f"sinal/candeeiro/contentor")
+    if ignorados["sem_tipo_valido"]:
+        print("  Pontos sem tipo não entram — confirme no geojson.io se falta preencher o tipo.")
 
 
 if __name__ == "__main__":

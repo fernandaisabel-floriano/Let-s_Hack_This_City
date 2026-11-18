@@ -1,0 +1,27 @@
+Imagens M###: Mapillary, licença CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+Desfocadas (rostos, matrículas, cabeças) pelo pipeline Ctrl+F Aveiro.
+
+M001_rotunda_40.637690_-8.658719_h030.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M002_rotunda_40.637725_-8.658699_h024.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M003_rotunda_40.637807_-8.658691_h344.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M004_rotunda_40.637858_-8.658706_h343.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M005_rotunda_40.637947_-8.658761_h135.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M006_rotunda_40.637907_-8.658702_h128.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M007_rotunda_40.637817_-8.658581_h108.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M008_cais_40.639207_-8.657831_h134.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M009_cais_40.639144_-8.657739_h131.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M010_cais_40.639116_-8.657697_h130.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M011_cais_40.639099_-8.657671_h130.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M012_cais_40.639067_-8.657623_h129.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M013_cais_40.639039_-8.657579_h129.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M014_cais_40.638967_-8.657462_h128.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M015_cais_40.638939_-8.657417_h128.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M016_cais_40.638911_-8.657373_h129.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M017_cais_40.638886_-8.657332_h129.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M018_cais_40.638874_-8.657313_h129.jpg: © msevilla00 / Mapillary, CC BY-SA 4.0
+M019_rotunda_40.637925_-8.658701_h090.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M020_rotunda_40.637925_-8.658704_h088.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M021_rotunda_40.637925_-8.658697_h093.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M022_rotunda_40.637925_-8.658699_h089.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M023_rotunda_40.637925_-8.658694_h096.jpg: © hedgiept / Mapillary, CC BY-SA 4.0
+M024_rotunda_40.637925_-8.658692_h089.jpg: © hedgiept / Mapillary, CC BY-SA 4.0

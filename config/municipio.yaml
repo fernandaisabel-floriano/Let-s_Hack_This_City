@@ -60,7 +60,8 @@ video:
   nitidez_min: 60             # variância do Laplaciano abaixo disto → frame tremido
   velocidade_max_ms: 8        # GPS: salto entre pontos acima disto → "GPS a saltar"
   heading_offset_deg: 0       # 0 = câmara a apontar para a frente; 90 = lado direito
-  janela_heading_m: 6         # heading = direção do movimento entre ±X/2 m
+  janela_heading_m: 10        # heading = direção do movimento entre ±X/2 m (trajeto suavizado)
+  suavizar_gps_s: 6           # média móvel do GPS (±X/2 s) antes de calcular distância e heading
   velocidade_min_ms: 0.5      # abaixo disto o GPS conta como parado (ruído)
   max_px: 2048                # redimensiona o lado maior
   autor: equipa
@@ -142,9 +143,25 @@ m5:
   dist_min_m: 2
   dist_max_m: 40
 
-# M6 — fusão entre vistas e fontes (pipeline/fuse.py)
+# M5+M6 — juntar por direção (raios) e calcular o ponto (pipeline/fuse.py)
 m6:
-  raio_fusao_m: 8
+  raio_fusao_m: {sinal: 8, candeeiro: 8, contentor: 8}   # vistas únicas (por classe)
+  angulo_min_graus: 10      # triangulação: ângulo mínimo entre raios
+  min_raios: 3              # ponto triangulado: ≥ X raios; com 2, só se bater com a distância estimada...
+  tol_dist_estimada: 0.35   # ...a ± 35 %
+  base_min_m: 2             # distância mínima entre câmaras de um par...
+  base_video_min_m: 8       # ...e entre frames do mesmo vídeo
+  tol_m: 1.0                # raio passa no ponto se a distância ≤ max(tol_m, tol_frac × alcance)
+  tol_frac: 0.05
+  modo_por_fonte: {mapillary: carro, video_proprio: pe}
+  lado_m: 2.0               # a pé/bicicleta: paralela ao trajeto, do lado do objeto
+  margem_lancil_m: 0.5      # de carro: lancil = meia largura da via + margem
+  largura_via_m: 3.0        # por faixa, quando a via OSM tem lanes=*
+  largura_por_highway: {primary: 10, secondary: 8, tertiary: 7, residential: 6, unclassified: 6, living_street: 5, service: 4, pedestrian: 4}
+  edificios_geojson: config/ruas/santos-martires-v3-edificios.geojson
+  calibrar_video: true      # δ heading e τ tempo por vídeo, contra o Mapillary
+  calib_min_elementos: 5    # elementos partilhados com o Mapillary para estimar δ
+  calib_tau_min_elementos: 10   # ...e para estimar também τ (senão τ = 0)
 
 # M9 — exportação (pipeline/export.py)
 m9:
@@ -153,3 +170,4 @@ m9:
 # M10 — avaliação contra a contagem manual (referencia.csv; pipeline/referencia.py)
 m10:
   referencia: data/clean/aveiro/santos-martires/referencia.csv
+  dist_max_m: 8             # encontrado = mesma classe a ≤ X m (um a um), dentro do polígono, sem papeleiras

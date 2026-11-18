@@ -4,7 +4,7 @@
 # --- Dados e imagens (partilha via Google Drive, não via git) -----------------
 # data/clean tem imagens Mapillary (CC BY-SA, exige atribuição) e frames do
 # vídeo próprio; mesmo desfocadas, não vão para o repositório.
-data/
+
 
 # --- Modelos (descarregados automaticamente para models/ na 1.ª execução) -----
 models/

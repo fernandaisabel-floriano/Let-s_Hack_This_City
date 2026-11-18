@@ -16,7 +16,7 @@ AQUI = Path(__file__).resolve().parent
 sys.path[:0] = [str(AQUI), str(AQUI.parent / "pipeline")]
 
 import classify_signs as cs  # noqa: E402
-import fuse  # noqa: E402
+import m4_voto  # noqa: E402
 import m4_medir as mm  # noqa: E402
 from m4_algarismos import ler_valor  # noqa: E402
 from m4_forma import analisar, para_analise  # noqa: E402
@@ -164,12 +164,12 @@ def _m(sub, lado, incerto=False, conf=0.8):
 
 def test_fusao_votos():
     m4 = {"voto_lado_max_px": 100, "voto_min_fracao": 0.6}
-    assert fuse.votar_subtipo([_m("stop", 60), _m("costas", 80), _m("outro_sinal", 90, True)], m4)[:3] == ("stop", 1.0, False)
-    assert fuse.votar_subtipo([_m("limite_40", 30), _m("limite_50", 90)], m4)[0] == "limite_50"       # pesa o tamanho
-    assert fuse.votar_subtipo([_m("limite_40", 100), _m("limite_50", 400)], m4)[0] == "limite_desconhecido"  # teto 100 px
-    s, _, inc, mot = fuse.votar_subtipo([_m("costas", 30), _m("costas", 50)], m4)
+    assert m4_voto.votar_subtipo([_m("stop", 60), _m("costas", 80), _m("outro_sinal", 90, True)], m4)[:3] == ("stop", 1.0, False)
+    assert m4_voto.votar_subtipo([_m("limite_40", 30), _m("limite_50", 90)], m4)[0] == "limite_50"       # pesa o tamanho
+    assert m4_voto.votar_subtipo([_m("limite_40", 100), _m("limite_50", 400)], m4)[0] == "limite_desconhecido"  # teto 100 px
+    s, _, inc, mot = m4_voto.votar_subtipo([_m("costas", 30), _m("costas", 50)], m4)
     assert (s, inc, mot) == ("outro_sinal", True, "só visto de costas")
-    r = fuse.votar_subtipo([_m("stop", 50), _m("cedencia_passagem", 50)], m4)       # vistas discordam
+    r = m4_voto.votar_subtipo([_m("stop", 50), _m("cedencia_passagem", 50)], m4)       # vistas discordam
     assert (r[0], r[2]) == ("outro_sinal", True), r
 
 
@@ -223,14 +223,23 @@ def test_contentores_classificar_e_limiares():
     assert (m["fila"], m["verdadeiros"], m["falsos_tirados"], m["verdadeiros_deitados_fora"]) == (4, 3, 2, 0)
 
 
-def test_cedencia_e_contentor_na_fusao():
-    def mc(sub, conf):
-        return {"subclasse": sub, "confianca": conf, "bbox": [0, 0, 50, 50],
-                "extra": {"imagem_id": "a", "lon_obj": 0, "lat_obj": 0, "dist_m": 10, "captured_at": "x",
-                          "fonte": "f", "imagem": "i", "atribuicao": ""}, "recorte": "r", "id": sub or "n", "classe": "contentor"}
-    e = fuse.element(1, [mc("ilha_reciclagem", 0.6), mc("indiferenciado", 0.2), mc(None, 0.9)], {"classes": {}}, {
-        "top_k": 3, "min_vistas": 2, "limiar_auto": 0.9, "min_rotulos_por_lado": 10}, {})
-    assert e["subtipo"] == "ilha_reciclagem" and e["confianca_subtipo"] == 0.75, e
+def test_subtipo_contentor_e_filtro():
+    def mc(sub, conf, rejeitado=False):
+        return {"subclasse": sub, "confianca": conf, "bbox": [0, 0, 50, 50], "extra": {"clip_rejeitado": rejeitado}}
+    assert m4_voto.subtipo("contentor", [mc("ilha_reciclagem", 0.6), mc("indiferenciado", 0.2), mc(None, 0.9)], {}) == \
+        ("ilha_reciclagem", 0.75, False, None)
+    assert m4_voto.subtipo("contentor", [mc(None, 0.9)], {}) == (None, None, False, None)   # escrever_tipo: false
+    assert m4_voto.subtipo("candeeiro", [mc(None, 0.9)], {}) == (None, None, False, None)
+    assert not m4_voto.usar_deteccao(mc(None, 0.5, True)) and m4_voto.usar_deteccao(mc(None, 0.5))
+
+
+def test_fuse_main_usa_m4_voto():
+    """O fuse.py (fusão da main) chama o m4_voto para o subtipo e para o filtro dos contentores."""
+    import inspect
+    import fuse
+    src = inspect.getsource(fuse)
+    assert "subtipo(classe, membros, m4)" in src and "usar_deteccao(d)" in src
+    assert "subtipo_incerto" in src and "and not incerto" in src
 
 
 if __name__ == "__main__":

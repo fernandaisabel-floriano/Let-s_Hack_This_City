@@ -42,7 +42,7 @@ log = logging.getLogger("ingest_video")
 
 VIDEO_DEFAULTS = {"passo_m": 2.0, "fov_lado_maior_deg": 68.0, "heading_offset_deg": 0.0,
                   "nitidez_min": 60.0, "velocidade_max_ms": 8.0,
-                  "janela_heading_m": 6.0, "velocidade_min_ms": 0.5, "max_px": 2048,
+                  "janela_heading_m": 10.0, "suavizar_gps_s": 6.0, "velocidade_min_ms": 0.5, "max_px": 2048,
                   "autor": "equipa"}
 
 
@@ -83,7 +83,7 @@ def parse_iso(s: str) -> datetime:
 class Track:
     """Trajeto GPX com interpolação por tempo e por distância percorrida."""
 
-    def __init__(self, gpx_path: Path, v_min: float, v_max: float = 8.0):
+    def __init__(self, gpx_path: Path, v_min: float, v_max: float = 8.0, suavizar_s: float = 0.0):
         g = gpxpy.parse(gpx_path.read_text())
         pts = [(p.time, p.longitude, p.latitude)
                for trk in g.tracks for seg in trk.segments for p in seg.points if p.time]
@@ -98,6 +98,14 @@ class Track:
                 continue  # horas repetidas
             t.append(ts); lon.append(lo); lat.append(la)
         self.t, self.lon, self.lat = np.array(t), np.array(lon), np.array(lat)
+        # Suavização: média móvel centrada de ±suavizar_s/2 segundos (reduz o
+        # ziguezague do GPS de telemóvel a pé, que estraga o heading).
+        if suavizar_s and suavizar_s > 0:
+            self.lon_bruto, self.lat_bruto = self.lon.copy(), self.lat.copy()
+            h = suavizar_s / 2
+            self.lon = np.array([self.lon_bruto[np.abs(self.t - ti) <= h].mean() for ti in self.t])
+            self.lat = np.array([self.lat_bruto[np.abs(self.t - ti) <= h].mean() for ti in self.t])
+            lon, lat = list(self.lon), list(self.lat)
 
         # Distância acumulada; segmentos abaixo de v_min contam como parado
         # (o ruído do GPS parado não gera frames).
@@ -195,7 +203,8 @@ def main() -> None:
         sys.exit("O vídeo não tem creation_time: indique --inicio AAAA-MM-DDTHH:MM:SSZ")
     t0_gpx = inicio.timestamp() + args.offset_s
 
-    track = Track(args.gpx, float(vcfg["velocidade_min_ms"]), float(vcfg["velocidade_max_ms"]))
+    track = Track(args.gpx, float(vcfg["velocidade_min_ms"]), float(vcfg["velocidade_max_ms"]),
+                  float(vcfg.get("suavizar_gps_s", 0)))
     log.info("vídeo %s → GPX %s .. %s (offset %+.2fs)",
              datetime.fromtimestamp(t0_gpx, timezone.utc).isoformat(timespec="seconds"),
              datetime.fromtimestamp(track.inicio, timezone.utc).isoformat(timespec="seconds"),
