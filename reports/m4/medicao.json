@@ -1,0 +1,1044 @@
+{
+ "gerado_em": "2026-11-18T18:06:25+00:00",
+ "rotulos": 194,
+ "rotulos_sem_deteccao": 0,
+ "config_m4": {
+  "variante": "p5",
+  "prompt_stop": "stop sign",
+  "cedencia_segunda_min": 0.3,
+  "limiar": 0.25,
+  "recorte_margem": 0.04,
+  "limiar_familia": {
+   "stop": 0.45,
+   "cedencia_passagem": 0.45,
+   "limite": 0.45,
+   "outro_sinal": 0.45,
+   "costas": 0.45
+  },
+  "limiar_numero": 0.6,
+  "lado_min_numero_px": 30,
+  "forma": {},
+  "algarismos": {
+   "aceites": [
+    30,
+    40,
+    50
+   ],
+   "score_min": 0.55,
+   "margem_min": 0.08
+  },
+  "voto_lado_max_px": 100,
+  "voto_min_fracao": 0.6,
+  "rotular_lado_min_px": 30,
+  "rotulos_contentores": "reports/m4/rotulos_contentores.json",
+  "contentores_versao": "v4_video",
+  "relatorios": "reports/m4",
+  "exemplos_por_erro": 3,
+  "erros_frequentes": 5
+ },
+ "variantes": {
+  "atual": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.833,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 0.5,
+    "recall": 0.1,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.75,
+    "recall": 0.75,
+    "certos": 3,
+    "previstos": 4,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 2,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.432,
+    "recall": 0.905,
+    "certos": 19,
+    "previstos": 44,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.727,
+    "recall": 0.886,
+    "certos": 101,
+    "previstos": 139,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 0,
+    "especificas": 11,
+    "erros_especificos": 3,
+    "precisao_especificas": 0.727,
+    "confusao_erros": {
+     "limite_40 → limite_70": 1,
+     "costas → cedencia": 1,
+     "outro → limite_20": 1
+    }
+   }
+  },
+  "p1": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.667,
+    "certos": 4,
+    "previstos": 4,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.1,
+    "certos": 1,
+    "previstos": 1,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.222,
+    "recall": 1.0,
+    "certos": 4,
+    "previstos": 18,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.696,
+    "recall": 0.762,
+    "certos": 16,
+    "previstos": 23,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.682,
+    "recall": 0.886,
+    "certos": 101,
+    "previstos": 148,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 24,
+    "especificas": 5,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "p3": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.696,
+    "recall": 0.762,
+    "certos": 16,
+    "previstos": 23,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.689,
+    "recall": 0.974,
+    "certos": 111,
+    "previstos": 161,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 26,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "p4": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.696,
+    "recall": 0.762,
+    "certos": 16,
+    "previstos": 23,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.689,
+    "recall": 0.974,
+    "certos": 111,
+    "previstos": 161,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 26,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "p5": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.625,
+    "recall": 0.476,
+    "certos": 10,
+    "previstos": 16,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.667,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 168,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 52,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  }
+ },
+ "passo_final": "p5",
+ "confusao_final": {
+  "nao_sinal": {
+   "outro_sinal (fila)": 4,
+   "outro_sinal": 30,
+   "costas": 5
+  },
+  "outro_frente": {
+   "outro_sinal": 83,
+   "outro_sinal (fila)": 29,
+   "limite_desconhecido (fila)": 1,
+   "costas": 1
+  },
+  "cedencia": {
+   "outro_sinal (fila)": 2,
+   "outro_sinal": 3,
+   "cedencia_passagem": 5
+  },
+  "stop": {
+   "stop": 3,
+   "outro_sinal (fila)": 3
+  },
+  "costas": {
+   "outro_sinal": 2,
+   "costas": 10,
+   "outro_sinal (fila)": 9
+  },
+  "limite_40": {
+   "limite_desconhecido (fila)": 1,
+   "outro_sinal (fila)": 3
+  }
+ },
+ "erros_frequentes": [
+  {
+   "rotulo": "outro_frente",
+   "previsao": "outro_sinal (fila)",
+   "n": 29,
+   "pasta": "reports/m4/exemplos/01_outro_frente__outro_sinal_fila",
+   "exemplos": [
+    "161620725985969_00104",
+    "161620725985969_00105",
+    "176303467780098_00079"
+   ]
+  },
+  {
+   "rotulo": "costas",
+   "previsao": "outro_sinal (fila)",
+   "n": 9,
+   "pasta": "reports/m4/exemplos/02_costas__outro_sinal_fila",
+   "exemplos": [
+    "151050097036700_00473",
+    "161620725985969_00102",
+    "176303467780098_00081"
+   ]
+  },
+  {
+   "rotulo": "nao_sinal",
+   "previsao": "costas",
+   "n": 5,
+   "pasta": "reports/m4/exemplos/03_nao_sinal__costas",
+   "exemplos": [
+    "1428507540881609_00385",
+    "1428507540881609_00387",
+    "396281794755874_00420"
+   ]
+  },
+  {
+   "rotulo": "limite_40",
+   "previsao": "outro_sinal (fila)",
+   "n": 3,
+   "pasta": "reports/m4/exemplos/04_limite_40__outro_sinal_fila",
+   "exemplos": [
+    "161620725985969_00101",
+    "176303467780098_00077",
+    "176303467780098_00080"
+   ]
+  },
+  {
+   "rotulo": "stop",
+   "previsao": "outro_sinal (fila)",
+   "n": 3,
+   "pasta": "reports/m4/exemplos/05_stop__outro_sinal_fila",
+   "exemplos": [
+    "1924321491055960_00349",
+    "1924321491055960_00352",
+    "333571651607552_00392"
+   ]
+  }
+ ],
+ "varrimento_final": {
+  "0.3": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.611,
+    "recall": 0.524,
+    "certos": 11,
+    "previstos": 18,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.675,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 166,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 49,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.4": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.611,
+    "recall": 0.524,
+    "certos": 11,
+    "previstos": 18,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.675,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 166,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 50,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.45": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.625,
+    "recall": 0.476,
+    "certos": 10,
+    "previstos": 16,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.667,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 168,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 52,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.5": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.643,
+    "recall": 0.429,
+    "certos": 9,
+    "previstos": 14,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.659,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 170,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 60,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.6": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.667,
+    "recall": 0.286,
+    "certos": 6,
+    "previstos": 9,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.646,
+    "recall": 0.991,
+    "certos": 113,
+    "previstos": 175,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 83,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.7": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 0.75,
+    "recall": 0.143,
+    "certos": 3,
+    "previstos": 4,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.628,
+    "recall": 0.991,
+    "certos": 113,
+    "previstos": 180,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 108,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.8": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 0.5,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 2,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": 1.0,
+    "recall": 0.095,
+    "certos": 2,
+    "previstos": 2,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.621,
+    "recall": 0.991,
+    "certos": 113,
+    "previstos": 182,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 133,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "0.9": {
+   "stop": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 3,
+    "previstos": 3,
+    "rotulados": 6
+   },
+   "cedencia": {
+    "precisao": 1.0,
+    "recall": 0.5,
+    "certos": 5,
+    "previstos": 5,
+    "rotulados": 10
+   },
+   "limite (família)": {
+    "precisao": 1.0,
+    "recall": 0.25,
+    "certos": 1,
+    "previstos": 1,
+    "rotulados": 4
+   },
+   "limite_30": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "limite_40": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 4
+   },
+   "limite_50": {
+    "precisao": null,
+    "recall": null,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 0
+   },
+   "costas": {
+    "precisao": null,
+    "recall": 0.0,
+    "certos": 0,
+    "previstos": 0,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.616,
+    "recall": 1.0,
+    "certos": 114,
+    "previstos": 185,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 154,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  }
+ },
+ "opcoes_costas": {
+  "atual (costas 0.45)": {
+   "costas": {
+    "precisao": 0.625,
+    "recall": 0.476,
+    "certos": 10,
+    "previstos": 16,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.667,
+    "recall": 0.982,
+    "certos": 112,
+    "previstos": 168,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 52,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  },
+  "limiar costas 0,8": {
+   "costas": {
+    "precisao": 1.0,
+    "recall": 0.095,
+    "certos": 2,
+    "previstos": 2,
+    "rotulados": 21
+   },
+   "outro (de frente)": {
+    "precisao": 0.621,
+    "recall": 0.991,
+    "certos": 113,
+    "previstos": 182,
+    "rotulados": 114
+   },
+   "_resumo": {
+    "n": 194,
+    "fila": 66,
+    "especificas": 8,
+    "erros_especificos": 0,
+    "precisao_especificas": 1.0,
+    "confusao_erros": {}
+   }
+  }
+ }
+}

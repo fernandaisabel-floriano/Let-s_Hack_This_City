@@ -86,9 +86,51 @@ m3:
     candeeiro: {"street lamp": 0.10}
     contentor: {"underground waste bin": 0.05, "trash can": 0.10}
 
-# M4 — classificação de sinais (pipeline/classify_signs.py)
+# M4 — classificação de sinais em cascata (pipeline/classify_signs.py).
+# Prioridade à precisão: o incerto vai para a fila como outro_sinal ou
+# limite_desconhecido. Limiares iniciais por afinar com pipeline/m4_medir.py.
 m4:
-  limiar: 0.25              # confiança da classe (soma das suas frases) abaixo disto → outro_sinal
+  variante: p5              # atual | p1 | p3 | p4 | p5 (m4_medir.py compara todas)
+  prompt_stop: stop sign    # p5: deteção vinda deste prompt da M3 = indício forte de STOP
+  cedencia_segunda_min: 0.3 # p5: outro_sinal com cedência em 2.º no CLIP (P ≥ X) → fila (18/11: +2 na fila, 0 erros)
+  limiar: 0.25              # só "atual": confiança da classe abaixo disto → outro_sinal
+  recorte_margem: 0.04      # recorte quadrado e justo para classificar (3–5 %)
+  limiar_familia:           # P(família) do CLIP abaixo disto → incerto
+    # 0,45 escolhido a 18/11 contra 194 rótulos: 0 erros, fila 50 (0,4: 0 erros, fila 48; 0,5: fila 59)
+    {stop: 0.45, cedencia_passagem: 0.45, limite: 0.45, outro_sinal: 0.45, costas: 0.45}
+  limiar_numero: 0.6        # p1/p3: P(valor | limite) do CLIP abaixo disto → limite_desconhecido
+  lado_min_numero_px: 30    # p4: sinal mais pequeno do que isto → limite_desconhecido
+  forma: {}                 # filtro A (m4_forma.py DEFAULTS): limiares HSV e de forma
+  algarismos:               # p4 (m4_algarismos.py): templates em config/m4/algarismos/
+    aceites: [30, 40, 50]
+    score_min: 0.55
+    margem_min: 0.08
+  voto_lado_max_px: 100     # fusão: peso do voto cresce com o lado do recorte até X px
+  voto_min_fracao: 0.6      # fusão: família/valor com menos do que X do voto → incerto
+  rotular_lado_min_px: 30   # m4_rotular.py: só recortes com lado maior ≥ X px
+  rotulos: reports/m4/rotulos.json
+  rotulos_contentores: reports/m4/rotulos_contentores.json   # modo contentores da página
+  contentores_versao: v4_video   # teste de prompts cujos contentores a página mostra (--versao=...)
+  relatorios: reports/m4    # página de rotulagem, medição, exemplos de erros
+  exemplos_por_erro: 3      # m4_medir.py: recortes copiados por tipo de erro frequente
+  erros_frequentes: 5       # ...para os N erros mais frequentes do passo final
+
+# Teste de prompts do YOLO-World (test_yolo_world_prompts.py): raw_detections, labels.json
+relatorios_yolo_world: reports/yolo_world_test
+# Contentores: medição das deteções da M3 contra os rótulos (contentores_medir.py)
+contentores_relatorios: reports/contentores
+
+# Contentores — filtro CLIP e tipo (pipeline/contentores_clip.py). Passo opcional do pipeline.
+# Medido a 18/11 contra 258 rótulos (reports/contentores/filtro_clip.md); limiar 0,05 confirmado a 18/11.
+# Nenhum contentor entra direto (confirmado). Valores medidos:
+#   descartar p_contentor < 0,05 → fila 258 → 175, precisão 0,20 → 0,27, perde 3 dos 51 verdadeiros
+#   (validação cruzada: recall 0,93, precisão 0,28); "entra direto" ≥ 0,8 dá precisão 0,93 em validação cruzada.
+contentores_clip:
+  ativo: true               # 18/11, decidido: ligado. Anota clip_contentor/clip_classe/clip_tipo em deteccoes.json
+  limiar: 0.05              # 18/11, decidido: deitar fora deteções com p_contentor < 0,05 (null = só anotar)
+  escrever_tipo: false      # 18/11, decidido: o tipo não vai para o catálogo por agora (acerta só 6 de 12)
+  recorte: justo            # justo (AUC 0,86) | largo (0,81)
+  margem_justo: 0.10
 
 # M5 — coordenadas de cada deteção (pipeline/geolocate.py)
 m5:

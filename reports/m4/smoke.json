@@ -1,0 +1,120 @@
+{
+ "gerado_em": "2026-11-18T16:26:22+00:00",
+ "recortes": 244,
+ "segundos_carregar_clip": 5.2,
+ "segundos_contexto": 23.8,
+ "segundos_por_recorte": 0.097,
+ "no_ficheiro": {
+  "por_subclasse": {
+   "outro_sinal": 233,
+   "stop": 5,
+   "limite_40": 2,
+   "cedencia_passagem": 2,
+   "limite_70": 1,
+   "limite_20": 1
+  },
+  "stop": 5,
+  "limite_120": 0,
+  "classificador": {
+   "clip-vit-b32-zero-shot": 244
+  }
+ },
+ "variantes": {
+  "atual": {
+   "por_subclasse": {
+    "outro_sinal": 167,
+    "costas": 66,
+    "stop": 5,
+    "limite_40": 2,
+    "cedencia_passagem": 2,
+    "limite_70": 1,
+    "limite_20": 1
+   },
+   "fila": 0,
+   "outro_sinal": 167,
+   "limite_desconhecido": 0,
+   "stop": 5,
+   "limite_120": 0,
+   "segundos_decisao": 0.001
+  },
+  "p1": {
+   "por_subclasse": {
+    "costas": 120,
+    "outro_sinal": 109,
+    "limite_desconhecido": 11,
+    "stop": 4
+   },
+   "fila": 56,
+   "outro_sinal": 109,
+   "limite_desconhecido": 11,
+   "stop": 4,
+   "limite_120": 0,
+   "segundos_decisao": 0.002
+  },
+  "p3": {
+   "por_subclasse": {
+    "costas": 118,
+    "outro_sinal": 117,
+    "cedencia_passagem": 5,
+    "stop": 3,
+    "limite_desconhecido": 1
+   },
+   "fila": 56,
+   "outro_sinal": 117,
+   "limite_desconhecido": 1,
+   "stop": 3,
+   "limite_120": 0,
+   "segundos_decisao": 0.002
+  },
+  "p4": {
+   "por_subclasse": {
+    "costas": 118,
+    "outro_sinal": 117,
+    "cedencia_passagem": 5,
+    "stop": 3,
+    "limite_desconhecido": 1
+   },
+   "fila": 56,
+   "outro_sinal": 117,
+   "limite_desconhecido": 1,
+   "stop": 3,
+   "limite_120": 0,
+   "segundos_decisao": 0.002
+  },
+  "p5": {
+   "por_subclasse": {
+    "outro_sinal": 131,
+    "costas": 104,
+    "cedencia_passagem": 5,
+    "stop": 3,
+    "limite_desconhecido": 1
+   },
+   "fila": 84,
+   "outro_sinal": 131,
+   "limite_desconhecido": 1,
+   "stop": 3,
+   "limite_120": 0,
+   "segundos_decisao": 0.002
+  }
+ },
+ "erros": [],
+ "valores_de_limite_previstos": {
+  "atual": [
+   "limite_20",
+   "limite_40",
+   "limite_70"
+  ],
+  "p1": [
+   "limite_desconhecido"
+  ],
+  "p3": [
+   "limite_desconhecido"
+  ],
+  "p4": [
+   "limite_desconhecido"
+  ],
+  "p5": [
+   "limite_desconhecido"
+  ]
+ }
+}

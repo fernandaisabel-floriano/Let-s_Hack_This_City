@@ -97,7 +97,7 @@ O Mapillary tem 54 imagens a ≤30 m da rua, todas de 2019–2021. Por isso, o *
 | Panorâmicas | Incluídas, cortadas em 4 vistas planas (FOV 90°, heading + 0/90/180/270°) |
 | Desfoque | Na recolha, antes de gravar. Rostos: YuNet. Matrículas: YOLOv11s de matrículas. Cabeças de peões: YOLO11n, como rede de segurança |
 | Deteção | YOLO-World (small), local; prompts por classe fixados após teste numa amostra |
-| Classificação de sinais | Modelo treinado no GTSRB (sinais da Convenção de Viena, próximos dos portugueses) |
+| Classificação de sinais | Cascata com prioridade à precisão: CLIP sem treino (família primeiro, depois o número) + filtro de forma e cor (OpenCV) + templates dos algarismos para os limites. O incerto vai para a fila. O GTSRB foi abandonado (não tem 40 km/h nem a passadeira portuguesa) |
 | Distância | Sinais: tamanho assumido da placa (~0,7 m). Candeeiros e contentores: ponto de contacto com o chão, câmara a ~2,5 m |
 | Limiares | Fusão a 8 m; entrada direta no catálogo a partir de 0,6 de confiança (ambos na config) |
 | Base de dados | SQLite |

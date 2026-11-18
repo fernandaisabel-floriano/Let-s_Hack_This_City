@@ -37,3 +37,9 @@ runs/
 .vscode/
 .idea/
 .DS_Store
+
+# --- M4: página de rotulagem (gerada; aponta para data/) ------------------------
+reports/m4/rotular.html
+
+# --- Testes: dados falsos gerados por tests/gerar_dados_falsos.py ----------------
+tests/dados_falsos/

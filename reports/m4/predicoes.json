@@ -1,0 +1,9702 @@
+[
+{
+"variante": "atual",
+"id": "1194235824337950_00512",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.149,
+"desc": "limite 120 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1202840680156839_00533",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.583,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "127103002827974_00118",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "127103002827974_00119",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.963,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1346415209085203_00321",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.865,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1346415209085203_00322",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.924,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1362535060784292_00424",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.976,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1362535060784292_00425",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.966,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "139830181467436_00330",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.821,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1401895673523017_00506",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.937,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "140402778072748_00050",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.639,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "140402778072748_00051",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.813,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "140402778072748_00052",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.607,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1428507540881609_00383",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.877,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1428507540881609_00384",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.608,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1428507540881609_00385",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.433,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1428507540881609_00386",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.713,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1428507540881609_00387",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.516,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1454909068222766_00263",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.889,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "151050097036700_00473",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.591,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00099",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00100",
+"rotulo": "limite_40",
+"subclasse": "limite_40",
+"conf": 0.41,
+"desc": "limite 40 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00101",
+"rotulo": "limite_40",
+"subclasse": "limite_70",
+"conf": 0.302,
+"desc": "limite 70 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00102",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.949,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00103",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.763,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00104",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.916,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00105",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.156,
+"desc": "limite 40 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "161620725985969_00106",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.892,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "176303467780098_00077",
+"rotulo": "limite_40",
+"subclasse": "limite_40",
+"conf": 0.253,
+"desc": "limite 40 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "176303467780098_00078",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.812,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "176303467780098_00079",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.454,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "176303467780098_00080",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.178,
+"desc": "limite 40 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "176303467780098_00081",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.954,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "179684627401981_00312",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.728,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "179684627401981_00313",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.71,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1924321491055960_00349",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.84,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1924321491055960_00350",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.886,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1924321491055960_00351",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.765,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1924321491055960_00352",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.62,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "1924321491055960_00353",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.912,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "221695656639355_00237",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "221695656639355_00238",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.403,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "251892116797241_00252",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.835,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "262929075567708_00439",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.783,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "262929075567708_00440",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.609,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "262929075567708_00441",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.822,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "262929075567708_00442",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.775,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "262929075567708_00443",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.937,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00372",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.819,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00373",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.91,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00374",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.926,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00375",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.889,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00376",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.511,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "314768113426345_00377",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.565,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "325387565826990_00000",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.962,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "325387565826990_00002",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.897,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "325387565826990_00003",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.237,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "325387565826990_00004",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "325387565826990_00005",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "332103931769021_00176",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "332103931769021_00177",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "332861158210983_00531",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.592,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "333571651607552_00392",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.844,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "333571651607552_00393",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.686,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "333571651607552_00394",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.717,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "333571651607552_00395",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.683,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "345941120216633_00159",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.996,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "345941120216633_00160",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "345941120216633_00161",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.597,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "357199595741657_00063",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "357199595741657_00064",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.766,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "358223035931413_00016",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.258,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "358223035931413_00017",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "358223035931413_00018",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.793,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "358223035931413_00020",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.621,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "358223035931413_00021",
+"rotulo": "costas",
+"subclasse": "cedencia_passagem",
+"conf": 0.466,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "393622815295748_00525",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.482,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "396281794755874_00420",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.854,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "4223581927673228_00399",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.88,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "4301765876512327_00132",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "4301765876512327_00133",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.796,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "464745681158829_00244",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.934,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "464745681158829_00245",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.79,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "491355092121556_00145",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "491355092121556_00146",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.983,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "512376593282609_00417",
+"rotulo": "outro_frente",
+"subclasse": "limite_20",
+"conf": 0.746,
+"desc": "limite 20 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "512376593282609_00418",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.939,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "541325036871456_00089",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.946,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "541325036871456_00090",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.821,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "549710842916356_00211",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.831,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "549710842916356_00212",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.673,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "549710842916356_00213",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.841,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "556053389113045_00337",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.222,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "556053389113045_00338",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.789,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "556053389113045_00339",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "565606381092155_00495",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.756,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00537",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.686,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00538",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.96,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00539",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.371,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00540",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.866,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00542",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.81,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "608010640585505_00543",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.791,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "627874648178072_00289",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "759446278037143_00360",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.416,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "759446278037143_00361",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.946,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "759446278037143_00362",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.846,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "759446278037143_00363",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.83,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "759446278037143_00364",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.587,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00446",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.915,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00447",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.578,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00448",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.962,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00449",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.829,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00450",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.942,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00451",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.227,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00452",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00453",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.823,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "796403697687751_00454",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.398,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "807789379917576_00228",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.971,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "807789379917576_00229",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.904,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "844120776190531_00037",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "via ciclável/pedonal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "844120776190531_00038",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.69,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "844120776190531_00040",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.949,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "844120776190531_00041",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.901,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "861102281195934_00498",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.925,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "885588182171496_00465",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.844,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "909391203345659_00193",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.546,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "909391203345659_00194",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.822,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "909391203345659_00195",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.976,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "909391203345659_00196",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.89,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "909391203345659_00197",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.971,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_000000_00552",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.913,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_000252_00562",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.708,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002415_00746",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.932,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002459_00757",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.617,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002506_00766",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.223,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002506_00767",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.769,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002554_00776",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.157,
+"desc": "limite 30 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002554_00780",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.598,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002554_00781",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.337,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002604_00791",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.229,
+"desc": "limite 120 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002656_00802",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.207,
+"desc": "limite 60 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002656_00803",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.621,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002656_00804",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.235,
+"desc": "limite 120 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002705_00808",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.223,
+"desc": "limite 50 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002705_00809",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.764,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002705_00810",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.773,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002705_00811",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.903,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002705_00813",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.727,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002752_00819",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.83,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002752_00820",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.336,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002796_00827",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.837,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002796_00828",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.737,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002796_00830",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.891,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002837_00838",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.184,
+"desc": "limite 90 km/h",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002837_00839",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.855,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002879_00847",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.944,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002879_00848",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.906,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002921_00856",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.964,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002921_00857",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.956,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_002921_00859",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.685,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003005_00871",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.823,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003005_00872",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.485,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003047_00876",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.79,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003047_00877",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.924,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003090_00883",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.742,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003090_00884",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.872,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003147_00895",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.612,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003147_00896",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.823,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003186_00902",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.936,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003186_00903",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.767,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003228_00910",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.806,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003228_00911",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.871,
+"desc": "direção",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003272_00919",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.82,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003272_00921",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.712,
+"desc": "rotunda",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003317_00930",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.892,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003317_00931",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.781,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003380_00939",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.958,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003427_00948",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.914,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003427_00949",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.779,
+"desc": "estacionamento proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003427_00950",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.799,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003471_00958",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.653,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003471_00959",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.989,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003471_00960",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.873,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003513_00965",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.899,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003513_00966",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003513_00967",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.926,
+"desc": "informação",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003552_00972",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.68,
+"desc": "proibição",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003552_00973",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.939,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003552_00974",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.957,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003552_00975",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.699,
+"desc": "sentido proibido",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003593_00980",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.87,
+"desc": "perigo",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003593_00981",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.6,
+"desc": "proibição",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003593_00982",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.964,
+"desc": "passadeira",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "atual",
+"id": "rua_sw_ne_1117_003593_00983",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.33,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1194235824337950_00512",
+"rotulo": "nao_sinal",
+"subclasse": "limite_desconhecido",
+"conf": 0.601,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 120 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "1202840680156839_00533",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.589,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "127103002827974_00118",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "127103002827974_00119",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1346415209085203_00321",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.77,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1346415209085203_00322",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1362535060784292_00424",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.643,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1362535060784292_00425",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "139830181467436_00330",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.777,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1401895673523017_00506",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.839,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "140402778072748_00050",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.578,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "140402778072748_00051",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "140402778072748_00052",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.384,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (stop 0.38)"
+},
+{
+"variante": "p1",
+"id": "1428507540881609_00383",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.901,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1428507540881609_00384",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1428507540881609_00385",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.72,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1428507540881609_00386",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.468,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1428507540881609_00387",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.501,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1454909068222766_00263",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.77,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "151050097036700_00473",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.693,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "161620725985969_00099",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "161620725985969_00100",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.36)"
+},
+{
+"variante": "p1",
+"id": "161620725985969_00101",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.938,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 70 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "161620725985969_00102",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.888,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "161620725985969_00103",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.668,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "161620725985969_00104",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.922,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "161620725985969_00105",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.54,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.13)"
+},
+{
+"variante": "p1",
+"id": "161620725985969_00106",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.508,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "176303467780098_00077",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.25)"
+},
+{
+"variante": "p1",
+"id": "176303467780098_00078",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.858,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "176303467780098_00079",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.583,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 120 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "176303467780098_00080",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.45)"
+},
+{
+"variante": "p1",
+"id": "176303467780098_00081",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.421,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p1",
+"id": "179684627401981_00312",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "179684627401981_00313",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1924321491055960_00349",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.871,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1924321491055960_00350",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.563,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1924321491055960_00351",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.678,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1924321491055960_00352",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.844,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "1924321491055960_00353",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "221695656639355_00237",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.892,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "221695656639355_00238",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.601,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "251892116797241_00252",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.624,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "262929075567708_00439",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.963,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "262929075567708_00440",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.553,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "262929075567708_00441",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.893,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "262929075567708_00442",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.718,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "262929075567708_00443",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "314768113426345_00372",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "314768113426345_00373",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.508,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "314768113426345_00374",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.928,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "314768113426345_00375",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.878,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "314768113426345_00376",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (outro_sinal 0.35)"
+},
+{
+"variante": "p1",
+"id": "314768113426345_00377",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.59,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "325387565826990_00000",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "325387565826990_00002",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "325387565826990_00003",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.544,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "325387565826990_00004",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "325387565826990_00005",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.504,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "332103931769021_00176",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "332103931769021_00177",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "332861158210983_00531",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.523,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "333571651607552_00392",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.81,
+"desc": "STOP",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "333571651607552_00393",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.626,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "333571651607552_00394",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.536,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "333571651607552_00395",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.816,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "345941120216633_00159",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "345941120216633_00160",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "345941120216633_00161",
+"rotulo": "nao_sinal",
+"subclasse": "limite_desconhecido",
+"conf": 0.535,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.12)"
+},
+{
+"variante": "p1",
+"id": "357199595741657_00063",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.881,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "357199595741657_00064",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.524,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "358223035931413_00016",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.464,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "358223035931413_00017",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "358223035931413_00018",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "358223035931413_00020",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.625,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "358223035931413_00021",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.35)"
+},
+{
+"variante": "p1",
+"id": "393622815295748_00525",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.489,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "396281794755874_00420",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.639,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "4223581927673228_00399",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.661,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "4301765876512327_00132",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "4301765876512327_00133",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.982,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "464745681158829_00244",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "464745681158829_00245",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.616,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "491355092121556_00145",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "491355092121556_00146",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "512376593282609_00417",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.931,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 20 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "512376593282609_00418",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.663,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "541325036871456_00089",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.877,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "541325036871456_00090",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.543,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "549710842916356_00211",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.994,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "549710842916356_00212",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "549710842916356_00213",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.556,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "556053389113045_00337",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.518,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "556053389113045_00338",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.772,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "556053389113045_00339",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.759,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "565606381092155_00495",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "608010640585505_00537",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.716,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "608010640585505_00538",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.958,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "608010640585505_00539",
+"rotulo": "nao_sinal",
+"subclasse": "limite_desconhecido",
+"conf": 0.561,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 120 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "608010640585505_00540",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "608010640585505_00542",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.63,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "608010640585505_00543",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.485,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "627874648178072_00289",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.765,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "759446278037143_00360",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.628,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "759446278037143_00361",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.416,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p1",
+"id": "759446278037143_00362",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "759446278037143_00363",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "759446278037143_00364",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.468,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00446",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.92,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00447",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00448",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00449",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00450",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.815,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00451",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.685,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00452",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.798,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00453",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "796403697687751_00454",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.452,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "807789379917576_00228",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "807789379917576_00229",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.543,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "844120776190531_00037",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "844120776190531_00038",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.648,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "844120776190531_00040",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "844120776190531_00041",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.479,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "861102281195934_00498",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.865,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "885588182171496_00465",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.837,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "909391203345659_00193",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.638,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "909391203345659_00194",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.747,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "909391203345659_00195",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "909391203345659_00196",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.768,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "909391203345659_00197",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.987,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_000000_00552",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.861,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_000252_00562",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002415_00746",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002459_00757",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.58,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002506_00766",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.738,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.14)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002506_00767",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002554_00776",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.969,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 60 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002554_00780",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.355,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.36)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002554_00781",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002604_00791",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.864,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 120 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002656_00802",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.943,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.19)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002656_00803",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.617,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002656_00804",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.673,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "CLIP diz 120 (fora dos aceites)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002705_00808",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.941,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.26)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002705_00809",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.836,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.18)"
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002705_00810",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.799,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002705_00811",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.568,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002705_00813",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.473,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002752_00819",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002752_00820",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.602,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002796_00827",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002796_00828",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.743,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002796_00830",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.591,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002837_00838",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.571,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002837_00839",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.867,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002879_00847",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.854,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002879_00848",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002921_00856",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.901,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002921_00857",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_002921_00859",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.681,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003005_00871",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003005_00872",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003047_00876",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.61,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003047_00877",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.5,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003090_00883",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.636,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003090_00884",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.812,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003147_00895",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003147_00896",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.712,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003186_00902",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.525,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003186_00903",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.482,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003228_00910",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.529,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003228_00911",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003272_00919",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.674,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003272_00921",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.675,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003317_00930",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003317_00931",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.456,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003380_00939",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003427_00948",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.691,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003427_00949",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.493,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003427_00950",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003471_00958",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.713,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003471_00959",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003471_00960",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.872,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003513_00965",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003513_00966",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003513_00967",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.833,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003552_00972",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.618,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003552_00973",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.897,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003552_00974",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.912,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003552_00975",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.506,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003593_00980",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003593_00981",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003593_00982",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.953,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p1",
+"id": "rua_sw_ne_1117_003593_00983",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.461,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.13)"
+},
+{
+"variante": "p3",
+"id": "1194235824337950_00512",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.601,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "1202840680156839_00533",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.589,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "127103002827974_00118",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "127103002827974_00119",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1346415209085203_00321",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.77,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1346415209085203_00322",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1362535060784292_00424",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.643,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1362535060784292_00425",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "139830181467436_00330",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.777,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1401895673523017_00506",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.839,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "140402778072748_00050",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.578,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "140402778072748_00051",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "140402778072748_00052",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.384,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (stop 0.38)"
+},
+{
+"variante": "p3",
+"id": "1428507540881609_00383",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.951,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p3",
+"id": "1428507540881609_00384",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1428507540881609_00385",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.72,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1428507540881609_00386",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.468,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1428507540881609_00387",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.501,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1454909068222766_00263",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.77,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "151050097036700_00473",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.693,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "161620725985969_00099",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "161620725985969_00100",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.36)"
+},
+{
+"variante": "p3",
+"id": "161620725985969_00101",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.938,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "161620725985969_00102",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.888,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "161620725985969_00103",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.668,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "161620725985969_00104",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.922,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "161620725985969_00105",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.54,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "161620725985969_00106",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.508,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "176303467780098_00077",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "176303467780098_00078",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.858,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "176303467780098_00079",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.583,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "176303467780098_00080",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "176303467780098_00081",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.421,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p3",
+"id": "179684627401981_00312",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "179684627401981_00313",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1924321491055960_00349",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.871,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP stop, forma nenhuma)"
+},
+{
+"variante": "p3",
+"id": "1924321491055960_00350",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.563,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1924321491055960_00351",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.678,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1924321491055960_00352",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.844,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "1924321491055960_00353",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "221695656639355_00237",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.892,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "221695656639355_00238",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.601,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "251892116797241_00252",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.624,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "262929075567708_00439",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.963,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "262929075567708_00440",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.553,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "262929075567708_00441",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.893,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "262929075567708_00442",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.718,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "262929075567708_00443",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "314768113426345_00372",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "314768113426345_00373",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.508,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "314768113426345_00374",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.964,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p3",
+"id": "314768113426345_00375",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.878,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "314768113426345_00376",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (outro_sinal 0.35)"
+},
+{
+"variante": "p3",
+"id": "314768113426345_00377",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.59,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "325387565826990_00000",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "325387565826990_00002",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "325387565826990_00003",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.772,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p3",
+"id": "325387565826990_00004",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "325387565826990_00005",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.504,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "332103931769021_00176",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "332103931769021_00177",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "332861158210983_00531",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.523,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "333571651607552_00392",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP stop, forma nenhuma)"
+},
+{
+"variante": "p3",
+"id": "333571651607552_00393",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.626,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "333571651607552_00394",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.536,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "333571651607552_00395",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.816,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "345941120216633_00159",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "345941120216633_00160",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "345941120216633_00161",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.535,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "357199595741657_00063",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.881,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "357199595741657_00064",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.524,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "358223035931413_00016",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.648,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p3",
+"id": "358223035931413_00017",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "358223035931413_00018",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "358223035931413_00020",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.625,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "358223035931413_00021",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.35)"
+},
+{
+"variante": "p3",
+"id": "393622815295748_00525",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.489,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "396281794755874_00420",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.639,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "4223581927673228_00399",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.661,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "4301765876512327_00132",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "4301765876512327_00133",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.982,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "464745681158829_00244",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "464745681158829_00245",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.616,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "491355092121556_00145",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "491355092121556_00146",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "512376593282609_00417",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.931,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "512376593282609_00418",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.663,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "541325036871456_00089",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.877,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "541325036871456_00090",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.543,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "549710842916356_00211",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.994,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "549710842916356_00212",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "549710842916356_00213",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.556,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "556053389113045_00337",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.518,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "556053389113045_00338",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.772,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "556053389113045_00339",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.759,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "565606381092155_00495",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "608010640585505_00537",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.545,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p3",
+"id": "608010640585505_00538",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.958,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "608010640585505_00539",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.561,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "608010640585505_00540",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "608010640585505_00542",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.63,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "608010640585505_00543",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.485,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "627874648178072_00289",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.765,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "759446278037143_00360",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.679,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p3",
+"id": "759446278037143_00361",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.416,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p3",
+"id": "759446278037143_00362",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "759446278037143_00363",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "759446278037143_00364",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.468,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00446",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.92,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00447",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00448",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00449",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00450",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.815,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00451",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.685,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00452",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.798,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00453",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "796403697687751_00454",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.452,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "807789379917576_00228",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "807789379917576_00229",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.543,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "844120776190531_00037",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "844120776190531_00038",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.56,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p3",
+"id": "844120776190531_00040",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "844120776190531_00041",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.479,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "861102281195934_00498",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.865,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "885588182171496_00465",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.837,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "909391203345659_00193",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.576,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p3",
+"id": "909391203345659_00194",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.747,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "909391203345659_00195",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "909391203345659_00196",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.768,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "909391203345659_00197",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.987,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_000000_00552",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.861,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_000252_00562",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002415_00746",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002459_00757",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.58,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002506_00766",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.738,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002506_00767",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002554_00776",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.969,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002554_00780",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.355,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.36)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002554_00781",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002604_00791",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.864,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002656_00802",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.943,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002656_00803",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.617,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002656_00804",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.673,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002705_00808",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002705_00809",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.836,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "valor incerto (CLIP 0.18)"
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002705_00810",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.799,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002705_00811",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.568,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002705_00813",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.473,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002752_00819",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002752_00820",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.602,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002796_00827",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002796_00828",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.743,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002796_00830",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.591,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002837_00838",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.571,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002837_00839",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.867,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002879_00847",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.854,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002879_00848",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002921_00856",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.901,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002921_00857",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_002921_00859",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.681,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003005_00871",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003005_00872",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003047_00876",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.61,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003047_00877",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.5,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003090_00883",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.636,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003090_00884",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.812,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003147_00895",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003147_00896",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.712,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003186_00902",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.525,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003186_00903",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.482,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003228_00910",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.529,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003228_00911",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003272_00919",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.674,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003272_00921",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.675,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003317_00930",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003317_00931",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.456,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003380_00939",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003427_00948",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.691,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003427_00949",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.493,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003427_00950",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003471_00958",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.713,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003471_00959",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003471_00960",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.872,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003513_00965",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003513_00966",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003513_00967",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.833,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003552_00972",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.618,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003552_00973",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.897,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003552_00974",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.912,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003552_00975",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.506,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003593_00980",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003593_00981",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003593_00982",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.953,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p3",
+"id": "rua_sw_ne_1117_003593_00983",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.461,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "1194235824337950_00512",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.601,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "1202840680156839_00533",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.589,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "127103002827974_00118",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "127103002827974_00119",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1346415209085203_00321",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.77,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1346415209085203_00322",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1362535060784292_00424",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.643,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1362535060784292_00425",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "139830181467436_00330",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.777,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1401895673523017_00506",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.839,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "140402778072748_00050",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.578,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "140402778072748_00051",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "140402778072748_00052",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.384,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (stop 0.38)"
+},
+{
+"variante": "p4",
+"id": "1428507540881609_00383",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.951,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p4",
+"id": "1428507540881609_00384",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1428507540881609_00385",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.72,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1428507540881609_00386",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.468,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1428507540881609_00387",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.501,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1454909068222766_00263",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.77,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "151050097036700_00473",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.693,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "161620725985969_00099",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "161620725985969_00100",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "algarismos: 1 algarismos (esperados 2)"
+},
+{
+"variante": "p4",
+"id": "161620725985969_00101",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.938,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "161620725985969_00102",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.888,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "161620725985969_00103",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.668,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "161620725985969_00104",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.922,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "161620725985969_00105",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.54,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "161620725985969_00106",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.508,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "176303467780098_00077",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "176303467780098_00078",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.858,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "176303467780098_00079",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.583,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "176303467780098_00080",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "176303467780098_00081",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.421,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p4",
+"id": "179684627401981_00312",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "179684627401981_00313",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1924321491055960_00349",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.871,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP stop, forma nenhuma)"
+},
+{
+"variante": "p4",
+"id": "1924321491055960_00350",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.563,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1924321491055960_00351",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.678,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1924321491055960_00352",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.844,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "1924321491055960_00353",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "221695656639355_00237",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.892,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "221695656639355_00238",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.601,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "251892116797241_00252",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.624,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "262929075567708_00439",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.963,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "262929075567708_00440",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.553,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "262929075567708_00441",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.893,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "262929075567708_00442",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.718,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "262929075567708_00443",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "314768113426345_00372",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "314768113426345_00373",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.508,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "314768113426345_00374",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.964,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p4",
+"id": "314768113426345_00375",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.878,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "314768113426345_00376",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (outro_sinal 0.35)"
+},
+{
+"variante": "p4",
+"id": "314768113426345_00377",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.59,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "325387565826990_00000",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "325387565826990_00002",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "325387565826990_00003",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.772,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p4",
+"id": "325387565826990_00004",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "325387565826990_00005",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.504,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "332103931769021_00176",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "332103931769021_00177",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "332861158210983_00531",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.523,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "333571651607552_00392",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP stop, forma nenhuma)"
+},
+{
+"variante": "p4",
+"id": "333571651607552_00393",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.626,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "333571651607552_00394",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.536,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "333571651607552_00395",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.816,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "345941120216633_00159",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "345941120216633_00160",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "345941120216633_00161",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.535,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "357199595741657_00063",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.881,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "357199595741657_00064",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.524,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "358223035931413_00016",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.648,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p4",
+"id": "358223035931413_00017",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "358223035931413_00018",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "358223035931413_00020",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.625,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "358223035931413_00021",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.35)"
+},
+{
+"variante": "p4",
+"id": "393622815295748_00525",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.489,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "396281794755874_00420",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.639,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "4223581927673228_00399",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.661,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "4301765876512327_00132",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "4301765876512327_00133",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.982,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "464745681158829_00244",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "464745681158829_00245",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.616,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "491355092121556_00145",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "491355092121556_00146",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "512376593282609_00417",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.931,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "512376593282609_00418",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.663,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "541325036871456_00089",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.877,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "541325036871456_00090",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.543,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "549710842916356_00211",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.994,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "549710842916356_00212",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "549710842916356_00213",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.556,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "556053389113045_00337",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.518,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "556053389113045_00338",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.772,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "556053389113045_00339",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.759,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "565606381092155_00495",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "608010640585505_00537",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.545,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p4",
+"id": "608010640585505_00538",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.958,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "608010640585505_00539",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.561,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "608010640585505_00540",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "608010640585505_00542",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.63,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "608010640585505_00543",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.485,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "627874648178072_00289",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.765,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "759446278037143_00360",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.679,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho"
+},
+{
+"variante": "p4",
+"id": "759446278037143_00361",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.416,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p4",
+"id": "759446278037143_00362",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "759446278037143_00363",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "759446278037143_00364",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.468,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00446",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.92,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00447",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00448",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00449",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00450",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.815,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00451",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.685,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00452",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.798,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00453",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "796403697687751_00454",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.452,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "807789379917576_00228",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "807789379917576_00229",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.543,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "844120776190531_00037",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "844120776190531_00038",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.56,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p4",
+"id": "844120776190531_00040",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "844120776190531_00041",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.479,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "861102281195934_00498",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.865,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "885588182171496_00465",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.837,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "909391203345659_00193",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.576,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p4",
+"id": "909391203345659_00194",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.747,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "909391203345659_00195",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "909391203345659_00196",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.768,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "909391203345659_00197",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.987,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_000000_00552",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.861,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_000252_00562",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002415_00746",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002459_00757",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.58,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002506_00766",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.738,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002506_00767",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002554_00776",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.969,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002554_00780",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.355,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.36)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002554_00781",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002604_00791",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.864,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002656_00802",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.943,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002656_00803",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.617,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002656_00804",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.673,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002705_00808",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002705_00809",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.836,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "algarismos: 1 algarismos (esperados 2)"
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002705_00810",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.799,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002705_00811",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.568,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002705_00813",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.473,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002752_00819",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002752_00820",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.602,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002796_00827",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002796_00828",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.743,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002796_00830",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.591,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002837_00838",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.571,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002837_00839",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.867,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002879_00847",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.854,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002879_00848",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002921_00856",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.901,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002921_00857",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_002921_00859",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.681,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003005_00871",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003005_00872",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003047_00876",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.61,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003047_00877",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.5,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003090_00883",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.636,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003090_00884",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.812,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003147_00895",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003147_00896",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.712,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003186_00902",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.525,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003186_00903",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.482,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003228_00910",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.529,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003228_00911",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003272_00919",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.674,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003272_00921",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.675,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003317_00930",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003317_00931",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.456,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003380_00939",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003427_00948",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.691,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003427_00949",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.493,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003427_00950",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003471_00958",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.713,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003471_00959",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003471_00960",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.872,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003513_00965",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003513_00966",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003513_00967",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.833,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003552_00972",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.618,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003552_00973",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.897,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003552_00974",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.912,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003552_00975",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.506,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003593_00980",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003593_00981",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003593_00982",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.953,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p4",
+"id": "rua_sw_ne_1117_003593_00983",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.461,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "1194235824337950_00512",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.601,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "1202840680156839_00533",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.589,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "127103002827974_00118",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "127103002827974_00119",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1346415209085203_00321",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.77,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1346415209085203_00322",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1362535060784292_00424",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.643,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1362535060784292_00425",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "139830181467436_00330",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.777,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1401895673523017_00506",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.839,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "140402778072748_00050",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.578,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "140402778072748_00051",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "140402778072748_00052",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.384,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (stop 0.38)"
+},
+{
+"variante": "p5",
+"id": "1428507540881609_00383",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.951,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho + prompt stop sign"
+},
+{
+"variante": "p5",
+"id": "1428507540881609_00384",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1428507540881609_00385",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.72,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1428507540881609_00386",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.468,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1428507540881609_00387",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.501,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1454909068222766_00263",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.77,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "151050097036700_00473",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.02,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00099",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "161620725985969_00100",
+"rotulo": "limite_40",
+"subclasse": "limite_desconhecido",
+"conf": 0.999,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "algarismos: 1 algarismos (esperados 2)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00101",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.938,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00102",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.003,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00103",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.668,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "161620725985969_00104",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.031,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00105",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.54,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "161620725985969_00106",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.508,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "176303467780098_00077",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.999,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "176303467780098_00078",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.858,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "176303467780098_00079",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.583,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "176303467780098_00080",
+"rotulo": "limite_40",
+"subclasse": "outro_sinal",
+"conf": 0.0,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "176303467780098_00081",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.421,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p5",
+"id": "179684627401981_00312",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "179684627401981_00313",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.794,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1924321491055960_00349",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.871,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "1924321491055960_00350",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.563,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1924321491055960_00351",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.678,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "1924321491055960_00352",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.139,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "1924321491055960_00353",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "221695656639355_00237",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.892,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "221695656639355_00238",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.009,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "251892116797241_00252",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.624,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "262929075567708_00439",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.963,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "262929075567708_00440",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.553,
+"desc": "incerto",
+"incerto": true,
+"motivo": "cedência em 2.º lugar no CLIP (0.35)"
+},
+{
+"variante": "p5",
+"id": "262929075567708_00441",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.893,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "262929075567708_00442",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.718,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "262929075567708_00443",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.023,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "314768113426345_00372",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "314768113426345_00373",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.508,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "314768113426345_00374",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.964,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho + prompt stop sign"
+},
+{
+"variante": "p5",
+"id": "314768113426345_00375",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.878,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "314768113426345_00376",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (outro_sinal 0.35)"
+},
+{
+"variante": "p5",
+"id": "314768113426345_00377",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.59,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "325387565826990_00000",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.947,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "325387565826990_00002",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "325387565826990_00003",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.772,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p5",
+"id": "325387565826990_00004",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "325387565826990_00005",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.504,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "332103931769021_00176",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.0,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "332103931769021_00177",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "332861158210983_00531",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.523,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "333571651607552_00392",
+"rotulo": "stop",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "333571651607552_00393",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.626,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "333571651607552_00394",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.042,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "333571651607552_00395",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.816,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "345941120216633_00159",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.0,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "345941120216633_00160",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "345941120216633_00161",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.027,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "357199595741657_00063",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.881,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "357199595741657_00064",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.524,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "358223035931413_00016",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.648,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p5",
+"id": "358223035931413_00017",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.0,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "358223035931413_00018",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "358223035931413_00020",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.625,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "358223035931413_00021",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.354,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.35)"
+},
+{
+"variante": "p5",
+"id": "393622815295748_00525",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.489,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "396281794755874_00420",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.639,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "4223581927673228_00399",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.661,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "4301765876512327_00132",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "4301765876512327_00133",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.005,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "464745681158829_00244",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "464745681158829_00245",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.616,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "491355092121556_00145",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "491355092121556_00146",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.998,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "512376593282609_00417",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.931,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "512376593282609_00418",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.663,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "541325036871456_00089",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.007,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "541325036871456_00090",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.543,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "549710842916356_00211",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.994,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "549710842916356_00212",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "549710842916356_00213",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.556,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "556053389113045_00337",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.518,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "556053389113045_00338",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.198,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "556053389113045_00339",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.759,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "565606381092155_00495",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.031,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "608010640585505_00537",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.545,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p5",
+"id": "608010640585505_00538",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.958,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "608010640585505_00539",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.561,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "608010640585505_00540",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.76,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "608010640585505_00542",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.63,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "608010640585505_00543",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.485,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "627874648178072_00289",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.213,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "759446278037143_00360",
+"rotulo": "stop",
+"subclasse": "stop",
+"conf": 0.679,
+"desc": "STOP",
+"incerto": false,
+"motivo": "octógono vermelho + prompt stop sign"
+},
+{
+"variante": "p5",
+"id": "759446278037143_00361",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.416,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (costas 0.42)"
+},
+{
+"variante": "p5",
+"id": "759446278037143_00362",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "759446278037143_00363",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "759446278037143_00364",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.014,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "796403697687751_00446",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.92,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00447",
+"rotulo": "cedencia",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00448",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00449",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.94,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00450",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.815,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00451",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.685,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00452",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.031,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "796403697687751_00453",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.721,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "796403697687751_00454",
+"rotulo": "nao_sinal",
+"subclasse": "costas",
+"conf": 0.452,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "807789379917576_00228",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.75,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "807789379917576_00229",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.543,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "844120776190531_00037",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 1.0,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "844120776190531_00038",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.56,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p5",
+"id": "844120776190531_00040",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "844120776190531_00041",
+"rotulo": "costas",
+"subclasse": "outro_sinal",
+"conf": 0.03,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "861102281195934_00498",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.053,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "885588182171496_00465",
+"rotulo": "costas",
+"subclasse": "costas",
+"conf": 0.837,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "909391203345659_00193",
+"rotulo": "cedencia",
+"subclasse": "cedencia_passagem",
+"conf": 0.576,
+"desc": "cedência de passagem",
+"incerto": false,
+"motivo": "triângulo invertido"
+},
+{
+"variante": "p5",
+"id": "909391203345659_00194",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.747,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "909391203345659_00195",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.785,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "909391203345659_00196",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.768,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "909391203345659_00197",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.987,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_000000_00552",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.033,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_000252_00562",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.024,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002415_00746",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.882,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002459_00757",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.58,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002506_00766",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.738,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002506_00767",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.884,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002554_00776",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.969,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002554_00780",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.355,
+"desc": "incerto",
+"incerto": true,
+"motivo": "família incerta (limite 0.36)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002554_00781",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002604_00791",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.864,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002656_00802",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.943,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002656_00803",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.617,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002656_00804",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.673,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002705_00808",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.941,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002705_00809",
+"rotulo": "outro_frente",
+"subclasse": "limite_desconhecido",
+"conf": 0.836,
+"desc": "limite (valor desconhecido)",
+"incerto": true,
+"motivo": "algarismos: 1 algarismos (esperados 2)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002705_00810",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.799,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002705_00811",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.568,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002705_00813",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.473,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002752_00819",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.788,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002752_00820",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.602,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002796_00827",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002796_00828",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.743,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002796_00830",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.591,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002837_00838",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.571,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002837_00839",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.867,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002879_00847",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.854,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002879_00848",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.908,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002921_00856",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.901,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002921_00857",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.907,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_002921_00859",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.681,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003005_00871",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003005_00872",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.549,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003047_00876",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.61,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003047_00877",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.5,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003090_00883",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.636,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003090_00884",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.812,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003147_00895",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.682,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003147_00896",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.712,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003186_00902",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.525,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003186_00903",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.482,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003228_00910",
+"rotulo": "outro_frente",
+"subclasse": "costas",
+"conf": 0.529,
+"desc": "de costas",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003228_00911",
+"rotulo": "nao_sinal",
+"subclasse": "outro_sinal",
+"conf": 0.902,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003272_00919",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.674,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003272_00921",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.675,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003317_00930",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.778,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003317_00931",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.456,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003380_00939",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.894,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003427_00948",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.691,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003427_00949",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.493,
+"desc": "incerto",
+"incerto": true,
+"motivo": "cedência em 2.º lugar no CLIP (0.36)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003427_00950",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.615,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003471_00958",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.713,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003471_00959",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.965,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003471_00960",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.872,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003513_00965",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.81,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003513_00966",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.06,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003513_00967",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.833,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003552_00972",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.028,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003552_00973",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.897,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003552_00974",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.912,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003552_00975",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.506,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003593_00980",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.644,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003593_00981",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.02,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (prompt stop sign, forma nenhuma)"
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003593_00982",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.953,
+"desc": "outro sinal",
+"incerto": false,
+"motivo": null
+},
+{
+"variante": "p5",
+"id": "rua_sw_ne_1117_003593_00983",
+"rotulo": "outro_frente",
+"subclasse": "outro_sinal",
+"conf": 0.461,
+"desc": "incerto",
+"incerto": true,
+"motivo": "veto da forma (CLIP limite, sem anel vermelho)"
+}
+]

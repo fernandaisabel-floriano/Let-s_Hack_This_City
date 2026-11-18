@@ -1,0 +1,918 @@
+{
+ "gerado_em": "2026-11-18T18:03:14+00:00",
+ "rotuladas": 258,
+ "sem_rotulo": 0,
+ "segundos": 71.7,
+ "alvo_recall": 0.9,
+ "modo_escolhido": "v2 justo",
+ "sem_filtro": {
+  "fila": 258,
+  "verdadeiros": 51,
+  "precisao": 0.198,
+  "recall": 1.0,
+  "verdadeiros_deitados_fora": 0,
+  "falsos_tirados": 0
+ },
+ "modos": {
+  "v2 justo": {
+   "auc": 0.862,
+   "varrimento": {
+    "0.0": {
+     "fila": 258,
+     "verdadeiros": 51,
+     "precisao": 0.198,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 0
+    },
+    "0.005": {
+     "fila": 246,
+     "verdadeiros": 51,
+     "precisao": 0.207,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 12
+    },
+    "0.01": {
+     "fila": 234,
+     "verdadeiros": 51,
+     "precisao": 0.218,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 24
+    },
+    "0.02": {
+     "fila": 207,
+     "verdadeiros": 51,
+     "precisao": 0.246,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 51
+    },
+    "0.03": {
+     "fila": 188,
+     "verdadeiros": 49,
+     "precisao": 0.261,
+     "recall": 0.961,
+     "verdadeiros_deitados_fora": 2,
+     "falsos_tirados": 68
+    },
+    "0.04": {
+     "fila": 185,
+     "verdadeiros": 48,
+     "precisao": 0.259,
+     "recall": 0.941,
+     "verdadeiros_deitados_fora": 3,
+     "falsos_tirados": 70
+    },
+    "0.05": {
+     "fila": 175,
+     "verdadeiros": 48,
+     "precisao": 0.274,
+     "recall": 0.941,
+     "verdadeiros_deitados_fora": 3,
+     "falsos_tirados": 80
+    },
+    "0.1": {
+     "fila": 113,
+     "verdadeiros": 41,
+     "precisao": 0.363,
+     "recall": 0.804,
+     "verdadeiros_deitados_fora": 10,
+     "falsos_tirados": 135
+    },
+    "0.15": {
+     "fila": 91,
+     "verdadeiros": 38,
+     "precisao": 0.418,
+     "recall": 0.745,
+     "verdadeiros_deitados_fora": 13,
+     "falsos_tirados": 154
+    },
+    "0.2": {
+     "fila": 70,
+     "verdadeiros": 38,
+     "precisao": 0.543,
+     "recall": 0.745,
+     "verdadeiros_deitados_fora": 13,
+     "falsos_tirados": 175
+    },
+    "0.25": {
+     "fila": 50,
+     "verdadeiros": 35,
+     "precisao": 0.7,
+     "recall": 0.686,
+     "verdadeiros_deitados_fora": 16,
+     "falsos_tirados": 192
+    },
+    "0.3": {
+     "fila": 46,
+     "verdadeiros": 34,
+     "precisao": 0.739,
+     "recall": 0.667,
+     "verdadeiros_deitados_fora": 17,
+     "falsos_tirados": 195
+    },
+    "0.35": {
+     "fila": 44,
+     "verdadeiros": 34,
+     "precisao": 0.773,
+     "recall": 0.667,
+     "verdadeiros_deitados_fora": 17,
+     "falsos_tirados": 197
+    },
+    "0.4": {
+     "fila": 38,
+     "verdadeiros": 31,
+     "precisao": 0.816,
+     "recall": 0.608,
+     "verdadeiros_deitados_fora": 20,
+     "falsos_tirados": 200
+    },
+    "0.45": {
+     "fila": 36,
+     "verdadeiros": 31,
+     "precisao": 0.861,
+     "recall": 0.608,
+     "verdadeiros_deitados_fora": 20,
+     "falsos_tirados": 202
+    },
+    "0.5": {
+     "fila": 31,
+     "verdadeiros": 28,
+     "precisao": 0.903,
+     "recall": 0.549,
+     "verdadeiros_deitados_fora": 23,
+     "falsos_tirados": 204
+    },
+    "0.55": {
+     "fila": 30,
+     "verdadeiros": 27,
+     "precisao": 0.9,
+     "recall": 0.529,
+     "verdadeiros_deitados_fora": 24,
+     "falsos_tirados": 204
+    },
+    "0.6": {
+     "fila": 27,
+     "verdadeiros": 24,
+     "precisao": 0.889,
+     "recall": 0.471,
+     "verdadeiros_deitados_fora": 27,
+     "falsos_tirados": 204
+    },
+    "0.65": {
+     "fila": 26,
+     "verdadeiros": 23,
+     "precisao": 0.885,
+     "recall": 0.451,
+     "verdadeiros_deitados_fora": 28,
+     "falsos_tirados": 204
+    },
+    "0.7": {
+     "fila": 22,
+     "verdadeiros": 20,
+     "precisao": 0.909,
+     "recall": 0.392,
+     "verdadeiros_deitados_fora": 31,
+     "falsos_tirados": 205
+    },
+    "0.75": {
+     "fila": 21,
+     "verdadeiros": 20,
+     "precisao": 0.952,
+     "recall": 0.392,
+     "verdadeiros_deitados_fora": 31,
+     "falsos_tirados": 206
+    },
+    "0.8": {
+     "fila": 21,
+     "verdadeiros": 20,
+     "precisao": 0.952,
+     "recall": 0.392,
+     "verdadeiros_deitados_fora": 31,
+     "falsos_tirados": 206
+    },
+    "0.85": {
+     "fila": 17,
+     "verdadeiros": 16,
+     "precisao": 0.941,
+     "recall": 0.314,
+     "verdadeiros_deitados_fora": 35,
+     "falsos_tirados": 206
+    },
+    "0.9": {
+     "fila": 14,
+     "verdadeiros": 14,
+     "precisao": 1.0,
+     "recall": 0.275,
+     "verdadeiros_deitados_fora": 37,
+     "falsos_tirados": 207
+    },
+    "0.95": {
+     "fila": 9,
+     "verdadeiros": 9,
+     "precisao": 1.0,
+     "recall": 0.176,
+     "verdadeiros_deitados_fora": 42,
+     "falsos_tirados": 207
+    }
+   },
+   "limiar_recomendado": 0.05,
+   "com_limiar_recomendado": {
+    "fila": 175,
+    "verdadeiros": 48,
+    "precisao": 0.274,
+    "recall": 0.941,
+    "verdadeiros_deitados_fora": 3,
+    "falsos_tirados": 80
+   },
+   "entra_direto_todos": {
+    "t": 0.75,
+    "fila": 21,
+    "verdadeiros": 20,
+    "precisao": 0.952,
+    "recall": 0.392,
+    "verdadeiros_deitados_fora": 31,
+    "falsos_tirados": 206
+   },
+   "validacao_cruzada": {
+    "t": {
+     "media": 0.051,
+     "p10": 0.03,
+     "p90": 0.05
+    },
+    "precisao": {
+     "media": 0.28,
+     "p10": 0.263,
+     "p90": 0.298
+    },
+    "recall": {
+     "media": 0.926,
+     "p10": 0.885,
+     "p90": 1.0
+    },
+    "fila": {
+     "media": 86.495,
+     "p10": 82.0,
+     "p90": 93.1
+    },
+    "fila_sem_filtro": {
+     "media": 130.0,
+     "p10": 130.0,
+     "p90": 130.0
+    },
+    "precisao_sem_filtro": {
+     "media": 0.2,
+     "p10": 0.2,
+     "p90": 0.2
+    },
+    "verdadeiros_deitados_fora": {
+     "media": 1.94,
+     "p10": 0.0,
+     "p90": 3.0
+    },
+    "auto_t": {
+     "media": 0.786,
+     "p10": 0.5,
+     "p90": 0.9
+    },
+    "auto_n": {
+     "media": 9.63,
+     "p10": 5.0,
+     "p90": 17.0
+    },
+    "auto_precisao": {
+     "media": 0.931,
+     "p10": 0.819,
+     "p90": 1.0
+    }
+   },
+   "cv_sem_auto": 7
+  },
+  "v2 largo": {
+   "auc": 0.811,
+   "varrimento": {
+    "0.0": {
+     "fila": 258,
+     "verdadeiros": 51,
+     "precisao": 0.198,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 0
+    },
+    "0.005": {
+     "fila": 248,
+     "verdadeiros": 51,
+     "precisao": 0.206,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 10
+    },
+    "0.01": {
+     "fila": 233,
+     "verdadeiros": 50,
+     "precisao": 0.215,
+     "recall": 0.98,
+     "verdadeiros_deitados_fora": 1,
+     "falsos_tirados": 24
+    },
+    "0.02": {
+     "fila": 210,
+     "verdadeiros": 50,
+     "precisao": 0.238,
+     "recall": 0.98,
+     "verdadeiros_deitados_fora": 1,
+     "falsos_tirados": 47
+    },
+    "0.03": {
+     "fila": 190,
+     "verdadeiros": 49,
+     "precisao": 0.258,
+     "recall": 0.961,
+     "verdadeiros_deitados_fora": 2,
+     "falsos_tirados": 66
+    },
+    "0.04": {
+     "fila": 168,
+     "verdadeiros": 49,
+     "precisao": 0.292,
+     "recall": 0.961,
+     "verdadeiros_deitados_fora": 2,
+     "falsos_tirados": 88
+    },
+    "0.05": {
+     "fila": 158,
+     "verdadeiros": 46,
+     "precisao": 0.291,
+     "recall": 0.902,
+     "verdadeiros_deitados_fora": 5,
+     "falsos_tirados": 95
+    },
+    "0.1": {
+     "fila": 105,
+     "verdadeiros": 38,
+     "precisao": 0.362,
+     "recall": 0.745,
+     "verdadeiros_deitados_fora": 13,
+     "falsos_tirados": 140
+    },
+    "0.15": {
+     "fila": 72,
+     "verdadeiros": 31,
+     "precisao": 0.431,
+     "recall": 0.608,
+     "verdadeiros_deitados_fora": 20,
+     "falsos_tirados": 166
+    },
+    "0.2": {
+     "fila": 55,
+     "verdadeiros": 27,
+     "precisao": 0.491,
+     "recall": 0.529,
+     "verdadeiros_deitados_fora": 24,
+     "falsos_tirados": 179
+    },
+    "0.25": {
+     "fila": 44,
+     "verdadeiros": 24,
+     "precisao": 0.545,
+     "recall": 0.471,
+     "verdadeiros_deitados_fora": 27,
+     "falsos_tirados": 187
+    },
+    "0.3": {
+     "fila": 37,
+     "verdadeiros": 23,
+     "precisao": 0.622,
+     "recall": 0.451,
+     "verdadeiros_deitados_fora": 28,
+     "falsos_tirados": 193
+    },
+    "0.35": {
+     "fila": 33,
+     "verdadeiros": 23,
+     "precisao": 0.697,
+     "recall": 0.451,
+     "verdadeiros_deitados_fora": 28,
+     "falsos_tirados": 197
+    },
+    "0.4": {
+     "fila": 29,
+     "verdadeiros": 21,
+     "precisao": 0.724,
+     "recall": 0.412,
+     "verdadeiros_deitados_fora": 30,
+     "falsos_tirados": 199
+    },
+    "0.45": {
+     "fila": 27,
+     "verdadeiros": 20,
+     "precisao": 0.741,
+     "recall": 0.392,
+     "verdadeiros_deitados_fora": 31,
+     "falsos_tirados": 200
+    },
+    "0.5": {
+     "fila": 25,
+     "verdadeiros": 19,
+     "precisao": 0.76,
+     "recall": 0.373,
+     "verdadeiros_deitados_fora": 32,
+     "falsos_tirados": 201
+    },
+    "0.55": {
+     "fila": 19,
+     "verdadeiros": 18,
+     "precisao": 0.947,
+     "recall": 0.353,
+     "verdadeiros_deitados_fora": 33,
+     "falsos_tirados": 206
+    },
+    "0.6": {
+     "fila": 18,
+     "verdadeiros": 17,
+     "precisao": 0.944,
+     "recall": 0.333,
+     "verdadeiros_deitados_fora": 34,
+     "falsos_tirados": 206
+    },
+    "0.65": {
+     "fila": 14,
+     "verdadeiros": 13,
+     "precisao": 0.929,
+     "recall": 0.255,
+     "verdadeiros_deitados_fora": 38,
+     "falsos_tirados": 206
+    },
+    "0.7": {
+     "fila": 14,
+     "verdadeiros": 13,
+     "precisao": 0.929,
+     "recall": 0.255,
+     "verdadeiros_deitados_fora": 38,
+     "falsos_tirados": 206
+    },
+    "0.75": {
+     "fila": 13,
+     "verdadeiros": 13,
+     "precisao": 1.0,
+     "recall": 0.255,
+     "verdadeiros_deitados_fora": 38,
+     "falsos_tirados": 207
+    },
+    "0.8": {
+     "fila": 12,
+     "verdadeiros": 12,
+     "precisao": 1.0,
+     "recall": 0.235,
+     "verdadeiros_deitados_fora": 39,
+     "falsos_tirados": 207
+    },
+    "0.85": {
+     "fila": 11,
+     "verdadeiros": 11,
+     "precisao": 1.0,
+     "recall": 0.216,
+     "verdadeiros_deitados_fora": 40,
+     "falsos_tirados": 207
+    },
+    "0.9": {
+     "fila": 8,
+     "verdadeiros": 8,
+     "precisao": 1.0,
+     "recall": 0.157,
+     "verdadeiros_deitados_fora": 43,
+     "falsos_tirados": 207
+    },
+    "0.95": {
+     "fila": 6,
+     "verdadeiros": 6,
+     "precisao": 1.0,
+     "recall": 0.118,
+     "verdadeiros_deitados_fora": 45,
+     "falsos_tirados": 207
+    }
+   },
+   "limiar_recomendado": 0.05,
+   "com_limiar_recomendado": {
+    "fila": 158,
+    "verdadeiros": 46,
+    "precisao": 0.291,
+    "recall": 0.902,
+    "verdadeiros_deitados_fora": 5,
+    "falsos_tirados": 95
+   },
+   "entra_direto_todos": {
+    "t": 0.75,
+    "fila": 13,
+    "verdadeiros": 13,
+    "precisao": 1.0,
+    "recall": 0.255,
+    "verdadeiros_deitados_fora": 38,
+    "falsos_tirados": 207
+   },
+   "validacao_cruzada": {
+    "t": {
+     "media": 0.046,
+     "p10": 0.04,
+     "p90": 0.05
+    },
+    "precisao": {
+     "media": 0.295,
+     "p10": 0.275,
+     "p90": 0.313
+    },
+    "recall": {
+     "media": 0.919,
+     "p10": 0.846,
+     "p90": 1.0
+    },
+    "fila": {
+     "media": 81.145,
+     "p10": 75.0,
+     "p90": 87.0
+    },
+    "fila_sem_filtro": {
+     "media": 130.0,
+     "p10": 130.0,
+     "p90": 130.0
+    },
+    "precisao_sem_filtro": {
+     "media": 0.2,
+     "p10": 0.2,
+     "p90": 0.2
+    },
+    "verdadeiros_deitados_fora": {
+     "media": 2.115,
+     "p10": 0.0,
+     "p90": 4.0
+    },
+    "auto_t": {
+     "media": 0.626,
+     "p10": 0.55,
+     "p90": 0.75
+    },
+    "auto_n": {
+     "media": 8.485,
+     "p10": 5.0,
+     "p90": 12.0
+    },
+    "auto_precisao": {
+     "media": 0.932,
+     "p10": 0.889,
+     "p90": 1.0
+    }
+   },
+   "cv_sem_auto": 10
+  },
+  "v1 justo": {
+   "auc": 0.813,
+   "varrimento": {
+    "0.0": {
+     "fila": 258,
+     "verdadeiros": 51,
+     "precisao": 0.198,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 0
+    },
+    "0.005": {
+     "fila": 227,
+     "verdadeiros": 51,
+     "precisao": 0.225,
+     "recall": 1.0,
+     "verdadeiros_deitados_fora": 0,
+     "falsos_tirados": 31
+    },
+    "0.01": {
+     "fila": 212,
+     "verdadeiros": 49,
+     "precisao": 0.231,
+     "recall": 0.961,
+     "verdadeiros_deitados_fora": 2,
+     "falsos_tirados": 44
+    },
+    "0.02": {
+     "fila": 185,
+     "verdadeiros": 46,
+     "precisao": 0.249,
+     "recall": 0.902,
+     "verdadeiros_deitados_fora": 5,
+     "falsos_tirados": 68
+    },
+    "0.03": {
+     "fila": 172,
+     "verdadeiros": 44,
+     "precisao": 0.256,
+     "recall": 0.863,
+     "verdadeiros_deitados_fora": 7,
+     "falsos_tirados": 79
+    },
+    "0.04": {
+     "fila": 149,
+     "verdadeiros": 41,
+     "precisao": 0.275,
+     "recall": 0.804,
+     "verdadeiros_deitados_fora": 10,
+     "falsos_tirados": 99
+    },
+    "0.05": {
+     "fila": 131,
+     "verdadeiros": 39,
+     "precisao": 0.298,
+     "recall": 0.765,
+     "verdadeiros_deitados_fora": 12,
+     "falsos_tirados": 115
+    },
+    "0.1": {
+     "fila": 80,
+     "verdadeiros": 38,
+     "precisao": 0.475,
+     "recall": 0.745,
+     "verdadeiros_deitados_fora": 13,
+     "falsos_tirados": 165
+    },
+    "0.15": {
+     "fila": 54,
+     "verdadeiros": 32,
+     "precisao": 0.593,
+     "recall": 0.627,
+     "verdadeiros_deitados_fora": 19,
+     "falsos_tirados": 185
+    },
+    "0.2": {
+     "fila": 43,
+     "verdadeiros": 29,
+     "precisao": 0.674,
+     "recall": 0.569,
+     "verdadeiros_deitados_fora": 22,
+     "falsos_tirados": 193
+    },
+    "0.25": {
+     "fila": 37,
+     "verdadeiros": 27,
+     "precisao": 0.73,
+     "recall": 0.529,
+     "verdadeiros_deitados_fora": 24,
+     "falsos_tirados": 197
+    },
+    "0.3": {
+     "fila": 34,
+     "verdadeiros": 26,
+     "precisao": 0.765,
+     "recall": 0.51,
+     "verdadeiros_deitados_fora": 25,
+     "falsos_tirados": 199
+    },
+    "0.35": {
+     "fila": 28,
+     "verdadeiros": 23,
+     "precisao": 0.821,
+     "recall": 0.451,
+     "verdadeiros_deitados_fora": 28,
+     "falsos_tirados": 202
+    },
+    "0.4": {
+     "fila": 25,
+     "verdadeiros": 22,
+     "precisao": 0.88,
+     "recall": 0.431,
+     "verdadeiros_deitados_fora": 29,
+     "falsos_tirados": 204
+    },
+    "0.45": {
+     "fila": 24,
+     "verdadeiros": 21,
+     "precisao": 0.875,
+     "recall": 0.412,
+     "verdadeiros_deitados_fora": 30,
+     "falsos_tirados": 204
+    },
+    "0.5": {
+     "fila": 24,
+     "verdadeiros": 21,
+     "precisao": 0.875,
+     "recall": 0.412,
+     "verdadeiros_deitados_fora": 30,
+     "falsos_tirados": 204
+    },
+    "0.55": {
+     "fila": 22,
+     "verdadeiros": 19,
+     "precisao": 0.864,
+     "recall": 0.373,
+     "verdadeiros_deitados_fora": 32,
+     "falsos_tirados": 204
+    },
+    "0.6": {
+     "fila": 17,
+     "verdadeiros": 15,
+     "precisao": 0.882,
+     "recall": 0.294,
+     "verdadeiros_deitados_fora": 36,
+     "falsos_tirados": 205
+    },
+    "0.65": {
+     "fila": 15,
+     "verdadeiros": 14,
+     "precisao": 0.933,
+     "recall": 0.275,
+     "verdadeiros_deitados_fora": 37,
+     "falsos_tirados": 206
+    },
+    "0.7": {
+     "fila": 11,
+     "verdadeiros": 11,
+     "precisao": 1.0,
+     "recall": 0.216,
+     "verdadeiros_deitados_fora": 40,
+     "falsos_tirados": 207
+    },
+    "0.75": {
+     "fila": 10,
+     "verdadeiros": 10,
+     "precisao": 1.0,
+     "recall": 0.196,
+     "verdadeiros_deitados_fora": 41,
+     "falsos_tirados": 207
+    },
+    "0.8": {
+     "fila": 10,
+     "verdadeiros": 10,
+     "precisao": 1.0,
+     "recall": 0.196,
+     "verdadeiros_deitados_fora": 41,
+     "falsos_tirados": 207
+    },
+    "0.85": {
+     "fila": 9,
+     "verdadeiros": 9,
+     "precisao": 1.0,
+     "recall": 0.176,
+     "verdadeiros_deitados_fora": 42,
+     "falsos_tirados": 207
+    },
+    "0.9": {
+     "fila": 5,
+     "verdadeiros": 5,
+     "precisao": 1.0,
+     "recall": 0.098,
+     "verdadeiros_deitados_fora": 46,
+     "falsos_tirados": 207
+    },
+    "0.95": {
+     "fila": 1,
+     "verdadeiros": 1,
+     "precisao": 1.0,
+     "recall": 0.02,
+     "verdadeiros_deitados_fora": 50,
+     "falsos_tirados": 207
+    }
+   },
+   "limiar_recomendado": 0.02,
+   "com_limiar_recomendado": {
+    "fila": 185,
+    "verdadeiros": 46,
+    "precisao": 0.249,
+    "recall": 0.902,
+    "verdadeiros_deitados_fora": 5,
+    "falsos_tirados": 68
+   },
+   "entra_direto_todos": {
+    "t": 0.7,
+    "fila": 11,
+    "verdadeiros": 11,
+    "precisao": 1.0,
+    "recall": 0.216,
+    "verdadeiros_deitados_fora": 40,
+    "falsos_tirados": 207
+   },
+   "validacao_cruzada": {
+    "t": {
+     "media": 0.019,
+     "p10": 0.01,
+     "p90": 0.03
+    },
+    "precisao": {
+     "media": 0.242,
+     "p10": 0.227,
+     "p90": 0.256
+    },
+    "recall": {
+     "media": 0.897,
+     "p10": 0.808,
+     "p90": 1.0
+    },
+    "fila": {
+     "media": 96.795,
+     "p10": 83.0,
+     "p90": 110.0
+    },
+    "fila_sem_filtro": {
+     "media": 130.0,
+     "p10": 130.0,
+     "p90": 130.0
+    },
+    "precisao_sem_filtro": {
+     "media": 0.2,
+     "p10": 0.2,
+     "p90": 0.2
+    },
+    "verdadeiros_deitados_fora": {
+     "media": 2.69,
+     "p10": 0.0,
+     "p90": 5.0
+    },
+    "auto_t": {
+     "media": 0.624,
+     "p10": 0.4,
+     "p90": 0.7
+    },
+    "auto_n": {
+     "media": 6.84,
+     "p10": 0.0,
+     "p90": 14.0
+    },
+    "auto_precisao": {
+     "media": 0.899,
+     "p10": 0.778,
+     "p90": 1.0
+    }
+   },
+   "cv_sem_auto": 29
+  }
+ },
+ "falsos_por_classe_negativa": {
+  "papeleira": 73,
+  "outro": 54,
+  "armario": 36,
+  "pilarete": 23,
+  "veiculo": 12,
+  "marco_incendio": 6,
+  "floreira": 3
+ },
+ "cruzamento_rotulo_tecnico": {
+  "(sem tipo) × outro": 40,
+  "outro × papeleira": 31,
+  "(sem tipo) × papeleira": 28,
+  "(sem tipo) × armario": 22,
+  "(sem tipo) × pilarete": 16,
+  "outro × armario": 10,
+  "outro × outro": 10,
+  "armario × papeleira": 8,
+  "(sem tipo) × veiculo": 6,
+  "outro × pilarete": 6,
+  "(sem tipo) × contentor": 5,
+  "veiculo × veiculo": 5,
+  "(sem tipo) × marco_incendio": 4,
+  "(sem tipo) × floreira": 3,
+  "veiculo × contentor": 3,
+  "armario × armario": 2,
+  "veiculo × outro": 2,
+  "outro × marco_incendio": 2,
+  "outro × contentor": 2,
+  "armario × pilarete": 1,
+  "veiculo × papeleira": 1
+ },
+ "verdadeiros_deitados_fora": [
+  {
+   "id": "759446278037143_00368",
+   "p": 0.0296,
+   "classe": "marco_incendio"
+  },
+  {
+   "id": "rua_sw_ne_1117_003272_00929",
+   "p": 0.0315,
+   "classe": "papeleira"
+  },
+  {
+   "id": "rua_sw_ne_1117_003427_00954",
+   "p": 0.0292,
+   "classe": "papeleira"
+  }
+ ],
+ "tipo": {
+  "rotulados_com_tipo": 12,
+  "certos": 6,
+  "confusao": {
+   "ilha_reciclagem → indiferenciado": 4,
+   "indiferenciado → indiferenciado": 6,
+   "ilha_reciclagem → subterraneo": 2
+  },
+  "previsto_nos_verdadeiros": {
+   "indiferenciado": 41,
+   "subterraneo": 8,
+   "ilha_reciclagem": 2
+  }
+ },
+ "exemplos": {
+  "pilarete": "reports/contentores/exemplos_filtro_clip/falso_pilarete",
+  "floreira": "reports/contentores/exemplos_filtro_clip/falso_floreira",
+  "armario": "reports/contentores/exemplos_filtro_clip/falso_armario",
+  "papeleira": "reports/contentores/exemplos_filtro_clip/falso_papeleira",
+  "outro": "reports/contentores/exemplos_filtro_clip/falso_outro",
+  "veiculo": "reports/contentores/exemplos_filtro_clip/falso_veiculo",
+  "marco_incendio": "reports/contentores/exemplos_filtro_clip/falso_marco_incendio"
+ }
+}

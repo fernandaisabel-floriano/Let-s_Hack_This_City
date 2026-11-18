@@ -1,0 +1,188 @@
+{
+ "gerado_em": "2026-11-18T17:13:00+00:00",
+ "deteccoes": 258,
+ "rotuladas": 258,
+ "sem_rotulo": 0,
+ "verdadeiros": 51,
+ "falsos": 207,
+ "por_fonte": {
+  "mapillary": {
+   "n": 127,
+   "verdadeiros": 25
+  },
+  "video_proprio": {
+   "n": 131,
+   "verdadeiros": 26
+  }
+ },
+ "por_prompt": {
+  "trash can": {
+   "n": 2,
+   "verdadeiros": 0
+  },
+  "underground waste bin": {
+   "n": 256,
+   "verdadeiros": 51
+  }
+ },
+ "faixas": [
+  {
+   "faixa": "[0.05, 0.10)",
+   "n": 110,
+   "verdadeiros": 10,
+   "precisao": 0.091
+  },
+  {
+   "faixa": "[0.10, 0.20)",
+   "n": 55,
+   "verdadeiros": 9,
+   "precisao": 0.164
+  },
+  {
+   "faixa": "[0.20, 0.30)",
+   "n": 28,
+   "verdadeiros": 1,
+   "precisao": 0.036
+  },
+  {
+   "faixa": "[0.30, 0.50)",
+   "n": 20,
+   "verdadeiros": 7,
+   "precisao": 0.35
+  },
+  {
+   "faixa": "[0.50, 0.70)",
+   "n": 23,
+   "verdadeiros": 10,
+   "precisao": 0.435
+  },
+  {
+   "faixa": "[0.70, 1.00]",
+   "n": 22,
+   "verdadeiros": 14,
+   "precisao": 0.636
+  }
+ ],
+ "acumulado": [
+  {
+   "limiar": 0.05,
+   "n": 258,
+   "verdadeiros": 51,
+   "precisao": 0.198,
+   "recall": 1.0
+  },
+  {
+   "limiar": 0.1,
+   "n": 148,
+   "verdadeiros": 41,
+   "precisao": 0.277,
+   "recall": 0.804
+  },
+  {
+   "limiar": 0.15,
+   "n": 114,
+   "verdadeiros": 36,
+   "precisao": 0.316,
+   "recall": 0.706
+  },
+  {
+   "limiar": 0.2,
+   "n": 93,
+   "verdadeiros": 32,
+   "precisao": 0.344,
+   "recall": 0.627
+  },
+  {
+   "limiar": 0.25,
+   "n": 79,
+   "verdadeiros": 31,
+   "precisao": 0.392,
+   "recall": 0.608
+  },
+  {
+   "limiar": 0.3,
+   "n": 65,
+   "verdadeiros": 31,
+   "precisao": 0.477,
+   "recall": 0.608
+  },
+  {
+   "limiar": 0.4,
+   "n": 54,
+   "verdadeiros": 29,
+   "precisao": 0.537,
+   "recall": 0.569
+  },
+  {
+   "limiar": 0.5,
+   "n": 45,
+   "verdadeiros": 24,
+   "precisao": 0.533,
+   "recall": 0.471
+  },
+  {
+   "limiar": 0.6,
+   "n": 35,
+   "verdadeiros": 21,
+   "precisao": 0.6,
+   "recall": 0.412
+  },
+  {
+   "limiar": 0.7,
+   "n": 22,
+   "verdadeiros": 14,
+   "precisao": 0.636,
+   "recall": 0.275
+  },
+  {
+   "limiar": 0.8,
+   "n": 15,
+   "verdadeiros": 11,
+   "precisao": 0.733,
+   "recall": 0.216
+  },
+  {
+   "limiar": 0.9,
+   "n": 5,
+   "verdadeiros": 3,
+   "precisao": 0.6,
+   "recall": 0.059
+  }
+ ],
+ "sugestao": {
+  "entra_direto_conf_min": null,
+  "fila_conf_min": 0.05,
+  "alvo_precisao": 0.95,
+  "alvo_recall": 0.95,
+  "min_n": 5
+ },
+ "tipos_falso": {
+  "papeleira": 0,
+  "armario": 11,
+  "banco_floreira": 0,
+  "veiculo": 11,
+  "outro": 61,
+  "(sem tipo)": 124
+ },
+ "tipos_verdadeiro": {
+  "subterraneo": 0,
+  "ilha_reciclagem": 6,
+  "indiferenciado": 6,
+  "(sem tipo)": 39
+ },
+ "incertos_fora_da_medicao": {
+  "n": 0,
+  "pequenos_lt30px": 0,
+  "conf_lt_0_1": 0,
+  "outros": 0
+ },
+ "exemplos": {
+  "falso_outro": "reports/contentores/exemplos/falso_outro",
+  "falso_sem_tipo": "reports/contentores/exemplos/falso_sem_tipo",
+  "falso_armario": "reports/contentores/exemplos/falso_armario",
+  "falso_veiculo": "reports/contentores/exemplos/falso_veiculo",
+  "verdadeiro_sem_tipo": "reports/contentores/exemplos/verdadeiro_sem_tipo",
+  "verdadeiro_ilha_reciclagem": "reports/contentores/exemplos/verdadeiro_ilha_reciclagem",
+  "verdadeiro_indiferenciado": "reports/contentores/exemplos/verdadeiro_indiferenciado"
+ }
+}

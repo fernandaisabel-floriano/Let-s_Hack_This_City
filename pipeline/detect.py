@@ -26,7 +26,7 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import ROOT, load_config, zone_dir  # noqa: E402
+from common import ROOT, load_config, recorte_largo_janela, zone_dir  # noqa: E402
 from schema import Detection  # noqa: E402
 
 
@@ -97,8 +97,8 @@ def main() -> None:
                 if x2 - x1 < 2 or y2 - y1 < 2:
                     continue
                 did = f"{r['id']}_{len(dets):05d}"
-                pad = max(8, int(0.15 * max(x2 - x1, y2 - y1)))
-                crop = im[max(0, int(y1) - pad):int(y2) + pad, max(0, int(x1) - pad):int(x2) + pad]
+                wx0, wy0, wx1, wy1 = recorte_largo_janela((x1, y1, x2, y2), im.shape[1], im.shape[0])
+                crop = im[wy0:wy1, wx0:wx1]
                 cv2.imwrite(str(out / "recortes" / f"{did}.jpg"), crop, [cv2.IMWRITE_JPEG_QUALITY, 90])
                 d = Detection(
                     id=did, image_id=r["image_id"],

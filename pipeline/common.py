@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import os
 from collections import Counter
 from pathlib import Path
 
@@ -14,8 +15,15 @@ from schema import IMAGE_FIELDS
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def load_config(path: Path) -> dict:
-    return yaml.safe_load(Path(path).read_text())
+CONFIG = ROOT / "config/municipio.yaml"
+
+
+def load_config(path: Path = CONFIG) -> dict:
+    """Lê a config. CTRLF_CONFIG=outro.yaml substitui a config por omissão
+    (usado pelos testes em tests/, para não tocar em data/ nem em reports/)."""
+    if Path(path).resolve() == CONFIG and os.environ.get("CTRLF_CONFIG"):
+        path = Path(os.environ["CTRLF_CONFIG"])
+    return yaml.safe_load(Path(path).read_text(encoding="utf-8"))
 
 
 def zone_dir(cfg: dict, zona: str | None = None, out_root: Path | None = None) -> Path:
@@ -65,6 +73,23 @@ def street_distance_fn(geojson_path: Path):
         return best
 
     return dist
+
+
+# ------------------------------------------------------------------ recortes
+
+def recorte_largo_janela(bbox, W: int, H: int) -> tuple[int, int, int, int]:
+    """Janela [x0, y0, x1, y1] do recorte largo gravado pela M3 (o que o técnico vê).
+
+    Margem de 15 % do lado maior (mínimo 8 px), cortada aos limites da imagem.
+    """
+    x1, y1, x2, y2 = bbox
+    pad = max(8, int(0.15 * max(x2 - x1, y2 - y1)))
+    return max(0, int(x1) - pad), max(0, int(y1) - pad), min(W, int(x2) + pad), min(H, int(y2) + pad)
+
+
+def lado_px(bbox) -> float:
+    """Lado maior da caixa, em px."""
+    return max(bbox[2] - bbox[0], bbox[3] - bbox[1])
 
 
 # ------------------------------------------------------------------ catálogo

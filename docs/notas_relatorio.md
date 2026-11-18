@@ -324,6 +324,29 @@ Ainda tosco, por decisão (correr de ponta a ponta antes de afinar):
   serão falsos (motas, armários).
 - Referência para a M10: o OSM tem 1 ecoponto e 1 papeleira dentro da zona.
 
+## 7c. M4 em cascata (prioridade à precisão)
+
+`classify_signs.py`, variantes cumulativas comparadas por `m4_medir.py`:
+atual (CLIP no recorte largo) → p1 (recorte quadrado justo, família primeiro
+com limiar por família, depois o número) → p3 (+ filtro A de forma e cor,
+`m4_forma.py`) → p4 (+ valor do limite por templates de algarismos,
+`m4_algarismos.py`). O incerto fica `outro_sinal` incerto ou
+`limite_desconhecido` e vai para a fila. Na fusão, as vistas de costas e as
+incertas abstêm-se e o voto é pesado pelo tamanho do recorte.
+
+Verificação em sinais **sintéticos** (24–80 px, com desfoque, ruído e JPEG;
+não substitui a medição com rótulos reais):
+- Filtro A: 0 confusões entre STOP, cedência, anel vermelho e os distratores
+  (perigo, sentido proibido, estacionamento, sinal azul, costas); STOP
+  reconhecido em todos os tamanhos; cedência a partir de 32 px.
+- Algarismos: 0 valores errados em 30/40/50/20/60/80/90/100 e num sinal de
+  proibição com símbolo; 30/40/50 lidos em quase todos os casos ≥ 32 px.
+  Comparar o número inteiro falhava (o "0" comum domina a correlação: 50 vs 60
+  com margem 0,05), por isso compara-se algarismo a algarismo e o 2.º tem de
+  ser 0.
+
+*Resultados com os rótulos reais: `reports/m4/medicao.md`.*
+
 ## 8. Licenças a mencionar
 
 - Imagens Mapillary: CC BY-SA 4.0 (atribuição ao autor em cada registo).

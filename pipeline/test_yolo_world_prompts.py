@@ -33,7 +33,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
 from zona import street_filter  # noqa: E402
 
-BASE = ROOT / "reports/yolo_world_test"
+BASE = ROOT / (load_config().get("relatorios_yolo_world") or "reports/yolo_world_test")
 LABELS = BASE / "labels.json"
 MODEL = ROOT / "models/yolov8s-worldv2.pt"
 CONF_MIN = 0.05

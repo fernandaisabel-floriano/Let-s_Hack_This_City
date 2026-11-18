@@ -51,7 +51,8 @@ def main() -> None:
 
     def props(r):
         p = {k: r.get(k) for k in EXPORT_FIELDS if k not in ("lat", "lon")}
-        p.update(recorte=r.get("recorte"), espalhamento_m=r.get("espalhamento_m"))
+        p.update(recorte=r.get("recorte"), espalhamento_m=r.get("espalhamento_m"),
+                 subtipo_incerto=r.get("subtipo_incerto"), subtipo_motivo=r.get("subtipo_motivo"))
         return p
 
     (out / "catalogo.geojson").write_text(json.dumps(
