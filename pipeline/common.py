@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def load_config(path: Path) -> dict:
-    return yaml.safe_load(Path(path).read_text())
+    return yaml.safe_load(Path(path).read_text(encoding="utf-8"))
 
 
 def zone_dir(cfg: dict, zona: str | None = None, out_root: Path | None = None) -> Path:
@@ -46,7 +46,7 @@ def bearing(lon1, lat1, lon2, lat2) -> float:
 
 def street_distance_fn(geojson_path: Path):
     """Devolve f(lon, lat) -> distância em metros ao eixo da rua (LineStrings)."""
-    feats = json.loads(Path(geojson_path).read_text())["features"]
+    feats = json.loads(Path(geojson_path).read_text(encoding="utf-8"))["features"]
     lines = [f["geometry"]["coordinates"] for f in feats]
     lat0 = sum(c[1] for ln in lines for c in ln) / sum(len(ln) for ln in lines)
     kx, ky = 111320 * math.cos(math.radians(lat0)), 111320
@@ -74,11 +74,11 @@ BLUR_KEYS = ("rostos", "matriculas", "cabecas")
 
 def load_blur_log(out: Path) -> dict:
     p = out / "desfoque.json"
-    return json.loads(p.read_text()) if p.exists() else {}
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
 def save_blur_log(out: Path, log: dict) -> None:
-    (out / "desfoque.json").write_text(json.dumps(log, indent=0, sort_keys=True))
+    (out / "desfoque.json").write_text(json.dumps(log, indent=0, sort_keys=True), encoding="utf-8")
 
 
 def write_catalog(out: Path, recs: list[dict]) -> None:
@@ -89,7 +89,7 @@ def write_catalog(out: Path, recs: list[dict]) -> None:
         "properties": {k: r.get(k) for k in IMAGE_FIELDS if k not in ("lon", "lat")},
     } for r in recs]
     (out / "images.geojson").write_text(json.dumps(
-        {"type": "FeatureCollection", "features": feats}, ensure_ascii=False, indent=1))
+        {"type": "FeatureCollection", "features": feats}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     with open(out / "images.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=IMAGE_FIELDS, extrasaction="ignore")

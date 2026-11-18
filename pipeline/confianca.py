@@ -73,7 +73,7 @@ def feature(confs_vistas, top_k: int) -> float:
 
 def load_calibration(m8: dict) -> dict:
     p = ROOT / m8["calibracao"]
-    return json.loads(p.read_text()) if p.exists() else {"classes": {}, "rotulos": []}
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"classes": {}, "rotulos": []}
 
 
 def confianca_elemento(confs_vistas, classe: str, calib: dict, m8: dict) -> float | None:
@@ -117,7 +117,7 @@ def refit(calib: dict, m8: dict, fonte: str) -> dict:
 
 
 def save_calibration(calib: dict, m8: dict) -> None:
-    (ROOT / m8["calibracao"]).write_text(json.dumps(calib, ensure_ascii=False, indent=1))
+    (ROOT / m8["calibracao"]).write_text(json.dumps(calib, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 # ----------------------------------------------------------------------- CLI
@@ -130,10 +130,10 @@ def inicial() -> None:
             "contentor": (["dumpster", "recycling bins", "colored recycling containers",
                            "recycling container", "waste container", "trash can"], 0.10)}
     base = ROOT / "reports/yolo_world_test"
-    labels = json.load(open(base / "labels.json"))["caixas"]
+    labels = json.load(open(base / "labels.json", encoding="utf-8"))["caixas"]
     rot, vistos = [], set()
     for raw_p in sorted(base.glob("*/raw_detections.json")):
-        raw = json.load(open(raw_p))
+        raw = json.load(open(raw_p, encoding="utf-8"))
         for o in raw["objetos"]:
             prompts, thr = sets[o["grupo"]]
             cs = [d["conf"] for d in raw["deteccoes"] if d.get("obj") == o["obj"] and d["prompt"] in prompts]
@@ -156,7 +156,7 @@ def inicial() -> None:
 def recalibrar(path: Path) -> None:
     m8 = m8_cfg()
     calib = load_calibration(m8)
-    vals = json.loads(Path(path).read_text())
+    vals = json.loads(Path(path).read_text(encoding="utf-8"))
     for v in vals:
         if v["estado"] not in ("validado", "corrigido", "rejeitado"):
             continue

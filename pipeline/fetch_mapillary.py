@@ -61,7 +61,7 @@ def load_token(env_path: Path) -> str:
     """Lê MAPILLARY_TOKEN do ambiente ou de .env (aceita o token com '|' sem aspas)."""
     tok = os.environ.get("MAPILLARY_TOKEN")
     if not tok and env_path.exists():
-        for line in env_path.read_text().splitlines():
+        for line in env_path.read_text(encoding="utf-8").splitlines():
             line = line.strip()
             if line.startswith("MAPILLARY_TOKEN="):
                 tok = line.split("=", 1)[1].strip().strip('"').strip("'")
@@ -456,7 +456,7 @@ def main() -> None:
         "licenca": LICENCA,
         "licenca_url": LICENCA_URL,
     }
-    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2))
+    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=2))
     if proc["erro"]:
         sys.exit(1)

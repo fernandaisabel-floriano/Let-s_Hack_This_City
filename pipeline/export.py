@@ -39,7 +39,7 @@ def main() -> None:
     epsg = int(crs.split(":")[1])
     tr = Transformer.from_crs("EPSG:4326", crs, always_xy=True)
     out = zone_dir(cfg) / "catalogo"
-    els = json.load(open(out / "elementos.json"))
+    els = json.load(open(out / "elementos.json", encoding="utf-8"))
     inside = zone_contains(cfg)
     so_zona = bool((cfg.get("m9") or {}).get("so_dentro_da_zona", True))
 
@@ -56,10 +56,10 @@ def main() -> None:
 
     (out / "catalogo.geojson").write_text(json.dumps(
         {"type": "FeatureCollection", "name": f"{cfg['municipio']}_{cfg['zona']}",
-         "features": [feature(r, props(r)) for r in cat]}, ensure_ascii=False, indent=1))
+         "features": [feature(r, props(r)) for r in cat]}, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "fora_da_zona.geojson").write_text(json.dumps(
         {"type": "FeatureCollection", "features": [feature(r, props(r)) for r in fora]},
-        ensure_ascii=False, indent=1))
+        ensure_ascii=False, indent=1), encoding="utf-8")
     with open(out / "catalogo.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=EXPORT_FIELDS, extrasaction="ignore")
         w.writeheader()
@@ -76,7 +76,7 @@ def main() -> None:
         "por_fonte": dict(Counter(r["fonte"] for r in cat)),
         "vistas_por_elemento": dict(sorted(Counter(min(r["n_vistas"], 5) for r in cat).items())),
     }
-    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=1))
+    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=1))
 
 

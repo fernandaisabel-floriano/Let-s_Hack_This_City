@@ -80,7 +80,7 @@ def main() -> None:
     limiar = float((cfg.get("m4") or {}).get("limiar", 0.25))
     zdir = zone_dir(cfg)
     p = zdir / "deteccoes/deteccoes.json"
-    dets = json.load(open(p))
+    dets = json.load(open(p, encoding="utf-8"))
     sinais = [d for d in dets if d["classe"] == "sinal"]
     res = ClipSignClassifier().classify([zdir / d["recorte"] for d in sinais])
     for d, (sub, conf, desc) in zip(sinais, res):
@@ -90,7 +90,7 @@ def main() -> None:
         d["extra"]["confianca_classificacao"] = round(conf, 3)
         d["extra"]["descricao_sinal"] = desc
         d["extra"]["classificador"] = "clip-vit-b32-zero-shot"
-    json.dump(dets, open(p, "w"), ensure_ascii=False, indent=0)
+    json.dump(dets, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     from collections import Counter
     print(f"{len(sinais)} sinais classificados: {dict(Counter(d['subclasse'] for d in sinais))}")
     print(f"   descrições: {dict(Counter(d['extra']['descricao_sinal'] for d in sinais))}")

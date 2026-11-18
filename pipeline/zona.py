@@ -37,7 +37,7 @@ def _cfg(cfg: dict) -> dict:
 
 def _lines(cfg: dict) -> list[tuple[str, list]]:
     """[(via, coordenadas)] do GeoJSON das vias (propriedade "via" ou "name")."""
-    feats = json.loads((ROOT / cfg["rua_geojson"]).read_text())["features"]
+    feats = json.loads((ROOT / cfg["rua_geojson"]).read_text(encoding="utf-8"))["features"]
     return [(f["properties"].get("via") or f["properties"].get("name") or "rua",
              f["geometry"]["coordinates"]) for f in feats]
 
@@ -58,7 +58,7 @@ def street_filter(cfg: dict):
     # sentido num anel de ~7 m de raio — as imagens úteis são as das ruas de
     # acesso a OLHAR para a rotunda. Regra extra: câmara a ≤ rotunda_raio_m do
     # centro e centro dentro de ± rotunda_tol_graus do heading.
-    feats = json.loads((ROOT / cfg["rua_geojson"]).read_text())["features"]
+    feats = json.loads((ROOT / cfg["rua_geojson"]).read_text(encoding="utf-8"))["features"]
     rot: dict[str, list] = {}
     for ft in feats:
         if ft["properties"].get("tipo") == "rotunda":
@@ -150,13 +150,13 @@ def main() -> None:
         "properties": {"zona": cfg["zona"], "vias": sorted({v for v, _ in _lines(cfg)}),
                        "buffer_m": z["buffer_avaliacao_m"], "pontas": z["pontas"],
                        "area_m2": round(area), "origem": f"{cfg['rua_geojson']} (OSM, ODbL)"},
-        "geometry": mapping(poly)}]}, ensure_ascii=False))
+        "geometry": mapping(poly)}]}, ensure_ascii=False), encoding="utf-8")
     print(f"polígono de avaliação ({area:.0f} m²) → {out.relative_to(ROOT)}")
 
     f = street_filter(cfg)
     rows = []
     for csvp in sorted(zone_dir(cfg).glob("**/images.csv")):
-        rows += list(csv.DictReader(open(csvp)))
+        rows += list(csv.DictReader(open(csvp, encoding="utf-8")))
     if not rows:
         return
     res = [(r, f(float(r["lon"]), float(r["lat"]), float(r["heading"]))) for r in rows]
@@ -176,7 +176,7 @@ def main() -> None:
                 print(f"     {dia}  {fonte:13s} {seq}  {len(rs):3d}")
                 rep[via].append({"fonte": fonte, "sequencia": seq, "data": dia, "imagens": len(rs)})
         (zone_dir(cfg) / "cobertura_zona.json").write_text(json.dumps(
-            {"vias": rep, "total": len(ok), "recolhidas": len(rows)}, ensure_ascii=False, indent=1))
+            {"vias": rep, "total": len(ok), "recolhidas": len(rows)}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":

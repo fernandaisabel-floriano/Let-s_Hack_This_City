@@ -109,11 +109,11 @@ def main() -> None:
     m8 = m8_cfg(cfg)
     calib = load_calibration(m8)
     zdir = zone_dir(cfg)
-    dets = [d for d in json.load(open(zdir / "deteccoes/deteccoes.json")) if d["extra"].get("posicao_valida")]
+    dets = [d for d in json.load(open(zdir / "deteccoes/deteccoes.json", encoding="utf-8")) if d["extra"].get("posicao_valida")]
     els = [element(i, ms, calib, m8) for i, ms in enumerate(cluster(dets, raio), 1)]
     out = zdir / "catalogo"
     out.mkdir(exist_ok=True)
-    json.dump(els, open(out / "elementos.json", "w"), ensure_ascii=False, indent=1)
+    json.dump(els, open(out / "elementos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"{len(dets)} deteções → {len(els)} elementos "
           f"{dict(Counter(e['tipo'] for e in els))}; estados {dict(Counter(e['estado'] for e in els))}")
     nv = Counter(min(e["n_vistas"], 5) for e in els)

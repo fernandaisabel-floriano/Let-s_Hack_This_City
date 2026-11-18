@@ -32,7 +32,7 @@ def main() -> None:
     ap.add_argument("--out-root", type=Path, default=ROOT / "data/clean")
     args = ap.parse_args()
 
-    cfg = yaml.safe_load(args.config.read_text())
+    cfg = yaml.safe_load(args.config.read_text(encoding="utf-8"))
     bbox = args.bbox or cfg["bbox"]
     validate_bbox(bbox)
     desde = cfg.get("desde")
@@ -101,7 +101,7 @@ def main() -> None:
     }
     out = args.out_root / cfg["municipio"] / cfg["zona"]
     out.mkdir(parents=True, exist_ok=True)
-    (out / "cobertura.json").write_text(json.dumps(rep, ensure_ascii=False, indent=2))
+    (out / "cobertura.json").write_text(json.dumps(rep, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Tabela legível
     print(f"Zona {cfg['zona']}  bbox {bbox}  ({stats['pedidos_api']} pedidos)\n")

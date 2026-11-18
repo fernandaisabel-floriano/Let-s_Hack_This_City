@@ -84,7 +84,7 @@ class Track:
     """Trajeto GPX com interpolação por tempo e por distância percorrida."""
 
     def __init__(self, gpx_path: Path, v_min: float, v_max: float = 8.0):
-        g = gpxpy.parse(gpx_path.read_text())
+        g = gpxpy.parse(gpx_path.read_text(encoding="utf-8"))
         pts = [(p.time, p.longitude, p.latitude)
                for trk in g.tracks for seg in trk.segments for p in seg.points if p.time]
         pts += [(p.time, p.longitude, p.latitude) for p in g.waypoints if p.time] if not pts else []
@@ -308,8 +308,8 @@ def main() -> None:
     write_catalog(out, recs)
     qpath = out / "qualidade.json"
     if qpath.exists():
-        qualidade = {**json.loads(qpath.read_text()), **qualidade}
-    qpath.write_text(json.dumps(qualidade, indent=0))
+        qualidade = {**json.loads(qpath.read_text(encoding="utf-8")), **qualidade}
+    qpath.write_text(json.dumps(qualidade, indent=0), encoding="utf-8")
     nit_min = float(vcfg["nitidez_min"])
     desfocados = sorted(((r["id"], qualidade.get(r["id"], {}).get("nitidez")) for r in recs
                          if qualidade.get(r["id"], {}).get("nitidez", 1e9) < nit_min), key=lambda x: x[1])
@@ -343,7 +343,7 @@ def main() -> None:
             "nitidez_mediana": round(float(np.median([q["nitidez"] for q in qualidade.values()])), 1) if qualidade else None,
         },
     }
-    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2))
+    (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=2))
 
 

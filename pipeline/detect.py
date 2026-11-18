@@ -33,7 +33,7 @@ from schema import Detection  # noqa: E402
 def load_images(zdir: Path) -> list[dict]:
     rows = []
     for csvp in sorted(zdir.glob("*/images.csv")) + sorted(zdir.glob("video/*/images.csv")):
-        for r in csv.DictReader(open(csvp)):
+        for r in csv.DictReader(open(csvp, encoding="utf-8")):
             r["_path"] = csvp.parent / r["ficheiro"]
             r["_rel"] = str(r["_path"].relative_to(zdir))
             rows.append(r)
@@ -118,7 +118,7 @@ def main() -> None:
                 dets.append(d.to_dict())
         if k % 10 == 0 or k == len(rows):
             print(f"  {k}/{len(rows)} imagens, {len(dets)} deteções")
-    json.dump(dets, open(out / "deteccoes.json", "w"), ensure_ascii=False, indent=0)
+    json.dump(dets, open(out / "deteccoes.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     from collections import Counter
     print(f"{len(dets)} deteções em {len(rows)} imagens ({(time.time() - t0) / max(1, len(rows)):.2f} s/imagem): "
           f"{dict(Counter(d['classe'] for d in dets))} → {out.relative_to(ROOT)}/deteccoes.json")

@@ -75,12 +75,12 @@ def main() -> None:
     cfg = load_config(ROOT / "config/municipio.yaml")
     m5 = cfg["m5"]
     p = zone_dir(cfg) / "deteccoes/deteccoes.json"
-    dets = json.load(open(p))
+    dets = json.load(open(p, encoding="utf-8"))
     for d in dets:
         for k in ("lon_obj", "lat_obj", "dist_m", "metodo_dist", "motivo"):
             d["extra"].pop(k, None)
         d["extra"].update(locate(d, m5))
-    json.dump(dets, open(p, "w"), ensure_ascii=False, indent=0)
+    json.dump(dets, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     ok = [d for d in dets if d["extra"]["posicao_valida"]]
     print(f"{len(ok)}/{len(dets)} deteções com posição válida; inválidas: "
           f"{dict(Counter(d['extra']['motivo'] for d in dets if not d['extra']['posicao_valida']))}")

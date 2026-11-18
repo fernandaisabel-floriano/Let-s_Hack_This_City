@@ -79,7 +79,7 @@ def sample_rows() -> list[dict]:
     fonte, cada = _arg("fonte"), int(_arg("cada", 1))
     rows = []
     for csvp in sorted(zone_dir(cfg).glob("**/images.csv")):
-        seq_rows = [r for r in csv.DictReader(open(csvp))
+        seq_rows = [r for r in csv.DictReader(open(csvp, encoding="utf-8"))
                     if (fonte is None or r["fonte"] == fonte)
                     and f(float(r["lon"]), float(r["lat"]), float(r["heading"]))[0]]
         for r in seq_rows[::cada]:
@@ -97,7 +97,7 @@ def active_prompts() -> dict:
 
 
 def load_labels() -> list[dict]:
-    return json.load(open(LABELS))["caixas"] if LABELS.exists() else []
+    return json.load(open(LABELS, encoding="utf-8"))["caixas"] if LABELS.exists() else []
 
 
 def match_label(o: dict, labels: list[dict]):
@@ -143,7 +143,7 @@ def run() -> None:
     todo = [o for o in objs if match_label(o, labels) is None]
     json.dump({"segundos_por_imagem": round(secs, 3), "imgsz": IMGSZ, "conf_min": CONF_MIN,
                "imagens": [r["id"] for r in rows], "deteccoes": dets, "objetos": objs},
-              open(out / "raw_detections.json", "w"), indent=1)
+              open(out / "raw_detections.json", "w", encoding="utf-8"), indent=1)
     print(f"{len(dets)} deteções, {len(objs)} objetos, {len(todo)} por rotular, "
           f"{secs:.2f} s/imagem/prompt")
 
@@ -180,7 +180,7 @@ def run() -> None:
 
 def label() -> None:
     out = out_dir()
-    raw = json.load(open(out / "raw_detections.json"))
+    raw = json.load(open(out / "raw_detections.json", encoding="utf-8"))
     reais, grupos = set(), set()
     for a in sys.argv[2:]:
         if ":" in a and not a.startswith("--"):
@@ -195,15 +195,15 @@ def label() -> None:
             labels.append({"image": o["image"], "grupo": o["grupo"], "bbox": o["bbox"],
                            "real": o["obj"] in reais})
             novos += 1
-    data = json.load(open(LABELS)) if LABELS.exists() else {}
+    data = json.load(open(LABELS, encoding="utf-8")) if LABELS.exists() else {}
     data["caixas"] = labels
-    json.dump(data, open(LABELS, "w"), indent=0, ensure_ascii=False)
+    json.dump(data, open(LABELS, "w", encoding="utf-8"), indent=0, ensure_ascii=False)
     print(f"{novos} rótulos novos ({len(reais)} reais); total {len(labels)}")
 
 
 def score() -> None:
     out = out_dir()
-    raw = json.load(open(out / "raw_detections.json"))
+    raw = json.load(open(out / "raw_detections.json", encoding="utf-8"))
     labels = load_labels()
     objs = {o["obj"]: o for o in raw["objetos"]}
     lab = {k: match_label(o, labels) for k, o in objs.items()}
@@ -241,7 +241,7 @@ def score() -> None:
 
     json.dump({"imagens": len(raw["imagens"]), "objetos_reais_encontrados": gt,
                "segundos_por_imagem": raw["segundos_por_imagem"], "por_prompt": res,
-               "combinacoes": combos}, open(out / "resultados.json", "w"), indent=1, ensure_ascii=False)
+               "combinacoes": combos}, open(out / "resultados.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 
     print(f"{len(raw['imagens'])} imagens | objetos reais encontrados por algum prompt: {gt}\n")
     print("prompt".ljust(30) + "".join(f"≥{t:<5}".ljust(13) for t in THRESHOLDS) + "  (certos/falsos/dup)")

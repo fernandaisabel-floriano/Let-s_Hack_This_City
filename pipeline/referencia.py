@@ -20,10 +20,15 @@ from __future__ import annotations
 import csv
 import json
 import sys
-import pillow_heif
-from PIL import Image
 from pathlib import Path
 
+from PIL import Image
+
+try:  # opcional: só é preciso para fotos HEIC/HEIF
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except ImportError:
+    pillow_heif = None
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
@@ -64,14 +69,9 @@ def _dms(v, ref) -> float:
 
 
 def exif_gps(path: Path) -> tuple[float, float] | None:
-    
-    if path.suffix.lower() in (".heic", ".heif"):
-        try:
-           
-            pillow_heif.register_heif_opener()
-        except ImportError:
-            print(f"  {path.name}: HEIC precisa de `pip install pillow-heif` — ignorada")
-            return None
+    if path.suffix.lower() in (".heic", ".heif") and pillow_heif is None:
+        print(f"  {path.name}: HEIC precisa de `pip install pillow-heif` — ignorada")
+        return None
     try:
         with Image.open(path) as im:
             gps = im.getexif().get_ifd(0x8825)
@@ -86,13 +86,15 @@ def exif_gps(path: Path) -> tuple[float, float] | None:
 def from_photos(folder: Path) -> None:
     p = ref_path()
     rows = load(p)
-    by_foto = {r["foto"]: r for r in rows if r.get("foto")}
+    # chave com "/" em qualquer sistema (linhas antigas do Windows podem ter "\")
+    by_foto = {r["foto"].replace("\\", "/"): r for r in rows if r.get("foto")}
     fotos = sorted(f for f in Path(folder).rglob("*") if f.suffix.lower() in IMG_EXT)
     if not fotos:
         sys.exit(f"nenhuma foto em {folder}")
     novas = sem_gps = preenchidas = 0
     for f in fotos:
-        rel = str(f.relative_to(ROOT)) if f.resolve().is_relative_to(ROOT) else str(f)
+        fa = f.resolve()
+        rel = (fa.relative_to(ROOT) if fa.is_relative_to(ROOT) else fa).as_posix()
         ll = exif_gps(f)
         if ll is None:
             sem_gps += 1
@@ -120,7 +122,7 @@ def from_geojsonio(path: Path) -> None:
     rows = load(p)
     pts = []
     if path.suffix.lower() in (".geojson", ".json"):
-        for ft in json.loads(path.read_text())["features"]:
+        for ft in json.loads(path.read_text(encoding="utf-8"))["features"]:
             if (ft.get("geometry") or {}).get("type") != "Point":
                 continue
             lon, lat = ft["geometry"]["coordinates"][:2]

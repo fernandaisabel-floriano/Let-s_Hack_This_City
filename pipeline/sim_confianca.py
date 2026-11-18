@@ -39,11 +39,11 @@ LIMIAR = m8_cfg()["limiar_auto"]
 
 
 def empirical() -> dict:
-    labels = json.load(open(BASE / "labels.json"))["caixas"]
+    labels = json.load(open(BASE / "labels.json", encoding="utf-8"))["caixas"]
     out = {g: {"real": [], "falso": []} for g in SETS}
     vistos = set()  # a mesma imagem pode estar em v1, v2 e v3
     for raw_p in sorted(BASE.glob("*/raw_detections.json")):
-        raw = json.load(open(raw_p))
+        raw = json.load(open(raw_p, encoding="utf-8"))
         for o in raw["objetos"]:
             if o["grupo"] not in SETS:
                 continue
@@ -141,7 +141,7 @@ def main() -> None:
             "mapillary": simulate(g, emp[g], ab, "mapillary"),
             "video": simulate(g, emp[g], ab, "video"),
         }
-    (OUT / "resultados.json").write_text(json.dumps(report, indent=1, ensure_ascii=False))
+    (OUT / "resultados.json").write_text(json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
     for g, r in report["classes"].items():
         print(f"\n{g}: {r['objetos_rotulados']}  calibração: c={r['calibracao_platt']['c_para_limiar']} ↔ P(real)={LIMIAR}")
         for fonte in ("mapillary", "video"):
