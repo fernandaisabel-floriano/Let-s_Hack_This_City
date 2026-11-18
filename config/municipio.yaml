@@ -56,7 +56,9 @@ desfoque:
 # Vídeo próprio (P1.1): pipeline/ingest_video.py
 video:
   passo_m: 2.0                # 1 frame a cada X m percorridos
-  fov_horizontal_deg: 68      # FOV horizontal da câmara do telemóvel (ajustar ao modelo)
+  fov_lado_maior_deg: 68      # FOV do lado maior do sensor (vale na horizontal e na vertical)
+  nitidez_min: 60             # variância do Laplaciano abaixo disto → frame tremido
+  velocidade_max_ms: 8        # GPS: salto entre pontos acima disto → "GPS a saltar"
   heading_offset_deg: 0       # 0 = câmara a apontar para a frente; 90 = lado direito
   janela_heading_m: 6         # heading = direção do movimento entre ±X/2 m
   velocidade_min_ms: 0.5      # abaixo disto o GPS conta como parado (ruído)
@@ -94,6 +96,7 @@ m5:
   camera_altura_m:          # candeeiros/contentores: ponto de contacto com o chão
     default: 2.5
     mapillary: 1.4          # imagens Mapillary da zona são de dashcam (tablier de carro)
+    video_proprio: 1.4      # vídeos de 17/11 filmados a pé, telemóvel na mão (2,5 m = viatura)
   dist_min_m: 2
   dist_max_m: 40
 
@@ -104,3 +107,7 @@ m6:
 # M9 — exportação (pipeline/export.py)
 m9:
   so_dentro_da_zona: true   # catálogo só com elementos dentro do polígono de avaliação
+
+# M10 — avaliação contra a contagem manual (referencia.csv; pipeline/referencia.py)
+m10:
+  referencia: data/clean/aveiro/santos-martires/referencia.csv

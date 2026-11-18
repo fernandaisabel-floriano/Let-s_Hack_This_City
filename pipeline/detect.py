@@ -113,6 +113,7 @@ def main() -> None:
                            "focal_norm": float(r["focal_norm"]) if r.get("focal_norm") else None,
                            "fov_deg": float(r["fov_deg"]) if r.get("fov_deg") else None,
                            "captured_at": r["captured_at"], "sequence": r["sequence"],
+                           "coord_fonte": r.get("coord_fonte"),
                            "atribuicao": r.get("atribuicao") or ""})
                 dets.append(d.to_dict())
         if k % 10 == 0 or k == len(rows):

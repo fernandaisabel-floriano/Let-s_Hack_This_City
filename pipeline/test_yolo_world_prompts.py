@@ -59,23 +59,41 @@ def iou(a, b) -> float:
 
 
 def out_dir() -> Path:
-    v = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--versao=")), "v3_zona")
+    v = _arg("versao", "v3_zona")
     p = BASE / v
     p.mkdir(parents=True, exist_ok=True)
     return p
 
 
+def _arg(name: str, default=None):
+    return next((a.split("=", 1)[1] for a in sys.argv if a.startswith(f"--{name}=")), default)
+
+
 def sample_rows() -> list[dict]:
-    """Imagens "da rua" de todas as fontes da zona (caminho absoluto em _path)."""
+    """Imagens "da zona" (caminho absoluto em _path).
+
+    --fonte=video_proprio  só uma fonte;  --cada=N  uma imagem em cada N por sequência.
+    """
     cfg = load_config(ROOT / "config/municipio.yaml")
     f = street_filter(cfg)
+    fonte, cada = _arg("fonte"), int(_arg("cada", 1))
     rows = []
     for csvp in sorted(zone_dir(cfg).glob("**/images.csv")):
-        for r in csv.DictReader(open(csvp)):
-            if f(float(r["lon"]), float(r["lat"]), float(r["heading"]))[0]:
-                r["_path"] = str(csvp.parent / r["ficheiro"])
-                rows.append(r)
+        seq_rows = [r for r in csv.DictReader(open(csvp))
+                    if (fonte is None or r["fonte"] == fonte)
+                    and f(float(r["lon"]), float(r["lat"]), float(r["heading"]))[0]]
+        for r in seq_rows[::cada]:
+            r["_path"] = str(csvp.parent / r["ficheiro"])
+            rows.append(r)
     return rows
+
+
+def active_prompts() -> dict:
+    """--so-fixos: sinais e candeeiros só com os prompts fixados na M3 (config m3)."""
+    if "--so-fixos" not in sys.argv:
+        return PROMPTS
+    m3 = load_config(ROOT / "config/municipio.yaml")["m3"]["prompts"]
+    return {"sinal": list(m3["sinal"]), "candeeiro": list(m3["candeeiro"]), "contentor": PROMPTS["contentor"]}
 
 
 def load_labels() -> list[dict]:
@@ -100,7 +118,7 @@ def run() -> None:
     imgs = {r["id"]: cv2.imread(r["_path"]) for r in rows}
     model = YOLOWorld(str(MODEL))
     dets, n, t0 = [], 0, time.time()
-    for grupo, prompts in PROMPTS.items():
+    for grupo, prompts in active_prompts().items():
         for p in prompts:
             model.set_classes([p])
             for iid, im in imgs.items():
@@ -163,15 +181,17 @@ def run() -> None:
 def label() -> None:
     out = out_dir()
     raw = json.load(open(out / "raw_detections.json"))
-    reais = set()
+    reais, grupos = set(), set()
     for a in sys.argv[2:]:
         if ":" in a and not a.startswith("--"):
             g, ids = a.split(":", 1)
+            grupos.add(g)
             reais |= {int(i) for i in ids.split(",") if i}
     labels = load_labels()
     novos = 0
     for o in raw["objetos"]:
-        if match_label(o, labels) is None:
+        # só rotula as classes indicadas (as outras ficam por rotular)
+        if o["grupo"] in grupos and match_label(o, labels) is None:
             labels.append({"image": o["image"], "grupo": o["grupo"], "bbox": o["bbox"],
                            "real": o["obj"] in reais})
             novos += 1
@@ -193,7 +213,7 @@ def score() -> None:
     gt = {g: sum(1 for o in objs.values() if o["grupo"] == g and lab[o["obj"]]) for g in PROMPTS}
 
     res = {}
-    for grupo, prompts in PROMPTS.items():
+    for grupo, prompts in active_prompts().items():
         for p in prompts:
             res[p] = {"grupo": grupo}
             for t in THRESHOLDS:
@@ -209,7 +229,7 @@ def score() -> None:
                 res[p][str(t)] = {"tp": tp, "fp": fp, "dup": dup}
 
     combos = {}
-    for grupo, prompts in PROMPTS.items():
+    for grupo, prompts in active_prompts().items():
         rows = []
         for k in range(1, min(3, len(prompts)) + 1):
             for c in itertools.combinations(prompts, k):

@@ -1,0 +1,80 @@
+{
+ "rua_sw_ne_1117": {
+  "sentido": "SW→NE (sentido inverso ao Mapillary)",
+  "posicao": "GPS real",
+  "frames": 76,
+  "distancia_m": 150.0,
+  "por_via_mais_proxima": {
+   "Rua dos Santos Mártires": 76
+  },
+  "passam_filtro_imagem_da_zona": {
+   "Rua dos Santos Mártires": 74
+  },
+  "dentro_do_poligono": 76,
+  "desfoque": {
+   "rostos": 5,
+   "matriculas": 35,
+   "cabecas": 47,
+   "imagens_com_desfoque": 56
+  },
+  "tremidos": {
+   "limiar_nitidez": 60.0,
+   "n": 0,
+   "frames": []
+  },
+  "nitidez_mediana": 401.4,
+  "gps_saltos": [],
+  "gps_paragens_s": [
+   [
+    0.0,
+    12.0
+   ],
+   [
+    135.0,
+    138.0
+   ]
+  ],
+  "frames_lidos": 3628,
+  "frames_fora_do_trajeto": 0
+ },
+ "rua_ne_sw_1631": {
+  "sentido": "NE→SW (sentido do Mapillary)",
+  "posicao": "trajeto estimado",
+  "frames": 83,
+  "distancia_m": 164.0,
+  "por_via_mais_proxima": {
+   "Rua dos Santos Mártires": 81,
+   "Rotunda": 2
+  },
+  "passam_filtro_imagem_da_zona": {
+   "Rua dos Santos Mártires": 81,
+   "Rotunda": 2
+  },
+  "dentro_do_poligono": 83,
+  "desfoque": {
+   "rostos": 0,
+   "matriculas": 6,
+   "cabecas": 18,
+   "imagens_com_desfoque": 18
+  },
+  "tremidos": {
+   "limiar_nitidez": 60.0,
+   "n": 2,
+   "frames": [
+    {
+     "id": "rua_ne_sw_1631_004219",
+     "nitidez": 37.9
+    },
+    {
+     "id": "rua_ne_sw_1631_004015",
+     "nitidez": 59.9
+    }
+   ]
+  },
+  "nitidez_mediana": 148.0,
+  "gps_saltos": [],
+  "gps_paragens_s": [],
+  "frames_lidos": 9391,
+  "frames_fora_do_trajeto": 991
+ }
+}

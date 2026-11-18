@@ -40,7 +40,8 @@ from common import (ROOT, bearing, blur_totals, count_by, haversine,  # noqa: E4
 
 log = logging.getLogger("ingest_video")
 
-VIDEO_DEFAULTS = {"passo_m": 2.0, "fov_horizontal_deg": 68.0, "heading_offset_deg": 0.0,
+VIDEO_DEFAULTS = {"passo_m": 2.0, "fov_lado_maior_deg": 68.0, "heading_offset_deg": 0.0,
+                  "nitidez_min": 60.0, "velocidade_max_ms": 8.0,
                   "janela_heading_m": 6.0, "velocidade_min_ms": 0.5, "max_px": 2048,
                   "autor": "equipa"}
 
@@ -69,7 +70,11 @@ def video_creation_time(path: Path) -> tuple[datetime | None, float | None]:
 
 
 def parse_iso(s: str) -> datetime:
-    dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    import re
+    s = s.replace("Z", "+00:00")
+    # Python 3.10 só aceita 3 ou 6 casas decimais nos segundos: normaliza para 6.
+    s = re.sub(r"(\d{2}:\d{2}:\d{2})\.(\d+)", lambda m: f"{m[1]}.{(m[2] + '000000')[:6]}", s)
+    dt = datetime.fromisoformat(s)
     return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
 
 
@@ -78,7 +83,7 @@ def parse_iso(s: str) -> datetime:
 class Track:
     """Trajeto GPX com interpolação por tempo e por distância percorrida."""
 
-    def __init__(self, gpx_path: Path, v_min: float):
+    def __init__(self, gpx_path: Path, v_min: float, v_max: float = 8.0):
         g = gpxpy.parse(gpx_path.read_text())
         pts = [(p.time, p.longitude, p.latitude)
                for trk in g.tracks for seg in trk.segments for p in seg.points if p.time]
@@ -98,11 +103,20 @@ class Track:
         # (o ruído do GPS parado não gera frames).
         d = [0.0]
         self.parado = 0.0
+        self.saltos: list[dict] = []      # velocidade implausível entre dois pontos
+        self.paragens: list[list] = []    # intervalos [t0, t1] parado (relativos ao início)
         for i in range(1, len(t)):
             seg = haversine(lon[i - 1], lat[i - 1], lon[i], lat[i])
             dt = t[i] - t[i - 1]
+            if seg / dt > v_max:
+                self.saltos.append({"t_gpx_s": round(t[i] - t[0], 1), "metros": round(seg, 1),
+                                    "velocidade_ms": round(seg / dt, 1)})
             if seg / dt < v_min:
                 self.parado += dt
+                if self.paragens and abs(self.paragens[-1][1] - (t[i - 1] - t[0])) < 1e-6:
+                    self.paragens[-1][1] = t[i] - t[0]
+                else:
+                    self.paragens.append([t[i - 1] - t[0], t[i] - t[0]])
                 seg = 0.0
             d.append(d[-1] + seg)
         self.d = np.array(d)
@@ -151,6 +165,10 @@ def main() -> None:
     ap.add_argument("--zona")
     ap.add_argument("--out-root", type=Path)
     ap.add_argument("--max-frames", type=int, help="parar após N frames extraídos (testes)")
+    ap.add_argument("--forcar", action="store_true",
+                    help="ingerir mesmo com GPX com poucos pontos ou que não cobre o vídeo")
+    ap.add_argument("--coord-fonte", default="gpx",
+                    help="valor de coord_fonte (p.ex. 'estimado' para um trajeto reconstruído, não GPS)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
@@ -177,12 +195,26 @@ def main() -> None:
         sys.exit("O vídeo não tem creation_time: indique --inicio AAAA-MM-DDTHH:MM:SSZ")
     t0_gpx = inicio.timestamp() + args.offset_s
 
-    track = Track(args.gpx, float(vcfg["velocidade_min_ms"]))
+    track = Track(args.gpx, float(vcfg["velocidade_min_ms"]), float(vcfg["velocidade_max_ms"]))
     log.info("vídeo %s → GPX %s .. %s (offset %+.2fs)",
              datetime.fromtimestamp(t0_gpx, timezone.utc).isoformat(timespec="seconds"),
              datetime.fromtimestamp(track.inicio, timezone.utc).isoformat(timespec="seconds"),
              datetime.fromtimestamp(track.fim, timezone.utc).isoformat(timespec="seconds"),
              args.offset_s)
+
+    # O GPX tem de cobrir o vídeo. (17/11: a app de GPS do iPhone parou ao fim de
+    # 6 s — 3 pontos — e o vídeo ficaria sem posições.) Falha em vez de seguir.
+    n_pts = len(track.t)
+    if dur:
+        cobre = max(0.0, min(track.fim, t0_gpx + dur) - max(track.inicio, t0_gpx)) / dur
+    else:
+        cobre = 1.0
+    if (n_pts < 10 or cobre < 0.5) and not args.forcar:
+        sys.exit(f"GPX insuficiente: {n_pts} pontos, cobre {100 * cobre:.0f}% do vídeo "
+                 f"({dur or 0:.0f} s). Verifique o par vídeo/GPX e o --offset-s/--inicio, "
+                 f"ou use --forcar.")
+    if cobre < 0.9:
+        log.warning("o GPX só cobre %.0f%% do vídeo: os frames fora dele são ignorados", 100 * cobre)
 
     cap = cv2.VideoCapture(str(args.video))
     if not cap.isOpened():
@@ -190,7 +222,9 @@ def main() -> None:
     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
 
     passo = float(vcfg["passo_m"])
-    fov = float(vcfg["fov_horizontal_deg"])
+    # FOV do lado MAIOR do sensor: serve tanto para vídeo na horizontal como na vertical.
+    fov = float(vcfg.get("fov_lado_maior_deg", vcfg.get("fov_horizontal_deg", 68.0)))
+    qualidade: dict[str, dict] = {}
     max_px = int(vcfg["max_px"])
     blur_log = load_blur_log(out)
     anon = None
@@ -241,6 +275,8 @@ def main() -> None:
                 frame = cv2.resize(frame, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
             if anon is None:
                 anon = Anonymizer(cfg.get("desfoque"), ROOT)
+            nitidez = float(cv2.Laplacian(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), cv2.CV_64F).var())
+            qualidade[rid] = {"nitidez": round(nitidez, 1), "t_video_s": round(t_v, 2)}
             clean, counts = anon(frame)
             del frame  # o original não sai daqui
             write_jpg(path, clean)
@@ -251,13 +287,14 @@ def main() -> None:
                 log.info("%d frames extraídos (%.0f m)", st["extraidos"], dist)
                 save_blur_log(out, blur_log)
 
-        focal_px = (w / 2) / math.tan(math.radians(fov / 2))
+        focal_px = (max(w, h) / 2) / math.tan(math.radians(fov / 2))
+        fov_h = math.degrees(2 * math.atan((w / 2) / focal_px))
         recs.append({
             "id": rid, "image_id": rid, "view": None, "fonte": "video_proprio",
-            "lon": lon, "lat": lat, "coord_fonte": "gpx",
+            "lon": lon, "lat": lat, "coord_fonte": args.coord_fonte,
             "heading": head, "heading_fonte": "movimento",
             "captured_at": datetime.fromtimestamp(ts, timezone.utc).isoformat(),
-            "is_pano": False, "fov_deg": fov, "focal_norm": focal_px / max(w, h),
+            "is_pano": False, "fov_deg": round(fov_h, 2), "focal_norm": focal_px / max(w, h),
             "sequence": nome, "camera_type": "perspective", "camera_parameters": None,
             "width": w, "height": h, "ficheiro": f"images/{rid}.jpg",
             "autor": vcfg["autor"], "autor_id": "", "licenca": "", "atribuicao": "",
@@ -269,6 +306,13 @@ def main() -> None:
     cap.release()
     save_blur_log(out, blur_log)
     write_catalog(out, recs)
+    qpath = out / "qualidade.json"
+    if qpath.exists():
+        qualidade = {**json.loads(qpath.read_text()), **qualidade}
+    qpath.write_text(json.dumps(qualidade, indent=0))
+    nit_min = float(vcfg["nitidez_min"])
+    desfocados = sorted(((r["id"], qualidade.get(r["id"], {}).get("nitidez")) for r in recs
+                         if qualidade.get(r["id"], {}).get("nitidez", 1e9) < nit_min), key=lambda x: x[1])
 
     gaps = [haversine(a["lon"], a["lat"], b["lon"], b["lat"]) for a, b in zip(recs, recs[1:])]
     resumo = {
@@ -289,7 +333,15 @@ def main() -> None:
         "espacamento_m": {"medio": round(float(np.mean(gaps)), 2),
                           "min": round(min(gaps), 2), "max": round(max(gaps), 2)} if gaps else None,
         "heading_fonte": count_by(recs, "heading_fonte"),
+        "coord_fonte": count_by(recs, "coord_fonte"),
         "desfoque_total": blur_totals(recs),
+        "problemas": {
+            "frames_tremidos": {"limiar_nitidez": nit_min, "n": len(desfocados),
+                                "frames": [{"id": i, "nitidez": n} for i, n in desfocados]},
+            "gps_saltos": track.saltos,
+            "gps_paragens_s": [[round(a, 1), round(b, 1)] for a, b in track.paragens if b - a >= 2],
+            "nitidez_mediana": round(float(np.median([q["nitidez"] for q in qualidade.values()])), 1) if qualidade else None,
+        },
     }
     (out / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2))
     print(json.dumps(resumo, ensure_ascii=False, indent=2))
