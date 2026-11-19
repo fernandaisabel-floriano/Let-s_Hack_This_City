@@ -28,6 +28,9 @@ const FALLBACK_CONFIG: MunicipioConfig = {
 export interface Deteccao {
   id: string
   confianca: number
+  /** [x1, y1, x2, y2] em px na imagem gravada */
+  bbox?: number[]
+  view?: number | null
   extra?: { imagem_id?: string }
 }
 

@@ -1,12 +1,15 @@
-import { FlaskConical, LogIn, Menu, Moon, Sun } from 'lucide-react'
+import { CircleHelp, FlaskConical, Loader2, LogIn, Menu, Moon, Sun } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
-import { AppSidebar, VISTAS, type Vista } from '@/components/app-sidebar'
-import { LoginDialog } from '@/components/login'
+import { AppSidebar, VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
+import { PaginaLogin } from '@/components/pagina-login'
+import { TabCatalogo } from '@/components/tab-catalogo'
+import { TabDashboard } from '@/components/tab-dashboard'
+import { TabDeteccoes } from '@/components/tab-deteccoes'
 import { TabExportar } from '@/components/tab-exportar'
-import { TabFila } from '@/components/tab-fila'
+import { TabImportacao } from '@/components/tab-importacao'
 import { TabMapa } from '@/components/tab-mapa'
-import { TabPainel } from '@/components/tab-painel'
 import { TabRegisto } from '@/components/tab-registo'
+import { PASSOS_PUBLICO, PASSOS_TECNICO, Tour, useTourVisto } from '@/components/tour'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SidebarInset, SidebarProvider, useSidebar } from '@/components/ui/sidebar'
@@ -45,8 +48,12 @@ function useTema() {
   return [escuro, alternar] as const
 }
 
-function lerVista(): Vista {
+type Rota = Vista | 'login'
+
+function lerRota(): Rota {
   const h = window.location.hash.slice(1)
+  if (h === 'login') return 'login'
+  if (VISTA_ALIAS[h]) return VISTA_ALIAS[h]
   return VISTAS.some((v) => v.id === h) ? (h as Vista) : 'mapa'
 }
 
@@ -55,8 +62,8 @@ function BotaoMenu() {
   const { toggleSidebar, open, openMobile, isMobile } = useSidebar()
   const aberto = isMobile ? openMobile : open
   return (
-    <Button variant="ghost" size="sm" onClick={toggleSidebar} aria-expanded={aberto} className="-ml-1 gap-2">
-      <Menu />
+    <Button data-tour="menu" variant="ghost" size="sm" onClick={toggleSidebar} aria-expanded={aberto} aria-label={aberto ? 'Fechar o menu' : 'Abrir o menu'} className="-ml-1 gap-2">
+      <Menu aria-hidden="true" />
       <span className="hidden sm:inline">Menu</span>
     </Button>
   )
@@ -67,69 +74,129 @@ export default function App() {
   const tecnico = sessao.estado.tipo === 'autenticado' ? sessao.estado.tecnico : null
   const cat = useCatalogo(tecnico, sessao.expirou)
   const [escuro, alternarTema] = useTema()
-  const [vista, setVistaState] = useState<Vista>(lerVista)
-  const [login, setLogin] = useState<{ aberto: boolean; destino?: Vista; motivo?: string }>({ aberto: false })
+  const [rota, setRota] = useState<Rota>(lerRota)
+  /** para onde ir depois de entrar, e porquê se pediu o login */
+  const [login, setLogin] = useState<{ destino?: Vista; motivo?: string }>({})
+  const [tour, setTour] = useState(false)
+  const tourChave = tecnico ? 'tecnico' : 'publico'
+  const tourVisto = useTourVisto(tourChave)
+  const pronto = sessao.estado.tipo !== 'a-carregar' && !!cat.base
 
   useEffect(() => {
-    const onHash = () => setVistaState(lerVista())
+    const onHash = () => setRota(lerRota())
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  const irPara = useCallback((v: Vista) => {
-    if (window.location.hash.slice(1) !== v) window.location.hash = v
-    setVistaState(v)
+  const irPara = useCallback((r: Rota) => {
+    if (window.location.hash.slice(1) !== r) window.location.hash = r
+    setRota(r)
   }, [])
 
-  const info = VISTAS.find((v) => v.id === vista)!
-  const restritoSemSessao = !!info.restrito && !tecnico && sessao.estado.tipo !== 'a-carregar'
+  const pedirLogin = useCallback(
+    (destino?: Vista) => {
+      const v = destino && VISTAS.find((x) => x.id === destino)
+      setLogin({ destino, motivo: v ? `«${v.titulo}» é reservada a técnicos.` : undefined })
+      irPara('login')
+    },
+    [irPara],
+  )
 
-  // vista de técnico sem sessão (link direto ou sessão expirada): volta ao mapa e pede login
+  const info = rota === 'login' ? null : VISTAS.find((v) => v.id === rota)!
+  const restritoSemSessao = !!info?.restrito && !tecnico && sessao.estado.tipo !== 'a-carregar'
+
+  // vista de técnico sem sessão (ligação direta ou sessão expirada): pede login e volta depois
   useEffect(() => {
-    if (restritoSemSessao) {
-      setLogin({ aberto: true, destino: vista, motivo: `${info.titulo} é reservada a técnicos da Câmara.` })
-      irPara('mapa')
-    }
-  }, [restritoSemSessao, vista, info.titulo, irPara])
+    if (restritoSemSessao && info) pedirLogin(info.id)
+  }, [restritoSemSessao, info, pedirLogin])
+
+  // já autenticado e na página de login (ex.: botão "voltar" do browser): segue para o destino
+  useEffect(() => {
+    if (rota === 'login' && tecnico) irPara(login.destino ?? 'dashboard')
+  }, [rota, tecnico, login.destino, irPara])
+
+  // primeira visita (público) ou primeiro login (técnico): mostra a visita guiada uma vez
+  useEffect(() => {
+    if (!pronto || rota !== 'mapa' || tourVisto.visto()) return
+    const t = window.setTimeout(() => setTour(true), 900)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só quando muda o tipo de utilizador
+  }, [pronto, tourChave])
+  const fecharTour = useCallback(() => {
+    setTour(false)
+    tourVisto.marcar()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tourChave])
 
   const escolherVista = (v: Vista) => {
     const alvo = VISTAS.find((x) => x.id === v)!
-    if (alvo.restrito && !tecnico) setLogin({ aberto: true, destino: v, motivo: `${alvo.titulo} é reservada a técnicos da Câmara.` })
+    if (alvo.restrito && !tecnico) pedirLogin(v)
     else irPara(v)
   }
 
   const depoisDoLogin = async (fn: () => Promise<void>) => {
     await fn()
-    const destino = login.destino
-    setLogin({ aberto: false })
-    if (destino) irPara(destino)
+    const destino = login.destino ?? 'dashboard'
+    setLogin({})
+    irPara(destino)
   }
 
   const sair = async () => {
     await sessao.sair()
-    if (info.restrito) irPara('mapa')
+    if (info?.restrito) irPara('mapa')
   }
 
-  if (sessao.estado.tipo === 'a-carregar' || !cat.base) {
+  if (!pronto) {
     return (
-      <div className="flex h-svh gap-3 p-3">
-        <Skeleton className="hidden h-full w-12 md:block" />
-        <Skeleton className="h-full flex-1" />
+      <div className="flex h-svh">
+        <Skeleton className="hidden h-full w-64 rounded-none bg-navy md:block" />
+        <div className="flex flex-1 flex-col">
+          <div className="flex h-14 items-center gap-3 border-b px-3">
+            <Skeleton className="h-8 w-20" />
+            <Skeleton className="h-5 w-40" />
+          </div>
+          <div className="relative flex-1 bg-muted">
+            <div className="absolute inset-0 flex items-center justify-center" role="status" aria-live="polite">
+              <div className="flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-sm text-muted-foreground shadow-lg">
+                <Loader2 className="size-4 animate-spin text-primary" aria-hidden="true" />A carregar a plataforma…
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
 
-  const mostrar: Vista = info.restrito && !tecnico ? 'mapa' : vista
+  if (rota === 'login' && !tecnico) {
+    return (
+      <PaginaLogin
+        motivo={login.motivo}
+        primeiraConta={sessao.estado.tipo === 'anonimo' && sessao.estado.primeiraConta}
+        semServidor={sessao.estado.tipo === 'sem-servidor'}
+        onEntrar={(u, p) => depoisDoLogin(() => sessao.entrar(u, p))}
+        onCriar={(u, n, p) => depoisDoLogin(() => sessao.criarPrimeira(u, n, p))}
+        onVoltar={() => {
+          setLogin({})
+          irPara('mapa')
+        }}
+      />
+    )
+  }
+
+  const mostrar: Vista = !info || (info.restrito && !tecnico) ? 'mapa' : info.id
+  const v = VISTAS.find((x) => x.id === mostrar)!
+  const ecraInteiro = mostrar === 'mapa'
+  const contentor = 'mx-auto w-full max-w-[1400px] p-4 sm:p-6'
 
   return (
-    <SidebarProvider defaultOpen={false}>
+    <SidebarProvider defaultOpen>
       <AppSidebar
         cat={cat}
         vista={mostrar}
         onVista={escolherVista}
         escuro={escuro}
         onTema={alternarTema}
-        onEntrar={() => setLogin({ aberto: true })}
+        onEntrar={() => pedirLogin()}
         onSair={sair}
       />
       <SidebarInset className="h-svh min-w-0 overflow-hidden">
@@ -137,53 +204,57 @@ export default function App() {
           <BotaoMenu />
           <div className="h-5 w-px bg-border" />
           <div className="min-w-0 flex-1 leading-tight">
-            <h1 className="truncate text-base font-semibold">{VISTAS.find((v) => v.id === mostrar)!.titulo}</h1>
-            <p className="hidden truncate text-xs text-muted-foreground sm:block">{VISTAS.find((v) => v.id === mostrar)!.descricao}</p>
+            <h1 className="truncate text-base font-semibold">{v.titulo}</h1>
+            <p className="hidden truncate text-xs text-muted-foreground sm:block">{v.descricao}</p>
           </div>
           {cat.origem !== 'pipeline' && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="outline" className="gap-1 font-normal text-muted-foreground">
-                  <FlaskConical /> {cat.origem === 'demo' ? 'Demonstração' : cat.nomeFicheiro}
+                <Badge variant="outline" className="gap-1 border-warning/50 font-normal text-warning">
+                  <FlaskConical aria-hidden="true" /> {cat.origem === 'demo' ? 'Dados fictícios de demonstração' : cat.nomeFicheiro}
                 </Badge>
               </TooltipTrigger>
               <TooltipContent>
-                {cat.origem === 'demo' ? 'Dados gerados para demonstração: não são deteções reais.' : 'Ficheiro carregado neste browser.'}
+                {cat.origem === 'demo' ? 'Não foi encontrado o catálogo do pipeline: estes dados são gerados e não são deteções reais.' : 'Ficheiro carregado neste browser.'}
               </TooltipContent>
+            </Tooltip>
+          )}
+          {mostrar === 'mapa' && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="ghost" size="icon-sm" onClick={() => setTour(true)} aria-label="Ajuda: visita guiada">
+                  <CircleHelp aria-hidden="true" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>Visita guiada</TooltipContent>
             </Tooltip>
           )}
           {!tecnico && (
             <>
-              <Button variant="ghost" size="icon-sm" onClick={alternarTema} aria-label={escuro ? 'Tema claro' : 'Tema escuro'}>
-                {escuro ? <Sun /> : <Moon />}
+              <Button variant="ghost" size="icon-sm" onClick={alternarTema} aria-label={escuro ? 'Mudar para tema claro' : 'Mudar para tema escuro'}>
+                {escuro ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
               </Button>
-              <Button variant="outline" size="sm" onClick={() => setLogin({ aberto: true })}>
-                <LogIn /> <span className="hidden sm:inline">Área do técnico</span>
+              <Button data-tour="tecnico" size="sm" onClick={() => pedirLogin()} aria-label="Entrar na área do técnico">
+                <LogIn aria-hidden="true" /> <span className="hidden sm:inline">Entrar</span>
               </Button>
             </>
           )}
         </header>
 
-        {cat.erro && <div className="border-b bg-destructive/10 px-4 py-2 text-xs text-destructive">{cat.erro}</div>}
+        {cat.erro && <div role="alert" className="border-b bg-destructive/10 px-4 py-2 text-xs text-destructive">{cat.erro}</div>}
 
-        <main className={mostrar === 'mapa' ? 'relative min-h-0 flex-1' : 'min-h-0 flex-1 overflow-auto'}>
-          {mostrar === 'mapa' && <TabMapa key={tecnico ? 't' : 'p'} cat={cat} escuro={escuro} onPedirLogin={() => setLogin({ aberto: true })} />}
-          {mostrar === 'fila' && <div className="h-full p-4"><TabFila cat={cat} escuro={escuro} /></div>}
-          {mostrar === 'painel' && <div className="mx-auto max-w-6xl p-4 sm:p-6"><TabPainel cat={cat} /></div>}
-          {mostrar === 'exportar' && <div className="mx-auto max-w-6xl p-4 sm:p-6"><TabExportar cat={cat} /></div>}
-          {mostrar === 'registo' && <div className="mx-auto max-w-6xl p-4 sm:p-6"><TabRegisto cat={cat} /></div>}
+        <main className={ecraInteiro ? 'relative min-h-0 flex-1' : 'min-h-0 flex-1 overflow-auto bg-background'}>
+          {mostrar === 'mapa' && <TabMapa key={tecnico ? 't' : 'p'} cat={cat} escuro={escuro} onPedirLogin={() => pedirLogin('deteccoes')} />}
+          {mostrar === 'dashboard' && <div className={contentor}><TabDashboard cat={cat} onIr={escolherVista} /></div>}
+          {mostrar === 'catalogo' && <div className={`${contentor} h-full`}><TabCatalogo cat={cat} onPedirLogin={() => pedirLogin('deteccoes')} /></div>}
+          {mostrar === 'exportar' && <div className={contentor}><TabExportar cat={cat} /></div>}
+          {mostrar === 'deteccoes' && <div className={`${contentor} h-full`}><TabDeteccoes cat={cat} escuro={escuro} /></div>}
+          {mostrar === 'importacao' && <div className={contentor}><TabImportacao cat={cat} /></div>}
+          {mostrar === 'registo' && <div className={contentor}><TabRegisto cat={cat} /></div>}
         </main>
       </SidebarInset>
 
-      <LoginDialog
-        open={login.aberto}
-        onOpenChange={(v) => setLogin((l) => ({ ...l, aberto: v }))}
-        motivo={login.motivo}
-        primeiraConta={sessao.estado.tipo === 'anonimo' && sessao.estado.primeiraConta}
-        semServidor={sessao.estado.tipo === 'sem-servidor'}
-        onEntrar={(u, p) => depoisDoLogin(() => sessao.entrar(u, p))}
-        onCriar={(u, n, p) => depoisDoLogin(() => sessao.criarPrimeira(u, n, p))}
-      />
+      <Tour aberto={tour && mostrar === 'mapa'} passos={tecnico ? PASSOS_TECNICO : PASSOS_PUBLICO} onFechar={fecharTour} />
     </SidebarProvider>
   )
 }

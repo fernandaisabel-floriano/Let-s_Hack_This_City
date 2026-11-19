@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import type { MetricaClasse } from '@/lib/data'
 import { separarCatalogo } from '@/lib/export'
 import { data, duracao, pct, subtipoLabel } from '@/lib/format'
-import { ESTADOS_CONFIRMADOS, METODO_LABEL, TIPOS, TIPO_LABEL, TIPO_PLURAL, type MetodoPosicao } from '@/lib/types'
+import { ESTADOS_CONFIRMADOS, METODO_LABEL, TIPOS, TIPOS_CONTENTOR, TIPO_LABEL, TIPO_PLURAL, type MetodoPosicao } from '@/lib/types'
 import type { Catalogo } from '@/hooks/use-catalogo'
 
 function Barras({ itens, total }: { itens: { label: React.ReactNode; n: number; key: string }[]; total: number }) {
@@ -29,7 +29,7 @@ function Barras({ itens, total }: { itens: { label: React.ReactNode; n: number; 
 
 function Numero({ label, valor, nota }: { label: string; valor: React.ReactNode; nota?: string }) {
   return (
-    <div className="flex flex-col gap-1 border-l-2 border-gold/70 pl-4">
+    <div className="flex flex-col gap-1 border-l-2 border-primary/50 pl-4">
       <span className="text-xs text-muted-foreground">{label}</span>
       <span className="font-heading text-3xl font-semibold tabular-nums">{valor}</span>
       {nota && <span className="text-xs text-muted-foreground">{nota}</span>}
@@ -37,7 +37,8 @@ function Numero({ label, valor, nota }: { label: string; valor: React.ReactNode;
   )
 }
 
-export function TabPainel({ cat }: { cat: Catalogo }) {
+/** Indicadores do inventário. `embutido`: dentro do Dashboard, sem a introdução nem os cartões por categoria (já lá estão). */
+export function TabPainel({ cat, embutido }: { cat: Catalogo; embutido?: boolean }) {
   const cfg = cat.base!.config
   const calib = cat.base!.calibracao
   const tecnico = !!cat.tecnico
@@ -62,7 +63,11 @@ export function TabPainel({ cat }: { cat: Catalogo }) {
       confirmados: confirmados.length,
       porTipoConf: count(confirmados.map((e) => e.tipo)),
       porTipoPend: count(els.filter((e) => e.estado === 'pendente').map((e) => e.tipo)),
-      porSubtipo: count(confirmados.filter((e) => e.tipo === 'sinal').map((e) => e.subtipo ?? 'outro_sinal')),
+      porSubtipo: count(els.filter((e) => e.tipo === 'sinal').map((e) => e.subtipo ?? 'outro_sinal')),
+      nSinais: els.filter((e) => e.tipo === 'sinal').length,
+      // contentores do catálogo (confirmados e por confirmar), pelo tipo: dado pelo técnico ou sugerido
+      porContentor: count(els.filter((e) => e.tipo === 'contentor').map((e) => e.subtipo ?? (cat.sugestoes[e.id] ? `~${cat.sugestoes[e.id].tipo}` : 'por_identificar'))),
+      nContentores: els.filter((e) => e.tipo === 'contentor').length,
       porFonte: count(els.flatMap((e) => e.fonte.split('+'))),
       metodo: count(els.map((e) => e.metodo_posicao ?? 'desconhecido')),
       vistas: count(els.map((e) => String(Math.min(e.n_vistas, 5)))),
@@ -82,6 +87,8 @@ export function TabPainel({ cat }: { cat: Catalogo }) {
 
   return (
     <div className="flex flex-col gap-8 pb-6">
+      {!embutido && (
+      <>
       <section className="flex flex-col gap-2">
         <h2 className="text-2xl font-semibold sm:text-3xl">Inventário de {nomeBonito(cfg.zona, cat)}</h2>
         <p className="max-w-2xl text-muted-foreground">
@@ -106,21 +113,46 @@ export function TabPainel({ cat }: { cat: Catalogo }) {
           </Card>
         ))}
       </section>
+      </>
+      )}
 
-      <section className="grid gap-4 md:grid-cols-2">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base font-medium">Contentores e ecopontos por tipo</CardTitle>
+            <CardDescription>Inclui os por confirmar; o tipo é confirmado por um técnico</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Barras
+              total={r.nContentores}
+              itens={[...TIPOS_CONTENTOR, 'papeleira', ...TIPOS_CONTENTOR.map((t) => `~${t}`), 'por_identificar']
+                .filter((k) => r.porContentor[k])
+                .map((k) => ({
+                  key: k,
+                  label:
+                    k === 'por_identificar'
+                      ? 'Tipo por identificar'
+                      : k.startsWith('~')
+                        ? `${subtipoLabel(k.slice(1))} (sugestão)`
+                        : subtipoLabel(k),
+                  n: r.porContentor[k],
+                }))}
+            />
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader>
             <CardTitle className="text-base font-medium">Sinais de trânsito por tipo</CardTitle>
-            <CardDescription>Só os confirmados</CardDescription>
+            <CardDescription>Classificação automática; inclui os por confirmar</CardDescription>
           </CardHeader>
           <CardContent>
             {Object.keys(r.porSubtipo).length ? (
               <Barras
-                total={r.porTipoConf.sinal ?? 0}
+                total={r.nSinais}
                 itens={Object.entries(r.porSubtipo).sort((a, b) => b[1] - a[1]).map(([s, n]) => ({ key: s, label: subtipoLabel(s), n }))}
               />
             ) : (
-              <p className="text-sm text-muted-foreground">Ainda não há sinais confirmados.</p>
+              <p className="text-sm text-muted-foreground">Ainda não há sinais no catálogo.</p>
             )}
           </CardContent>
         </Card>
@@ -149,10 +181,15 @@ export function TabPainel({ cat }: { cat: Catalogo }) {
             <p className="text-sm text-muted-foreground">Visíveis só para técnicos.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 lg:grid-cols-5">
             <Numero label="Entrada automática" valor={pct(r.total ? r.auto / r.total : null)} nota={`confiança ≥ ${cfg.limiar_auto} e ≥ ${cfg.min_vistas} vistas`} />
             <Numero label="Na fila" valor={r.pendentes} nota="por confirmar" />
             <Numero label="Validações" valor={r.nVal} nota="guardadas como dados rotulados" />
+            <Numero
+              label="Duplicados fundidos"
+              valor={cat.duplicados.nAutomaticos}
+              nota={cat.duplicados.porDecidir.length ? `${cat.duplicados.porDecidir.length} possíveis por decidir na fila` : 'nenhum por decidir'}
+            />
             <Numero label="Tempo por validação" valor={r.tempoMedio ? `${r.tempoMedio.toFixed(1)} s` : '—'} nota={r.tempoMedio ? `${duracao(r.tempoTotal)} no total (M11)` : 'M11'} />
           </div>
 

@@ -1,12 +1,12 @@
 import { createElement } from 'react'
-import { Gauge, Lightbulb, Octagon, Signpost, Trash2, Triangle, type LucideIcon } from 'lucide-react'
+import { Gauge, Lightbulb, Octagon, Recycle, Signpost, Trash2, Triangle, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { TIPO_COR, type Tipo } from '@/lib/types'
 
 /** Ícone de um elemento: por tipo e, nos sinais, por subtipo. */
 export function iconeDe(tipo: Tipo, subtipo?: string | null): LucideIcon {
   if (tipo === 'candeeiro') return Lightbulb
-  if (tipo === 'contentor') return Trash2
+  if (tipo === 'contentor') return subtipo === 'ilha_reciclagem' ? Recycle : Trash2
   if (subtipo === 'stop') return Octagon
   if (subtipo === 'cedencia_passagem') return Triangle
   if (subtipo?.startsWith('limite')) return Gauge

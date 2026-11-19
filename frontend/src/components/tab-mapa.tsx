@@ -1,12 +1,25 @@
-import { Lock, Search, SlidersHorizontal, X } from 'lucide-react'
+import { Download, FileSpreadsheet, Map as MapIcon, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { Acoes, Detalhes, Recorte, titulo } from '@/components/ficha'
-import { aplicarFiltros, Filtros, filtrosAtivos, filtrosIniciais, type FiltrosState } from '@/components/filtros'
+import { toast } from 'sonner'
+import { FichaPainel } from '@/components/ficha-painel'
+import { aplicarFiltros, Filtros, filtrosAtivos, filtrosIniciais, type CorPor, type FiltrosState } from '@/components/filtros'
 import { MapView } from '@/components/map-view'
-import { TipoIcon } from '@/components/tipo-icon'
 import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { Label } from '@/components/ui/label'
+import { Switch } from '@/components/ui/switch'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { download, separarCatalogo, toCSV, toGeoJSON } from '@/lib/export'
+import { nomesVias, posicaoARever } from '@/lib/revisao'
 import { cn } from '@/lib/utils'
 import type { Catalogo } from '@/hooks/use-catalogo'
 
@@ -20,21 +33,32 @@ const flutuante = 'rounded-xl border bg-card/95 shadow-lg backdrop-blur supports
 
 export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const tecnico = !!cat.tecnico
+  const movel = useIsMobile()
   const [filtros, setFiltros] = useState<FiltrosState>(() => filtrosIniciais(tecnico))
   const [verFiltros, setVerFiltros] = useState(false)
   const [sel, setSel] = useState<string | null>(null)
   const [editarPos, setEditarPos] = useState(false)
+  const [corPor, setCorPor] = useState<CorPor>('categoria')
+
+  // modo lite: no telemóvel junta os marcadores próximos por omissão
+  const [agruparEscolha, setAgrupar] = useState<boolean | null>(null)
+  const agrupar = agruparEscolha ?? movel
   const cfg = cat.base!.config
+  const ruas = useMemo(() => nomesVias(cat.base!.vias), [cat.base])
 
   const visiveis = useMemo(() => aplicarFiltros(cat.elementos, filtros), [cat.elementos, filtros])
   const contagens = useMemo(() => {
     const tipo: Record<string, number> = {}
     const estado: Record<string, number> = {}
+    let rever = 0
     for (const e of cat.elementos) {
       estado[e.estado] = (estado[e.estado] ?? 0) + 1
-      if (filtros.estados.includes(e.estado)) tipo[e.tipo] = (tipo[e.tipo] ?? 0) + 1
+      if (filtros.estados.includes(e.estado)) {
+        tipo[e.tipo] = (tipo[e.tipo] ?? 0) + 1
+        if (posicaoARever(e)) rever++
+      }
     }
-    return { tipo, estado }
+    return { tipo, estado, rever }
   }, [cat.elementos, filtros.estados])
   const el = cat.elementos.find((e) => e.id === sel)
   const nAtivos = filtrosAtivos(filtros, tecnico)
@@ -45,8 +69,24 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
     setVerFiltros(false)
   }
 
+  /** exportação rápida: o que está no mapa ou o catálogo (mesmas regras do Exportar: dentro da zona, sem rejeitados) */
+  const paraExportar = useMemo(
+    () => ({
+      mapa: separarCatalogo(visiveis, cfg, cat.base!.zona).cat,
+      tudo: separarCatalogo(cat.elementos, cfg, cat.base!.zona).cat,
+    }),
+    [visiveis, cat.elementos, cfg, cat.base],
+  )
+  const exportar = (formato: 'geojson' | 'csv', tudo: boolean) => {
+    const rows = tudo ? paraExportar.tudo : paraExportar.mapa
+    const nome = `${cfg.municipio}_${cfg.zona}_${tudo ? 'catalogo' : 'mapa'}.${formato}`
+    if (formato === 'geojson') download(nome, JSON.stringify(toGeoJSON(rows, cfg), null, 1), 'application/geo+json')
+    else download(nome, toCSV(rows), 'text/csv')
+    toast.success(`${nome} descarregado (${rows.length} elementos)`)
+  }
+
   return (
-    <div className="relative size-full">
+    <div className="relative size-full" data-tour="mapa">
       <MapView
         elementos={visiveis}
         vias={cat.base!.vias}
@@ -55,28 +95,91 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
         selecionado={sel}
         onSelect={selecionar}
         escuro={escuro}
+        limiar={cfg.limiar_auto}
+        agrupar={agrupar}
+        corPor={corPor}
         onMover={tecnico && editarPos ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon }) : undefined}
       />
 
-      {/* pesquisa + filtros */}
-      <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-col items-start gap-2 sm:right-auto sm:w-80">
-        <div className={cn('pointer-events-auto flex w-full items-center gap-1 p-1', flutuante)}>
-          <Search className="ml-2 size-4 shrink-0 text-muted-foreground" />
+      {/* pesquisa + filtros + exportação rápida */}
+      <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-col items-start gap-2 sm:right-auto sm:w-96">
+        <div className={cn('pointer-events-auto flex w-full items-center gap-1 p-1', flutuante)} role="search">
+          <Search className="ml-2 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
           <Input
-            placeholder="Procurar…"
+            data-tour="pesquisa"
+            type="search"
+            aria-label="Procurar por rua, tipo ou identificador"
+            placeholder="Procurar rua, tipo, ex.: «cais stop»"
             className="h-8 min-w-0 flex-1 border-0 bg-transparent px-1 shadow-none focus-visible:ring-0 dark:bg-transparent"
             value={filtros.texto}
             onChange={(e) => setFiltros({ ...filtros, texto: e.target.value })}
           />
-          <Button className="shrink-0" variant={verFiltros ? 'secondary' : 'ghost'} size="sm" onClick={() => setVerFiltros(!verFiltros)} aria-expanded={verFiltros}>
-            <SlidersHorizontal />
+          <Button
+            data-tour="filtros"
+            className="shrink-0"
+            variant={verFiltros ? 'secondary' : 'ghost'}
+            size="sm"
+            onClick={() => setVerFiltros(!verFiltros)}
+            aria-expanded={verFiltros}
+            aria-controls="painel-filtros"
+          >
+            <SlidersHorizontal aria-hidden="true" />
             Filtros
-            {nAtivos > 0 && <span className="rounded-full bg-primary px-1.5 text-[10px] text-primary-foreground">{nAtivos}</span>}
+            {nAtivos > 0 && (
+              <span className="rounded-full bg-primary px-1.5 text-[10px] text-primary-foreground" aria-label={`${nAtivos} filtros ativos`}>
+                {nAtivos}
+              </span>
+            )}
           </Button>
+          <DropdownMenu>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <DropdownMenuTrigger asChild>
+                  <Button data-tour="exportar" variant="ghost" size="icon-sm" className="shrink-0" aria-label="Transferir dados (GeoJSON ou CSV)">
+                    <Download aria-hidden="true" />
+                  </Button>
+                </DropdownMenuTrigger>
+              </TooltipTrigger>
+              <TooltipContent>Transferir dados</TooltipContent>
+            </Tooltip>
+            <DropdownMenuContent align="end" className="w-64">
+              <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">O que está no mapa ({paraExportar.mapa.length})</DropdownMenuLabel>
+              <DropdownMenuItem onSelect={() => exportar('geojson', false)}>
+                <MapIcon aria-hidden="true" /> GeoJSON
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => exportar('csv', false)}>
+                <FileSpreadsheet aria-hidden="true" /> CSV
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Catálogo completo ({paraExportar.tudo.length})</DropdownMenuLabel>
+              <DropdownMenuItem onSelect={() => exportar('geojson', true)}>
+                <MapIcon aria-hidden="true" /> GeoJSON
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => exportar('csv', true)}>
+                <FileSpreadsheet aria-hidden="true" /> CSV
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         {verFiltros && (
-          <div className={cn('pointer-events-auto w-full p-4', flutuante)}>
-            <Filtros value={filtros} onChange={setFiltros} contagens={contagens} tecnico={tecnico} />
+          <div id="painel-filtros" className={cn('pointer-events-auto max-h-[calc(100svh-12rem)] w-full overflow-y-auto p-4', flutuante)}>
+            <Filtros
+              value={filtros}
+              onChange={setFiltros}
+              contagens={contagens}
+              tecnico={tecnico}
+              limiar={cfg.limiar_auto}
+              ruas={ruas}
+              corPor={corPor}
+              onCorPor={setCorPor}
+            />
+            <Label className="mt-5 flex items-center justify-between gap-3 font-normal">
+              <span>
+                Agrupar elementos próximos
+                <span className="block text-xs text-muted-foreground">Mais leve em telemóveis; amplie para separar.</span>
+              </span>
+              <Switch checked={agrupar} onCheckedChange={(v) => setAgrupar(v)} />
+            </Label>
             <div className="mt-4 flex items-center justify-between border-t pt-3">
               <Button variant="ghost" size="sm" onClick={() => setFiltros(filtrosIniciais(tecnico))}>Repor</Button>
               <Button size="sm" onClick={() => setVerFiltros(false)}>Ver {visiveis.length} no mapa</Button>
@@ -87,52 +190,29 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
 
       {/* contagem discreta */}
       {!el && (
-        <div className={cn('absolute bottom-6 left-3 z-10 px-3 py-1.5 text-xs text-muted-foreground', flutuante)}>
+        <div className={cn('absolute bottom-6 left-3 z-10 px-3 py-1.5 text-xs text-muted-foreground', flutuante)} aria-live="polite">
           <strong className="font-semibold text-foreground tabular-nums">{visiveis.length}</strong> elementos no mapa
+          {filtros.rua && <> · {filtros.rua}</>}
         </div>
       )}
 
       {/* ficha */}
       {el && (
         <aside
+          aria-label="Ficha do elemento"
           className={cn(
-            'absolute inset-x-3 bottom-3 z-20 flex max-h-[60%] flex-col overflow-hidden sm:inset-x-auto sm:top-3 sm:right-3 sm:bottom-6 sm:max-h-none sm:w-[360px]',
+            'absolute inset-x-3 bottom-3 z-20 flex max-h-[60%] flex-col overflow-hidden sm:inset-x-auto sm:top-3 sm:right-3 sm:bottom-6 sm:max-h-none sm:w-[380px]',
             flutuante,
           )}
         >
-          <header className="flex items-start gap-3 border-b p-4">
-            <TipoIcon tipo={el.tipo} subtipo={el.subtipo} className="size-9" />
-            <div className="min-w-0 flex-1">
-              <h2 className="truncate text-lg leading-tight font-semibold">{titulo(el)}</h2>
-              <p className="font-mono text-xs text-muted-foreground">{el.id}</p>
-            </div>
-            <Button variant="ghost" size="icon-sm" onClick={() => setSel(null)} aria-label="Fechar">
-              <X />
-            </Button>
-          </header>
-          <ScrollArea className="min-h-0 flex-1">
-            <div className="flex flex-col gap-4 p-4">
-              <Recorte el={el} className="aspect-[4/3] w-full" />
-              {tecnico ? (
-                <Acoes
-                  el={el}
-                  validado={!!cat.validacoes[el.id]}
-                  onDecidir={(estado, opts) => cat.decidir(el.id, estado, opts)}
-                  onDesfazer={() => cat.desfazer(el.id)}
-                  editarPosicao={editarPos}
-                  onEditarPosicao={setEditarPos}
-                />
-              ) : (
-                el.estado === 'pendente' && (
-                  <button onClick={onPedirLogin} className="flex items-center gap-2 rounded-md bg-muted px-3 py-2 text-left text-xs text-muted-foreground hover:bg-accent">
-                    <Lock className="size-3.5 shrink-0" />
-                    Este elemento ainda não foi confirmado por um técnico. É técnico da Câmara? Entre para validar.
-                  </button>
-                )
-              )}
-              <Detalhes el={el} crs={cfg.crs_local} limiar={cfg.limiar_auto} validacao={cat.validacoes[el.id]} tecnico={tecnico} />
-            </div>
-          </ScrollArea>
+          <FichaPainel
+            cat={cat}
+            el={el}
+            onFechar={() => setSel(null)}
+            onPedirLogin={onPedirLogin}
+            editarPosicao={editarPos}
+            onEditarPosicao={setEditarPos}
+          />
         </aside>
       )}
     </div>

@@ -41,6 +41,7 @@ export function useSessao() {
     setEstado({ tipo: 'autenticado', tecnico: t })
   }, [])
 
+  /** primeira conta do servidor: nome de utilizador, nome completo e palavra-passe */
   const criarPrimeira = useCallback(async (utilizador: string, nome: string, password: string) => {
     const t = (await post('/api/tecnicos', { utilizador, nome, password })) as Tecnico
     setEstado({ tipo: 'autenticado', tecnico: t })

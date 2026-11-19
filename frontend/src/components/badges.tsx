@@ -3,11 +3,20 @@ import { cn } from '@/lib/utils'
 import { ESTADO_LABEL, TIPO_COR, TIPO_LABEL, type Estado, type Tipo } from '@/lib/types'
 
 /** Estado como texto sóbrio com um ponto de cor. */
+/** Verde = validado (pelo técnico, com ou sem correção), laranja = pendente, vermelho = rejeitado, azul = automático. */
+export const ESTADO_COR_VAR: Record<Estado, string> = {
+  auto: 'var(--estado-auto)',
+  pendente: 'var(--warning)',
+  validado: 'var(--success)',
+  corrigido: 'var(--success)',
+  rejeitado: 'var(--destructive)',
+}
+
 const ESTADO_PONTO: Record<Estado, string> = {
-  auto: 'bg-primary',
+  auto: 'bg-estado-auto',
   pendente: 'bg-warning',
   validado: 'bg-success',
-  corrigido: 'bg-gold',
+  corrigido: 'bg-success',
   rejeitado: 'bg-destructive',
 }
 
@@ -35,9 +44,10 @@ export function TipoBadge({ tipo }: { tipo: Tipo }) {
 
 export function ConfiancaBar({ valor, limiar }: { valor: number | null | undefined; limiar?: number }) {
   if (valor === null || valor === undefined) return <span className="text-xs text-muted-foreground">sem calibração</span>
-  const cor = valor >= (limiar ?? 0.9) ? 'bg-success' : valor >= 0.5 ? 'bg-warning' : 'bg-destructive/80'
+  // mesmas cores do ponto nos marcadores do mapa (map-view.tsx, corConfianca)
+  const cor = valor >= (limiar ?? 0.9) ? 'bg-success' : valor >= 0.5 ? 'bg-gold' : 'bg-destructive'
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" role="meter" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(valor * 100)} aria-label="Confiança">
       <div className="relative h-1.5 w-16 overflow-hidden rounded-full bg-muted">
         <div className={cn('h-full rounded-full', cor)} style={{ width: `${Math.round(valor * 100)}%` }} />
         {limiar !== undefined && <div className="absolute inset-y-0 w-px bg-foreground/50" style={{ left: `${limiar * 100}%` }} />}

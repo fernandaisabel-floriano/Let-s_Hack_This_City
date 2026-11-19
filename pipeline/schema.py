@@ -16,7 +16,7 @@ from typing import Optional
 
 # --------------------------------------------------------------------- imagens
 
-FONTES = ("mapillary", "video_proprio")
+FONTES = ("mapillary", "video_proprio", "fotos")
 
 IMAGE_FIELDS = [
     "id",              # chave única da linha = nome do ficheiro sem .jpg

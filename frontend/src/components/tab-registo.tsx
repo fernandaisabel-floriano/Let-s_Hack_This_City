@@ -16,6 +16,12 @@ import type { Catalogo } from '@/hooks/use-catalogo'
 function descricao(e: Evento) {
   if (e.acao === 'limpar') return <span className="text-muted-foreground">apagou todas as decisões</span>
   if (e.acao === 'desfazer') return <span className="text-muted-foreground">desfez a decisão</span>
+  if (e.acao === 'par')
+    return (
+      <span className="text-xs">
+        {e.mesmo ? 'juntou como o mesmo objeto' : 'marcou como objetos diferentes'}: <span className="font-mono">{e.a}</span> e <span className="font-mono">{e.b}</span>
+      </span>
+    )
   const v = e.validacao!
   return (
     <div className="flex flex-wrap items-center gap-1.5">
@@ -124,7 +130,7 @@ export function TabRegisto({ cat }: { cat: Catalogo }) {
               </TableHeader>
               <TableBody>
                 {eventos.map((e) => {
-                  const el = e.id ? cat.elementos.find((x) => x.id === e.id) : undefined
+                  const el = e.id ? cat.todos.find((x) => x.id === e.id) : undefined
                   return (
                     <TableRow key={`${e.seq}-${e.quando}`}>
                       <TableCell className="pl-6 text-xs whitespace-nowrap tabular-nums">{new Date(e.quando).toLocaleString('pt-PT')}</TableCell>
@@ -135,6 +141,8 @@ export function TabRegisto({ cat }: { cat: Catalogo }) {
                             {el && <TipoDot tipo={el.tipo} />}
                             {e.id}
                           </span>
+                        ) : e.acao === 'par' ? (
+                          <span className="font-mono text-xs">{e.a} + {e.b}</span>
                         ) : (
                           <Badge variant="outline">todos</Badge>
                         )}

@@ -1,8 +1,9 @@
-import { ArrowDownWideNarrow, ArrowUpNarrowWide, CircleCheck, Timer, Undo2 } from 'lucide-react'
+import { ArrowDownWideNarrow, ArrowUpNarrowWide, Copy, CircleCheck, Timer, Undo2 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { ConfiancaBar } from '@/components/badges'
-import { Acoes, Detalhes, Recorte, titulo } from '@/components/ficha'
+import { Acoes, CoordenadasEditor, Detalhes, Recorte, titulo } from '@/components/ficha'
+import { bboxDe } from '@/components/ficha-painel'
 import { TipoIcon } from '@/components/tipo-icon'
+import { Duplicados } from '@/components/duplicados'
 import { MapView } from '@/components/map-view'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -10,6 +11,7 @@ import { Progress } from '@/components/ui/progress'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Slider } from '@/components/ui/slider'
 import { duracao } from '@/lib/format'
+import { posicaoARever } from '@/lib/revisao'
 import { TIPOS, type Validacao } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import type { Catalogo, DecisaoOpts } from '@/hooks/use-catalogo'
@@ -34,13 +36,19 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
   // menos vistas do que m8.min_vistas entram sempre: são duvidosos de qualquer forma.
   const fila = useMemo(() => {
     const p = cat.elementos.filter(
-      (e) => e.estado === 'pendente' && (e.confianca === null || e.confianca < limiar || e.n_vistas < cfg.min_vistas),
+      (e) =>
+        (e.estado === 'pendente' && (e.confianca === null || e.confianca < limiar || e.n_vistas < cfg.min_vistas)) ||
+        // possíveis duplicados por decidir entram na fila mesmo que já estejam confirmados
+        (e.estado !== 'rejeitado' && cat.duplicados.paresDe(e.id).length > 0) ||
+        // posição incerta e ainda sem decisão de um técnico (inclui os aceites automaticamente)
+        ((e.estado === 'pendente' || e.estado === 'auto') && posicaoARever(e)),
     )
     // sem calibração (null) = mais duvidoso
     const k = (c: number | null) => c ?? -1
     return p.sort((a, b) => (ordem === 'asc' ? k(a.confianca) - k(b.confianca) : k(b.confianca) - k(a.confianca)))
-  }, [cat.elementos, ordem, limiar, cfg.min_vistas])
-  const pendentesTotal = cat.elementos.filter((e) => e.estado === 'pendente').length
+  }, [cat.elementos, cat.duplicados, ordem, limiar, cfg.min_vistas])
+  const naFila = new Set(fila.map((e) => e.id))
+  const escondidos = cat.elementos.filter((e) => e.estado === 'pendente' && !naFila.has(e.id)).length
 
   const feitos = Object.keys(cat.validacoes).length
   const totalParaValidar = fila.length + feitos
@@ -120,7 +128,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
             </div>
             <Slider min={0} max={1} step={0.005} value={[limiar]} onValueChange={([v]) => setLimiar(v)} />
             <div className="flex items-center justify-between text-[11px] text-muted-foreground">
-              <span>{pendentesTotal - fila.length ? `${pendentesTotal - fila.length} acima do limiar` : 'todos os pendentes'}</span>
+              <span>{escondidos ? `${escondidos} pendentes acima do limiar` : 'todos os pendentes'}</span>
               {limiar !== cfg.limiar_auto && (
                 <button className="underline underline-offset-2" onClick={() => setLimiar(cfg.limiar_auto)}>
                   repor {(cfg.limiar_auto * 100).toFixed(0)}%
@@ -140,7 +148,12 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                   <span className="w-5 text-right text-xs text-muted-foreground tabular-nums">{i + 1}</span>
                   <TipoIcon tipo={e.tipo} subtipo={e.subtipo} className="size-6" />
                   <span className="min-w-0 flex-1 truncate">{titulo(e)}</span>
-                  <ConfiancaBar valor={e.confianca} />
+                  {cat.duplicados.paresDe(e.id).length > 0 && (
+                    <Copy className="ctrlf-dup size-3.5 shrink-0 text-warning" aria-label="possível duplicado" />
+                  )}
+                  <span className="w-9 shrink-0 text-right text-xs text-muted-foreground tabular-nums">
+                    {e.confianca !== null ? `${Math.round(e.confianca * 100)}%` : '—'}
+                  </span>
                 </button>
               </li>
             ))}
@@ -169,19 +182,45 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
             <CardContent className="grid gap-4 py-4 xl:grid-cols-[1fr_340px]">
               <div className="flex min-w-0 flex-col gap-4">
                 <Recorte el={atual} className="aspect-video w-full" />
+                <Duplicados cat={cat} el={atual} compacto />
                 <div className="h-52 overflow-hidden rounded-lg border">
-                  <MapView compacto escuro={escuro} elementos={[atual]} vias={cat.base!.vias} zona={cat.base!.zona} bbox={cfg.bbox} selecionado={atual.id} onSelect={() => {}} />
+                  <MapView
+                    compacto
+                    escuro={escuro}
+                    elementos={[atual, ...cat.duplicados.paresDe(atual.id).map((p) => p.outro)]}
+                    vias={cat.base!.vias}
+                    zona={cat.base!.zona}
+                    bbox={cfg.bbox}
+                    selecionado={atual.id}
+                    onSelect={() => {}}
+                    onMover={(id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon })}
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <Acoes
                   el={atual}
                   atalhos
+                  sugestao={cat.sugestoes[atual.id]}
                   validado={false}
                   onDecidir={(estado, opts) => decidir(estado, opts)}
                   onDesfazer={() => {}}
                 />
-                <Detalhes el={atual} crs={cfg.crs_local} limiar={cfg.limiar_auto} tecnico />
+                <details className="rounded-lg border px-3 py-2 text-sm">
+                  <summary className="cursor-pointer text-xs font-medium text-muted-foreground">Corrigir coordenadas (ou arraste o marcador no mapa)</summary>
+                  <div className="pt-3">
+                    <CoordenadasEditor el={atual} onGuardar={(lat, lon) => cat.decidir(atual.id, 'corrigido', { lat, lon })} />
+                  </div>
+                </details>
+                <Detalhes
+                  el={atual}
+                  crs={cfg.crs_local}
+                  limiar={cfg.limiar_auto}
+                  tecnico
+                  sugestao={cat.sugestoes[atual.id]}
+                  imagemInfo={cat.imagens?.imagens[atual.imagem]}
+                  bbox={bboxDe(cat, atual)}
+                />
               </div>
             </CardContent>
           </ScrollArea>

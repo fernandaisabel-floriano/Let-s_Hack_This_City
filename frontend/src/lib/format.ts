@@ -20,10 +20,11 @@ const SUBTIPO_LABEL: Record<string, string> = {
   limite_desconhecido: 'Limite de velocidade (valor por ler)',
   costas: 'Sinal de costas',
   subterraneo: 'Subterrâneo',
-  ilha_reciclagem: 'Ilha de reciclagem',
+  ilha_reciclagem: 'Ilha de reciclagem (ecoponto)',
   indiferenciado: 'Indiferenciado',
   papeleira: 'Papeleira',
   candeeiro: 'Candeeiro',
+  poste_iluminacao: 'Poste de iluminação',
 }
 
 export function subtipoLabel(s: string | null | undefined) {
@@ -31,6 +32,20 @@ export function subtipoLabel(s: string | null | undefined) {
   const lim = s.match(/^(?:limite|velocidade)_(\d+)$/)
   if (lim) return `Limite ${lim[1]} km/h`
   return SUBTIPO_LABEL[s] ?? s.replace(/_/g, ' ')
+}
+
+const FONTE_LABEL: Record<string, string> = {
+  mapillary: 'Mapillary',
+  kartaview: 'KartaView',
+  video_proprio: 'Vídeo da Câmara',
+  fotos: 'Fotografias importadas',
+}
+
+export function fonteLabel(f: string) {
+  return f
+    .split('+')
+    .map((x) => FONTE_LABEL[x] ?? x)
+    .join(', ')
 }
 
 export function coord(v: number, casas = 6) {

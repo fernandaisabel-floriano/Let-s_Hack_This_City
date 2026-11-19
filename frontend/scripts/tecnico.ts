@@ -2,7 +2,9 @@
  * Gestão das contas dos técnicos (data/tecnicos.json, fora do git).
  *
  *   node scripts/tecnico.ts listar
- *   node scripts/tecnico.ts adicionar <utilizador> "<Nome completo>"   (pede a password)
+ *   node scripts/tecnico.ts adicionar <utilizador> "<Nome completo>" [email]   (pede a password)
+ *
+ * O técnico entra com o email (ou com o utilizador).
  *
  * A primeira conta também pode ser criada no ecrã de login.
  */
@@ -26,23 +28,24 @@ function perguntarOculto(pergunta: string): Promise<string> {
   })
 }
 
-const [cmd, utilizador, nome] = process.argv.slice(2)
+const [cmd, utilizador, nome, email] = process.argv.slice(2)
 
 if (cmd === 'listar') {
   const contas = lerContas()
   if (!contas.length) console.log('Sem contas.')
-  for (const c of contas) console.log(`${c.utilizador.padEnd(20)} ${c.nome}  (criada a ${c.criado_em.slice(0, 10)})`)
+  for (const c of contas) console.log(`${c.utilizador.padEnd(20)} ${(c.email ?? '—').padEnd(30)} ${c.nome}  (criada a ${c.criado_em.slice(0, 10)})`)
 } else if (cmd === 'adicionar') {
   const u = (utilizador ?? '').trim().toLowerCase()
   const pw = await perguntarOculto(`Password para ${u}: `)
   const pw2 = await perguntarOculto('Repetir password: ')
-  const erro = validarNovaConta(u, nome, pw) ?? (pw !== pw2 ? 'as passwords não coincidem' : null)
+  const em = (email ?? '').trim().toLowerCase()
+  const erro = validarNovaConta(u, nome, pw, em) ?? (pw !== pw2 ? 'as passwords não coincidem' : null)
   if (erro) {
     console.error(`Erro: ${erro}`)
     process.exit(1)
   }
-  criarConta(u, nome.trim(), pw)
+  criarConta(u, nome.trim(), pw, em || undefined)
   console.log(`Conta ${u} criada.`)
 } else {
-  console.log('Uso:\n  node scripts/tecnico.ts listar\n  node scripts/tecnico.ts adicionar <utilizador> "<Nome completo>"')
+  console.log('Uso:\n  node scripts/tecnico.ts listar\n  node scripts/tecnico.ts adicionar <utilizador> "<Nome completo>" [email]')
 }

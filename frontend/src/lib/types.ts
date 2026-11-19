@@ -42,6 +42,10 @@ export interface Elemento {
   metodo_posicao?: MetodoPosicao
   residuo_raios_m?: number | null
   ajustado_edificio?: boolean
+  /** rua mais próxima (calculada no cliente a partir das vias da zona) */
+  rua?: string | null
+  /** ids dos duplicados fundidos neste elemento (lib/duplicados.ts) */
+  fundidos?: string[]
   /** versões antigas do fuse.py */
   espalhamento_m?: number
   deteccoes?: string[]
@@ -72,9 +76,13 @@ export interface Evento {
   seq: number
   quando: string
   tecnico: Tecnico
-  acao: 'decisao' | 'desfazer' | 'limpar'
+  acao: 'decisao' | 'desfazer' | 'limpar' | 'par'
   id?: string
   validacao?: Omit<Validacao, 'validado_em' | 'validado_por'>
+  /** acao "par": a e b são (mesmo = true) ou não são (false) o mesmo objeto */
+  a?: string
+  b?: string
+  mesmo?: boolean
 }
 
 export interface MunicipioConfig {
@@ -106,10 +114,17 @@ export const TIPO_LABEL: Record<Tipo, string> = {
   contentor: 'Contentor',
 }
 
+/** Categorias do catálogo (enunciado da Câmara). */
+export const CATEGORIA_LABEL: Record<Tipo, string> = {
+  sinal: 'Sinalização vertical',
+  candeeiro: 'Iluminação pública',
+  contentor: 'Resíduos',
+}
+
 export const TIPO_PLURAL: Record<Tipo, string> = {
   sinal: 'Sinais',
-  candeeiro: 'Candeeiros',
-  contentor: 'Contentores',
+  candeeiro: 'Candeeiros e postes',
+  contentor: 'Contentores e ecopontos',
 }
 
 export const ESTADO_LABEL: Record<Estado, string> = {
@@ -123,9 +138,12 @@ export const ESTADO_LABEL: Record<Estado, string> = {
 /** Subclasses de pipeline/classify_signs.py (M4) e tipos de contentor. */
 export const SUBTIPOS: Record<Tipo, string[]> = {
   sinal: ['stop', 'cedencia_passagem', 'limite_20', 'limite_30', 'limite_40', 'limite_50', 'limite_desconhecido', 'outro_sinal', 'costas'],
-  candeeiro: ['candeeiro'],
+  candeeiro: ['candeeiro', 'poste_iluminacao'],
   contentor: ['subterraneo', 'ilha_reciclagem', 'indiferenciado', 'papeleira'],
 }
+
+/** Tipos de contentor pedidos no enunciado (o pipeline usa os mesmos nomes em contentores_clip.py). */
+export const TIPOS_CONTENTOR = ['subterraneo', 'ilha_reciclagem', 'indiferenciado'] as const
 
 /** Cores por tipo: tokens CSS (index.css), funcionam também nos ícones do mapa. */
 export const TIPO_COR: Record<Tipo, string> = {

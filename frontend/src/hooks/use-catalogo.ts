@@ -9,7 +9,10 @@ import {
   type Deteccao,
   type Metrica,
 } from '@/lib/data'
+import { obterImagens, type InfoImagem, type TotaisFonte } from '@/lib/api'
 import { gerarDemo } from '@/lib/demo'
+import { ruaMaisProxima } from '@/lib/revisao'
+import { agrupar, paresDecididos, type DecisaoPar, type ParDuplicado } from '@/lib/duplicados'
 import type { Elemento, Evento, Origem, Tecnico, Tipo, Validacao } from '@/lib/types'
 
 /**
@@ -59,7 +62,11 @@ export interface DecisaoOpts {
   tempo_s?: number
 }
 
-type Acao = { acao: 'decisao'; validacao: NonNullable<Evento['validacao']> } | { acao: 'desfazer'; id: string } | { acao: 'limpar' }
+type Acao =
+  | { acao: 'decisao'; validacao: NonNullable<Evento['validacao']> }
+  | { acao: 'desfazer'; id: string }
+  | { acao: 'limpar' }
+  | { acao: 'par'; a: string; b: string; mesmo: boolean }
 
 export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const [base, setBase] = useState<DadosBase | null>(null)
@@ -67,10 +74,17 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const [nomeFicheiro, setNomeFicheiro] = useState<string | null>(null)
   const [brutos, setBrutos] = useState<Elemento[]>([])
   const [registo, setRegisto] = useState<Evento[]>([])
-  const [estadoPublico, setEstadoPublico] = useState<Record<string, Validacao>>({})
+  const [estadoPublico, setEstadoPublico] = useState<{ elementos: Record<string, Validacao>; pares: DecisaoPar[] }>({ elementos: {}, pares: [] })
+  const [paresDuplicados, setParesDuplicados] = useState<ParDuplicado[]>([])
+  /** tipo de contentor sugerido pelo CLIP, por elemento (server/sugestoes.ts) */
+  const [sugestoes, setSugestoes] = useState<Record<string, { tipo: string; fracao: number; n: number }>>({})
   const [deteccoes, setDeteccoes] = useState<Map<string, Deteccao> | null>(null)
   const [metrica, setMetrica] = useState<{ ficheiro: string; dados: Metrica } | null>(null)
   const [erro, setErro] = useState<string | null>(null)
+  /** proveniência (fonte, autor, licença) e desfocagem de cada imagem */
+  const [imagens, setImagens] = useState<{ imagens: Record<string, InfoImagem>; totais: Record<string, TotaisFonte> } | null>(null)
+  /** incrementa para voltar a ler o catálogo (ex.: quando um processamento termina) */
+  const [versao, setVersao] = useState(0)
 
   const storageKey = base ? `ctrlf:registo:${base.config.municipio}/${base.config.zona}:${origem}` : null
 
@@ -85,7 +99,23 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
         setBrutos(gerarDemo(b.vias))
       }
     })
-  }, [])
+    obterImagens().then(setImagens).catch(() => setImagens(null))
+  }, [versao])
+
+  // pares de duplicados (calculados no servidor a partir das deteções)
+  useEffect(() => {
+    if (origem !== 'pipeline') {
+      setParesDuplicados([])
+      setSugestoes({})
+      return
+    }
+    fetch('/api/duplicados')
+      .then(async (r) => (r.ok ? setParesDuplicados(await r.json()) : setParesDuplicados([])))
+      .catch(() => setParesDuplicados([]))
+    fetch('/api/sugestoes')
+      .then(async (r) => r.ok && setSugestoes(await r.json()))
+      .catch(() => {})
+  }, [origem, base])
 
   // dados só para técnicos
   useEffect(() => {
@@ -96,7 +126,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     }
     carregarDeteccoes().then(setDeteccoes)
     carregarMetrica().then(setMetrica)
-  }, [tecnico, origem])
+  }, [tecnico, origem, versao])
 
   useEffect(() => {
     if (!storageKey) return
@@ -114,15 +144,18 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     } else {
       setRegisto([])
       fetch('/api/estado')
-        .then(async (r) => r.ok && setEstadoPublico(await r.json()))
+        .then(async (r) => {
+          if (!r.ok) return
+          const j = await r.json()
+          setEstadoPublico({ elementos: j.elementos ?? {}, pares: j.pares ?? [] })
+        })
         .catch(() => {})
     }
   }, [storageKey, origem, tecnico, onExpirou])
 
-  const validacoes = useMemo(
-    () => (origem === 'pipeline' && !tecnico ? estadoPublico : estadoAtual(registo)),
-    [origem, tecnico, estadoPublico, registo],
-  )
+  const publico = origem === 'pipeline' && !tecnico
+  const validacoes = useMemo(() => (publico ? estadoPublico.elementos : estadoAtual(registo)), [publico, estadoPublico, registo])
+  const decisoesPares = useMemo(() => (publico ? estadoPublico.pares : paresDecididos(registo)), [publico, estadoPublico, registo])
 
   const enviar = useCallback(
     async (a: Acao) => {
@@ -162,22 +195,31 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     [registo, origem, storageKey, tecnico, onExpirou],
   )
 
-  const elementos = useMemo<Elemento[]>(
+  const ruaDe = useMemo(() => ruaMaisProxima(base?.vias ?? null), [base])
+
+  /** todos os elementos, com as decisões aplicadas (inclui os duplicados) e a rua mais próxima */
+  const todos = useMemo<Elemento[]>(
     () =>
       brutos.map((e) => {
         const v = validacoes[e.id]
-        if (!v) return e
-        return {
-          ...e,
-          estado: v.estado,
-          tipo: v.classe_corrigida ?? e.tipo,
-          subtipo: v.subtipo_corrigido !== undefined ? v.subtipo_corrigido : e.subtipo,
-          lat: v.lat ?? e.lat,
-          lon: v.lon ?? e.lon,
-        }
+        const el = !v
+          ? e
+          : {
+              ...e,
+              estado: v.estado,
+              tipo: v.classe_corrigida ?? e.tipo,
+              subtipo: v.subtipo_corrigido !== undefined ? v.subtipo_corrigido : e.subtipo,
+              lat: v.lat ?? e.lat,
+              lon: v.lon ?? e.lon,
+            }
+        return { ...el, rua: ruaDe(el.lon, el.lat) }
       }),
-    [brutos, validacoes],
+    [brutos, validacoes, ruaDe],
   )
+
+  /** um elemento por objeto: duplicados fundidos (lib/duplicados.ts) */
+  const duplicados = useMemo(() => agrupar(todos, paresDuplicados, decisoesPares), [todos, paresDuplicados, decisoesPares])
+  const elementos = duplicados.elementos
 
   const decidir = useCallback(
     (id: string, estado: Validacao['estado'], opts: DecisaoOpts = {}) => {
@@ -206,6 +248,8 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   )
 
   const desfazer = useCallback((id: string) => enviar({ acao: 'desfazer', id }), [enviar])
+  /** o técnico diz se dois elementos são o mesmo objeto (true) ou não (false) */
+  const decidirPar = useCallback((a: string, b: string, mesmo: boolean) => enviar({ acao: 'par', a, b, mesmo }), [enviar])
   const limparValidacoes = useCallback(() => enviar({ acao: 'limpar' }), [enviar])
 
   const carregarFicheiro = useCallback(async (f: File) => {
@@ -238,6 +282,12 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     origem,
     nomeFicheiro,
     elementos,
+    todos,
+    duplicados,
+    sugestoes,
+    imagens,
+    deteccoes,
+    recarregar: () => setVersao((v) => v + 1),
     validacoes,
     registo,
     metrica,
@@ -245,6 +295,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     tecnico,
     decidir,
     desfazer,
+    decidirPar,
     limparValidacoes,
     carregarFicheiro,
     usarDemo,

@@ -11,7 +11,12 @@
  *   /zona/<caminho>             ficheiros de <saida>/<municipio>/<zona>/
  *   /config/<caminho>           ficheiros de config/
  *
- *   GET  /api/estado            público: estado atual de cada elemento, sem nomes
+ *   GET  /api/estado            público: estado atual de cada elemento e pares decididos, sem nomes
+ *   GET  /api/duplicados        público: pares de elementos duplicados (server/duplicados.ts)
+ *   GET  /api/sugestoes         público: tipo de contentor sugerido pelo CLIP (server/sugestoes.ts)
+ *   GET  /api/imagens           público: proveniência, licença e desfocagem de cada imagem (server/imagens.ts)
+ *   GET  /api/motor, /api/importacoes…   técnicos: importação e processamento (server/importacoes.ts)
+ *   POST /api/decisoes {acao: "par", a, b, mesmo}   o técnico decide um possível duplicado
  *   /zona/ público só para o catálogo e as imagens (ZONA_PUBLICA); o resto exige sessão
  *
  * Ficheiros gravados (em data/; ver .gitignore — tecnicos.json não deve ir para o git):
@@ -26,6 +31,10 @@ import crypto from 'node:crypto'
 import fs from 'node:fs'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import path from 'node:path'
+import { duplicadosDaZona } from './duplicados.ts'
+import { imagensDaZona } from './imagens.ts'
+import { rotasImportacoes } from './importacoes.ts'
+import { sugestoesDaZona } from './sugestoes.ts'
 
 export const ROOT = path.resolve(import.meta.dirname, '..', '..')
 
@@ -82,6 +91,8 @@ const zonaDir = () => {
 interface Conta {
   utilizador: string
   nome: string
+  /** email institucional (opcional nas contas antigas); também serve para entrar */
+  email?: string
   salt: string
   hash: string
   criado_em: string
@@ -97,12 +108,13 @@ export function lerContas(): Conta[] {
   }
 }
 
-export function criarConta(utilizador: string, nome: string, password: string): Conta {
+export function criarConta(utilizador: string, nome: string, password: string, email?: string): Conta {
   const contas = lerContas()
   if (contas.some((c) => c.utilizador === utilizador)) throw new Error('utilizador já existe')
+  if (email && contas.some((c) => c.email === email)) throw new Error('email já registado')
   const salt = crypto.randomBytes(16).toString('hex')
   const hash = crypto.scryptSync(password, salt, 64).toString('hex')
-  const conta = { utilizador, nome, salt, hash, criado_em: new Date().toISOString() }
+  const conta: Conta = { utilizador, nome, ...(email ? { email } : {}), salt, hash, criado_em: new Date().toISOString() }
   fs.mkdirSync(path.dirname(CONTAS), { recursive: true })
   fs.writeFileSync(CONTAS, JSON.stringify([...contas, conta], null, 1), 'utf-8')
   return conta
@@ -113,9 +125,11 @@ function verificar(c: Conta, password: string) {
   return crypto.timingSafeEqual(h, Buffer.from(c.hash, 'hex'))
 }
 
-export function validarNovaConta(utilizador: unknown, nome: unknown, password: unknown) {
+export function validarNovaConta(utilizador: unknown, nome: unknown, password: unknown, email?: unknown) {
   if (typeof utilizador !== 'string' || !/^[a-z0-9._-]{3,32}$/.test(utilizador))
     return 'utilizador: 3–32 caracteres (minúsculas, números, . _ -)'
+  if (email !== undefined && email !== '' && (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))
+    return 'email inválido'
   if (typeof nome !== 'string' || nome.trim().length < 2) return 'indique o nome completo'
   if (typeof password !== 'string' || password.length < 8) return 'a password tem de ter pelo menos 8 caracteres'
   return null
@@ -169,9 +183,23 @@ interface Evento {
   seq: number
   quando: string
   tecnico: { utilizador: string; nome: string }
-  acao: 'decisao' | 'desfazer' | 'limpar'
+  acao: 'decisao' | 'desfazer' | 'limpar' | 'par'
   id?: string
   validacao?: Omit<Validacao, 'validado_em' | 'validado_por'>
+  /** acao "par": a e b são (mesmo = true) ou não são (false) o mesmo objeto */
+  a?: string
+  b?: string
+  mesmo?: boolean
+}
+
+/** Última decisão do técnico sobre cada par de possíveis duplicados. "limpar" apaga também estas. */
+function paresDecididos(reg: Evento[]) {
+  const m = new Map<string, { a: string; b: string; mesmo: boolean }>()
+  for (const e of reg) {
+    if (e.acao === 'limpar') m.clear()
+    else if (e.acao === 'par' && e.a && e.b) m.set([e.a, e.b].sort().join('|'), { a: e.a, b: e.b, mesmo: !!e.mesmo })
+  }
+  return [...m.values()]
 }
 
 const registoPath = () => path.join(zonaDir(), 'catalogo', 'registo_validacoes.jsonl')
@@ -279,7 +307,7 @@ function lerCorpo(req: IncomingMessage): Promise<Record<string, unknown>> {
  * O que o público pode ler da pasta da zona: o catálogo e as imagens (já desfocadas
  * na recolha). Deteções brutas, referência, cobertura e registo ficam só para técnicos.
  */
-const ZONA_PUBLICA = /^(catalogo\/(elementos\.json|resumo\.json|catalogo\.geojson|catalogo\.csv)|deteccoes\/recortes\/[^/]+\.jpe?g|(mapillary|video)\/.+\.(jpe?g|png))$/i
+const ZONA_PUBLICA = /^(catalogo\/(elementos\.json|resumo\.json|catalogo\.geojson|catalogo\.csv)|deteccoes\/recortes\/[^/]+\.jpe?g|(mapillary|video|fotos)\/.+\.(jpe?g|png))$/i
 
 export function apiHandler() {
   return async (req: IncomingMessage, res: ServerResponse, next: () => void) => {
@@ -300,11 +328,13 @@ export function apiHandler() {
         if (f && f.n >= 5 && Date.now() - f.desde < 5 * 60_000)
           return json(res, 429, { erro: 'Demasiadas tentativas. Tente de novo dentro de 5 minutos.' })
         const { utilizador, password } = await lerCorpo(req)
-        const conta = lerContas().find((c) => c.utilizador === String(utilizador ?? '').trim().toLowerCase())
+        // entra-se com o email institucional ou com o nome de utilizador
+        const id = String(utilizador ?? '').trim().toLowerCase()
+        const conta = lerContas().find((c) => c.utilizador === id || (!!c.email && c.email === id))
         if (!conta || typeof password !== 'string' || !verificar(conta, password)) {
           const g = f && Date.now() - f.desde < 5 * 60_000 ? f : { n: 0, desde: Date.now() }
           falhas.set(ip, { ...g, n: g.n + 1 })
-          return json(res, 401, { erro: 'Utilizador ou password incorretos.' })
+          return json(res, 401, { erro: 'Utilizador ou palavra-passe incorretos.' })
         }
         falhas.delete(ip)
         abrirSessao(res, conta)
@@ -321,11 +351,13 @@ export function apiHandler() {
       if (url === '/api/tecnicos' && metodo === 'POST') {
         if (lerContas().length > 0)
           return json(res, 403, { erro: 'Já existem contas. Novas contas: node scripts/tecnico.ts adicionar' })
-        const { utilizador, nome, password } = await lerCorpo(req)
-        const u = String(utilizador ?? '').trim().toLowerCase()
-        const erro = validarNovaConta(u, nome, password)
+        const { utilizador, nome, password, email } = await lerCorpo(req)
+        const em = String(email ?? '').trim().toLowerCase()
+        // sem utilizador explícito, usa a parte do email antes do @
+        const u = String(utilizador || em.split('@')[0] || '').trim().toLowerCase().replace(/[^a-z0-9._-]/g, '')
+        const erro = validarNovaConta(u, nome, password, em)
         if (erro) return json(res, 400, { erro })
-        const conta = criarConta(u, String(nome).trim(), password as string)
+        const conta = criarConta(u, String(nome).trim(), password as string, em || undefined)
         abrirSessao(res, conta)
         return json(res, 200, { utilizador: conta.utilizador, nome: conta.nome })
       }
@@ -336,7 +368,18 @@ export function apiHandler() {
         for (const [id, v] of Object.entries(estadoAtual(lerRegisto()))) {
           publico[id] = { estado: v.estado, classe: v.classe, classe_corrigida: v.classe_corrigida, subtipo_corrigido: v.subtipo_corrigido, lat: v.lat, lon: v.lon }
         }
-        return json(res, 200, publico)
+        return json(res, 200, { elementos: publico, pares: paresDecididos(lerRegisto()) })
+      }
+      // proveniência e desfocagem de cada imagem (atribuição CC BY-SA, privacidade): público
+      if (url === '/api/imagens' && metodo === 'GET') return json(res, 200, imagensDaZona(zonaDir()))
+      // tipo de contentor sugerido pelo CLIP (por confirmar pelo técnico): público
+      if (url === '/api/sugestoes' && metodo === 'GET') return json(res, 200, sugestoesDaZona(zonaDir()))
+      // pares de elementos duplicados (só ids e distâncias: público)
+      if (url === '/api/duplicados' && metodo === 'GET') {
+        const cfg = readMunicipio()
+        const r = cfg.raio_fusao_m
+        const raio = (t: string) => (typeof r === 'number' ? r : (r[t] ?? 8))
+        return json(res, 200, duplicadosDaZona(zonaDir(), raio))
       }
       if (url.startsWith('/zona/') && ZONA_PUBLICA.test(decodeURIComponent(url.slice('/zona/'.length))))
         return serveFile(zonaDir(), url.slice('/zona/'.length), res)
@@ -345,6 +388,11 @@ export function apiHandler() {
       const precisaSessao = url.startsWith('/api/') || url.startsWith('/zona/')
       const s = precisaSessao ? sessaoDe(req) : null
       if (precisaSessao && !s) return json(res, 401, { erro: 'sessão necessária' })
+
+      // importação e processamento (pipeline Python): só técnicos
+      if (url === '/api/motor' || url.startsWith('/api/importacoes')) {
+        if (await rotasImportacoes(req, res, url, metodo, { root: ROOT, zonaDir: zonaDir(), tecnico: { utilizador: s!.utilizador, nome: s!.nome } })) return
+      }
 
       if (url === '/api/decisoes' && metodo === 'GET') {
         const reg = lerRegisto()
@@ -362,6 +410,9 @@ export function apiHandler() {
         if (b.acao === 'desfazer' && typeof b.id === 'string')
           return json(res, 200, acrescentar({ tecnico, acao: 'desfazer', id: b.id }))
         if (b.acao === 'limpar') return json(res, 200, acrescentar({ tecnico, acao: 'limpar' }))
+        // decisão sobre um par de possíveis duplicados: mesmo objeto ou não
+        if (b.acao === 'par' && typeof b.a === 'string' && typeof b.b === 'string' && b.a !== b.b && typeof b.mesmo === 'boolean')
+          return json(res, 200, acrescentar({ tecnico, acao: 'par', a: b.a, b: b.b, mesmo: b.mesmo }))
         return json(res, 400, { erro: 'ação desconhecida' })
       }
 

@@ -1,11 +1,12 @@
 import {
-  ChartColumn,
   ChevronsUpDown,
   Database,
   Download,
   FlaskConical,
   FolderOpen,
   History,
+  LayoutDashboard,
+  Library,
   ListChecks,
   Lock,
   LogIn,
@@ -45,15 +46,20 @@ import {
 import { iniciais, nomeLegivel } from '@/lib/format'
 import type { Catalogo } from '@/hooks/use-catalogo'
 
-export type Vista = 'mapa' | 'fila' | 'painel' | 'exportar' | 'registo'
+export type Vista = 'dashboard' | 'mapa' | 'catalogo' | 'exportar' | 'deteccoes' | 'importacao' | 'registo'
 
 export const VISTAS: { id: Vista; titulo: string; descricao: string; icon: typeof MapIcon; restrito?: boolean }[] = [
-  { id: 'mapa', titulo: 'Mapa', descricao: 'Mobiliário urbano identificado na zona', icon: MapIcon },
-  { id: 'painel', titulo: 'Painel', descricao: 'O inventário em números', icon: ChartColumn },
-  { id: 'exportar', titulo: 'Exportar', descricao: 'Dados abertos em GeoJSON e CSV', icon: Download },
-  { id: 'fila', titulo: 'Validação', descricao: 'Confirmar ou corrigir as deteções duvidosas', icon: ListChecks, restrito: true },
+  { id: 'dashboard', titulo: 'Dashboard', descricao: 'Visão geral do mobiliário urbano', icon: LayoutDashboard },
+  { id: 'mapa', titulo: 'Mapa', descricao: 'Mobiliário urbano no mapa, com filtros', icon: MapIcon },
+  { id: 'catalogo', titulo: 'Catálogo', descricao: 'Todos os elementos identificados', icon: Library },
+  { id: 'exportar', titulo: 'Exportação', descricao: 'Dados abertos em GeoJSON e CSV', icon: Download },
+  { id: 'deteccoes', titulo: 'Deteções e validação', descricao: 'Supervisionar, corrigir e validar os resultados da IA', icon: ListChecks, restrito: true },
+  { id: 'importacao', titulo: 'Importação', descricao: 'Fotografias, vídeos e fontes abertas', icon: Upload, restrito: true },
   { id: 'registo', titulo: 'Registo', descricao: 'Quem validou o quê, e quando', icon: History, restrito: true },
 ]
+
+/** nomes antigos das vistas (ligações guardadas) */
+export const VISTA_ALIAS: Record<string, Vista> = { painel: 'dashboard', fila: 'deteccoes' }
 
 interface Props {
   cat: Catalogo
@@ -78,13 +84,25 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
   const t = cat.tecnico
 
   const item = (v: (typeof VISTAS)[number]) => (
-    <SidebarMenuItem key={v.id}>
-      <SidebarMenuButton isActive={vista === v.id} onClick={() => onVista(v.id)} tooltip={v.titulo}>
-        <v.icon />
+    <SidebarMenuItem key={v.id} data-tour={`nav-${v.id}`}>
+      <SidebarMenuButton
+        isActive={vista === v.id}
+        aria-current={vista === v.id ? 'page' : undefined}
+        onClick={() => onVista(v.id)}
+        tooltip={v.restrito && !t ? `${v.titulo} (reservado a técnicos)` : v.titulo}
+      >
+        <v.icon aria-hidden="true" />
         <span>{v.titulo}</span>
       </SidebarMenuButton>
-      {v.restrito && !t && <SidebarMenuBadge><Lock className="size-3 opacity-60" /></SidebarMenuBadge>}
-      {v.id === 'fila' && t && pendentes > 0 && <SidebarMenuBadge className="text-sidebar-primary">{pendentes}</SidebarMenuBadge>}
+      {v.restrito && !t && (
+        <SidebarMenuBadge>
+          <Lock className="size-3 opacity-60" aria-hidden="true" />
+          <span className="sr-only">reservado a técnicos</span>
+        </SidebarMenuBadge>
+      )}
+      {v.id === 'deteccoes' && t && pendentes > 0 && (
+        <SidebarMenuBadge className="rounded-full bg-warning/90 px-1.5 text-[10px] text-white">{pendentes}</SidebarMenuBadge>
+      )}
     </SidebarMenuItem>
   )
 
@@ -94,10 +112,15 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" className="pointer-events-none">
-              <div className="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary font-mono text-xs font-bold text-sidebar-primary-foreground">⌃F</div>
+              <div className="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21Z" />
+                  <circle cx="12" cy="10.5" r="2.2" />
+                </svg>
+              </div>
               <div className="grid flex-1 text-left leading-tight">
-                <span className="truncate font-heading text-base font-semibold">Ctrl+F {nomeBonito(cfg.municipio)}</span>
-                <span className="truncate text-xs text-sidebar-foreground/60">Mobiliário urbano · {nomeBonito(cfg.zona, cat)}</span>
+                <span className="truncate text-sm font-semibold text-white">Aveiro Smart City</span>
+                <span className="truncate text-xs text-sidebar-foreground/60">Zona piloto · {nomeBonito(cfg.zona, cat)}</span>
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -106,7 +129,7 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-sidebar-foreground/50">Consultar</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-sidebar-foreground/50">Gestão</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>{VISTAS.filter((v) => !v.restrito).map(item)}</SidebarMenu>
           </SidebarGroupContent>
@@ -171,7 +194,7 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
               </DropdownMenu>
             ) : (
               <SidebarMenuButton onClick={onEntrar} tooltip="Entrar como técnico">
-                <LogIn />
+                <LogIn aria-hidden="true" />
                 <span>Entrar como técnico</span>
               </SidebarMenuButton>
             )}
