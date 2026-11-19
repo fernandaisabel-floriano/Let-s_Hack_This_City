@@ -43,3 +43,6 @@ reports/m4/rotular.html
 
 # --- Testes: dados falsos gerados por tests/gerar_dados_falsos.py ----------------
 tests/dados_falsos/
+
+# --- Contas dos técnicos da app (passwords com scrypt) — nunca no git -----------
+data/tecnicos.json

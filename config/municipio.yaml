@@ -169,5 +169,6 @@ m9:
 
 # M10 — avaliação contra a contagem manual (referencia.csv; pipeline/referencia.py)
 m10:
-  referencia: data/clean/aveiro/santos-martires/referencia.csv
+  contagem: data/clean/aveiro/santos-martires/contagem.json     # contagem manual por tipo → recall
+  referencia: data/clean/aveiro/santos-martires/referencia.csv  # opcional: pontos → erro de posição
   dist_max_m: 8             # encontrado = mesma classe a ≤ X m (um a um), dentro do polígono, sem papeleiras

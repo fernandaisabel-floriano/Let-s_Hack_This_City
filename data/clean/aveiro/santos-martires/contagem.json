@@ -1,0 +1,26 @@
+{
+ "_como_contar": [
+  "Contar à mão os elementos REAIS e ÚNICOS dentro da zona de avaliação (config/ruas/santos-martires-v3-zona.geojson), vendo o vídeo e as fotografias Mapillary do Cais e da rotunda (reports/referencia_apoio/).",
+  "Um número inteiro por campo. null = ainda não contado (o recall dessa classe fica vazio).",
+  "sinal: cada placa conta uma vez, mesmo que estejam várias no mesmo poste. As placas de nome de rua e os painéis publicitários não contam.",
+  "  stop = STOP; cedencia = cedência de passagem (triângulo invertido); limite = limite de velocidade (qualquer valor); outro = todos os outros sinais de trânsito.",
+  "candeeiro: cada poste de iluminação conta uma vez (um poste com dois braços = 1).",
+  "contentor: cada contentor conta uma vez (uma ilha de 3 contentores = 3). Papeleiras (caixotes pequenos presos a postes) NÃO contam.",
+  "Contar só o que se vê nas imagens. Se souberem de um elemento que nenhuma imagem mostra, ponham-no em nao_visiveis (não entra no recall, mas fica registado)."
+ ],
+ "contado_por": null,
+ "contado_em": null,
+ "candeeiro": null,
+ "sinal": {
+  "stop": null,
+  "cedencia": null,
+  "limite": null,
+  "outro": null
+ },
+ "contentor": null,
+ "nao_visiveis": {
+  "candeeiro": 0,
+  "sinal": 0,
+  "contentor": 0
+ }
+}

@@ -17,6 +17,7 @@
  *   GET  /api/imagens           público: proveniência, licença e desfocagem de cada imagem (server/imagens.ts)
  *   GET  /api/motor, /api/importacoes…   técnicos: importação e processamento (server/importacoes.ts)
  *   POST /api/decisoes {acao: "par", a, b, mesmo}   o técnico decide um possível duplicado
+ *   POST /api/metrica          técnicos: corre pipeline/evaluate.py (M10) e devolve a saída
  *   /zona/ público só para o catálogo e as imagens (ZONA_PUBLICA); o resto exige sessão
  *
  * Ficheiros gravados (em data/; ver .gitignore — tecnicos.json não deve ir para o git):
@@ -27,13 +28,14 @@
  *
  * O técnico que fica no registo é o da sessão, nunca um campo enviado pelo browser.
  */
+import { spawnSync } from 'node:child_process'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import path from 'node:path'
 import { duplicadosDaZona } from './duplicados.ts'
 import { imagensDaZona } from './imagens.ts'
-import { rotasImportacoes } from './importacoes.ts'
+import { estadoMotor, rotasImportacoes } from './importacoes.ts'
 import { sugestoesDaZona } from './sugestoes.ts'
 
 export const ROOT = path.resolve(import.meta.dirname, '..', '..')
@@ -175,6 +177,8 @@ interface Validacao {
   lat?: number
   lon?: number
   tempo_s?: number
+  /** rejeitado por ser o mesmo objeto que outro elemento (M10) */
+  duplicado_de?: string
   validado_em: string
   validado_por: { utilizador: string; nome: string }
 }
@@ -241,6 +245,8 @@ function normalizar(v: Record<string, unknown>): Evento['validacao'] | null {
   if (typeof v.subtipo_corrigido === 'string' || v.subtipo_corrigido === null) out.subtipo_corrigido = v.subtipo_corrigido as string | null
   if (typeof v.lat === 'number' && typeof v.lon === 'number') Object.assign(out, { lat: v.lat, lon: v.lon })
   if (typeof v.tempo_s === 'number') out.tempo_s = v.tempo_s
+  if (typeof v.duplicado_de === 'string' && v.duplicado_de && v.duplicado_de !== v.id && out.estado === 'rejeitado')
+    out.duplicado_de = v.duplicado_de
   return out
 }
 
@@ -414,6 +420,21 @@ export function apiHandler() {
         if (b.acao === 'par' && typeof b.a === 'string' && typeof b.b === 'string' && b.a !== b.b && typeof b.mesmo === 'boolean')
           return json(res, 200, acrescentar({ tecnico, acao: 'par', a: b.a, b: b.b, mesmo: b.mesmo }))
         return json(res, 400, { erro: 'ação desconhecida' })
+      }
+
+      // M10: recalcula catalogo/metrica.json a partir do registo e de contagem.json
+      if (url === '/api/metrica' && metodo === 'POST') {
+        const py = estadoMotor(ROOT).python
+        if (!py) return json(res, 503, { erro: 'Python não encontrado (ver CTRLF_PYTHON ou .venv)' })
+        const r = spawnSync(py, ['pipeline/evaluate.py'], {
+          cwd: ROOT,
+          encoding: 'utf-8',
+          timeout: 120_000,
+          env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
+        })
+        const saida = `${r.stdout ?? ''}${r.stderr ?? ''}`.trim()
+        if (r.status !== 0) return json(res, 500, { erro: saida.split('\n').pop() || 'evaluate.py falhou', saida })
+        return json(res, 200, { ok: true, saida })
       }
 
       if (url.startsWith('/zona/')) return serveFile(zonaDir(), url.slice('/zona/'.length), res)

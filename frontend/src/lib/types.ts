@@ -44,6 +44,8 @@ export interface Elemento {
   ajustado_edificio?: boolean
   /** rua mais próxima (calculada no cliente a partir das vias da zona) */
   rua?: string | null
+  /** decisão do técnico: rejeitado por ser duplicado deste id (M10) */
+  duplicado_de?: string
   /** ids dos duplicados fundidos neste elemento (lib/duplicados.ts) */
   fundidos?: string[]
   /** versões antigas do fuse.py */
@@ -64,6 +66,8 @@ export interface Validacao {
   validado_em: string
   validado_por?: Tecnico
   tempo_s?: number
+  /** rejeitado por ser o mesmo objeto que outro elemento (M10) */
+  duplicado_de?: string
 }
 
 export interface Tecnico {

@@ -160,6 +160,10 @@ def recalibrar(path: Path) -> None:
     for v in vals:
         if v["estado"] not in ("validado", "corrigido", "rejeitado"):
             continue
+        # duplicado de outro elemento: é um objeto real, mas não um elemento novo — não é rótulo
+        # nem de real nem de falso para a calibração
+        if v.get("duplicado_de"):
+            continue
         f = round(feature(v["confiancas_vistas"], m8["top_k"]), 4)
         nova = v.get("classe_corrigida")
         mudou_tipo = v["estado"] == "corrigido" and nova and nova != v["classe"]

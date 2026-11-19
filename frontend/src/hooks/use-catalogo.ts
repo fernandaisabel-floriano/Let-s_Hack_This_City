@@ -60,6 +60,8 @@ export interface DecisaoOpts {
   lat?: number
   lon?: number
   tempo_s?: number
+  /** só com estado rejeitado: o elemento é o mesmo objeto que este id (M10) */
+  duplicado_de?: string
 }
 
 type Acao =
@@ -211,6 +213,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
               subtipo: v.subtipo_corrigido !== undefined ? v.subtipo_corrigido : e.subtipo,
               lat: v.lat ?? e.lat,
               lon: v.lon ?? e.lon,
+              duplicado_de: v.duplicado_de,
             }
         return { ...el, rua: ruaDe(el.lon, el.lat) }
       }),
@@ -240,12 +243,29 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
       const lon = opts.lon ?? anterior?.lon
       if (lat !== undefined && lon !== undefined) Object.assign(v, { lat, lon })
       if (opts.tempo_s !== undefined) v.tempo_s = opts.tempo_s
+      if (estado === 'rejeitado' && opts.duplicado_de) v.duplicado_de = opts.duplicado_de
       // corrigido sem mudança efetiva → validado
       if (estado === 'corrigido' && !v.classe_corrigida && v.subtipo_corrigido === undefined && v.lat === undefined) v.estado = 'validado'
       enviar({ acao: 'decisao', validacao: v })
     },
     [brutos, deteccoes, validacoes, enviar],
   )
+
+  /** M10: corre evaluate.py no servidor e volta a ler catalogo/metrica.json */
+  const recalcularMetrica = useCallback(async (): Promise<{ ok: boolean; saida: string }> => {
+    try {
+      const r = await fetch('/api/metrica', { method: 'POST' })
+      if (r.status === 401) {
+        onExpirou()
+        return { ok: false, saida: 'sessão expirada' }
+      }
+      const j = await r.json()
+      if (r.ok) carregarMetrica().then(setMetrica)
+      return { ok: r.ok, saida: j.saida ?? j.erro ?? '' }
+    } catch (e) {
+      return { ok: false, saida: String(e instanceof Error ? e.message : e) }
+    }
+  }, [onExpirou])
 
   const desfazer = useCallback((id: string) => enviar({ acao: 'desfazer', id }), [enviar])
   /** o técnico diz se dois elementos são o mesmo objeto (true) ou não (false) */
@@ -288,6 +308,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     imagens,
     deteccoes,
     recarregar: () => setVersao((v) => v + 1),
+    recalcularMetrica,
     validacoes,
     registo,
     metrica,

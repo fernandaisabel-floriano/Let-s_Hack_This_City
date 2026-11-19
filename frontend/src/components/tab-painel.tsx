@@ -1,9 +1,10 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
+import { Calculator, TriangleAlert } from 'lucide-react'
 import { nomeBonito } from '@/components/app-sidebar'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import type { MetricaClasse } from '@/lib/data'
+import { Button } from '@/components/ui/button'
 import { separarCatalogo } from '@/lib/export'
 import { data, duracao, pct, subtipoLabel } from '@/lib/format'
 import { ESTADOS_CONFIRMADOS, METODO_LABEL, TIPOS, TIPOS_CONTENTOR, TIPO_LABEL, TIPO_PLURAL, type MetodoPosicao } from '@/lib/types'
@@ -34,6 +35,163 @@ function Numero({ label, valor, nota }: { label: string; valor: React.ReactNode;
       <span className="font-heading text-3xl font-semibold tabular-nums">{valor}</span>
       {nota && <span className="text-xs text-muted-foreground">{nota}</span>}
     </div>
+  )
+}
+
+const SUBTIPO_M10: Record<string, string> = { stop: 'STOP', cedencia: 'Cedência de passagem', limite: 'Limite de velocidade', outro: 'Outros sinais' }
+
+/** M10: precisão (validação de todos os elementos da zona) e recall (contagem manual). Ver pipeline/evaluate.py. */
+function CartaoM10({ cat }: { cat: Catalogo }) {
+  const [aCalcular, setACalcular] = useState(false)
+  const [erro, setErro] = useState<string | null>(null)
+  const m = cat.metrica?.dados ?? null
+  const ultimaDecisao = cat.registo.filter((e) => e.acao !== 'limpar').at(-1)?.quando
+  const desatualizada = !!(m && ultimaDecisao && ultimaDecisao > m.gerado_em)
+  const recalcular = async () => {
+    setACalcular(true)
+    const r = await cat.recalcularMetrica()
+    setErro(r.ok ? null : r.saida)
+    setACalcular(false)
+  }
+  const t = m?.tempo
+  return (
+    <Card>
+      <CardHeader className="flex flex-row items-start justify-between gap-4">
+        <div className="flex flex-col gap-1.5">
+          <CardTitle className="text-base font-medium">Precisão e recall (M10)</CardTitle>
+          <CardDescription>
+            Precisão: o que o sistema propôs, confirmado elemento a elemento na fila (modo "Todos da zona"). Recall: elementos reais
+            encontrados ÷ contagem manual (<code className="text-xs">contagem.json</code>).
+            {m && <> Calculado em {data(m.gerado_em)} {m.gerado_em.slice(11, 16)}.</>}
+            {m?.contagem_info?.contado_por && <> Contagem de {m.contagem_info.contado_por}.</>}
+          </CardDescription>
+        </div>
+        <Button size="sm" variant={desatualizada || !m ? 'default' : 'outline'} onClick={recalcular} disabled={aCalcular}>
+          <Calculator /> {aCalcular ? 'A calcular…' : 'Recalcular'}
+        </Button>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-6">
+        {erro && <pre className="overflow-x-auto rounded-md bg-destructive/10 p-3 text-xs text-destructive">{erro}</pre>}
+        {!m ? (
+          <p className="text-sm text-muted-foreground">
+            Ainda sem métricas. Valide os elementos na fila (modo "Todos da zona"), preencha <code className="text-xs">contagem.json</code> e
+            carregue em Recalcular.
+          </p>
+        ) : (
+          <>
+            {(desatualizada || m.avisos.length > 0) && (
+              <ul className="flex flex-col gap-1 rounded-lg border border-warning/40 bg-warning/5 p-3 text-xs">
+                {desatualizada && (
+                  <li className="flex gap-2"><TriangleAlert className="size-3.5 shrink-0 text-warning" /> Há decisões mais recentes do que estas métricas: carregue em Recalcular.</li>
+                )}
+                {m.avisos.map((a) => (
+                  <li key={a} className="flex gap-2"><TriangleAlert className="size-3.5 shrink-0 text-warning" /> {a}</li>
+                ))}
+              </ul>
+            )}
+
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+              <Numero label="Precisão" valor={pct(m.todas.precisao)} nota={`${m.todas.reais} reais em ${m.todas.decididos} decididos`} />
+              <Numero
+                label="Recall"
+                valor={pct(m.todas.recall)}
+                nota={m.todas.contagem !== null ? `${m.todas.reais_unicos} de ${m.todas.contagem} contados` : 'falta a contagem'}
+              />
+              <Numero label="Tempo de validação" valor={t?.tempo_ativo_s ? duracao(t.tempo_ativo_s) : '—'} nota={t?.relogio_s ? `${duracao(t.relogio_s)} de relógio (M11)` : 'M11'} />
+              <Numero label="Por elemento" valor={t?.s_por_elemento ? `${t.s_por_elemento.toFixed(1)} s` : '—'} nota={t?.elementos ? `${t.elementos} elementos decididos` : undefined} />
+            </div>
+
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Classe</TableHead>
+                  <TableHead className="text-right">Propostos</TableHead>
+                  <TableHead className="text-right">Reais</TableHead>
+                  <TableHead className="text-right">Falsos</TableHead>
+                  <TableHead className="text-right">Duplicados</TableHead>
+                  <TableHead className="text-right">Tipo errado</TableHead>
+                  <TableHead className="text-right">Por validar</TableHead>
+                  <TableHead className="text-right">Precisão</TableHead>
+                  <TableHead className="text-right">Únicos / contagem</TableHead>
+                  <TableHead className="text-right">Recall</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {(['todas', ...TIPOS] as const).map((k) => {
+                  const c = m[k]
+                  return (
+                    <TableRow key={k}>
+                      <TableCell>{k === 'todas' ? <strong>Todas</strong> : TIPO_LABEL[k]}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.propostos}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.reais}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.falsos}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.duplicados}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.tipo_errado}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.por_validar || ''}</TableCell>
+                      <TableCell className="text-right tabular-nums" title={`contando duplicados como objetos reais: ${pct(c.precisao_objeto)}`}>{pct(c.precisao)}</TableCell>
+                      <TableCell className="text-right tabular-nums">{c.reais_unicos} / {c.contagem ?? '—'}</TableCell>
+                      <TableCell className="text-right tabular-nums">{pct(c.recall)}</TableCell>
+                    </TableRow>
+                  )
+                })}
+              </TableBody>
+            </Table>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="flex flex-col gap-2">
+                <p className="text-sm font-medium">Sinais por tipo</p>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Tipo</TableHead>
+                      <TableHead className="text-right">Encontrados</TableHead>
+                      <TableHead className="text-right">Contagem</TableHead>
+                      <TableHead className="text-right">Recall</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {(['stop', 'cedencia', 'limite', 'outro'] as const).map((k) => (
+                      <TableRow key={k}>
+                        <TableCell>{SUBTIPO_M10[k]}</TableCell>
+                        <TableCell className="text-right tabular-nums">{m.sinal_subtipo[k].reais_unicos}</TableCell>
+                        <TableCell className="text-right tabular-nums">{m.sinal_subtipo[k].contagem ?? '—'}</TableCell>
+                        <TableCell className="text-right tabular-nums">{pct(m.sinal_subtipo[k].recall)}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+                <p className="text-xs text-muted-foreground">
+                  Tipo de sinal certo sem correção: {m.sinal_subtipo.subtipo_certo} de {m.sinal_subtipo.sinais_reais} ({pct(m.sinal_subtipo.precisao_subtipo)}).
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-sm font-medium">Quem validou</p>
+                {t?.por_tecnico && Object.keys(t.por_tecnico).length ? (
+                  <ul className="flex flex-col gap-1 text-sm">
+                    {Object.entries(t.por_tecnico).map(([nome, v]) => (
+                      <li key={nome} className="flex justify-between gap-2">
+                        <span className="truncate">{nome}</span>
+                        <span className="text-muted-foreground tabular-nums">
+                          {v.elementos} elementos · {duracao(v.tempo_ativo_s ?? 0)} · {v.s_por_elemento?.toFixed(1) ?? '—'} s/el.
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-muted-foreground">Ainda sem validações.</p>
+                )}
+                {m.erro_posicao_m?.todas && (
+                  <p className="pt-2 text-xs text-muted-foreground">
+                    Erro de posição (opcional, contra {m.erro_posicao_m.pontos_referencia} pontos de <code>referencia.csv</code>): mediana{' '}
+                    {m.erro_posicao_m.todas.mediana} m, p90 {m.erro_posicao_m.todas.p90} m (n = {m.erro_posicao_m.todas.n}).
+                  </p>
+                )}
+              </div>
+            </div>
+          </>
+        )}
+      </CardContent>
+    </Card>
   )
 }
 
@@ -82,8 +240,6 @@ export function TabPainel({ cat, embutido }: { cat: Catalogo; embutido?: boolean
     }
   }, [cat, cfg])
 
-  const metrica = cat.metrica
-  const provisoria = metrica?.ficheiro.includes('osm')
 
   return (
     <div className="flex flex-col gap-8 pb-6">
@@ -193,51 +349,7 @@ export function TabPainel({ cat, embutido }: { cat: Catalogo; embutido?: boolean
             <Numero label="Tempo por validação" valor={r.tempoMedio ? `${r.tempoMedio.toFixed(1)} s` : '—'} nota={r.tempoMedio ? `${duracao(r.tempoTotal)} no total (M11)` : 'M11'} />
           </div>
 
-          {metrica && (
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base font-medium">Avaliação contra a referência (M10)</CardTitle>
-                <CardDescription>
-                  <code className="text-xs">catalogo/{metrica.ficheiro}</code>
-                  {provisoria && ' · referência provisória do OpenStreetMap, incompleta: os "falsos" incluem elementos reais que o OSM não tem.'}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Classe</TableHead>
-                      <TableHead className="text-right">Referência</TableHead>
-                      <TableHead className="text-right">Encontrados</TableHead>
-                      <TableHead className="text-right">Falsos</TableHead>
-                      <TableHead className="text-right">Em falta</TableHead>
-                      <TableHead className="text-right">Precisão</TableHead>
-                      <TableHead className="text-right">Recall</TableHead>
-                      <TableHead className="text-right">Erro mediano</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {(['todas', ...TIPOS] as const).map((k) => {
-                      const m = metrica.dados[k] as MetricaClasse | undefined
-                      if (!m || typeof m !== 'object' || !('referencia' in m)) return null
-                      return (
-                        <TableRow key={k}>
-                          <TableCell>{k === 'todas' ? <strong>Todas</strong> : TIPO_LABEL[k]}</TableCell>
-                          <TableCell className="text-right tabular-nums">{m.referencia}</TableCell>
-                          <TableCell className="text-right tabular-nums">{m.encontrados}</TableCell>
-                          <TableCell className="text-right tabular-nums">{m.falsos}</TableCell>
-                          <TableCell className="text-right tabular-nums">{m.em_falta}</TableCell>
-                          <TableCell className="text-right tabular-nums">{pct(m.precisao)}</TableCell>
-                          <TableCell className="text-right tabular-nums">{pct(m.recall)}</TableCell>
-                          <TableCell className="text-right tabular-nums">{m.erro_posicao_m ? `${m.erro_posicao_m.mediana} m` : '—'}</TableCell>
-                        </TableRow>
-                      )
-                    })}
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          )}
+          <CartaoM10 cat={cat} />
 
           <div className="grid gap-4 md:grid-cols-2">
             <Card>
