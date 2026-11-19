@@ -1,3 +1,4 @@
+import { ZonaSeletor } from '@/components/zona-seletor'
 import {
   ChevronsUpDown,
   Database,
@@ -73,6 +74,8 @@ interface Props {
 
 /** Nome legível do município ou da zona, com os acentos tirados dos nomes das vias. */
 export function nomeBonito(z: string, cat?: Catalogo) {
+  const cfg = cat?.base?.config
+  if (cfg?.nome_zona && cfg.zona === z) return cfg.nome_zona
   const vias = (cat?.base?.vias?.features ?? []).map((f) => String(f.properties.via ?? f.properties.name ?? ''))
   return nomeLegivel(z, vias)
 }
@@ -120,11 +123,12 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
               </div>
               <div className="grid flex-1 text-left leading-tight">
                 <span className="truncate text-sm font-semibold text-white">Aveiro Smart City</span>
-                <span className="truncate text-xs text-sidebar-foreground/60">Zona piloto · {nomeBonito(cfg.zona, cat)}</span>
+                <span className="truncate text-xs text-sidebar-foreground/60">{nomeBonito(cfg.zona, cat)}</span>
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
+        <ZonaSeletor atual={cfg.zona} />
       </SidebarHeader>
 
       <SidebarContent>

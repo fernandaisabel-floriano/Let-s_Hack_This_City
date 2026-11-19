@@ -1,0 +1,10 @@
+# Zona criada por pipeline/nova_zona.py. Junta-se ao municipio.yaml com CTRLF_ZONA=av-lourenco-peixinho.
+zona: av-lourenco-peixinho
+nome_zona: Av. Lourenço Peixinho
+rua_geojson: config/ruas/av-lourenco-peixinho.geojson
+zona_avaliacao_geojson: config/ruas/av-lourenco-peixinho-zona.geojson
+zona_piloto:
+  pontas_redondas: []
+m10: {contagem: null, referencia: null}
+bbox: [-8.648812, 40.642202, -8.64366, 40.643946]
+m6: {edificios_geojson: config/ruas/av-lourenco-peixinho-edificios.geojson}

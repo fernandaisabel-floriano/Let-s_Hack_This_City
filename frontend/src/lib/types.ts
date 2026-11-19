@@ -30,6 +30,12 @@ export interface Elemento {
   lat: number
   confianca: number | null
   confianca_max_vista?: number
+  /** etapa 1: visto só em vistas fracas (pequenas, tremidas, escuras): vai sempre para a fila */
+  so_vistas_fracas?: boolean
+  /** imagens com vista boa (não fraca): é o que conta para a entrada automática */
+  n_vistas_boas?: number
+  /** nitidez (variância do Laplaciano) do recorte escolhido */
+  nitidez_imagem?: number | null
   /** contentores: 2.ª opinião do CLIP (média das melhores imagens), para o limiar com base "clip" */
   confianca_clip?: number | null
   confianca_subtipo?: number | null
@@ -94,6 +100,8 @@ export interface Evento {
 export interface MunicipioConfig {
   municipio: string
   zona: string
+  /** nome da zona para mostrar (municipio.yaml ou config/zonas/<id>.yaml) */
+  nome_zona?: string | null
   saida: string
   bbox: number[] | null
   rua_geojson: string | null

@@ -21,14 +21,20 @@ export function grupoDuplicados(cat: Catalogo, el: Elemento): Elemento[] {
   return [...ids].map((i) => porId.get(i)).filter((e): e is Elemento => !!e && e.estado !== 'rejeitado')
 }
 
-/** O que fica por omissão: o já confirmado por um técnico; senão mais vistas, mais confiança, imagem mais recente. */
+/**
+ * O que fica por omissão (19/11): o já confirmado por um técnico; senão o que não foi visto só em
+ * imagens fracas; depois a imagem MAIS RECENTE (é o mesmo objeto: não vale a pena olhar para 2021 se
+ * há 2026); em empate, mais vistas boas, imagem mais nítida, mais confiança.
+ */
 export function melhorDoGrupo(g: Elemento[]) {
   return [...g].sort(
     (a, b) =>
       Number(confirmado(b)) - Number(confirmado(a)) ||
-      b.n_vistas - a.n_vistas ||
-      (b.confianca ?? b.confianca_max_vista ?? 0) - (a.confianca ?? a.confianca_max_vista ?? 0) ||
-      b.ultima_vista.localeCompare(a.ultima_vista),
+      Number(!b.so_vistas_fracas) - Number(!a.so_vistas_fracas) ||
+      b.ultima_vista.slice(0, 10).localeCompare(a.ultima_vista.slice(0, 10)) ||
+      (b.n_vistas_boas ?? b.n_vistas) - (a.n_vistas_boas ?? a.n_vistas) ||
+      (b.nitidez_imagem ?? 0) - (a.nitidez_imagem ?? 0) ||
+      (b.confianca ?? b.confianca_max_vista ?? 0) - (a.confianca ?? a.confianca_max_vista ?? 0),
   )[0]
 }
 
@@ -56,7 +62,7 @@ export function QualFica({ cat, grupo, escolhido, pos, onEscolher, onMover, onCo
       <div>
         <h3 id="qual-fica" className="text-sm font-medium">Qual fica? {grupo.length} deteções parecem ser o mesmo objeto</h3>
         <p className="text-xs text-muted-foreground">
-          Escolha a que tem a melhor imagem e a posição certa (no cartão ou no marcador). Pode arrastar o marcador escolhido para acertar a
+          Vem escolhida a imagem mais recente. Escolha outra se tiver melhor imagem ou a posição certa (no cartão ou no marcador). Pode arrastar o marcador escolhido para acertar a
           posição. As outras ficam como duplicados desta.
         </p>
       </div>

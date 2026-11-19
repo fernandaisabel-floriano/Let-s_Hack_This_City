@@ -1,0 +1,426 @@
+[
+ {
+  "rotulo": "A_clip",
+  "quando": "2026-11-19T16:35:24+00:00",
+  "elementos": 195,
+  "por_tipo": {
+   "sinal": 57,
+   "candeeiro": 87,
+   "contentor": 51
+  },
+  "pendentes": 146,
+  "duplicados_resolvidos": "13 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 13,
+   "mesmo: separados": 16
+  }
+ },
+ {
+  "rotulo": "B_clip_qualidade",
+  "quando": "2026-11-19T16:35:25+00:00",
+  "elementos": 164,
+  "por_tipo": {
+   "sinal": 46,
+   "candeeiro": 79,
+   "contentor": 39
+  },
+  "pendentes": 121,
+  "duplicados_resolvidos": "7 de 26",
+  "diferentes_juntados_mal": "11 de 40",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 11,
+   "implicito: separados": 28,
+   "implicito: um deles desapareceu": 1,
+   "mesmo: juntos": 7,
+   "mesmo: separados": 19,
+   "mesmo: um deles desapareceu": 3
+  }
+ },
+ {
+  "rotulo": "B2_qualidade_raios",
+  "quando": "2026-11-19T16:36:12+00:00",
+  "elementos": 184,
+  "por_tipo": {
+   "sinal": 52,
+   "candeeiro": 82,
+   "contentor": 50
+  },
+  "pendentes": 141,
+  "duplicados_resolvidos": "7 de 27",
+  "diferentes_juntados_mal": "11 de 40",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 11,
+   "implicito: separados": 28,
+   "implicito: um deles desapareceu": 1,
+   "mesmo: juntos": 7,
+   "mesmo: separados": 20,
+   "mesmo: um deles desapareceu": 2
+  }
+ },
+ {
+  "rotulo": "C_qualidade_so_imagem_e_auto",
+  "quando": "2026-11-19T16:37:07+00:00",
+  "elementos": 195,
+  "por_tipo": {
+   "sinal": 57,
+   "candeeiro": 87,
+   "contentor": 51
+  },
+  "pendentes": 149,
+  "duplicados_resolvidos": "13 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 13,
+   "mesmo: separados": 16
+  }
+ },
+ {
+  "rotulo": "fundir_0_1.0",
+  "quando": "2026-11-19T16:43:38+00:00",
+  "elementos": 195,
+  "por_tipo": {
+   "sinal": 57,
+   "candeeiro": 87,
+   "contentor": 51
+  },
+  "pendentes": 146,
+  "duplicados_resolvidos": "13 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 13,
+   "mesmo: separados": 16
+  }
+ },
+ {
+  "rotulo": "fundir_6_0.8",
+  "quando": "2026-11-19T16:43:39+00:00",
+  "elementos": 192,
+  "por_tipo": {
+   "sinal": 56,
+   "candeeiro": 86,
+   "contentor": 50
+  },
+  "pendentes": 143,
+  "duplicados_resolvidos": "13 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 13,
+   "mesmo: separados": 16
+  }
+ },
+ {
+  "rotulo": "fundir_6_1.2",
+  "quando": "2026-11-19T16:43:40+00:00",
+  "elementos": 190,
+  "por_tipo": {
+   "sinal": 54,
+   "candeeiro": 86,
+   "contentor": 50
+  },
+  "pendentes": 141,
+  "duplicados_resolvidos": "13 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 13,
+   "mesmo: separados": 16
+  }
+ },
+ {
+  "rotulo": "fundir_8_1.5",
+  "quando": "2026-11-19T16:43:41+00:00",
+  "elementos": 188,
+  "por_tipo": {
+   "sinal": 53,
+   "candeeiro": 85,
+   "contentor": 50
+  },
+  "pendentes": 140,
+  "duplicados_resolvidos": "14 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 14,
+   "mesmo: separados": 15
+  }
+ },
+ {
+  "rotulo": "fundir_8_2.0",
+  "quando": "2026-11-19T16:43:42+00:00",
+  "elementos": 187,
+  "por_tipo": {
+   "sinal": 53,
+   "candeeiro": 85,
+   "contentor": 49
+  },
+  "pendentes": 139,
+  "duplicados_resolvidos": "14 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 14,
+   "mesmo: separados": 15
+  }
+ },
+ {
+  "rotulo": "fundir_6_1.0_0.5",
+  "quando": "2026-11-19T16:44:23+00:00",
+  "elementos": 179,
+  "por_tipo": {
+   "sinal": 46,
+   "candeeiro": 83,
+   "contentor": 50
+  },
+  "pendentes": 129,
+  "duplicados_resolvidos": "19 de 29",
+  "diferentes_juntados_mal": "10 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 10,
+   "implicito: separados": 30,
+   "mesmo: juntos": 19,
+   "mesmo: separados": 10
+  }
+ },
+ {
+  "rotulo": "fundir_8_1.5_0.5",
+  "quando": "2026-11-19T16:44:24+00:00",
+  "elementos": 176,
+  "por_tipo": {
+   "sinal": 45,
+   "candeeiro": 82,
+   "contentor": 49
+  },
+  "pendentes": 127,
+  "duplicados_resolvidos": "19 de 29",
+  "diferentes_juntados_mal": "10 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 10,
+   "implicito: separados": 30,
+   "mesmo: juntos": 19,
+   "mesmo: separados": 10
+  }
+ },
+ {
+  "rotulo": "fundir_8_1.5_0.7",
+  "quando": "2026-11-19T16:44:25+00:00",
+  "elementos": 177,
+  "por_tipo": {
+   "sinal": 45,
+   "candeeiro": 83,
+   "contentor": 49
+  },
+  "pendentes": 128,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ },
+ {
+  "rotulo": "fundir_8_2.0_0.5",
+  "quando": "2026-11-19T16:44:26+00:00",
+  "elementos": 174,
+  "por_tipo": {
+   "sinal": 44,
+   "candeeiro": 82,
+   "contentor": 48
+  },
+  "pendentes": 125,
+  "duplicados_resolvidos": "19 de 29",
+  "diferentes_juntados_mal": "10 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 10,
+   "implicito: separados": 30,
+   "mesmo: juntos": 19,
+   "mesmo: separados": 10
+  }
+ },
+ {
+  "rotulo": "fundir2_8_1.5_0.7",
+  "quando": "2026-11-19T16:45:46+00:00",
+  "elementos": 182,
+  "por_tipo": {
+   "sinal": 49,
+   "candeeiro": 83,
+   "contentor": 50
+  },
+  "pendentes": 133,
+  "duplicados_resolvidos": "17 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 17,
+   "mesmo: separados": 12
+  }
+ },
+ {
+  "rotulo": "fundir2_8_2.0_0.7",
+  "quando": "2026-11-19T16:45:47+00:00",
+  "elementos": 179,
+  "por_tipo": {
+   "sinal": 47,
+   "candeeiro": 83,
+   "contentor": 49
+  },
+  "pendentes": 130,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ },
+ {
+  "rotulo": "fundir2_8_2.0_0.5",
+  "quando": "2026-11-19T16:45:48+00:00",
+  "elementos": 178,
+  "por_tipo": {
+   "sinal": 47,
+   "candeeiro": 82,
+   "contentor": 49
+  },
+  "pendentes": 129,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "10 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 10,
+   "implicito: separados": 30,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ },
+ {
+  "rotulo": "fundir3_8_1.5_0.7",
+  "quando": "2026-11-19T16:46:14+00:00",
+  "elementos": 184,
+  "por_tipo": {
+   "sinal": 50,
+   "candeeiro": 84,
+   "contentor": 50
+  },
+  "pendentes": 135,
+  "duplicados_resolvidos": "17 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 17,
+   "mesmo: separados": 12
+  }
+ },
+ {
+  "rotulo": "fundir3_8_2.0_0.7",
+  "quando": "2026-11-19T16:46:15+00:00",
+  "elementos": 182,
+  "por_tipo": {
+   "sinal": 49,
+   "candeeiro": 84,
+   "contentor": 49
+  },
+  "pendentes": 133,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ },
+ {
+  "rotulo": "fundir3_8_2.0_0.5",
+  "quando": "2026-11-19T16:46:16+00:00",
+  "elementos": 182,
+  "por_tipo": {
+   "sinal": 49,
+   "candeeiro": 84,
+   "contentor": 49
+  },
+  "pendentes": 133,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ },
+ {
+  "rotulo": "fundir4_8_1.5_0.7",
+  "quando": "2026-11-19T16:46:39+00:00",
+  "elementos": 185,
+  "por_tipo": {
+   "sinal": 51,
+   "candeeiro": 84,
+   "contentor": 50
+  },
+  "pendentes": 136,
+  "duplicados_resolvidos": "17 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 17,
+   "mesmo: separados": 12
+  }
+ },
+ {
+  "rotulo": "fundir4_8_2.0_0.7",
+  "quando": "2026-11-19T16:46:40+00:00",
+  "elementos": 183,
+  "por_tipo": {
+   "sinal": 50,
+   "candeeiro": 84,
+   "contentor": 49
+  },
+  "pendentes": 134,
+  "duplicados_resolvidos": "18 de 29",
+  "diferentes_juntados_mal": "9 de 41",
+  "detalhe": {
+   "diferente: separados": 1,
+   "implicito: juntos": 9,
+   "implicito: separados": 31,
+   "mesmo: juntos": 18,
+   "mesmo: separados": 11
+  }
+ }
+]

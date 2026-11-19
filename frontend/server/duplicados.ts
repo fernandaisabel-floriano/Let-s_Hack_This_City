@@ -139,7 +139,7 @@ export function duplicadosDaZona(zonaDir: string, raio: (tipo: string) => number
   const fe = path.join(zonaDir, 'catalogo', 'elementos.json')
   const fd = path.join(zonaDir, 'deteccoes', 'deteccoes.json')
   if (!fs.existsSync(fe) || !fs.existsSync(fd)) return []
-  const chave = `${fs.statSync(fe).mtimeMs}|${fs.statSync(fd).mtimeMs}|${raio('sinal')},${raio('candeeiro')},${raio('contentor')}`
+  const chave = `${zonaDir}|${fs.statSync(fe).mtimeMs}|${fs.statSync(fd).mtimeMs}|${raio('sinal')},${raio('candeeiro')},${raio('contentor')}`
   if (cache?.chave === chave) return cache.pares
   const els = JSON.parse(fs.readFileSync(fe, 'utf-8')) as El[]
   const dets = JSON.parse(fs.readFileSync(fd, 'utf-8')) as Det[]

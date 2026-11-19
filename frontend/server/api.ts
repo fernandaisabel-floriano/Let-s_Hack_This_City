@@ -18,6 +18,10 @@
  *   GET  /api/motor, /api/importacoes…   técnicos: importação e processamento (server/importacoes.ts)
  *   POST /api/decisoes {acao: "par", a, b, mesmo}   o técnico decide um possível duplicado
  *   POST /api/metrica          técnicos: corre pipeline/evaluate.py (M10) e devolve a saída
+ *   GET  /api/zonas            público: zonas do município (municipio.yaml + config/zonas/*.yaml)
+ *   POST /api/zona             público: {id} escolhe a zona que a app mostra (cookie ctrlf_zona)
+ *   GET  /api/osm/procurar?q=  técnicos: ruas e bairros no OpenStreetMap (Nominatim, 1 pedido/s, cache)
+ *   GET  /api/osm/inversa?lat=&lon=  técnicos: a rua num ponto do mapa
  *   GET  /api/limiares         limiares de entrada automática (config/limiares.json); o histórico só para técnicos
  *   POST /api/limiares         técnicos: {zona, tipo, valores: {ativo, limiar, min_vistas} | null} (null = repor o padrão)
  *   /zona/ público só para o catálogo e as imagens (ZONA_PUBLICA); o resto exige sessão
@@ -30,6 +34,7 @@
  *
  * O técnico que fica no registo é o da sessão, nunca um campo enviado pelo browser.
  */
+import { AsyncLocalStorage } from 'node:async_hooks'
 import { spawnSync } from 'node:child_process'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
@@ -57,12 +62,64 @@ function lerNumeroOuMapa(v: string | null, omissao: number): number | Record<str
   return out
 }
 
-export function readMunicipio() {
+// ------------------------------------------------------------------ zonas (etapa 5)
+
+/** zona do pedido atual (cookie ctrlf_zona), para zonaDir() e readMunicipio() sem a passar a todo o lado */
+const zonaCtx = new AsyncLocalStorage<string>()
+
+function topo(txt: string, key: string) {
+  const m = txt.match(new RegExp(`^${key}:\\s*([^#\\n]+)`, 'm'))
+  return m ? m[1].trim().replace(/^["']|["']$/g, '') : null
+}
+
+const ZONAS_DIR = path.join(ROOT, 'config', 'zonas')
+
+/** Igual a common.zonas_disponiveis(): a zona do municipio.yaml e as de config/zonas/*.yaml. */
+export function zonasDisponiveis() {
   const txt = fs.readFileSync(path.join(ROOT, 'config/municipio.yaml'), 'utf-8')
-  const top = (key: string) => {
-    const m = txt.match(new RegExp(`^${key}:\\s*([^#\\n]+)`, 'm'))
-    return m ? m[1].trim().replace(/^["']|["']$/g, '') : null
+  const base = topo(txt, 'zona') ?? 'santos-martires'
+  const bb = (t: string) => {
+    const v = topo(t, 'bbox')
+    try {
+      return v ? (JSON.parse(v) as number[]) : null
+    } catch {
+      return null
+    }
   }
+  const out = [{ id: base, nome: topo(txt, 'nome_zona') ?? base, bbox: bb(txt) }]
+  let fs_: string[] = []
+  try {
+    fs_ = fs.readdirSync(ZONAS_DIR).filter((f) => f.endsWith('.yaml')).sort()
+  } catch {
+    /* sem zonas extra */
+  }
+  for (const f of fs_) {
+    const t = fs.readFileSync(path.join(ZONAS_DIR, f), 'utf-8')
+    const id = topo(t, 'zona')
+    if (id && id !== base) out.push({ id, nome: topo(t, 'nome_zona') ?? id, bbox: bb(t) })
+  }
+  return out
+}
+
+function zonaDoPedido(req: IncomingMessage) {
+  const z = cookie(req, 'ctrlf_zona')
+  const zonas = zonasDisponiveis()
+  return z && zonas.some((x) => x.id === z) ? z : zonas[0].id
+}
+
+export function readMunicipio(zona = zonaCtx.getStore()) {
+  const txt = fs.readFileSync(path.join(ROOT, 'config/municipio.yaml'), 'utf-8')
+  const base = topo(txt, 'zona')
+  // zona extra: as chaves da zona (no topo do ficheiro dela) sobrepõem-se às do município
+  let txtZona = ''
+  if (zona && zona !== base && /^[a-z0-9-]+$/.test(zona)) {
+    try {
+      txtZona = fs.readFileSync(path.join(ZONAS_DIR, `${zona}.yaml`), 'utf-8')
+    } catch {
+      /* zona desconhecida: fica a por omissão */
+    }
+  }
+  const top = (key: string) => (txtZona && topo(txtZona, key)) || topo(txt, key)
   const nested = (section: string, key: string) => {
     const block = txt.match(new RegExp(`^${section}:\\s*\\n((?:[ \\t]+.*\\n?)*)`, 'm'))
     if (!block) return null
@@ -73,6 +130,7 @@ export function readMunicipio() {
   return {
     municipio: top('municipio') ?? 'aveiro',
     zona: top('zona') ?? 'santos-martires',
+    nome_zona: top('nome_zona'),
     saida: top('saida') ?? 'data/clean',
     bbox: bbox ? (JSON.parse(bbox) as number[]) : null,
     rua_geojson: top('rua_geojson'),
@@ -382,12 +440,81 @@ function lerCorpo(req: IncomingMessage): Promise<Record<string, unknown>> {
  */
 const ZONA_PUBLICA = /^(catalogo\/(elementos\.json|resumo\.json|catalogo\.geojson|catalogo\.csv)|deteccoes\/recortes\/[^/]+\.jpe?g|(mapillary|video|fotos)\/.+\.(jpe?g|png))$/i
 
+// ------------------------------------------------------------------ OpenStreetMap (Nominatim)
+
+const AGENTE_OSM = 'ctrlf-inventario/0.1 (inventario municipal; pedidos raros)'
+const cacheOsm = new Map<string, { t: number; v: unknown }>()
+let ultimoOsm = Promise.resolve(0)
+
+/** Nominatim pede no máximo 1 pedido por segundo e um User-Agent: fila com 1,1 s entre pedidos, e cache de 1 h. */
+async function nominatim(caminho: string, params: Record<string, string>) {
+  const u = `https://nominatim.openstreetmap.org/${caminho}?${new URLSearchParams({ format: 'jsonv2', ...params })}`
+  const c = cacheOsm.get(u)
+  if (c && Date.now() - c.t < 3600_000) return c.v
+  const vez = ultimoOsm.then(async (t) => {
+    const espera = t + 1100 - Date.now()
+    if (espera > 0) await new Promise((r) => setTimeout(r, espera))
+    return Date.now()
+  })
+  ultimoOsm = vez.catch(() => Date.now())
+  await vez
+  const r = await fetch(u, { headers: { 'User-Agent': AGENTE_OSM, 'Accept-Language': 'pt' } })
+  if (!r.ok) throw new Error(`OpenStreetMap respondeu ${r.status}`)
+  const v = await r.json()
+  cacheOsm.set(u, { t: Date.now(), v })
+  return v
+}
+
+type ResultadoOsm = { osm_type: string; osm_id: number; category: string; type: string; name?: string; display_name: string; lat: string; lon: string; geojson?: { type: string } }
+
+/** Ruas (LineString) e bairros (Polygon) de um resultado do Nominatim, como Features. */
+function featureOsm(x: ResultadoOsm) {
+  const g = x.geojson
+  if (!g) return null
+  const rua = x.category === 'highway' && (g.type === 'LineString' || g.type === 'MultiLineString')
+  const area = (g.type === 'Polygon' || g.type === 'MultiPolygon') && ['place', 'boundary', 'landuse'].includes(x.category)
+  if (!rua && !area) return null
+  return {
+    type: 'Feature',
+    geometry: g,
+    properties: { tipo: rua ? 'rua' : 'area', name: x.name || x.display_name.split(',')[0], highway: rua ? x.type : undefined, osm_id: x.osm_id, osm_type: x.osm_type, local: x.display_name },
+  }
+}
+
 export function apiHandler() {
+  const h = handler()
+  return (req: IncomingMessage, res: ServerResponse, next: () => void) => zonaCtx.run(zonaDoPedido(req), () => h(req, res, next))
+}
+
+function handler() {
   return async (req: IncomingMessage, res: ServerResponse, next: () => void) => {
     const url = (req.url ?? '').split('?')[0]
     const metodo = req.method ?? 'GET'
     try {
       if (url === '/api/config') return json(res, 200, readMunicipio())
+
+      if (url === '/api/zonas' && metodo === 'GET') {
+        const c = readMunicipio(zonasDisponiveis()[0].id)
+        return json(res, 200, {
+          atual: zonaCtx.getStore(),
+          zonas: zonasDisponiveis().map((z) => {
+            const f = path.join(ROOT, c.saida, c.municipio, z.id, 'catalogo', 'elementos.json')
+            let n: number | null = null
+            try {
+              n = (JSON.parse(fs.readFileSync(f, 'utf-8')) as unknown[]).length
+            } catch {
+              /* ainda não processada */
+            }
+            return { ...z, elementos: n }
+          }),
+        })
+      }
+      if (url === '/api/zona' && metodo === 'POST') {
+        const b = await lerCorpo(req)
+        if (typeof b.id !== 'string' || !zonasDisponiveis().some((z) => z.id === b.id)) return json(res, 400, { erro: 'zona desconhecida' })
+        res.setHeader('Set-Cookie', `ctrlf_zona=${b.id}; SameSite=Strict; Path=/; Max-Age=${365 * 86400}`)
+        return json(res, 200, { atual: b.id })
+      }
 
       if (url === '/api/sessao') {
         const s = sessaoDe(req)
@@ -473,7 +600,17 @@ export function apiHandler() {
 
       // importação e processamento (pipeline Python): só técnicos
       if (url === '/api/motor' || url.startsWith('/api/importacoes')) {
-        if (await rotasImportacoes(req, res, url, metodo, { root: ROOT, zonaDir: zonaDir(), tecnico: { utilizador: s!.utilizador, nome: s!.nome } })) return
+        if (
+          await rotasImportacoes(req, res, url, metodo, {
+            root: ROOT,
+            zonaDir: zonaDir(),
+            municipioDir: path.dirname(zonaDir()),
+            zona: zonaCtx.getStore() ?? zonasDisponiveis()[0].id,
+            zonas: zonasDisponiveis().map((z) => z.id),
+            tecnico: { utilizador: s!.utilizador, nome: s!.nome },
+          })
+        )
+          return
       }
 
       if (url === '/api/decisoes' && metodo === 'GET') {
@@ -493,6 +630,8 @@ export function apiHandler() {
           // decisões e desfazer, validadas todas antes de gravar a primeira
           const evs = (b.acoes as Record<string, unknown>[]).map((x) => {
             if (x?.acao === 'desfazer' && typeof x.id === 'string') return { acao: 'desfazer' as const, id: x.id }
+            if (x?.acao === 'par' && typeof x.a === 'string' && typeof x.b === 'string' && x.a !== x.b && typeof x.mesmo === 'boolean')
+              return { acao: 'par' as const, a: x.a, b: x.b, mesmo: x.mesmo }
             const v = x?.acao === 'decisao' ? normalizar((x.validacao ?? {}) as Record<string, unknown>) : null
             return v ? { acao: 'decisao' as const, id: v.id, validacao: v } : null
           })
@@ -516,6 +655,30 @@ export function apiHandler() {
         if (erro) return json(res, 400, { erro })
         const l = gravarLimiar(b.zona as string, b.tipo as string, b.valores as Record<string, unknown> | null, { utilizador: s!.utilizador, nome: s!.nome })
         return json(res, 200, l)
+      }
+
+      // pesquisa de ruas e bairros para criar uma zona (Importação → Nova zona)
+      if (url === '/api/osm/procurar' && metodo === 'GET') {
+        const q = new URL(req.url ?? '', 'http://x').searchParams.get('q')?.trim() ?? ''
+        if (q.length < 3 || q.length > 120) return json(res, 400, { erro: 'pesquisa entre 3 e 120 caracteres' })
+        const c = readMunicipio()
+        const ref = (c.bbox ?? [-8.66, 40.63, -8.64, 40.65]) as number[]
+        const vb = [ref[0] - 0.08, ref[3] + 0.08, ref[2] + 0.08, ref[1] - 0.08].join(',')
+        const [ruas, areas] = (await Promise.all([
+          nominatim('search', { q, countrycodes: 'pt', layer: 'address', polygon_geojson: '1', limit: '20', viewbox: vb }),
+          nominatim('search', { q, countrycodes: 'pt', polygon_geojson: '1', limit: '6', viewbox: vb, featureType: 'settlement' }).catch(() => []),
+        ])) as ResultadoOsm[][]
+        const feats = [...ruas, ...areas].map(featureOsm).filter(Boolean)
+        return json(res, 200, { type: 'FeatureCollection', features: feats })
+      }
+      if (url.startsWith('/api/osm/inversa') && metodo === 'GET') {
+        const sp = new URL(req.url ?? '', 'http://x').searchParams
+        const lat = Number(sp.get('lat'))
+        const lon = Number(sp.get('lon'))
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return json(res, 400, { erro: 'lat/lon inválidos' })
+        const x = (await nominatim('reverse', { lat: lat.toFixed(6), lon: lon.toFixed(6), zoom: '17', polygon_geojson: '1' })) as ResultadoOsm
+        const f = x && featureOsm(x)
+        return f ? json(res, 200, f) : json(res, 404, { erro: 'sem rua neste ponto' })
       }
 
       // M10: recalcula catalogo/metrica.json a partir do registo e de contagem.json

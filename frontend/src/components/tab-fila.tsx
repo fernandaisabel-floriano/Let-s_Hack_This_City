@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Progress } from '@/components/ui/progress'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { duracao } from '@/lib/format'
+import { maQualidade } from '@/lib/estado'
 import { distM, zoneContains } from '@/lib/geo'
 import { posicaoARever } from '@/lib/revisao'
 import { TIPOS, type Elemento, type Validacao } from '@/lib/types'
@@ -76,10 +77,25 @@ function DuplicadoDe({ cands, onEscolher }: { cands: ReturnType<typeof candidato
   )
 }
 
+/** Relógio da sessão num componente à parte: atualizar a cada segundo não re-renderiza a fila (nem o mapa). */
+function Relogio({ inicio }: { inicio: number | null }) {
+  const [agora, setAgora] = useState(() => Date.now())
+  useEffect(() => {
+    if (inicio === null) return
+    const t = window.setInterval(() => setAgora(Date.now()), 1000)
+    return () => window.clearInterval(t)
+  }, [inicio])
+  return <>{inicio !== null ? duracao(Math.max(0, agora - inicio) / 1000) : '—'}</>
+}
+
 export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
   const cfg = cat.base!.config
   /** duvidosos = fila normal (M8); zona = todos os elementos da zona de avaliação por validar (M10) */
-  const [modo, setModo] = useState<'duvidosos' | 'zona'>('duvidosos')
+  /**
+   * duvidosos = fila normal (M8); zona = todos os da zona de avaliação (M10);
+   * fracas = rejeitados automaticamente por má qualidade, só se o técnico os quiser rever
+   */
+  const [modo, setModo] = useState<'duvidosos' | 'zona' | 'fracas'>('duvidosos')
   const dentro = useMemo(() => zoneContains(cat.base!.zona), [cat.base])
   const [msgMetrica, setMsgMetrica] = useState<{ ok: boolean; saida: string } | null>(null)
   const [aCalcular, setACalcular] = useState(false)
@@ -94,20 +110,17 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
   const [historico, setHistorico] = useState<string[][]>([])
   const inicioItem = useRef(Date.now())
   const [inicioSessao, setInicioSessao] = useState<number | null>(null)
-  const [agora, setAgora] = useState(Date.now())
-
-  useEffect(() => {
-    const t = window.setInterval(() => setAgora(Date.now()), 1000)
-    return () => window.clearInterval(t)
-  }, [])
 
   // Pendentes = abaixo dos limiares de entrada automática do tipo (estado calculado em estado.ts;
   // os limiares mudam-se em "Entrada automática", no cabeçalho).
-  const naZona = useMemo(() => cat.todos.filter((e) => dentro(e.lon, e.lat)), [cat.todos, dentro])
+  // M10: os rejeitados por má qualidade não foram propostos pelo sistema, não entram (evaluate.py também não)
+  const naZona = useMemo(() => cat.todos.filter((e) => dentro(e.lon, e.lat) && (!maQualidade(e) || cat.validacoes[e.id])), [cat.todos, dentro, cat.validacoes])
+  const fracas = useMemo(() => cat.todos.filter((e) => maQualidade(e)), [cat.todos])
+  const nFracasPorRever = fracas.filter((e) => !cat.validacoes[e.id]).length
   const fila = useMemo(() => {
     // M10: todos os elementos propostos dentro da zona, ainda sem decisão de um técnico
     // (inclui os automáticos e os que a app juntou a outro, para os marcar como duplicados)
-    const p = modo === 'zona' ? naZona.filter((e) => !cat.validacoes[e.id]) : cat.elementos.filter(
+    const p = modo === 'fracas' ? fracas.filter((e) => !cat.validacoes[e.id]) : modo === 'zona' ? naZona.filter((e) => !cat.validacoes[e.id]) : cat.elementos.filter(
       (e) =>
         e.estado === 'pendente' ||
         // possíveis duplicados por decidir entram na fila mesmo que já estejam confirmados
@@ -118,10 +131,10 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     // sem calibração (null) = mais duvidoso
     const k = (c: number | null) => c ?? -1
     return p.sort((a, b) => (ordem === 'asc' ? k(a.confianca) - k(b.confianca) : k(b.confianca) - k(a.confianca)))
-  }, [modo, naZona, cat.validacoes, cat.elementos, cat.duplicados, ordem])
+  }, [modo, naZona, fracas, cat.validacoes, cat.elementos, cat.duplicados, ordem])
 
-  const feitos = modo === 'zona' ? naZona.length - fila.length : Object.keys(cat.validacoes).length
-  const totalParaValidar = modo === 'zona' ? naZona.length : fila.length + feitos
+  const feitos = modo === 'zona' ? naZona.length - fila.length : modo === 'fracas' ? fracas.length - fila.length : Object.keys(cat.validacoes).length
+  const totalParaValidar = modo === 'zona' ? naZona.length : modo === 'fracas' ? fracas.length : fila.length + feitos
   const atual = fila.find((e) => e.id === atualId) ?? fila[0]
   const cands = useMemo(() => (atual ? candidatosDuplicado(cat, atual) : []), [cat, atual])
   // "Qual fica?": grupo de duplicados do elemento atual, o escolhido e a posição ajustada à mão
@@ -130,6 +143,9 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
   const [escolha, setEscolha] = useState<{ para: string; id: string; pos: { lat: number; lon: number } | null } | null>(null)
   const escolhido = escolha && escolha.para === atual?.id && grupo.some((e) => e.id === escolha.id) ? escolha : null
   const escolhidoId = escolhido?.id ?? (temGrupo ? melhorDoGrupo(grupo).id : null)
+  // posição ajustada à mão (arrastar ou escrever) do elemento atual: só se grava ao confirmar (V)
+  const [ajuste, setAjuste] = useState<{ para: string; lat: number; lon: number } | null>(null)
+  const posAjustada = useMemo(() => (ajuste && ajuste.para === atual?.id ? { lat: ajuste.lat, lon: ajuste.lon } : null), [ajuste, atual?.id])
 
   useEffect(() => {
     inicioItem.current = Date.now()
@@ -140,11 +156,14 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
       if (!atual) return
       if (inicioSessao === null) setInicioSessao(inicioItem.current)
       const tempo_s = Math.round((Date.now() - inicioItem.current) / 100) / 10
-      cat.decidir(atual.id, estado, { ...opts, tempo_s })
+      // confirmar com a posição ajustada grava-a (fica "corrigido")
+      const pos = posAjustada && estado !== 'rejeitado' && opts.lat === undefined ? posAjustada : {}
+      cat.decidir(atual.id, 'lat' in pos ? (estado === 'validado' ? 'corrigido' : estado) : estado, { ...opts, ...pos, tempo_s })
       setHistorico((h) => [...h, [atual.id]])
       setAtualId(null)
+      setAjuste(null)
     },
-    [atual, cat, inicioSessao],
+    [atual, cat, inicioSessao, posAjustada],
   )
 
   /** fica o escolhido (com a posição ajustada, se houver); os outros do grupo ficam duplicados dele */
@@ -162,11 +181,15 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     setAtualId(null)
   }, [atual, escolhidoId, escolhido, grupo, cat, inicioSessao])
 
-  /** o técnico diz que não são o mesmo objeto: cada um volta à fila sozinho */
+  /**
+   * O técnico diz que não são o mesmo objeto: cada um volta à fila sozinho.
+   * Todos os pares entre eles, num só pedido — separar só do representante deixava-os ligados
+   * por um terceiro (19/11: um par foi marcado "diferente" 14 vezes sem efeito).
+   */
   const separarGrupo = useCallback(() => {
     if (!atual) return
-    const rep = cat.duplicados.escondidoEm.get(atual.id) ?? atual.id
-    for (const e of grupo) if (e.id !== rep) cat.decidirPar(rep, e.id, false)
+    const pares = grupo.flatMap((a, i) => grupo.slice(i + 1).map((b) => ({ a: a.id, b: b.id, mesmo: false })))
+    cat.decidirPares(pares)
   }, [atual, grupo, cat])
 
   const desfazerUltimo = useCallback(() => {
@@ -207,11 +230,12 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     <div className="grid h-full min-h-0 grid-cols-1 gap-3 lg:grid-cols-[320px_1fr]">
       <Card className="min-h-0 gap-0 py-0">
         <CardHeader className="gap-3 py-4">
-          <div className="grid grid-cols-2 gap-1 rounded-lg bg-muted p-1 text-xs" role="tablist" aria-label="Que elementos validar">
+          <div className="grid grid-cols-3 gap-1 rounded-lg bg-muted p-1 text-xs" role="tablist" aria-label="Que elementos validar">
             {(
               [
-                ['duvidosos', 'Casos duvidosos'],
-                ['zona', 'Todos da zona (M10)'],
+                ['duvidosos', 'Duvidosos'],
+                ['zona', 'Zona (M10)'],
+                ['fracas', `Má qualidade${nFracasPorRever ? ` (${nFracasPorRever})` : ''}`],
               ] as const
             ).map(([m, l]) => (
               <button
@@ -238,10 +262,16 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
           <div className="flex flex-col gap-1.5">
             <Progress value={progresso} />
             <CardDescription className="flex justify-between text-xs">
-              <span>{modo === 'zona' ? `${fila.length} por validar · ${feitos} de ${totalParaValidar} na zona` : `${fila.length} na fila · ${feitos} decididos`}</span>
+              <span>
+                {modo === 'zona'
+                  ? `${fila.length} por validar · ${feitos} de ${totalParaValidar} na zona`
+                  : modo === 'fracas'
+                    ? `${fila.length} por rever · ${feitos} revistos`
+                    : `${fila.length} na fila · ${feitos} decididos`}
+              </span>
               <span className="flex items-center gap-1 tabular-nums">
                 <Timer className="size-3" />
-                {inicioSessao ? duracao((agora - inicioSessao) / 1000) : '—'}
+                <Relogio inicio={inicioSessao} />
               </span>
             </CardDescription>
           </div>
@@ -250,6 +280,11 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
               Para medir a precisão: decida <strong>todos</strong> os elementos da zona de avaliação.{' '}
               <kbd>V</kbd> real, <kbd>X</kbd> falso, <kbd>D</kbd> duplicado do primeiro sugerido, <kbd>1</kbd>–<kbd>3</kbd> outro tipo.
               Cada decisão é cronometrada.
+            </p>
+          ) : modo === 'fracas' ? (
+            <p className="rounded-lg bg-muted/60 p-3 text-xs text-muted-foreground">
+              Vistos só em imagens pequenas, tremidas ou escuras: <strong>ficam rejeitados por má qualidade</strong> sem ninguém os ver. Reveja só se quiser:
+              {' '}<kbd>V</kbd> recupera um elemento real, <kbd>X</kbd> confirma a rejeição. Medido a 19/11: 3 em cada 4 eram falsos ou duplicados.
             </p>
           ) : null}
         </CardHeader>
@@ -287,6 +322,11 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                 <CardDescription className="font-mono text-xs">
                   {atual.id}
                   {atual.confianca === null && <span className="font-sans"> · sem calibração, vem sempre para a fila</span>}
+                  {atual.so_vistas_fracas && !cat.validacoes[atual.id] && (
+                    <span className="font-sans text-warning" title="Medido a 19/11: 13 de 17 elementos assim eram falsos ou duplicados">
+                      {' '}· rejeitado por má qualidade (só imagens pequenas, tremidas ou escuras): confirme ou recupere
+                    </span>
+                  )}
                 </CardDescription>
               </div>
             </div>
@@ -317,13 +357,13 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                       <MapView
                         compacto
                         escuro={escuro}
-                        elementos={[atual, ...cands.map((c) => c.el)]}
+                        elementos={[posAjustada ? { ...atual, ...posAjustada } : atual, ...cands.map((c) => c.el)]}
                         vias={cat.base!.vias}
                         zona={cat.base!.zona}
                         bbox={cfg.bbox}
                         selecionado={atual.id}
                         onSelect={() => {}}
-                        onMover={(id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon })}
+                        onMover={(id, lat, lon) => id === atual.id && setAjuste({ para: atual.id, lat, lon })}
                       />
                     </div>
                   </>
@@ -338,11 +378,17 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                   onDecidir={(estado, opts) => decidir(estado, opts)}
                   onDesfazer={() => {}}
                 />
+                {posAjustada && !temGrupo && (
+                  <p className="flex flex-wrap items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs">
+                    Posição ajustada: carregue em <kbd>V</kbd> (Confirmar) para a gravar.
+                    <button className="underline underline-offset-2" onClick={() => setAjuste(null)}>repor a original</button>
+                  </p>
+                )}
                 {!temGrupo && <DuplicadoDe cands={cands} onEscolher={(id) => decidir('rejeitado', { duplicado_de: id })} />}
                 <details className="rounded-lg border px-3 py-2 text-sm">
                   <summary className="cursor-pointer text-xs font-medium text-muted-foreground">Corrigir coordenadas (ou arraste o marcador no mapa)</summary>
                   <div className="pt-3">
-                    <CoordenadasEditor el={atual} onGuardar={(lat, lon) => cat.decidir(atual.id, 'corrigido', { lat, lon })} />
+                    <CoordenadasEditor el={posAjustada ? { ...atual, ...posAjustada } : atual} onGuardar={(lat, lon) => setAjuste({ para: atual.id, lat, lon })} />
                   </div>
                 </details>
                 <Detalhes
@@ -362,9 +408,15 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
         <Card className="items-center justify-center text-center">
           <CardContent className="flex flex-col items-center gap-3 py-10">
             <CircleCheck className="size-10 text-success" />
-            <CardTitle className="font-heading text-xl">{modo === 'zona' ? 'Zona toda validada' : 'Fila vazia'}</CardTitle>
+            <CardTitle className="font-heading text-xl">{modo === 'zona' ? 'Zona toda validada' : modo === 'fracas' ? 'Nada de má qualidade por rever' : 'Fila vazia'}</CardTitle>
             <CardDescription className="max-w-sm">
-              {modo === 'zona' ? `Os ${totalParaValidar} elementos da zona de avaliação foram decididos` : 'Todos os casos duvidosos foram decididos'}
+              {modo === 'zona'
+                ? `Os ${totalParaValidar} elementos da zona de avaliação foram decididos`
+                : modo === 'fracas'
+                  ? fracas.length
+                    ? `Os ${fracas.length} elementos de má qualidade foram revistos`
+                    : 'Não há elementos vistos só em imagens fracas (o passo de qualidade corre no pipeline)'
+                  : 'Todos os casos duvidosos foram decididos'}
               {tempos.length ? ` em ${duracao(tempoTotal)} (${(tempoTotal / tempos.length).toFixed(1)} s por elemento)` : ''}.
               Exporte as validações para recalibrar a confiança com <code className="text-xs">confianca.py recalibrar</code>.
             </CardDescription>

@@ -46,3 +46,6 @@ tests/dados_falsos/
 
 # --- Contas dos técnicos da app (passwords com scrypt) — nunca no git -----------
 data/tecnicos.json
+
+# Cache dos vetores CLIP dos recortes (pipeline/duplicados.py): recalcula-se
+**/embeddings_clip.npz

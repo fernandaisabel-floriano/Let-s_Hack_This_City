@@ -5,6 +5,10 @@
  *   fotos      python pipeline/ingest_fotos.py  PASTA --nome N --rua R
  *   video      python pipeline/ingest_video.py  VIDEO GPX --nome N --offset-s S
  *   mapillary  python pipeline/fetch_mapillary.py           (precisa de MAPILLARY_TOKEN no .env)
+ *   zona       python pipeline/nova_zona.py --id Z --nome N --vias V.geojson   (etapa 5: zona nova a partir das
+ *              ruas escolhidas no mapa) e depois fetch_mapillary.py para a área dela
+ *
+ * Cada processamento corre na sua zona (CTRLF_ZONA); a lista de importações é uma só por município.
  *   e depois   python pipeline/run_all.py   (deteção → classificação → georreferenciação → fusão → exportação)
  *
  * Privacidade: os ficheiros enviados ficam numa pasta temporária do sistema, FORA do
@@ -22,12 +26,17 @@ import type { IncomingMessage, ServerResponse } from 'node:http'
 import os from 'node:os'
 import path from 'node:path'
 
-export type TipoImportacao = 'fotos' | 'video' | 'mapillary' | 'demo'
+export type TipoImportacao = 'fotos' | 'video' | 'mapillary' | 'demo' | 'zona'
 export type EstadoImportacao = 'rascunho' | 'a_aguardar' | 'em_processamento' | 'concluido' | 'erro' | 'cancelado'
 
 export interface Importacao {
   id: string
   tipo: TipoImportacao
+  /** zona em que corre (CTRLF_ZONA); numa importação "zona", a zona que vai ser criada */
+  zona?: string
+  /** "zona": nome legível e número de troços de via escolhidos */
+  zona_nome?: string
+  n_vias?: number
   nome: string
   rua: string
   offset_s?: number
@@ -46,9 +55,11 @@ export interface Importacao {
   originais_apagados?: boolean
 }
 
-const PASSOS_PIPELINE = ['detect', 'classify_signs', 'contentores_clip', 'geolocate', 'fuse', 'export']
+const PASSOS_PIPELINE = ['detect', 'classify_signs', 'contentores_clip', 'qualidade', 'geolocate', 'fuse', 'export']
 export const NOME_PASSO: Record<string, string> = {
+  zona: 'Criação da zona (vias, polígono, edifícios)',
   ingest: 'Recolha e desfocagem',
+  qualidade: 'Qualidade das imagens',
   detect: 'Deteção (YOLO-World)',
   classify_signs: 'Classificação dos sinais',
   contentores_clip: 'Tipo de contentor (CLIP)',
@@ -61,6 +72,7 @@ const EXT: Record<TipoImportacao, string[]> = {
   video: ['.mp4', '.mov', '.avi', '.mkv', '.gpx'],
   mapillary: [],
   demo: [],
+  zona: [],
 }
 const MAX_BYTES = 4 * 1024 ** 3 // 4 GB por ficheiro
 
@@ -126,12 +138,15 @@ let lista: Importacao[] | null = null
 let ficheiroLista = ''
 const processos = new Map<string, ChildProcess>()
 
-function carregar(zonaDir: string) {
-  const f = path.join(zonaDir, 'importacoes', 'importacoes.json')
+/** Uma lista por município (<saida>/<municipio>/importacoes/); a antiga, por zona, é lida na primeira vez. */
+function carregar(municipioDir: string, zonaDir: string, zona: string) {
+  const f = path.join(municipioDir, 'importacoes', 'importacoes.json')
   if (lista && ficheiroLista === f) return lista
   ficheiroLista = f
+  const antigo = path.join(zonaDir, 'importacoes', 'importacoes.json')
   try {
-    lista = JSON.parse(fs.readFileSync(f, 'utf-8')) as Importacao[]
+    lista = JSON.parse(fs.readFileSync(fs.existsSync(f) ? f : antigo, 'utf-8')) as Importacao[]
+    for (const j of lista) j.zona ??= zona
     // processamentos interrompidos por um reinício do servidor
     for (const j of lista)
       if (j.estado === 'em_processamento' || j.estado === 'a_aguardar' || j.estado === 'rascunho') {
@@ -175,8 +190,9 @@ const foiCancelado = (j: Importacao) => (j.estado as EstadoImportacao) === 'canc
 
 function correr(py: string, args: string[], root: string, j: Importacao, aoLer: (l: string) => void): Promise<number> {
   return new Promise((resolve) => {
-    registar(j, `$ python ${args.map((a) => (a.includes(' ') ? `"${a}"` : a)).join(' ')}`)
-    const p = spawn(py, args, { cwd: root, env: { ...process.env, PYTHONIOENCODING: 'utf-8', PYTHONUNBUFFERED: '1' } })
+    registar(j, `$ ${j.zona ? `CTRLF_ZONA=${j.zona} ` : ''}python ${args.map((a) => (a.includes(' ') ? `"${a}"` : a)).join(' ')}`)
+    const env = { ...process.env, PYTHONIOENCODING: 'utf-8', PYTHONUNBUFFERED: '1', ...(j.zona ? { CTRLF_ZONA: j.zona } : {}) }
+    const p = spawn(py, args, { cwd: root, env })
     processos.set(j.id, p)
     const ler = (b: Buffer) =>
       b
@@ -213,6 +229,15 @@ async function processar(j: Importacao, root: string) {
     if (!motor.disponivel || !motor.python) throw new Error(`motor de processamento indisponível (falta: ${motor.em_falta.join(', ')})`)
     const py = motor.python
     const dir = pastaTmp(j)
+
+    // 0) zona nova: vias, polígono de avaliação, edifícios e config/zonas/<id>.yaml
+    if (j.tipo === 'zona') {
+      avancar('zona')
+      const c0 = await correr(py, ['pipeline/nova_zona.py', '--id', j.zona!, '--nome', j.zona_nome ?? j.zona!, '--vias', path.join(dir, 'vias.geojson'),
+        ...(fs.existsSync(path.join(dir, 'poligono.geojson')) ? ['--poligono', path.join(dir, 'poligono.geojson')] : [])], root, j, () => gravarAsync())
+      if (foiCancelado(j)) return
+      if (c0 !== 0) throw new Error(`a criação da zona terminou com erro (código ${c0})`)
+    }
 
     // 1) recolha + desfocagem
     avancar('ingest')
@@ -340,14 +365,14 @@ export async function rotasImportacoes(
   res: ServerResponse,
   url: string,
   metodo: string,
-  ctx: { root: string; zonaDir: string; tecnico: { utilizador: string; nome: string } },
+  ctx: { root: string; zonaDir: string; municipioDir: string; zona: string; zonas: string[]; tecnico: { utilizador: string; nome: string } },
 ): Promise<boolean> {
   if (url === '/api/motor' && metodo === 'GET') {
     json(res, 200, { ...estadoMotor(ctx.root), passos: NOME_PASSO })
     return true
   }
   if (!url.startsWith('/api/importacoes')) return false
-  const jobs = carregar(ctx.zonaDir)
+  const jobs = carregar(ctx.municipioDir, ctx.zonaDir, ctx.zona)
 
   if (url === '/api/importacoes' && metodo === 'GET') {
     json(res, 200, [...jobs].reverse().map(publica))
@@ -356,23 +381,44 @@ export async function rotasImportacoes(
   if (url === '/api/importacoes' && metodo === 'POST') {
     const b = await lerJson(req)
     const tipo = b.tipo as TipoImportacao
-    if (!['fotos', 'video', 'mapillary', 'demo'].includes(tipo)) return json(res, 400, { erro: 'tipo inválido' }), true
-    const nome = String(b.nome ?? '').trim().toLowerCase().replace(/[^a-z0-9_-]+/g, '_').slice(0, 40)
+    if (!['fotos', 'video', 'mapillary', 'demo', 'zona'].includes(tipo)) return json(res, 400, { erro: 'tipo inválido' }), true
+    // zona nova: nome legível → id; as vias (GeoJSON) vão para a pasta temporária do trabalho
+    let zonaNova: { id: string; nome: string; vias: { features: unknown[] }; poligono?: unknown } | null = null
+    if (tipo === 'zona') {
+      const zn = String(b.zona_nome ?? '').trim().slice(0, 80)
+      const id = zn.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)
+      const vias = b.vias as { type?: string; features?: unknown[] } | undefined
+      if (!zn || id.length < 2) return json(res, 400, { erro: 'indique o nome da zona' }), true
+      if (ctx.zonas.includes(id)) return json(res, 400, { erro: `já existe uma zona "${id}"` }), true
+      if (!vias || vias.type !== 'FeatureCollection' || !Array.isArray(vias.features) || !vias.features.length || vias.features.length > 400)
+        return json(res, 400, { erro: 'escolha pelo menos uma rua' }), true
+      if (jobs.some((x) => x.tipo === 'zona' && x.zona === id && ['a_aguardar', 'em_processamento'].includes(x.estado)))
+        return json(res, 400, { erro: 'essa zona já está a ser criada' }), true
+      zonaNova = { id, nome: zn, vias: vias as { features: unknown[] }, poligono: b.poligono }
+    }
+    const nome = zonaNova ? zonaNova.id : String(b.nome ?? '').trim().toLowerCase().replace(/[^a-z0-9_-]+/g, '_').slice(0, 40)
     if (!nome) return json(res, 400, { erro: 'indique um nome para a recolha' }), true
     const j: Importacao = {
       id: crypto.randomBytes(6).toString('hex'),
       tipo,
       nome,
-      rua: String(b.rua ?? '').slice(0, 120),
+      rua: zonaNova ? zonaNova.nome : String(b.rua ?? '').slice(0, 120),
+      zona: zonaNova ? zonaNova.id : ctx.zona,
+      ...(zonaNova ? { zona_nome: zonaNova.nome, n_vias: zonaNova.vias.features.length } : {}),
       offset_s: typeof b.offset_s === 'number' ? b.offset_s : undefined,
-      estado: tipo === 'mapillary' || tipo === 'demo' ? 'a_aguardar' : 'rascunho',
+      estado: tipo === 'mapillary' || tipo === 'demo' || tipo === 'zona' ? 'a_aguardar' : 'rascunho',
       criado_em: new Date().toISOString(),
       criado_por: ctx.tecnico,
       ficheiros: [],
-      passos: ['ingest', ...PASSOS_PIPELINE],
+      passos: [...(zonaNova ? ['zona'] : []), 'ingest', ...PASSOS_PIPELINE],
       progresso: 0,
       log: [],
       demo: tipo === 'demo',
+    }
+    if (zonaNova) {
+      fs.mkdirSync(pastaTmp(j), { recursive: true })
+      fs.writeFileSync(path.join(pastaTmp(j), 'vias.geojson'), JSON.stringify(zonaNova.vias))
+      if (zonaNova.poligono) fs.writeFileSync(path.join(pastaTmp(j), 'poligono.geojson'), JSON.stringify(zonaNova.poligono))
     }
     jobs.push(j)
     gravar()

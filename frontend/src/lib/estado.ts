@@ -3,8 +3,10 @@
  *
  *   1. decisão de um técnico (validado / corrigido / rejeitado) — nunca muda com o limiar
  *   2. ticket aberto depois da última decisão → pendente (em revisão)
- *   3. tipo ativo, subtipo certo, pontuação ≥ limiar e vistas ≥ mínimo → auto
- *   4. senão → pendente
+ *   3. visto só em vistas fracas (pequenas, tremidas, escuras) → rejeitado por má qualidade
+ *      (o técnico só os revê se quiser, no separador "Má qualidade" da fila)
+ *   4. tipo ativo, subtipo certo, pontuação ≥ limiar e vistas boas ≥ mínimo → auto
+ *   5. senão → pendente
  */
 import type { Elemento, Estado, Tipo, Validacao } from './types'
 
@@ -57,10 +59,15 @@ export function pontuacao(e: Elemento, p: ValoresLimiar): number | null {
   return e.confianca
 }
 
-export function estadoAuto(e: Elemento, p: ValoresLimiar): 'auto' | 'pendente' {
+/** Rejeitado automaticamente por só ter vistas fracas (sem decisão de um técnico). */
+export const maQualidade = (e: Elemento) => !!e.so_vistas_fracas
+
+export function estadoAuto(e: Elemento, p: ValoresLimiar): 'auto' | 'pendente' | 'rejeitado' {
+  if (maQualidade(e)) return 'rejeitado'
   if (!p.ativo || e.subtipo_incerto) return 'pendente'
   const s = pontuacao(e, p)
-  if (s === null || s < p.limiar || e.n_vistas < p.min_vistas) return 'pendente'
+  // vistas mínimas contam só as boas (etapa 1); catálogos antigos sem n_vistas_boas usam n_vistas
+  if (s === null || s < p.limiar || (e.n_vistas_boas ?? e.n_vistas) < p.min_vistas) return 'pendente'
   return 'auto'
 }
 

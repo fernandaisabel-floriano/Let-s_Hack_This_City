@@ -429,6 +429,82 @@ def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj:
     return els
 
 
+def fundir_coerentes(els: list[dict], p: dict, proj: Proj, edif: "Edificios") -> tuple[list[dict], int]:
+    """Etapa 2: junta dois elementos da mesma classe quando as direções de TODAS as fotos dos dois se
+    cruzam num só ponto — o mesmo objeto partido em dois pela triangulação gulosa (19/11: 16 dos 29
+    duplicados confirmados eram Mapillary + Mapillary, triangulados).
+
+    Condições (m6.fundir_*): os dois com ≥ 2 imagens, a ≤ fundir_dist_m, o ponto comum com resíduo
+    mediano ≤ fundir_tol_m em CADA um dos dois grupos, à frente de todas as câmaras e dentro do alcance. Gulosa: o par com menor
+    resíduo primeiro.
+
+    Imagens com vista nos dois: só se as caixas apontarem na mesma direção (intervalos horizontais
+    sobrepostos ≥ fundir_sobreposicao_x da mais estreita) — o detetor marcou duas vezes o mesmo objeto
+    (ex.: cabeça e poste do candeeiro). Medido a 19/11: 14 dos 15 duplicados confirmados que a
+    triangulação deixou separados partilhavam imagens assim. Caixas em direções diferentes = dois objetos."""
+    sob_min = float(p.get("fundir_sobreposicao_x", 0.5))
+
+    def compativeis(a: dict, b: dict, comuns: set) -> bool:
+        for img in comuns:
+            ba = [r["det"]["bbox"] for r in a["membros"] if r["img"] == img]
+            bb = [r["det"]["bbox"] for r in b["membros"] if r["img"] == img]
+            ok = any(min(x[2], y[2]) - max(x[0], y[0]) >= sob_min * min(x[2] - x[0], y[2] - y[0]) for x in ba for y in bb)
+            if not ok:
+                return False
+        return True
+
+    dmax, tol = float(p.get("fundir_dist_m", 0)), float(p.get("fundir_tol_m", 1.0))
+    if dmax <= 0:
+        return els, 0
+    n_fund = 0
+    while True:
+        best = None
+        for i, a in enumerate(els):
+            ia = {r["img"] for r in a["membros"]}
+            if len(ia) < 2:
+                continue
+            pa = np.array(proj.xy(a["lon"], a["lat"]))
+            for j in range(i + 1, len(els)):
+                b = els[j]
+                if b["classe"] != a["classe"]:
+                    continue
+                ib = {r["img"] for r in b["membros"]}
+                if len(ib) < 2 or not compativeis(a, b, ia & ib):
+                    continue
+                pb = np.array(proj.xy(b["lon"], b["lat"]))
+                dab = float(np.linalg.norm(pa - pb))
+                if dab > dmax:
+                    continue
+                R = a["membros"] + b["membros"]
+                C, U = np.array([r["c"] for r in R]), np.array([r["u"] for r in R])
+                pt = ls_point(C, U)
+                v = pt - C
+                t = (v * U).sum(1)
+                if (t <= p["dist_min_m"] * 0.5).any() or (t > p["dist_max_m"]).any():
+                    continue
+                # o ponto comum de um duplicado fica entre os dois; o de dois objetos vizinhos fica atrás
+                # de um deles (os raios cruzam-se depois de passar pelo objeto)
+                if max(np.linalg.norm(pt - pa), np.linalg.norm(pt - pb)) > 0.6 * dab + 0.75:
+                    continue
+                # os DOIS grupos têm de passar pelo ponto comum (com a mediana de todos os raios,
+                # dois candeeiros vizinhos juntavam-se: 2 de 5 raios podiam estar longe)
+                d = np.abs(cross(v, U))
+                na = len(a["membros"])
+                res = max(float(np.median(d[:na])), float(np.median(d[na:])))
+                if res <= tol and (best is None or res < best[0]):
+                    best = (res, i, j, pt)
+        if best is None:
+            return els, n_fund
+        _, i, j, pt = best
+        pt, ajust = edif.fix(pt, None)
+        lon, lat = proj.ll(*pt)
+        a, b = els[i], els[j]
+        novo = {**a, "lon": lon, "lat": lat, "metodo": "triangulado", "membros": a["membros"] + b["membros"],
+                "ajustado_edificio": ajust}
+        els = [e for k, e in enumerate(els) if k not in (i, j)] + [novo]
+        n_fund += 1
+
+
 def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | None = None,
                  lim: dict[str, dict] | None = None) -> dict:
     membros = [r["det"] for r in g["membros"]]
@@ -448,7 +524,10 @@ def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | 
     subclasse, conf_cls, incerto, motivo_sub = subtipo(classe, membros, m4)
     ex, ey = proj.xy(g["lon"], g["lat"])
     dist = {id(r): float(np.linalg.norm(np.array([ex, ey]) - r["c"])) for r in g["membros"]}
-    melhor = max(g["membros"], key=lambda r: r["conf"] / max(dist[id(r)], 5.0))["det"]
+    # etapa 1: a imagem escolhida vem de uma vista boa (as fracas só ajudam a geometria)
+    boas = [r for r in g["membros"] if not r["det"]["extra"].get("fraca")]
+    melhor = max(boas or g["membros"], key=lambda r: r["conf"] / max(dist[id(r)], 5.0))["det"]
+    n_boas = len({r["img"] for r in boas})
     datas = sorted(m["extra"]["captured_at"] for m in membros)
     fontes = sorted({m["extra"]["fonte"] for m in membros})
     atrib = sorted({m["extra"]["atribuicao"] for m in membros if m["extra"].get("atribuicao")})
@@ -468,6 +547,9 @@ def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | 
         "metodo_posicao": g["metodo"], "ajustado_edificio": g["ajustado_edificio"],
         "residuo_raios_m": round(float(np.median(res)), 2),
         "deteccoes": [m["id"] for m in membros],
+        "n_vistas_boas": n_boas,
+        "so_vistas_fracas": n_boas == 0,
+        "nitidez_imagem": ((melhor["extra"].get("qualidade") or {}).get("nitidez")),
     }
 
 
@@ -552,7 +634,17 @@ def main() -> None:
         if not cal_video:
             print("calibração do vídeo: não há elementos com posição Mapillary triangulada e vistas de vídeo")
 
+    # etapa 1: as vistas fracas (qualidade.py) entram na geometria — medido a 19/11, tirá-las do
+    # agrupamento desfazia duplicados juntados (contentores: 6 → 1 de 9) e perdia reais. Ficam de
+    # lado onde confundem: não são a imagem escolhida e não contam para a entrada automática
+    # (n_vistas_boas); um objeto só com vistas fracas vai sempre para a fila.
     groups = build_elements(load_rays(dets, proj, cal_video), p, ruas, edif, proj)
+    groups, n_fund = fundir_coerentes(groups, p, proj, edif)
+    if n_fund:
+        print(f"fusão coerente: {n_fund} pares de elementos juntados (as direções das fotos cruzam-se num só ponto)")
+    n_fracas = sum(bool(d["extra"].get("fraca")) for d in dets)
+    if n_fracas:
+        print(f"qualidade: {n_fracas} de {len(dets)} vistas fracas (só geometria: não são imagem nem confirmação)")
     els = [element_dict(i, g, calib, m8, proj, cfg.get("m4")) for i, g in enumerate(groups, 1)]
     lim = limiares_zona(ler_limiares(cfg=cfg), cfg["zona"])
     for e in els:

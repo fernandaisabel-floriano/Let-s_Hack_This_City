@@ -6,8 +6,10 @@ O pipeline grava só a confiança. O estado calcula-se na leitura, igual na app
 
     1. decisão de um técnico (validado / corrigido / rejeitado)   — nunca muda com o limiar
     2. ticket aberto depois da última decisão                     → pendente (em revisão)
-    3. tipo ativo, subtipo certo, pontuação ≥ limiar e vistas ≥ mínimo → auto
-    4. senão                                                       → pendente
+    3. visto só em vistas fracas (qualidade.py: pequenas, tremidas, escuras) → rejeitado (má qualidade);
+       o técnico só os revê se quiser (19/11: 13 de 17 assim eram falsos ou duplicados)
+    4. tipo ativo, subtipo certo, pontuação ≥ limiar e vistas boas ≥ mínimo → auto
+    5. senão                                                       → pendente
 
 Limiares: config/limiares.json, um só ficheiro para todas as zonas e tipos.
 
@@ -81,14 +83,23 @@ def pontuacao(e: dict, p: dict) -> float | None:
     return e.get("confianca")
 
 
+def ma_qualidade(e: dict) -> bool:
+    """Rejeitado automaticamente por só ter vistas fracas (sem decisão de um técnico)."""
+    return bool(e.get("so_vistas_fracas"))
+
+
 def estado_auto(e: dict, p: dict) -> str:
-    """'auto' ou 'pendente', só pelos limiares (sem decisões)."""
+    """'auto', 'pendente' ou 'rejeitado' (má qualidade), só pelas regras (sem decisões)."""
+    if ma_qualidade(e):
+        return "rejeitado"
     if not p.get("ativo"):
         return "pendente"
     if e.get("subtipo_incerto"):
         return "pendente"
     s = pontuacao(e, p)
-    if s is None or s < float(p["limiar"]) or e.get("n_vistas", 0) < int(p.get("min_vistas", 1)):
+    # vistas mínimas contam só as boas (etapa 1); catálogos antigos sem n_vistas_boas usam n_vistas
+    vistas = e.get("n_vistas_boas", e.get("n_vistas", 0))
+    if s is None or s < float(p["limiar"]) or vistas < int(p.get("min_vistas", 1)):
         return "pendente"
     return "auto"
 

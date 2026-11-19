@@ -1,0 +1,70 @@
+{
+ "rotulos": {
+  "reais": 196,
+  "falsos": 194
+ },
+ "por_metrica": {
+  "lado_min_px": {
+   "limiar": 33.2,
+   "perde_reais": 0.051,
+   "tira_falsos": 0.309,
+   "reais_mediana": 62.9,
+   "falsos_mediana": 47.9
+  },
+  "nitidez_min": {
+   "limiar": 102.0,
+   "perde_reais": 0.051,
+   "tira_falsos": 0.093,
+   "reais_mediana": 1510.3,
+   "falsos_mediana": 1320.8
+  },
+  "brilho_min": {
+   "limiar": 24.4,
+   "perde_reais": 0.046,
+   "tira_falsos": 0.031,
+   "reais_mediana": 80.4,
+   "falsos_mediana": 68.7
+  },
+  "brilho_max": {
+   "limiar": 159.0,
+   "perde_reais": 0.051,
+   "tira_falsos": 0.036,
+   "reais_mediana": 80.4,
+   "falsos_mediana": 68.7
+  },
+  "contraste_min": {
+   "limiar": 20.9,
+   "perde_reais": 0.051,
+   "tira_falsos": 0.062,
+   "reais_mediana": 44.8,
+   "falsos_mediana": 37.0
+  }
+ },
+ "proposta": {
+  "limiares": {
+   "lado_min_px": 33.2
+  },
+  "perde_reais": 0.051,
+  "tira_falsos": 0.309
+ },
+ "config_atual": {
+  "limiares": {
+   "lado_min_px": {
+    "sinal": 30,
+    "candeeiro": 30,
+    "contentor": 42
+   },
+   "nitidez_min": 50,
+   "brilho_min": 15,
+   "brilho_max": 245,
+   "contraste_min": 0
+  },
+  "perde_reais": 0.01,
+  "tira_falsos": 0.495,
+  "fracas_por_classe": {
+   "sinal": "54 de 244",
+   "candeeiro": "61 de 489",
+   "contentor": "122 de 258"
+  }
+ }
+}

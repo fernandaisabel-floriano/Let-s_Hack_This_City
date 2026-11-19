@@ -71,7 +71,7 @@ type Acao =
   | { acao: 'limpar' }
   | { acao: 'par'; a: string; b: string; mesmo: boolean }
   /** várias decisões de uma vez (ex.: "ficar com este" num grupo de duplicados) */
-  | { acao: 'lote'; acoes: ({ acao: 'decisao'; validacao: NonNullable<Evento['validacao']> } | { acao: 'desfazer'; id: string })[] }
+  | { acao: 'lote'; acoes: ({ acao: 'decisao'; validacao: NonNullable<Evento['validacao']> } | { acao: 'desfazer'; id: string } | { acao: 'par'; a: string; b: string; mesmo: boolean })[] }
 
 export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const [base, setBase] = useState<DadosBase | null>(null)
@@ -338,6 +338,11 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   )
   /** o técnico diz se dois elementos são o mesmo objeto (true) ou não (false) */
   const decidirPar = useCallback((a: string, b: string, mesmo: boolean) => enviar({ acao: 'par', a, b, mesmo }), [enviar])
+  /** vários pares de uma vez (ex.: "são objetos diferentes" num grupo de 3: todos os pares entre eles) */
+  const decidirPares = useCallback(
+    (pares: { a: string; b: string; mesmo: boolean }[]) => pares.length && enviar({ acao: 'lote', acoes: pares.map((p) => ({ acao: 'par' as const, ...p })) }),
+    [enviar],
+  )
   const limparValidacoes = useCallback(() => enviar({ acao: 'limpar' }), [enviar])
 
   const carregarFicheiro = useCallback(async (f: File) => {
@@ -391,6 +396,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     desfazer,
     desfazerVarios,
     decidirPar,
+    decidirPares,
     limparValidacoes,
     carregarFicheiro,
     usarDemo,

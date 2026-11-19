@@ -154,6 +154,13 @@ def test_estado_auto():
     assert estado_auto(s, LIM["sinal"]) == "pendente"  # subtipo incerto → fila, como antes no fuse.py
 
 
+def test_so_vistas_fracas_rejeitado_salvo_decisao():
+    c = el("con_0009", "contentor", confianca=None, confianca_clip=0.99, n_vistas=4, n_vistas_boas=0, so_vistas_fracas=True)
+    assert estado_auto(c, LIM_Z2["contentor"]) == "rejeitado"     # mesmo com o tipo ligado e pontuação alta
+    val = {"estado": "validado", "validado_em": "2026-11-19T10:00:00Z"}
+    assert estado_efetivo(c, val, None, LIM["contentor"]) == "validado"   # o técnico reviu: fica a decisão dele
+
+
 def test_contentores_desligados_por_omissao():
     c = el("con_0001", "contentor", confianca=None, confianca_clip=0.97, n_vistas=4)
     assert estado_auto(c, LIM["contentor"]) == "pendente"

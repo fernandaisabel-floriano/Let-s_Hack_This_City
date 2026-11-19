@@ -45,7 +45,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
-from estado import depois_do_ultimo_limpar, estado_atual, ler_registo, pares_mesmo  # noqa: E402
+from estado import depois_do_ultimo_limpar, estado_atual, ler_registo, ma_qualidade, pares_mesmo  # noqa: E402
 from zona import zone_contains  # noqa: E402
 
 CLASSES = ("sinal", "candeeiro", "contentor")
@@ -282,7 +282,10 @@ def avaliar(els: list[dict], reg_todo: list[dict], cont: dict | None, refs: list
     reg = depois_do_ultimo_limpar(reg_todo)
     atual = estado_atual(reg)
     ids = {e["id"] for e in els}
-    rot = {e["id"]: rotular(e, atual.get(e["id"])) for e in els}
+    # rejeitados automaticamente por má qualidade (só vistas fracas) e que nenhum técnico reviu: o sistema
+    # não os propôs para o catálogo, por isso não contam na precisão (contam-se à parte)
+    fracos = {e["id"] for e in els if ma_qualidade(e) and e["id"] not in atual}
+    rot = {e["id"]: rotular(e, atual.get(e["id"])) for e in els if e["id"] not in fracos}
     avisos: list[str] = []
 
     orfas = sorted(set(atual) - ids)
@@ -349,6 +352,7 @@ def avaliar(els: list[dict], reg_todo: list[dict], cont: dict | None, refs: list
         avisos.append(f"{len(proximos)} pares de elementos reais a < {DIST_AVISO_DUPLICADO_M:g} m: confirmar "
                       f"que não são o mesmo objeto (ver detalhe.reais_proximos)")
 
+    out["rejeitados_ma_qualidade"] = len(fracos)
     out["tempo"] = tempos(reg, ids)
     if refs:
         out["erro_posicao_m"] = erro_posicao([r for r in rot.values() if r["rotulo"] in ("real", "tipo_errado")],
