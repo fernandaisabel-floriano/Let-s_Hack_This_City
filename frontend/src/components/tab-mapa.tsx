@@ -46,12 +46,12 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const cfg = cat.base!.config
   const ruas = useMemo(() => nomesVias(cat.base!.vias), [cat.base])
 
-  const visiveis = useMemo(() => aplicarFiltros(cat.elementos, filtros), [cat.elementos, filtros])
+  const visiveis = useMemo(() => aplicarFiltros(cat.consolidados, filtros), [cat.consolidados, filtros])
   const contagens = useMemo(() => {
     const tipo: Record<string, number> = {}
     const estado: Record<string, number> = {}
     let rever = 0
-    for (const e of cat.elementos) {
+    for (const e of cat.consolidados) {
       estado[e.estado] = (estado[e.estado] ?? 0) + 1
       if (filtros.estados.includes(e.estado)) {
         tipo[e.tipo] = (tipo[e.tipo] ?? 0) + 1
@@ -59,8 +59,8 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
       }
     }
     return { tipo, estado, rever }
-  }, [cat.elementos, filtros.estados])
-  const el = cat.elementos.find((e) => e.id === sel)
+  }, [cat.consolidados, filtros.estados])
+  const el = cat.consolidados.find((e) => e.id === sel)
   const nAtivos = filtrosAtivos(filtros, tecnico)
 
   const selecionar = (id: string) => {
@@ -73,9 +73,9 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const paraExportar = useMemo(
     () => ({
       mapa: separarCatalogo(visiveis, cfg, cat.base!.zona).cat,
-      tudo: separarCatalogo(cat.elementos, cfg, cat.base!.zona).cat,
+      tudo: separarCatalogo(cat.consolidados, cfg, cat.base!.zona).cat,
     }),
-    [visiveis, cat.elementos, cfg, cat.base],
+    [visiveis, cat.consolidados, cfg, cat.base],
   )
   const exportar = (formato: 'geojson' | 'csv', tudo: boolean) => {
     const rows = tudo ? paraExportar.tudo : paraExportar.mapa

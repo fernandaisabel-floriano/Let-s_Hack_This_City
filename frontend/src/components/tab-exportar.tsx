@@ -42,7 +42,7 @@ function Ficheiro({ icon: Icon, titulo, descricao, acao, onClick, disabled }: {
 export function TabExportar({ cat }: { cat: Catalogo }) {
   const cfg = cat.base!.config
   const tecnico = !!cat.tecnico
-  const { cat: rows, fora } = useMemo(() => separarCatalogo(cat.elementos, cfg, cat.base!.zona), [cat.elementos, cfg, cat.base])
+  const { cat: rows, fora } = useMemo(() => separarCatalogo(cat.consolidados, cfg, cat.base!.zona), [cat.consolidados, cfg, cat.base])
   const prefixo = `${cfg.municipio}_${cfg.zona}`
   const vals = Object.values(cat.validacoes)
 

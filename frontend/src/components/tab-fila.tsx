@@ -4,12 +4,12 @@ import { Acoes, CoordenadasEditor, Detalhes, Recorte, titulo } from '@/component
 import { bboxDe } from '@/components/ficha-painel'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Duplicados } from '@/components/duplicados'
+import { grupoDuplicados, melhorDoGrupo, QualFica } from '@/components/qual-fica'
 import { MapView } from '@/components/map-view'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { Slider } from '@/components/ui/slider'
 import { duracao } from '@/lib/format'
 import { distM, zoneContains } from '@/lib/geo'
 import { posicaoARever } from '@/lib/revisao'
@@ -90,7 +90,8 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
   }
   const [ordem, setOrdem] = useState<'asc' | 'desc'>('asc')
   const [atualId, setAtualId] = useState<string | null>(null)
-  const [historico, setHistorico] = useState<string[]>([])
+  /** cada passo pode decidir vários elementos (um grupo de duplicados): desfazer desfaz o passo todo */
+  const [historico, setHistorico] = useState<string[][]>([])
   const inicioItem = useRef(Date.now())
   const [inicioSessao, setInicioSessao] = useState<number | null>(null)
   const [agora, setAgora] = useState(Date.now())
@@ -100,33 +101,35 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     return () => window.clearInterval(t)
   }, [])
 
-  const [limiar, setLimiar] = useState(cfg.limiar_auto)
-
-  // Pendentes com confiança abaixo do limiar escolhido. Sem calibração (null) ou com
-  // menos vistas do que m8.min_vistas entram sempre: são duvidosos de qualquer forma.
+  // Pendentes = abaixo dos limiares de entrada automática do tipo (estado calculado em estado.ts;
+  // os limiares mudam-se em "Entrada automática", no cabeçalho).
   const naZona = useMemo(() => cat.todos.filter((e) => dentro(e.lon, e.lat)), [cat.todos, dentro])
   const fila = useMemo(() => {
     // M10: todos os elementos propostos dentro da zona, ainda sem decisão de um técnico
     // (inclui os automáticos e os que a app juntou a outro, para os marcar como duplicados)
     const p = modo === 'zona' ? naZona.filter((e) => !cat.validacoes[e.id]) : cat.elementos.filter(
       (e) =>
-        (e.estado === 'pendente' && (e.confianca === null || e.confianca < limiar || e.n_vistas < cfg.min_vistas)) ||
+        e.estado === 'pendente' ||
         // possíveis duplicados por decidir entram na fila mesmo que já estejam confirmados
         (e.estado !== 'rejeitado' && cat.duplicados.paresDe(e.id).length > 0) ||
         // posição incerta e ainda sem decisão de um técnico (inclui os aceites automaticamente)
-        ((e.estado === 'pendente' || e.estado === 'auto') && posicaoARever(e)),
+        (e.estado === 'auto' && posicaoARever(e)),
     )
     // sem calibração (null) = mais duvidoso
     const k = (c: number | null) => c ?? -1
     return p.sort((a, b) => (ordem === 'asc' ? k(a.confianca) - k(b.confianca) : k(b.confianca) - k(a.confianca)))
-  }, [modo, naZona, cat.validacoes, cat.elementos, cat.duplicados, ordem, limiar, cfg.min_vistas])
-  const naFila = new Set(fila.map((e) => e.id))
-  const escondidos = cat.elementos.filter((e) => e.estado === 'pendente' && !naFila.has(e.id)).length
+  }, [modo, naZona, cat.validacoes, cat.elementos, cat.duplicados, ordem])
 
   const feitos = modo === 'zona' ? naZona.length - fila.length : Object.keys(cat.validacoes).length
   const totalParaValidar = modo === 'zona' ? naZona.length : fila.length + feitos
   const atual = fila.find((e) => e.id === atualId) ?? fila[0]
   const cands = useMemo(() => (atual ? candidatosDuplicado(cat, atual) : []), [cat, atual])
+  // "Qual fica?": grupo de duplicados do elemento atual, o escolhido e a posição ajustada à mão
+  const grupo = useMemo(() => (atual ? grupoDuplicados(cat, atual) : []), [cat, atual])
+  const temGrupo = grupo.length > 1
+  const [escolha, setEscolha] = useState<{ para: string; id: string; pos: { lat: number; lon: number } | null } | null>(null)
+  const escolhido = escolha && escolha.para === atual?.id && grupo.some((e) => e.id === escolha.id) ? escolha : null
+  const escolhidoId = escolhido?.id ?? (temGrupo ? melhorDoGrupo(grupo).id : null)
 
   useEffect(() => {
     inicioItem.current = Date.now()
@@ -138,18 +141,40 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
       if (inicioSessao === null) setInicioSessao(inicioItem.current)
       const tempo_s = Math.round((Date.now() - inicioItem.current) / 100) / 10
       cat.decidir(atual.id, estado, { ...opts, tempo_s })
-      setHistorico((h) => [...h, atual.id])
+      setHistorico((h) => [...h, [atual.id]])
       setAtualId(null)
     },
     [atual, cat, inicioSessao],
   )
 
+  /** fica o escolhido (com a posição ajustada, se houver); os outros do grupo ficam duplicados dele */
+  const confirmarGrupo = useCallback(() => {
+    if (!atual || !escolhidoId) return
+    if (inicioSessao === null) setInicioSessao(inicioItem.current)
+    const tempo_s = Math.round((Date.now() - inicioItem.current) / 100) / 10
+    const pos = escolhido?.pos ?? null
+    const outros = grupo.filter((e) => e.id !== escolhidoId)
+    cat.decidirVarios([
+      { id: escolhidoId, estado: pos ? 'corrigido' : 'validado', opts: { ...(pos ?? {}), tempo_s } },
+      ...outros.map((e) => ({ id: e.id, estado: 'rejeitado' as const, opts: { duplicado_de: escolhidoId } })),
+    ])
+    setHistorico((h) => [...h, [escolhidoId, ...outros.map((e) => e.id)]])
+    setAtualId(null)
+  }, [atual, escolhidoId, escolhido, grupo, cat, inicioSessao])
+
+  /** o técnico diz que não são o mesmo objeto: cada um volta à fila sozinho */
+  const separarGrupo = useCallback(() => {
+    if (!atual) return
+    const rep = cat.duplicados.escondidoEm.get(atual.id) ?? atual.id
+    for (const e of grupo) if (e.id !== rep) cat.decidirPar(rep, e.id, false)
+  }, [atual, grupo, cat])
+
   const desfazerUltimo = useCallback(() => {
-    const id = historico.at(-1)
-    if (!id) return
-    cat.desfazer(id)
+    const ids = historico.at(-1)
+    if (!ids) return
+    cat.desfazerVarios(ids)
     setHistorico((h) => h.slice(0, -1))
-    setAtualId(id)
+    setAtualId(ids[0])
   }, [historico, cat])
 
   useEffect(() => {
@@ -157,7 +182,10 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
       if (ev.target instanceof HTMLElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(ev.target.tagName)) return
       if (ev.ctrlKey || ev.metaKey || ev.altKey) return
       const k = ev.key.toLowerCase()
-      if (k === 'v' || k === 'enter') decidir('validado')
+      // Enter num botão focado já o carrega: não decidir duas vezes
+      if (k === 'enter' && ev.target instanceof HTMLElement && ev.target.closest('button, a, [role="tab"]')) return
+      if ((k === 'v' || k === 'enter') && temGrupo) confirmarGrupo()
+      else if (k === 'v' || k === 'enter') decidir('validado')
       else if (k === 'x' || k === 'delete') decidir('rejeitado')
       else if (k === 'z') desfazerUltimo()
       else if (k === 'd' && cands[0]) decidir('rejeitado', { duplicado_de: cands[0].el.id })
@@ -169,7 +197,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [decidir, desfazerUltimo, atual, cands])
+  }, [decidir, desfazerUltimo, atual, cands, temGrupo, confirmarGrupo])
 
   const tempos = Object.values(cat.validacoes).map((v) => v.tempo_s ?? 0).filter((t) => t > 0)
   const tempoTotal = tempos.reduce((a, b) => a + b, 0)
@@ -223,23 +251,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
               <kbd>V</kbd> real, <kbd>X</kbd> falso, <kbd>D</kbd> duplicado do primeiro sugerido, <kbd>1</kbd>–<kbd>3</kbd> outro tipo.
               Cada decisão é cronometrada.
             </p>
-          ) : (
-          <div className="flex flex-col gap-2 rounded-lg bg-muted/60 p-3">
-            <div className="flex items-center justify-between text-xs">
-              <span>Confiança abaixo de</span>
-              <span className="font-mono tabular-nums">{(limiar * 100).toFixed(1)}%</span>
-            </div>
-            <Slider min={0} max={1} step={0.005} value={[limiar]} onValueChange={([v]) => setLimiar(v)} />
-            <div className="flex items-center justify-between text-[11px] text-muted-foreground">
-              <span>{escondidos ? `${escondidos} pendentes acima do limiar` : 'todos os pendentes'}</span>
-              {limiar !== cfg.limiar_auto && (
-                <button className="underline underline-offset-2" onClick={() => setLimiar(cfg.limiar_auto)}>
-                  repor {(cfg.limiar_auto * 100).toFixed(0)}%
-                </button>
-              )}
-            </div>
-          </div>
-          )}
+          ) : null}
         </CardHeader>
         <ScrollArea className="min-h-0 flex-1 border-t">
           <ul className="p-2">
@@ -285,24 +297,37 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
           <ScrollArea className="min-h-0 flex-1 border-t">
             <CardContent className="grid gap-4 py-4 xl:grid-cols-[1fr_340px]">
               <div className="flex min-w-0 flex-col gap-4">
-                <Recorte el={atual} className="aspect-video w-full" />
-                <Duplicados cat={cat} el={atual} compacto />
-                <div className="h-52 overflow-hidden rounded-lg border">
-                  <MapView
-                    compacto
+                {temGrupo && escolhidoId ? (
+                  <QualFica
+                    cat={cat}
+                    grupo={grupo}
+                    escolhido={escolhidoId}
+                    pos={escolhido?.pos ?? null}
                     escuro={escuro}
-                    elementos={[
-                      atual,
-                      ...new Map([...cat.duplicados.paresDe(atual.id).map((p) => p.outro), ...cands.map((c) => c.el)].map((o) => [o.id, o])).values(),
-                    ]}
-                    vias={cat.base!.vias}
-                    zona={cat.base!.zona}
-                    bbox={cfg.bbox}
-                    selecionado={atual.id}
-                    onSelect={() => {}}
-                    onMover={(id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon })}
+                    onEscolher={(id) => setEscolha({ para: atual.id, id, pos: null })}
+                    onMover={(lat, lon) => setEscolha({ para: atual.id, id: escolhidoId, pos: { lat, lon } })}
+                    onConfirmar={confirmarGrupo}
+                    onDiferentes={separarGrupo}
                   />
-                </div>
+                ) : (
+                  <>
+                    <Recorte el={atual} className="aspect-video w-full" />
+                    <Duplicados cat={cat} el={atual} compacto />
+                    <div className="h-52 overflow-hidden rounded-lg border">
+                      <MapView
+                        compacto
+                        escuro={escuro}
+                        elementos={[atual, ...cands.map((c) => c.el)]}
+                        vias={cat.base!.vias}
+                        zona={cat.base!.zona}
+                        bbox={cfg.bbox}
+                        selecionado={atual.id}
+                        onSelect={() => {}}
+                        onMover={(id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon })}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
               <div className="flex flex-col gap-4">
                 <Acoes
@@ -313,7 +338,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                   onDecidir={(estado, opts) => decidir(estado, opts)}
                   onDesfazer={() => {}}
                 />
-                <DuplicadoDe cands={cands} onEscolher={(id) => decidir('rejeitado', { duplicado_de: id })} />
+                {!temGrupo && <DuplicadoDe cands={cands} onEscolher={(id) => decidir('rejeitado', { duplicado_de: id })} />}
                 <details className="rounded-lg border px-3 py-2 text-sm">
                   <summary className="cursor-pointer text-xs font-medium text-muted-foreground">Corrigir coordenadas (ou arraste o marcador no mapa)</summary>
                   <div className="pt-3">
@@ -323,7 +348,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
                 <Detalhes
                   el={atual}
                   crs={cfg.crs_local}
-                  limiar={cfg.limiar_auto}
+                  limiar={cat.limZona[atual.tipo].limiar}
                   tecnico
                   sugestao={cat.sugestoes[atual.id]}
                   imagemInfo={cat.imagens?.imagens[atual.imagem]}

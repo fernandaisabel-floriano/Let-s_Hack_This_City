@@ -30,6 +30,8 @@ export interface Elemento {
   lat: number
   confianca: number | null
   confianca_max_vista?: number
+  /** contentores: 2.ª opinião do CLIP (média das melhores imagens), para o limiar com base "clip" */
+  confianca_clip?: number | null
   confianca_subtipo?: number | null
   n_vistas: number
   estado: Estado

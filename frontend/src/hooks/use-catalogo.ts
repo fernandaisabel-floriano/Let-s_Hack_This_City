@@ -11,6 +11,7 @@ import {
 } from '@/lib/data'
 import { obterImagens, type InfoImagem, type TotaisFonte } from '@/lib/api'
 import { gerarDemo } from '@/lib/demo'
+import { estadoEfetivo, limiaresZona, padraoLimiares, type Limiares, type ValoresLimiar } from '@/lib/estado'
 import { ruaMaisProxima } from '@/lib/revisao'
 import { agrupar, paresDecididos, type DecisaoPar, type ParDuplicado } from '@/lib/duplicados'
 import type { Elemento, Evento, Origem, Tecnico, Tipo, Validacao } from '@/lib/types'
@@ -69,6 +70,8 @@ type Acao =
   | { acao: 'desfazer'; id: string }
   | { acao: 'limpar' }
   | { acao: 'par'; a: string; b: string; mesmo: boolean }
+  /** várias decisões de uma vez (ex.: "ficar com este" num grupo de duplicados) */
+  | { acao: 'lote'; acoes: ({ acao: 'decisao'; validacao: NonNullable<Evento['validacao']> } | { acao: 'desfazer'; id: string })[] }
 
 export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const [base, setBase] = useState<DadosBase | null>(null)
@@ -85,6 +88,8 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const [erro, setErro] = useState<string | null>(null)
   /** proveniência (fonte, autor, licença) e desfocagem de cada imagem */
   const [imagens, setImagens] = useState<{ imagens: Record<string, InfoImagem>; totais: Record<string, TotaisFonte> } | null>(null)
+  /** limiares de entrada automática (config/limiares.json): o estado "auto" é calculado aqui */
+  const [limiares, setLimiares] = useState<Limiares | null>(null)
   /** incrementa para voltar a ler o catálogo (ex.: quando um processamento termina) */
   const [versao, setVersao] = useState(0)
 
@@ -103,6 +108,13 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     })
     obterImagens().then(setImagens).catch(() => setImagens(null))
   }, [versao])
+
+  // limiares: público (sem histórico) ou técnico (com histórico)
+  useEffect(() => {
+    fetch('/api/limiares')
+      .then(async (r) => (r.ok ? setLimiares(await r.json()) : setLimiares(null)))
+      .catch(() => setLimiares(null))
+  }, [tecnico, versao])
 
   // pares de duplicados (calculados no servidor a partir das deteções)
   useEffect(() => {
@@ -162,14 +174,16 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const enviar = useCallback(
     async (a: Acao) => {
       if (!tecnico) return
-      const local: Evento = {
-        seq: (registo.at(-1)?.seq ?? 0) + 1,
-        quando: new Date().toISOString(),
+      const quando = new Date().toISOString()
+      const seq0 = registo.at(-1)?.seq ?? 0
+      const locais: Evento[] = (a.acao === 'lote' ? a.acoes : [a]).map((x, i) => ({
+        seq: seq0 + i + 1,
+        quando,
         tecnico,
-        ...a,
-        ...('validacao' in a ? { id: a.validacao.id } : {}),
-      }
-      const seguinte = [...registo, local]
+        ...x,
+        ...('validacao' in x ? { id: x.validacao.id } : {}),
+      }))
+      const seguinte = [...registo, ...locais]
       setRegisto(seguinte) // otimista: o servidor devolve o registo oficial
       if (origem !== 'pipeline') {
         if (storageKey) gravarStorage(storageKey, seguinte)
@@ -199,16 +213,25 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
 
   const ruaDe = useMemo(() => ruaMaisProxima(base?.vias ?? null), [base])
 
+  /** limiares efetivos da zona atual (padrão + o que a zona muda); sem ficheiro, os valores por omissão */
+  const limZona = useMemo(() => {
+    const cfg = base?.config
+    const l = limiares ?? { padrao: padraoLimiares(cfg?.limiar_auto, cfg?.min_vistas), zonas: {} }
+    return limiaresZona(l, cfg?.zona ?? '')
+  }, [limiares, base])
+
   /** todos os elementos, com as decisões aplicadas (inclui os duplicados) e a rua mais próxima */
   const todos = useMemo<Elemento[]>(
     () =>
       brutos.map((e) => {
         const v = validacoes[e.id]
+        // estado calculado aqui (estado.ts): decisão do técnico > ticket > limiares > por confirmar
+        const estado = estadoEfetivo(e, v, undefined, limZona[e.tipo] ?? limZona.sinal)
         const el = !v
-          ? e
+          ? { ...e, estado }
           : {
               ...e,
-              estado: v.estado,
+              estado,
               tipo: v.classe_corrigida ?? e.tipo,
               subtipo: v.subtipo_corrigido !== undefined ? v.subtipo_corrigido : e.subtipo,
               lat: v.lat ?? e.lat,
@@ -217,17 +240,19 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
             }
         return { ...el, rua: ruaDe(el.lon, el.lat) }
       }),
-    [brutos, validacoes, ruaDe],
+    [brutos, validacoes, ruaDe, limZona],
   )
 
   /** um elemento por objeto: duplicados fundidos (lib/duplicados.ts) */
   const duplicados = useMemo(() => agrupar(todos, paresDuplicados, decisoesPares), [todos, paresDuplicados, decisoesPares])
   const elementos = duplicados.elementos
+  /** vista da Câmara: um ponto por objeto, mesmo com duplicados ainda por decidir */
+  const consolidados = useMemo(() => agrupar(todos, paresDuplicados, decisoesPares, true).elementos, [todos, paresDuplicados, decisoesPares])
 
-  const decidir = useCallback(
-    (id: string, estado: Validacao['estado'], opts: DecisaoOpts = {}) => {
+  const construir = useCallback(
+    (id: string, estado: Validacao['estado'], opts: DecisaoOpts = {}): NonNullable<Evento['validacao']> | null => {
       const e = brutos.find((x) => x.id === id)
-      if (!e) return
+      if (!e) return null
       const anterior = validacoes[id]
       const v: NonNullable<Evento['validacao']> = {
         id,
@@ -246,9 +271,48 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
       if (estado === 'rejeitado' && opts.duplicado_de) v.duplicado_de = opts.duplicado_de
       // corrigido sem mudança efetiva → validado
       if (estado === 'corrigido' && !v.classe_corrigida && v.subtipo_corrigido === undefined && v.lat === undefined) v.estado = 'validado'
-      enviar({ acao: 'decisao', validacao: v })
+      return v
     },
-    [brutos, deteccoes, validacoes, enviar],
+    [brutos, deteccoes, validacoes],
+  )
+
+  const decidir = useCallback(
+    (id: string, estado: Validacao['estado'], opts: DecisaoOpts = {}) => {
+      const v = construir(id, estado, opts)
+      if (v) enviar({ acao: 'decisao', validacao: v })
+    },
+    [construir, enviar],
+  )
+
+  /** várias decisões num só pedido (ficam seguidas no registo) */
+  const decidirVarios = useCallback(
+    (lista: { id: string; estado: Validacao['estado']; opts?: DecisaoOpts }[]) => {
+      const acoes = lista.flatMap((d) => {
+        const v = construir(d.id, d.estado, d.opts)
+        return v ? [{ acao: 'decisao' as const, validacao: v }] : []
+      })
+      if (acoes.length) enviar({ acao: 'lote', acoes })
+    },
+    [construir, enviar],
+  )
+
+  /** técnico: grava os limiares de um tipo na zona atual (null = repor o padrão) */
+  const gravarLimiar = useCallback(
+    async (tipo: Tipo, valores: Pick<ValoresLimiar, 'ativo' | 'limiar' | 'min_vistas'> | null) => {
+      const r = await fetch('/api/limiares', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ zona: base?.config.zona, tipo, valores }),
+      })
+      if (r.status === 401) {
+        onExpirou()
+        throw new Error('sessão expirada')
+      }
+      const j = await r.json()
+      if (!r.ok) throw new Error(j.erro ?? `Erro ${r.status}`)
+      setLimiares(j)
+    },
+    [base, onExpirou],
   )
 
   /** M10: corre evaluate.py no servidor e volta a ler catalogo/metrica.json */
@@ -268,6 +332,10 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   }, [onExpirou])
 
   const desfazer = useCallback((id: string) => enviar({ acao: 'desfazer', id }), [enviar])
+  const desfazerVarios = useCallback(
+    (ids: string[]) => ids.length && enviar(ids.length === 1 ? { acao: 'desfazer', id: ids[0] } : { acao: 'lote', acoes: ids.map((id) => ({ acao: 'desfazer' as const, id })) }),
+    [enviar],
+  )
   /** o técnico diz se dois elementos são o mesmo objeto (true) ou não (false) */
   const decidirPar = useCallback((a: string, b: string, mesmo: boolean) => enviar({ acao: 'par', a, b, mesmo }), [enviar])
   const limparValidacoes = useCallback(() => enviar({ acao: 'limpar' }), [enviar])
@@ -302,6 +370,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     origem,
     nomeFicheiro,
     elementos,
+    consolidados,
     todos,
     duplicados,
     sugestoes,
@@ -309,13 +378,18 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     deteccoes,
     recarregar: () => setVersao((v) => v + 1),
     recalcularMetrica,
+    limiares,
+    limZona,
+    gravarLimiar,
     validacoes,
     registo,
     metrica,
     erro,
     tecnico,
     decidir,
+    decidirVarios,
     desfazer,
+    desfazerVarios,
     decidirPar,
     limparValidacoes,
     carregarFicheiro,

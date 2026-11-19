@@ -9,6 +9,10 @@
 Só entram no catálogo os elementos dentro do polígono de avaliação
 (m9.so_dentro_da_zona) e que não estejam rejeitados.
 
+O estado é o mesmo que a app mostra (estado.py): decisões dos técnicos
+(catalogo/registo_validacoes.jsonl, com as correções de tipo, subtipo e posição),
+tickets abertos e limiares de entrada automática (config/limiares.json).
+
 Uso:
     python pipeline/export.py
 """
@@ -24,6 +28,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
 from schema import EXPORT_FIELDS  # noqa: E402
+from estado import aplicar, ler_limiares, ler_registo, limiares_zona  # noqa: E402
 from zona import zone_contains  # noqa: E402
 
 
@@ -39,7 +44,8 @@ def main() -> None:
     epsg = int(crs.split(":")[1])
     tr = Transformer.from_crs("EPSG:4326", crs, always_xy=True)
     out = zone_dir(cfg) / "catalogo"
-    els = json.load(open(out / "elementos.json"))
+    els = aplicar(json.load(open(out / "elementos.json")), ler_registo(out / "registo_validacoes.jsonl"),
+                  limiares_zona(ler_limiares(cfg=cfg), cfg["zona"]))
     inside = zone_contains(cfg)
     so_zona = bool((cfg.get("m9") or {}).get("so_dentro_da_zona", True))
 

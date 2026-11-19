@@ -45,6 +45,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
+from estado import depois_do_ultimo_limpar, estado_atual, ler_registo, pares_mesmo  # noqa: E402
 from zona import zone_contains  # noqa: E402
 
 CLASSES = ("sinal", "candeeiro", "contentor")
@@ -96,41 +97,6 @@ def grupo_sinal(subtipo: str | None) -> str:
     if s.startswith("limite"):
         return "limite"
     return "outro"
-
-
-# ----------------------------------------------------------------- registo (igual a server/api.ts)
-
-def ler_registo(path: Path) -> list[dict]:
-    if not path.exists():
-        return []
-    return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
-
-
-def depois_do_ultimo_limpar(reg: list[dict]) -> list[dict]:
-    idx = max((i for i, e in enumerate(reg) if e.get("acao") == "limpar"), default=-1)
-    return reg[idx + 1:]
-
-
-def estado_atual(reg: list[dict]) -> dict[str, dict]:
-    atual: dict[str, dict] = {}
-    for e in reg:
-        if e["acao"] == "limpar":
-            atual.clear()
-        elif e["acao"] == "desfazer" and e.get("id"):
-            atual.pop(e["id"], None)
-        elif e["acao"] == "decisao" and e.get("validacao"):
-            atual[e["validacao"]["id"]] = {**e["validacao"], "validado_em": e["quando"], "validado_por": e["tecnico"]}
-    return atual
-
-
-def pares_mesmo(reg: list[dict]) -> list[tuple[str, str]]:
-    m: dict[tuple[str, str], bool] = {}
-    for e in reg:
-        if e["acao"] == "limpar":
-            m.clear()
-        elif e["acao"] == "par" and e.get("a") and e.get("b"):
-            m[tuple(sorted((e["a"], e["b"])))] = bool(e.get("mesmo"))
-    return [k for k, v in m.items() if v]
 
 
 # ----------------------------------------------------------------- rótulos

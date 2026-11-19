@@ -5,22 +5,29 @@
  * aparece na MESMA foto em caixas DIFERENTES, ou seja, são objetos distintos
  * (ou um deles é falso). Por isso a distância sozinha não serve. Regras:
  *
- *   certo     candeeiros e contentores: mesma classe, ≤ raio de fusão, e numa foto
- *             que os dois partilham as caixas sobrepõem-se (IoU ≥ IOU_MIN): é o mesmo
- *             objeto detetado duas vezes (ou um falso colado a um real). Funde-se
- *             automaticamente; o técnico pode separar.
- *             Nos SINAIS isto fica "possivel": vários sinais no mesmo poste têm caixas
- *             sobrepostas (ex.: 40 km/h por cima de uma cedência) e são objetos diferentes.
- *   possivel  mesma classe, ≤ DIST_POSSIVEL_M, nenhuma foto em comum (ex.: um visto
- *             só no Mapillary e outro só no vídeo) e subtipos compatíveis. O técnico
- *             decide se é o mesmo.
+ *   certo     (D7, 19/11) só os casos ÓBVIOS, fundidos sem perguntar: mesma classe e
+ *             mesmo subtipo (nos sinais, um subtipo lido com certeza), a ≤ DIST_CERTO_M,
+ *             os dois com confiança ≥ CONF_CERTO, e nunca em caixas distintas na mesma
+ *             foto. O técnico pode separar.
+ *   possivel  o resto que pode ser o mesmo objeto, para o técnico decidir ("Qual fica?"):
+ *             - mesma classe, ≤ raio de fusão, caixas sobrepostas numa foto partilhada
+ *               (IoU ≥ IOU_MIN) — antes fundido automaticamente nos candeeiros e contentores;
+ *               nos sinais, vários no mesmo poste sobrepõem-se e são objetos diferentes;
+ *             - mesma classe, ≤ DIST_POSSIVEL_M, nenhuma foto em comum (ex.: um visto só
+ *               no Mapillary e outro só no vídeo) e subtipos compatíveis.
  *   (nada)    partilham uma foto com caixas distintas: objetos diferentes.
+ *
+ * Medir depois da fase 1 quantos "possivel" sobram e ajustar DIST_CERTO_M / CONF_CERTO.
  */
 import fs from 'node:fs'
 import path from 'node:path'
 
 export const IOU_MIN = 0.3
 export const DIST_POSSIVEL_M = 5
+/** D7: junção automática só abaixo desta distância… */
+export const DIST_CERTO_M = 1.5
+/** …e com os dois elementos acima desta confiança (calibrada; sem calibração, a do detetor) */
+export const CONF_CERTO = 0.9
 
 export interface ParDuplicado {
   a: string
@@ -38,6 +45,8 @@ interface El {
   subtipo: string | null
   lat: number
   lon: number
+  confianca?: number | null
+  confianca_max_vista?: number
   deteccoes?: string[]
 }
 
@@ -60,6 +69,15 @@ function iou(p: number[], q: number[]) {
   const i = w * h
   const u = (p[2] - p[0]) * (p[3] - p[1]) + (q[2] - q[0]) * (q[3] - q[1]) - i
   return u > 0 ? i / u : 0
+}
+
+const confAlta = (e: El) => (e.confianca ?? e.confianca_max_vista ?? 0) >= CONF_CERTO
+
+/** D7: mesma classe e subtipo, perto, os dois confiantes (nos sinais, o subtipo tem de ter sido lido). */
+function obvio(a: El, b: El, dist: number) {
+  if (dist > DIST_CERTO_M || !confAlta(a) || !confAlta(b)) return false
+  if ((a.subtipo ?? null) !== (b.subtipo ?? null)) return false
+  return a.tipo !== 'sinal' || !SUBTIPO_VAGO.has(a.subtipo)
 }
 
 /** Sinais com subtipos lidos com certeza e diferentes (ex.: STOP e limite 50) não são o mesmo. */
@@ -103,12 +121,11 @@ export function calcularDuplicados(els: El[], dets: Det[], raio: (tipo: string) 
         for (const p of caixasA) for (const q of caixasB) melhor = Math.max(melhor, iou(p, q))
       }
       const base = { a: a.id, b: b.id, tipo: a.tipo, dist_m: Math.round(dist * 10) / 10 }
-      if (comum && melhor >= IOU_MIN) {
-        // sinais: vários no mesmo poste têm caixas sobrepostas e são objetos diferentes → decide o técnico
-        const motivo = a.tipo === 'sinal' ? 'possivel' : 'certo'
-        pares.push({ ...base, motivo, iou: Math.round(melhor * 100) / 100 })
-      }
-      else if (!comum && fa.size && fb.size && dist <= DIST_POSSIVEL_M && subtiposCompativeis(a, b)) pares.push({ ...base, motivo: 'possivel' })
+      // caixas distintas numa foto partilhada: objetos diferentes
+      if (comum && melhor < IOU_MIN) continue
+      if (obvio(a, b, dist)) pares.push({ ...base, motivo: 'certo', ...(comum ? { iou: Math.round(melhor * 100) / 100 } : {}) })
+      else if (comum) pares.push({ ...base, motivo: 'possivel', iou: Math.round(melhor * 100) / 100 })
+      else if (fa.size && fb.size && dist <= DIST_POSSIVEL_M && subtiposCompativeis(a, b)) pares.push({ ...base, motivo: 'possivel' })
     }
   }
   return pares

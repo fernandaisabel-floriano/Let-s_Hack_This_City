@@ -24,11 +24,11 @@ export interface FiltrosState {
   rever: boolean
 }
 
-export function filtrosIniciais(tecnico: boolean): FiltrosState {
+export function filtrosIniciais(_tecnico?: boolean): FiltrosState {
   return {
     tipos: [...TIPOS],
-    // o público vê o catálogo confirmado; o técnico vê também o que está por confirmar
-    estados: tecnico ? ['auto', 'pendente', 'validado', 'corrigido'] : [...ESTADOS_CONFIRMADOS],
+    // por omissão só os confirmados, para todos (19/11); os por confirmar ligam-se nos filtros
+    estados: [...ESTADOS_CONFIRMADOS],
     confMin: 0,
     texto: '',
     rua: null,

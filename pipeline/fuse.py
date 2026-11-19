@@ -38,6 +38,11 @@ contentores) não entram.
 
 Saída: <zona>/catalogo/elementos.json (com metodo_posicao por elemento).
 
+Ids estáveis (ids.py): cada elemento herda o id do elemento da execução anterior
+da mesma classe a ≤ raio_fusao_m, para as decisões dos técnicos não se perderem.
+O campo estado é só a sugestão dos limiares (config/limiares.json); a app e o
+export.py recalculam-no com as decisões (estado.py).
+
 Uso:
     python pipeline/fuse.py
 """
@@ -55,7 +60,9 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_config, zone_dir  # noqa: E402
-from confianca import confianca_elemento, estado_inicial, load_calibration, m8_cfg  # noqa: E402
+from confianca import confianca_elemento, feature, load_calibration, m8_cfg  # noqa: E402
+from estado import estado_atual, estado_auto, ler_limiares, ler_registo, limiares_zona  # noqa: E402
+from ids import herdar_ids, ler_registo_ids, relatorio  # noqa: E402
 from m4_voto import subtipo, usar_deteccao  # noqa: E402
 
 DEFAULTS = {
@@ -422,7 +429,8 @@ def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj:
     return els
 
 
-def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | None = None) -> dict:
+def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | None = None,
+                 lim: dict[str, dict] | None = None) -> dict:
     membros = [r["det"] for r in g["membros"]]
     classe = g["classe"]
     por_imagem: dict[str, float] = defaultdict(float)
@@ -430,6 +438,13 @@ def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | 
         por_imagem[m["extra"]["imagem_id"]] = max(por_imagem[m["extra"]["imagem_id"]], m["confianca"])
     confs = sorted(por_imagem.values(), reverse=True)
     conf = confianca_elemento(confs, classe, calib, m8)
+    # contentores: 2.ª opinião do CLIP (contentores_clip.py), melhor por imagem, média das top-k imagens
+    clip_img: dict[str, float] = {}
+    for m in membros:
+        c = m["extra"].get("clip_contentor")
+        if c is not None:
+            clip_img[m["extra"]["imagem_id"]] = max(clip_img.get(m["extra"]["imagem_id"], 0.0), float(c))
+    conf_clip = round(feature(list(clip_img.values()), m8["top_k"]), 3) if clip_img else None
     subclasse, conf_cls, incerto, motivo_sub = subtipo(classe, membros, m4)
     ex, ey = proj.xy(g["lon"], g["lat"])
     dist = {id(r): float(np.linalg.norm(np.array([ex, ey]) - r["c"])) for r in g["membros"]}
@@ -443,10 +458,10 @@ def element_dict(i: int, g: dict, calib: dict, m8: dict, proj: Proj, m4: dict | 
         "id": f"{classe[:3]}_{i:04d}", "tipo": classe, "subtipo": subclasse,
         "lon": round(g["lon"], 7), "lat": round(g["lat"], 7),
         "confianca": None if conf is None else round(conf, 3),
-        "confianca_max_vista": round(confs[0], 3), "confianca_subtipo": conf_cls,
+        "confianca_max_vista": round(confs[0], 3), "confianca_clip": conf_clip, "confianca_subtipo": conf_cls,
         "subtipo_incerto": incerto, "subtipo_motivo": motivo_sub,
         "n_vistas": len(confs),
-        "estado": "auto" if estado_inicial(conf, len(confs), m8) == "auto" and not incerto else "pendente",
+        "estado": None,  # preenchido em main() com estado_auto (limiares da zona)
         "primeira_vista": datas[0], "ultima_vista": datas[-1],
         "imagem": melhor["extra"]["imagem"], "recorte": melhor["recorte"],
         "fonte": "+".join(fontes), "atribuicao": "; ".join(atrib),
@@ -539,8 +554,22 @@ def main() -> None:
 
     groups = build_elements(load_rays(dets, proj, cal_video), p, ruas, edif, proj)
     els = [element_dict(i, g, calib, m8, proj, cfg.get("m4")) for i, g in enumerate(groups, 1)]
+    lim = limiares_zona(ler_limiares(cfg=cfg), cfg["zona"])
+    for e in els:
+        e["estado"] = estado_auto(e, lim[e["tipo"]])
     out = zdir / "catalogo"
     out.mkdir(exist_ok=True)
+
+    # D1: herdar os ids da execução anterior (as decisões dos técnicos estão guardadas por id)
+    anterior = out / "elementos.json"
+    antigos = json.load(open(anterior)) if anterior.exists() else []
+    todas_dets = {d["id"] for d in json.load(open(zdir / "deteccoes/deteccoes.json"))}
+    els, reg_ids = herdar_ids(els, antigos, p["raio_fusao_m"], ler_registo_ids(out / "ids.json"), todas_dets)
+    (out / "ids.json").write_text(json.dumps(reg_ids, ensure_ascii=False, indent=1), encoding="utf-8")
+    decididos = set(estado_atual(ler_registo(out / "registo_validacoes.jsonl")))
+    for linha in relatorio(reg_ids["execucoes"][-1], decididos):
+        print(linha)
+
     json.dump(els, open(out / "elementos.json", "w"), ensure_ascii=False, indent=1)
     n_det = sum(len(g["membros"]) for g in groups)
     print(f"{n_det}/{len(dets)} deteções usadas → {len(els)} elementos {dict(Counter(e['tipo'] for e in els))}")

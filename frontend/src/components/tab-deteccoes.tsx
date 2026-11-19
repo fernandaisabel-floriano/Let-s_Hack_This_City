@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react'
 import { ConfiancaBar, EstadoBadge } from '@/components/badges'
 import { Recorte, titulo } from '@/components/ficha'
 import { FichaPainel } from '@/components/ficha-painel'
+import { Limiares } from '@/components/limiares'
 import { TabFila } from '@/components/tab-fila'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Button } from '@/components/ui/button'
@@ -157,10 +158,13 @@ export function TabDeteccoes({ cat, escuro }: { cat: Catalogo; escuro?: boolean 
           <h2 className="text-xl font-semibold">Deteções e validação</h2>
           <p className="text-sm text-muted-foreground">A IA deteta; o técnico supervisiona, corrige e valida. Cada decisão fica no registo com o seu nome.</p>
         </div>
+        <div className="flex flex-wrap items-center gap-2">
+        <Limiares cat={cat} />
         <TabsList>
           <TabsTrigger value="fila"><ListChecks aria-hidden="true" /> Fila de validação</TabsTrigger>
           <TabsTrigger value="grelha"><LayoutGrid aria-hidden="true" /> Todas as deteções</TabsTrigger>
         </TabsList>
+        </div>
       </div>
       <TabsContent value="fila" className="min-h-[600px] flex-1"><TabFila cat={cat} escuro={escuro} /></TabsContent>
       <TabsContent value="grelha" className="pb-6"><Grelha cat={cat} /></TabsContent>

@@ -18,6 +18,8 @@
  *   GET  /api/motor, /api/importacoes…   técnicos: importação e processamento (server/importacoes.ts)
  *   POST /api/decisoes {acao: "par", a, b, mesmo}   o técnico decide um possível duplicado
  *   POST /api/metrica          técnicos: corre pipeline/evaluate.py (M10) e devolve a saída
+ *   GET  /api/limiares         limiares de entrada automática (config/limiares.json); o histórico só para técnicos
+ *   POST /api/limiares         técnicos: {zona, tipo, valores: {ativo, limiar, min_vistas} | null} (null = repor o padrão)
  *   /zona/ público só para o catálogo e as imagens (ZONA_PUBLICA); o resto exige sessão
  *
  * Ficheiros gravados (em data/; ver .gitignore — tecnicos.json não deve ir para o git):
@@ -265,6 +267,71 @@ function acrescentar(ev: Omit<Evento, 'seq' | 'quando'>) {
   return { validacoes: atual, registo: reg }
 }
 
+// ------------------------------------------------------------------ limiares (pipeline/estado.py)
+
+const TIPOS_LIMIAR = ['sinal', 'candeeiro', 'contentor'] as const
+type ValoresLimiar = { ativo: boolean; base: 'calibrada' | 'clip' | 'detetor'; limiar: number; min_vistas: number }
+interface Limiares {
+  _doc?: string
+  padrao: Record<string, ValoresLimiar>
+  zonas: Record<string, Record<string, Partial<ValoresLimiar>>>
+  historico: { quando: string; tecnico: { utilizador: string; nome: string }; zona: string; tipo: string; antes: Partial<ValoresLimiar>; depois: Partial<ValoresLimiar> }[]
+}
+const limiaresPath = () => path.join(ROOT, 'config', 'limiares.json')
+
+/** Igual a estado.padrao(): sinais e candeeiros com m8.limiar_auto/min_vistas, contentores desligados. */
+function padraoLimiares(): Record<string, ValoresLimiar> {
+  const c = readMunicipio()
+  const base = { ativo: true, base: 'calibrada' as const, limiar: c.limiar_auto, min_vistas: c.min_vistas }
+  return { sinal: { ...base }, candeeiro: { ...base }, contentor: { ativo: false, base: 'clip', limiar: 0.8, min_vistas: c.min_vistas } }
+}
+
+function lerLimiares(): Limiares {
+  try {
+    const d = JSON.parse(fs.readFileSync(limiaresPath(), 'utf-8')) as Partial<Limiares>
+    return { ...d, padrao: d.padrao ?? padraoLimiares(), zonas: d.zonas ?? {}, historico: d.historico ?? [] }
+  } catch {
+    return { padrao: padraoLimiares(), zonas: {}, historico: [] }
+  }
+}
+
+const efetivos = (l: Limiares, zona: string, tipo: string) => ({ ...l.padrao[tipo], ...(l.zonas[zona]?.[tipo] ?? {}) })
+
+function gravarLimiar(zona: string, tipo: string, valores: Record<string, unknown> | null, tecnico: { utilizador: string; nome: string }) {
+  const l = lerLimiares()
+  const antes = efetivos(l, zona, tipo)
+  const zonaAtual = { ...(l.zonas[zona] ?? {}) }
+  if (valores === null) delete zonaAtual[tipo]
+  else {
+    const padrao = l.padrao[tipo]
+    const novo: Partial<ValoresLimiar> = {}
+    if (typeof valores.ativo === 'boolean' && valores.ativo !== padrao.ativo) novo.ativo = valores.ativo
+    if (typeof valores.limiar === 'number' && valores.limiar !== padrao.limiar) novo.limiar = Math.round(valores.limiar * 1000) / 1000
+    if (Number.isInteger(valores.min_vistas) && valores.min_vistas !== padrao.min_vistas) novo.min_vistas = valores.min_vistas as number
+    if (Object.keys(novo).length) zonaAtual[tipo] = novo
+    else delete zonaAtual[tipo]
+  }
+  l.zonas = { ...l.zonas, [zona]: zonaAtual }
+  if (!Object.keys(zonaAtual).length) delete l.zonas[zona]
+  const depois = efetivos(l, zona, tipo)
+  if (JSON.stringify(antes) !== JSON.stringify(depois))
+    l.historico.push({ quando: new Date().toISOString(), tecnico, zona, tipo, antes, depois })
+  fs.writeFileSync(limiaresPath(), JSON.stringify(l, null, 1) + '\n', 'utf-8')
+  return l
+}
+
+function validarLimiar(b: Record<string, unknown>): string | null {
+  if (typeof b.zona !== 'string' || !/^[a-z0-9_-]+$/i.test(b.zona)) return 'zona inválida'
+  if (!TIPOS_LIMIAR.includes(b.tipo as (typeof TIPOS_LIMIAR)[number])) return 'tipo inválido'
+  if (b.valores === null) return null
+  const v = b.valores as Record<string, unknown> | undefined
+  if (!v || typeof v !== 'object') return 'valores em falta'
+  if (v.limiar !== undefined && (typeof v.limiar !== 'number' || v.limiar < 0 || v.limiar > 1)) return 'limiar entre 0 e 1'
+  if (v.min_vistas !== undefined && (!Number.isInteger(v.min_vistas) || (v.min_vistas as number) < 1 || (v.min_vistas as number) > 10)) return 'vistas mínimas entre 1 e 10'
+  if (v.ativo !== undefined && typeof v.ativo !== 'boolean') return 'ativo deve ser verdadeiro ou falso'
+  return null
+}
+
 // ------------------------------------------------------------------ http
 
 const MIME: Record<string, string> = {
@@ -390,6 +457,15 @@ export function apiHandler() {
       if (url.startsWith('/zona/') && ZONA_PUBLICA.test(decodeURIComponent(url.slice('/zona/'.length))))
         return serveFile(zonaDir(), url.slice('/zona/'.length), res)
 
+      // limiares: o público precisa deles para saber o que está confirmado; o histórico (nomes) só técnicos
+      if (url === '/api/limiares' && metodo === 'GET') {
+        const { historico, _doc, ...l } = lerLimiares()
+        void _doc
+        return json(res, 200, sessaoDe(req) ? { ...l, historico } : l)
+      }
+      // o ficheiro direto tem o histórico com nomes: só pela API
+      if (url === '/config/limiares.json') return json(res, 404, { erro: 'use /api/limiares' })
+
       // ---- daqui para baixo, só com sessão
       const precisaSessao = url.startsWith('/api/') || url.startsWith('/zona/')
       const s = precisaSessao ? sessaoDe(req) : null
@@ -413,6 +489,18 @@ export function apiHandler() {
           if (!v) return json(res, 400, { erro: 'validação inválida' })
           return json(res, 200, acrescentar({ tecnico, acao: 'decisao', id: v.id, validacao: v }))
         }
+        if (b.acao === 'lote' && Array.isArray(b.acoes) && b.acoes.length && b.acoes.length <= 50) {
+          // decisões e desfazer, validadas todas antes de gravar a primeira
+          const evs = (b.acoes as Record<string, unknown>[]).map((x) => {
+            if (x?.acao === 'desfazer' && typeof x.id === 'string') return { acao: 'desfazer' as const, id: x.id }
+            const v = x?.acao === 'decisao' ? normalizar((x.validacao ?? {}) as Record<string, unknown>) : null
+            return v ? { acao: 'decisao' as const, id: v.id, validacao: v } : null
+          })
+          if (evs.some((e) => !e)) return json(res, 400, { erro: 'ação inválida no lote' })
+          let r: ReturnType<typeof acrescentar> | null = null
+          for (const e of evs) r = acrescentar({ tecnico, ...e! })
+          return json(res, 200, r)
+        }
         if (b.acao === 'desfazer' && typeof b.id === 'string')
           return json(res, 200, acrescentar({ tecnico, acao: 'desfazer', id: b.id }))
         if (b.acao === 'limpar') return json(res, 200, acrescentar({ tecnico, acao: 'limpar' }))
@@ -420,6 +508,14 @@ export function apiHandler() {
         if (b.acao === 'par' && typeof b.a === 'string' && typeof b.b === 'string' && b.a !== b.b && typeof b.mesmo === 'boolean')
           return json(res, 200, acrescentar({ tecnico, acao: 'par', a: b.a, b: b.b, mesmo: b.mesmo }))
         return json(res, 400, { erro: 'ação desconhecida' })
+      }
+
+      if (url === '/api/limiares' && metodo === 'POST') {
+        const b = await lerCorpo(req)
+        const erro = validarLimiar(b)
+        if (erro) return json(res, 400, { erro })
+        const l = gravarLimiar(b.zona as string, b.tipo as string, b.valores as Record<string, unknown> | null, { utilizador: s!.utilizador, nome: s!.nome })
+        return json(res, 200, l)
       }
 
       // M10: recalcula catalogo/metrica.json a partir do registo e de contagem.json

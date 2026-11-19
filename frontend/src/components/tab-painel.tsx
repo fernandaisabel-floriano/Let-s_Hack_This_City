@@ -202,8 +202,8 @@ export function TabPainel({ cat, embutido }: { cat: Catalogo; embutido?: boolean
   const tecnico = !!cat.tecnico
 
   const r = useMemo(() => {
-    const { cat: noCat } = separarCatalogo(cat.elementos, cfg, cat.base!.zona)
-    const els = noCat as unknown as typeof cat.elementos
+    const { cat: noCat } = separarCatalogo(cat.consolidados, cfg, cat.base!.zona)
+    const els = noCat as unknown as typeof cat.consolidados
     const confirmados = els.filter((e) => ESTADOS_CONFIRMADOS.includes(e.estado))
     const count = (xs: string[]) => xs.reduce<Record<string, number>>((a, k) => ((a[k] = (a[k] ?? 0) + 1), a), {})
     const datas = els.flatMap((e) => [e.primeira_vista, e.ultima_vista]).filter(Boolean).sort()

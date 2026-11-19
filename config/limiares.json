@@ -1,0 +1,25 @@
+{
+ "_doc": "Limiares de entrada automática (pipeline/estado.py). padrao = valores por omissão por tipo; zonas.<zona>.<tipo> = só o que muda nessa zona; historico = alterações feitas na app (quem, quando, antes, depois). base: calibrada = P(real) calibrada; clip = 2.ª opinião do CLIP (contentores); detetor = confiança bruta.",
+ "padrao": {
+  "sinal": {
+   "ativo": true,
+   "base": "calibrada",
+   "limiar": 0.9,
+   "min_vistas": 2
+  },
+  "candeeiro": {
+   "ativo": true,
+   "base": "calibrada",
+   "limiar": 0.9,
+   "min_vistas": 2
+  },
+  "contentor": {
+   "ativo": false,
+   "base": "clip",
+   "limiar": 0.8,
+   "min_vistas": 2
+  }
+ },
+ "zonas": {},
+ "historico": []
+}
