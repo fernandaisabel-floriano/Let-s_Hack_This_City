@@ -177,14 +177,6 @@ export const METODO_LABEL: Record<MetodoPosicao, string> = {
   trajeto: 'Ao lado do trajeto a pé',
 }
 
-export function raioFusao(cfg: MunicipioConfig, tipo?: Tipo) {
-  const r = cfg.raio_fusao_m
-  if (typeof r === 'number') return r
-  if (tipo && r[tipo] !== undefined) return r[tipo]
-  const vs = Object.values(r)
-  return vs.length ? Math.max(...vs) : 8
-}
-
 /** Motivos de um aviso (igual a MOTIVOS_TICKET em server/api.ts; avisos da Câmara, components/reportar-problema.tsx). */
 export const MOTIVOS_TICKET = ['nao_existe', 'tipo_errado', 'posicao_errada', 'outro'] as const
 export const MOTIVO_LABEL: Record<string, string> = {

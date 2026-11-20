@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
-import { ESTADO_LABEL, TIPO_COR, TIPO_LABEL, type Estado, type Tipo } from '@/lib/types'
+import { ESTADO_LABEL, TIPO_COR, type Estado, type Tipo } from '@/lib/types'
 
 /** Estado como texto sóbrio com um ponto de cor. */
 /** Verde = validado (pelo técnico, com ou sem correção), laranja = pendente, vermelho = rejeitado, azul = automático. */
@@ -31,15 +31,6 @@ export function EstadoBadge({ estado, className }: { estado: Estado; className?:
 
 export function TipoDot({ tipo, className }: { tipo: Tipo; className?: string }) {
   return <span className={cn('inline-block size-2.5 shrink-0 rounded-full', className)} style={{ background: TIPO_COR[tipo] }} />
-}
-
-export function TipoBadge({ tipo }: { tipo: Tipo }) {
-  return (
-    <Badge variant="secondary" className="gap-1.5 font-normal">
-      <TipoDot tipo={tipo} />
-      {TIPO_LABEL[tipo]}
-    </Badge>
-  )
 }
 
 export function ConfiancaBar({ valor, limiar }: { valor: number | null | undefined; limiar?: number }) {

@@ -1,6 +1,6 @@
 import { CircleHelp, FlaskConical, Loader2, TriangleAlert } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
-import { VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
+import { VISTAS, VISTA_ALIAS, type Vista } from '@/lib/vistas'
 import { AtualizarDados } from '@/components/atualizar-dados'
 import { EcraEntrada } from '@/components/ecra-entrada'
 import { BarraSuperior, botaoBarra } from '@/components/barra-superior'

@@ -1,6 +1,6 @@
 import { CircleCheck, Clock, Copy, Globe, Layers, ShieldCheck, TriangleAlert } from 'lucide-react'
 import { useMemo } from 'react'
-import { nomeBonito } from '@/components/app-sidebar'
+import { nomeBonito } from '@/lib/vistas'
 import { TabPainel } from '@/components/tab-painel'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Badge } from '@/components/ui/badge'
