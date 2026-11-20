@@ -50,24 +50,6 @@ function useTema() {
   return [escuro, alternar] as const
 }
 
-/** o setup do município (ecrã de entrada) já foi feito nesta sessão do browser (separador) */
-const CHAVE_ENTRADA = 'ctrlf:zona-escolhida'
-function lerEntrada() {
-  try {
-    return sessionStorage.getItem(CHAVE_ENTRADA) === '1'
-  } catch {
-    return false
-  }
-}
-function marcarEntrada(v: boolean) {
-  try {
-    if (v) sessionStorage.setItem(CHAVE_ENTRADA, '1')
-    else sessionStorage.removeItem(CHAVE_ENTRADA)
-  } catch {
-    /* ignore */
-  }
-}
-
 type Rota = Vista | 'login'
 
 function lerRota(): Rota {
@@ -86,8 +68,8 @@ export default function App() {
   /** para onde ir depois de entrar, e porquê se pediu o login */
   const [login, setLogin] = useState<{ destino?: Vista; motivo?: string }>({})
   const [tour, setTour] = useState(false)
-  /** ecrã de entrada: setup do município antes do mapa (ligações diretas a #login também passam por ele) */
-  const [entrou, setEntrou] = useState(lerEntrada)
+  /** ecrã de entrada: setup do município, sempre que a app abre (protótipo: não grava nada) */
+  const [entrou, setEntrou] = useState(false)
   const tourChave = tecnico ? 'tecnico' : 'publico'
   const tourVisto = useTourVisto(tourChave)
   const pronto = entrou && sessao.estado.tipo !== 'a-carregar' && !!cat.base
@@ -161,7 +143,6 @@ export default function App() {
       <EcraEntrada
         onConcluir={() => {
           // protótipo: os dados do município não vão para o servidor; abre a app com o config real
-          marcarEntrada(true)
           setEntrou(true)
         }}
       />
