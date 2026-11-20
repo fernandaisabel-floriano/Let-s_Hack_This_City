@@ -49,3 +49,7 @@ data/tecnicos.json
 
 # Cache dos vetores CLIP dos recortes (pipeline/duplicados.py): recalcula-se
 **/embeddings_clip.npz
+
+# Av. Lourenço Peixinho: imagens e recortes (~450 MB) partilham-se pelo Drive, não pelo git
+data/clean/aveiro/av-lourenco-peixinho/mapillary/images/
+data/clean/aveiro/av-lourenco-peixinho/deteccoes/recortes/
