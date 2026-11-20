@@ -21,14 +21,14 @@ Fotografias   ─┘   rostos e    3 tipos    (forma + CLIP    das vistas    rai
 
 1. **Recolha**: imagens do Mapillary, frames de vídeo sincronizados com o trajeto GPS (GPX) e fotografias com GPS no EXIF. Todas as fontes produzem o mesmo formato.
 2. **Desfoque**: rostos e matrículas são desfocados **antes** de qualquer imagem ser gravada. A imagem original só existe em memória.
-3. **Deteção** (M3): YOLO-World a correr localmente, com prompts por classe.
-4. **Tipo de sinal** (M4): uma cascata que dá prioridade à precisão:
+3. **Deteção**: YOLO-World a correr localmente, com prompts por classe.
+4. **Tipo de sinal**: uma cascata que dá prioridade à precisão:
    - a forma e a cor (OpenCV) decidem primeiro: octógono vermelho → STOP, triângulo invertido → cedência;
    - os algarismos leem o valor dos limites de velocidade;
    - o CLIP e uma **sonda re-treinável** decidem o resto;
    - o que fica incerto vai para a fila.
 5. **Qualidade**: as vistas tremidas, escuras ou demasiado pequenas ajudam a calcular a posição, mas não servem de prova.
-6. **Posição e fusão** (M5/M6): cada deteção é um raio que parte da câmara.
+6. **Posição e fusão**: cada deteção é um raio que parte da câmara.
    - Os raios de imagens diferentes **triangulam-se** num ponto.
    - Placas empilhadas no mesmo poste ficam separadas pela família do sinal.
    - O mesmo objeto visto em várias imagens e fontes fica um só elemento ("visto em N imagens").
@@ -47,38 +47,23 @@ Fotografias   ─┘   rostos e    3 tipos    (forma + CLIP    das vistas    rai
 
 ---
 
-## Estado das user stories
+## Na app
 
-### P1
-
-| # | História | Está feito quando | Estado |
-|---|---|---|---|
-| P1.1 | Usar vídeo da frota | Frames sincronizados com o GPX entram no mesmo pipeline | ✅ `ingest_video.py` (também `ingest_fotos.py` para fotografias) |
-| P1.2 | Sem duplicados entre fontes | O mesmo elemento no Mapillary e no vídeo fica um só ponto | ✅ calibração do vídeo contra o Mapillary |
-| P1.3 | Melhorar com o uso | Painel com precisão por tipo; limiar de entrada ajustado pelas validações | ✅ painel, limiares por zona e re-treino |
-| P1.4 | Corrigir a posição | Arrastar o ponto no mapa grava a nova coordenada | ✅ |
-| P1.5 | Formato do cadastro da Câmara | Campos indicados pelos mentores + tags OSM e códigos do RST | ❌ |
-| P1.6 | Instalar noutro município | Config com o polígono + rua de outro concelho processada | 🟡 `nova_zona.py` e uma 2.ª zona (Av. Lourenço Peixinho); falta outro concelho |
-
-### P2
-
-| # | História | Está feito quando | Estado |
-|---|---|---|---|
-| P2.1 | Posições mais exatas | Triangulação entre várias vistas; erro em metros vs. referência | 🟡 triangulação feita; falta a referência de posições para o erro em metros |
-| P2.2 | Re-treinar o modelo | Contador "X exemplos prontos" + script de re-treino | ✅ `retreino.py` |
-| P2.3 | Instalar com um comando | `docker compose up` | ❌ |
-| P2.4 | Filtrar o mapa | Filtros por tipo e estado de validação | ✅ |
-
-### Também feito
-- **Avisos da Câmara**: quem consulta o catálogo sem sessão pode reportar um problema num elemento (já não existe, tipo errado, posição errada). O elemento volta à fila do técnico, à frente dos outros.
+- **Mapa e catálogo** (público): cada elemento com a ficha (imagem, coordenadas, tipo, confiança, n.º de vistas e autoria da imagem), filtros por tipo e estado, e exportação GeoJSON / CSV.
+- **Fila de validação** (técnico): os casos duvidosos ordenados por confiança, com confirmar, rejeitar, mudar o tipo e arrastar o ponto para corrigir a posição. Cada decisão é cronometrada e fica no registo de auditoria.
 - **Selecionar vários no mapa** (técnico): unir duplicados escolhendo o que fica e a posição, ou rejeitar em massa.
+- **Avisos da Câmara**: quem consulta o catálogo sem sessão pode reportar um problema num elemento (já não existe, tipo errado, posição errada). O elemento volta à fila do técnico, à frente dos outros.
+- **Painel**: precisão por tipo a partir das validações e limiares de entrada automática ajustáveis por zona.
+- **Importação**: novas zonas, vídeos e fotografias processados a partir da própria app.
 - **Ecrã de setup do município** ao abrir a app (protótipo, só no frontend).
 
-### Roadmap (fora do protótipo)
+## Roadmap (fora do protótipo)
+
 - Câmaras fixas em viaturas municipais com rota regular, para recolha semanal automática.
 - Instância Panoramax da própria Câmara para guardar as imagens recolhidas.
 - KartaView como segunda fonte aberta, se houver cobertura.
 - Base de dados PostGIS e servidor próprio com HTTPS e contas da Câmara (SSO).
+- Instalação com um comando (`docker compose up`).
 
 ---
 
@@ -96,7 +81,7 @@ Fotografias   ─┘   rostos e    3 tipos    (forma + CLIP    das vistas    rai
 
 Os contentores nunca entram sozinhos, porque o detetor deles é o mais fraco. Os candeeiros têm propostas a mais, mas os que entram sozinhos (7) não passam dos reais (9).
 
-**Tipo de sinal (M4)**, medido contra 194 recortes rotulados à mão, com a sonda avaliada fora do treino:
+**Tipo de sinal**, medido contra 194 recortes rotulados à mão, com a sonda avaliada fora do treino:
 
 | | Antes (p5) | Agora (p6) |
 |---|---:|---:|
@@ -193,8 +178,8 @@ CTRLF_ZONA=gloria .venv/bin/python pipeline/fetch_mapillary.py && CTRLF_ZONA=glo
 **Medir e re-treinar:**
 
 ```bash
-.venv/bin/python pipeline/evaluate.py                    # M10: precisão (validações) e recall (contagem.json)
-.venv/bin/python pipeline/m4_elementos.py                # M4 por elemento, contra os rótulos
+.venv/bin/python pipeline/evaluate.py                    # precisão (validações) e recall (contagem.json)
+.venv/bin/python pipeline/m4_elementos.py                # tipo de sinal por elemento, contra os rótulos
 .venv/bin/python pipeline/retreino.py --so-contar        # "X exemplos prontos"
 .venv/bin/python pipeline/retreino.py --sinteticos       # re-treina a sonda, mede p5 × p6, grava config/m4/sonda.npz
 .venv/bin/python pipeline/run_all.py --desde classify_signs   # aplica a sonda nova ao catálogo
@@ -212,9 +197,9 @@ for t in tests/test_*.py; do .venv/bin/python "$t"; done
 |---|---|
 | `pipeline/` | Recolha, desfoque, deteção, classificação, posição, fusão, exportação, medição e re-treino |
 | `frontend/` | App web (React + Vite) e a API dela (`frontend/server/`) |
-| `config/` | `municipio.yaml`, zonas extra (`zonas/`), ruas e polígonos (`ruas/`), limiares, calibrações e a sonda do M4 |
+| `config/` | `municipio.yaml`, zonas extra (`zonas/`), ruas e polígonos (`ruas/`), limiares, calibrações e a sonda dos sinais |
 | `data/clean/` | Imagens desfocadas, deteções e catálogo por zona (as imagens da Av. Lourenço Peixinho partilham-se pelo Drive) |
-| `reports/` | Medições e relatórios (M4, contentores, duplicados, qualidade) |
+| `reports/` | Medições e relatórios (sinais, contentores, duplicados, qualidade) |
 | `tests/` | Testes do pipeline |
 | `docs/` | Notas para o relatório, plano de ação e marca (logotipo) |
 
