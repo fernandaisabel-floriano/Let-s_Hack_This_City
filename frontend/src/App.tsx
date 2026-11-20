@@ -211,10 +211,7 @@ export default function App() {
 
   return (
     <div className="flex h-svh min-w-0 flex-col overflow-hidden">
-      <BarraSuperior cat={cat} vista={mostrar} onVista={escolherVista} escuro={escuro} onTema={alternarTema} onEntrar={() => pedirLogin()} onSair={sair} onInicio={() => {
-          marcarEntrada(false)
-          setEntrou(false)
-        }}>
+      <BarraSuperior cat={cat} vista={mostrar} onVista={escolherVista} escuro={escuro} onTema={alternarTema} onEntrar={() => pedirLogin()} onSair={sair}>
         {cat.origem !== 'pipeline' && (
           <Tooltip>
             <TooltipTrigger asChild>

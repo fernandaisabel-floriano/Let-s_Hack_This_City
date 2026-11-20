@@ -26,8 +26,6 @@ interface Props {
   onTema: () => void
   onEntrar: () => void
   onSair: () => void
-  /** volta ao ecrã de entrada (setup do município) */
-  onInicio: () => void
   /** controlos extra à direita (aviso de dados de demonstração, ajuda, atualizar dados) */
   children?: ReactNode
 }
@@ -39,7 +37,7 @@ export const botaoBarra = 'h-11 min-w-11 text-foreground hover:bg-muted hover:te
  * Barra superior (substitui a barra lateral): marca, navegação, controlos e sessão. A zona está no mapa (zona-seletor.tsx).
  * Abaixo de 1280 px a navegação passa para um menu; abaixo de 640 px a barra parte em duas linhas.
  */
-export function BarraSuperior({ cat, vista, onVista, escuro, onTema, onEntrar, onSair, onInicio, children }: Props) {
+export function BarraSuperior({ cat, vista, onVista, escuro, onTema, onEntrar, onSair, children }: Props) {
   const fileRef = useRef<HTMLInputElement>(null)
   const t = cat.tecnico
   const pendentes = cat.elementos.filter((e) => e.estado === 'pendente').length
@@ -84,18 +82,12 @@ export function BarraSuperior({ cat, vista, onVista, escuro, onTema, onEntrar, o
   return (
     <header className="shrink-0 border-b-2 border-destaque bg-card text-foreground">
       <div className="flex min-h-14 flex-wrap items-center gap-x-1 px-2 sm:gap-x-2 sm:px-4">
-        <button
-          type="button"
-          onClick={onInicio}
-          title="Voltar ao setup do município"
-          aria-label="Mapeya: voltar ao início (setup do município)"
-          className="mr-1 flex min-w-0 items-center gap-2 rounded-md py-2 outline-none focus-visible:ring-2 focus-visible:ring-realce sm:mr-3"
-        >
+        <div className="mr-1 flex min-w-0 items-center gap-2 py-2 sm:mr-3">
           <img src={pin} alt="" className="h-8 w-auto" />
           <span className="font-marca text-2xl leading-none font-semibold tracking-tight text-titulo">
             Mape<span className="text-marca">ya</span>
           </span>
-        </button>
+        </div>
 
         {/* navegação compacta (< 1280 px) */}
         <div className="xl:hidden">
