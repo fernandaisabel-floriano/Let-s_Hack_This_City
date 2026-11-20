@@ -108,6 +108,11 @@ m4:
     aceites: [30, 40, 50]
     score_min: 0.55
     margem_min: 0.08
+  # fusão: regra do voto do subtipo por elemento (m4_voto.py). "especifico": uma vista STOP/cedência/
+  # limite certa ganha ao "outro sinal" (em minoria → fila). 20/11, por elemento (m4_elementos.py):
+  # maioria 1 de 11 certos, 5 perdidos sem fila → especifico 6 de 11 (5 na fila), 1 perdido, 0 erros.
+  voto: especifico          # especifico | maioria
+  voto_min_vistas_especificas: 2   # especifico: com menos vistas certas da família → fila (só com 1, sin_0022 entrava como cedência errada)
   voto_lado_max_px: 100     # fusão: peso do voto cresce com o lado do recorte até X px
   voto_min_fracao: 0.6      # fusão: família/valor com menos do que X do voto → incerto
   rotular_lado_min_px: 30   # m4_rotular.py: só recortes com lado maior ≥ X px

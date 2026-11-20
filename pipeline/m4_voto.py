@@ -18,7 +18,7 @@ Subtipo incerto → o elemento fica sempre "pendente" (fuse.py).
 """
 from __future__ import annotations
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 from common import lado_px
 
@@ -27,7 +27,73 @@ def usar_deteccao(d: dict) -> bool:
     return not d["extra"].get("clip_rejeitado")
 
 
+ESPECIFICAS = ("stop", "cedencia_passagem", "limite")
+
+
+def familia(sub: str) -> str:
+    return "limite" if sub.startswith("limite_") else sub
+
+
 def votar_subtipo(membros: list[dict], m4: dict) -> tuple[str, float | None, bool, str | None]:
+    """Subtipo do sinal fundido. m4.voto escolhe a regra:
+
+      especifico (omissão)  uma vista específica CERTA (stop, cedência, limite com
+                            valor — na p5 só saem com prova de forma/algarismos)
+                            ganha ao "outro sinal", que é a classe residual: num
+                            poste com várias placas, e com recortes que nem são
+                            sinais, o "outro" ganhava sempre por maioria (20/11:
+                            1 de 11 elementos com STOP/cedência/limite certos).
+                            Se a família específica tiver < voto_min_fracao do
+                            voto total, fica com esse subtipo mas incerta (→ fila).
+      maioria               regra anterior (votar_maioria).
+    """
+    if m4.get("voto", "especifico") == "maioria":
+        return votar_maioria(membros, m4)
+    cap = float(m4.get("voto_lado_max_px", 100))
+    fmin = float(m4.get("voto_min_fracao", 0.6))
+    esp: dict[str, float] = defaultdict(float)
+    num: dict[str, float] = defaultdict(float)
+    n_esp: Counter = Counter()
+    total = 0.0
+    for m in membros:
+        sub, e = m.get("subclasse") or "outro_sinal", m["extra"]
+        if sub == "costas" or (e.get("m4_incerto") and sub != "limite_desconhecido"):
+            continue
+        w = max(e.get("confianca_classificacao") or 0.0, 1e-3) * min(lado_px(m["bbox"]), cap) / cap
+        total += w
+        fam = familia(sub)
+        if fam in ESPECIFICAS and not e.get("m4_incerto"):
+            esp[fam] += w
+            n_esp[fam] += 1
+            if fam == "limite":
+                num[sub] += w
+    if not esp:
+        sub, frac, incerto, motivo = votar_maioria(membros, m4)
+        # anel vermelho visto mas valor por ler: limite por confirmar, não "outro sinal" automático
+        if not incerto and any(m.get("subclasse") == "limite_desconhecido" for m in membros):
+            return "limite_desconhecido", frac, True, "anel vermelho numa vista, valor do limite não lido"
+        return sub, frac, incerto, motivo
+    fam = max(esp, key=esp.get)
+    f_esp = esp[fam] / sum(esp.values())          # concordância entre as famílias específicas
+    f_tot = esp[fam] / total                      # peso face a todas as vistas certas
+    if f_esp < fmin:
+        return "outro_sinal", round(f_esp, 3), True, f"vistas específicas discordam ({dict(esp)})"
+    sub = fam
+    if fam == "limite":
+        v = max(num, key=num.get)
+        if num[v] / sum(num.values()) < fmin:
+            return "limite_desconhecido", round(f_tot, 3), True, f"valores discordam ({dict(num)})"
+        sub = v
+    if f_tot < fmin:
+        return sub, round(f_tot, 3), True, f"{sub} em minoria face a outro sinal ({f_tot:.2f} do voto)"
+    if n_esp[fam] < int(m4.get("voto_min_vistas_especificas", 2)):
+        # uma só vista certa: com as placas empilhadas separadas por família (fuse.py), uma vista
+        # do STOP/cedência do mesmo poste pode juntar-se aos raios incertos da placa de baixo
+        return sub, round(f_tot, 3), True, f"{sub} visto numa só vista certa"
+    return sub, round(f_tot, 3), False, None
+
+
+def votar_maioria(membros: list[dict], m4: dict) -> tuple[str, float | None, bool, str | None]:
     """Subtipo do sinal fundido → (subtipo, fração do voto, incerto, motivo).
 
     Abstêm-se: vistas de costas e vistas incertas da M4 (outro_sinal incerto).
