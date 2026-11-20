@@ -1,4 +1,6 @@
-# CPU: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# Python 3.10+. Instalar PRIMEIRO o PyTorch (versão CPU, sem GPU):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# e depois:  pip install -r requirements.txt   (o CLIP vem do GitHub: precisa de git)
 requests>=2.28
 PyYAML>=6.0
 numpy
@@ -10,3 +12,12 @@ gpxpy
 av
 Pillow
 shapely
+# M4 (sinais), tipo de contentor e duplicados: CLIP ViT-B/32 (fork do Ultralytics, o mesmo que o
+# YOLO-World instala); ftfy e regex são dependências dele
+clip @ git+https://github.com/ultralytics/CLIP.git@7ffa84b3bfa40c42ecc1c77147a855e69cb2dd40
+ftfy
+regex
+# re-treino da sonda (pipeline/retreino.py)
+scipy
+# fotografias HEIC (iPhone) em ingest_fotos.py e referencia.py; sem ele essas fotos ficam de fora
+pillow-heif

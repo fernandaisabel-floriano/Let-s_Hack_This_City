@@ -78,7 +78,8 @@ const MAX_BYTES = 4 * 1024 ** 3 // 4 GB por ficheiro
 
 // ------------------------------------------------------------------ motor (Python)
 
-const MODULOS = ['cv2', 'numpy', 'ultralytics', 'torch', 'PIL', 'yaml', 'pyproj', 'shapely', 'gpxpy', 'av', 'requests']
+/** módulos Python de que o pipeline precisa (requirements.txt; pillow-heif é opcional, só para HEIC) */
+const MODULOS = ['cv2', 'numpy', 'ultralytics', 'torch', 'clip', 'scipy', 'PIL', 'yaml', 'pyproj', 'shapely', 'gpxpy', 'av', 'requests']
 
 function candidatosPython(root: string) {
   return [

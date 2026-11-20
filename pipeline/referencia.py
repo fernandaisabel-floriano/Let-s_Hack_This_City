@@ -20,7 +20,6 @@ from __future__ import annotations
 import csv
 import json
 import sys
-import pillow_heif
 from PIL import Image
 from pathlib import Path
 
@@ -67,7 +66,7 @@ def exif_gps(path: Path) -> tuple[float, float] | None:
     
     if path.suffix.lower() in (".heic", ".heif"):
         try:
-           
+            import pillow_heif  # opcional: só para fotografias HEIC
             pillow_heif.register_heif_opener()
         except ImportError:
             print(f"  {path.name}: HEIC precisa de `pip install pillow-heif` — ignorada")

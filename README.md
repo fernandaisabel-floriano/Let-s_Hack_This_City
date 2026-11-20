@@ -130,11 +130,16 @@ O Mapillary tem 54 imagens a ≤30 m da rua, todas de 2019–2021. Por isso, o *
 
 ## Como correr
 
+Precisa de Python 3.10+, Node.js 20.19+ e git. Não precisa de GPU.
+
 ```bash
 python -m venv .venv
-.venv/bin/pip install -r requirements.txt
+.venv/bin/pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu   # PyTorch só CPU, primeiro
+.venv/bin/pip install -r requirements.txt   # inclui o CLIP (do GitHub) e o pillow-heif (fotos HEIC)
 cp .env.example .env        # preencher MAPILLARY_TOKEN
 ```
+
+Os modelos (YOLO-World, rostos, matrículas e CLIP, ~390 MB) descarregam-se sozinhos para `models/` e `weights/clip/` na primeira execução.
 
 **Imagens Mapillary** (zona definida em `config/municipio.yaml`):
 
