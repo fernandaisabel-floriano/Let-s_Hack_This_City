@@ -1,0 +1,2024 @@
+{
+ "gerado_em": "2026-11-20T13:13:27+00:00",
+ "exemplos_prontos": 267,
+ "por_classe": {
+  "stop": {
+   "rótulos": 6,
+   "sintéticos": 24
+  },
+  "cedencia_passagem": {
+   "rótulos": 10,
+   "sintéticos": 24
+  },
+  "limite": {
+   "rótulos": 4,
+   "sintéticos": 24
+  },
+  "outro_sinal": {
+   "rótulos": 114,
+   "validações": 1
+  },
+  "costas": {
+   "rótulos": 21
+  },
+  "nao_sinal": {
+   "rótulos": 39
+  }
+ },
+ "lambda": 1e-05,
+ "sinteticos": true,
+ "sonda_fora_do_treino": {
+  "stop": {
+   "precisao": 0.8,
+   "recall": 0.667,
+   "rotulados": 6
+  },
+  "cedencia_passagem": {
+   "precisao": 0.571,
+   "recall": 0.4,
+   "rotulados": 10
+  },
+  "limite": {
+   "precisao": 1.0,
+   "recall": 0.75,
+   "rotulados": 4
+  },
+  "outro_sinal": {
+   "precisao": 0.924,
+   "recall": 0.957,
+   "rotulados": 115
+  },
+  "costas": {
+   "precisao": 0.826,
+   "recall": 0.905,
+   "rotulados": 21
+  },
+  "nao_sinal": {
+   "precisao": 0.789,
+   "recall": 0.769,
+   "rotulados": 39
+  }
+ },
+ "p5": {
+  "n": 194,
+  "fila": 52,
+  "especificas": 8,
+  "erros_especificos": 0,
+  "precisao_especificas": 1.0,
+  "confusao_erros": {}
+ },
+ "p6_melhor": {
+  "especifica_min": 0.9,
+  "nao_sinal_min": 0.4,
+  "n": 194,
+  "fila": 89,
+  "especificas": 9,
+  "erros_especificos": 0,
+  "precisao_especificas": 1.0,
+  "confusao_erros": {},
+  "stop_R": 0.667,
+  "cedencia_R": 0.5,
+  "limite_R": 0.75,
+  "elementos": {
+   "nao_especificos": 35,
+   "ok": 35,
+   "especificos": 5,
+   "fila": 1,
+   "certo_auto": 2,
+   "certo_fila": 2
+  }
+ },
+ "grelha_p6": [
+  {
+   "especifica_min": 0.5,
+   "nao_sinal_min": 0.4,
+   "n": 194,
+   "fila": 84,
+   "especificas": 14,
+   "erros_especificos": 3,
+   "precisao_especificas": 0.786,
+   "confusao_erros": {
+    "outro → cedencia": 1,
+    "outro → stop": 1,
+    "nao_sinal → cedencia": 1
+   },
+   "stop_R": 0.833,
+   "cedencia_R": 0.6,
+   "limite_R": 0.75,
+   "elementos": {
+    "nao_especificos": 35,
+    "ok": 32,
+    "especificos": 5,
+    "certo_fila": 3,
+    "falso_especifico": 1,
+    "falso_fila": 2,
+    "certo_auto": 2
+   }
+  },
+  {
+   "especifica_min": 0.6,
+   "nao_sinal_min": 0.4,
+   "n": 194,
+   "fila": 85,
+   "especificas": 13,
+   "erros_especificos": 2,
+   "precisao_especificas": 0.846,
+   "confusao_erros": {
+    "outro → stop": 1,
+    "nao_sinal → cedencia": 1
+   },
+   "stop_R": 0.833,
+   "cedencia_R": 0.6,
+   "limite_R": 0.75,
+   "elementos": {
+    "nao_especificos": 35,
+    "ok": 33,
+    "especificos": 5,
+    "certo_fila": 3,
+    "falso_especifico": 1,
+    "certo_auto": 2,
+    "falso_fila": 1
+   }
+  },
+  {
+   "especifica_min": 0.7,
+   "nao_sinal_min": 0.4,
+   "n": 194,
+   "fila": 87,
+   "especificas": 11,
+   "erros_especificos": 1,
+   "precisao_especificas": 0.909,
+   "confusao_erros": {
+    "nao_sinal → cedencia": 1
+   },
+   "stop_R": 0.833,
+   "cedencia_R": 0.5,
+   "limite_R": 0.75,
+   "elementos": {
+    "nao_especificos": 35,
+    "ok": 33,
+    "especificos": 5,
+    "fila": 1,
+    "falso_fila": 2,
+    "certo_auto": 2,
+    "certo_fila": 2
+   }
+  },
+  {
+   "especifica_min": 0.8,
+   "nao_sinal_min": 0.4,
+   "n": 194,
+   "fila": 88,
+   "especificas": 10,
+   "erros_especificos": 0,
+   "precisao_especificas": 1.0,
+   "confusao_erros": {},
+   "stop_R": 0.833,
+   "cedencia_R": 0.5,
+   "limite_R": 0.75,
+   "elementos": {
+    "nao_especificos": 35,
+    "ok": 35,
+    "especificos": 5,
+    "fila": 1,
+    "certo_auto": 2,
+    "certo_fila": 2
+   }
+  },
+  {
+   "especifica_min": 0.9,
+   "nao_sinal_min": 0.4,
+   "n": 194,
+   "fila": 89,
+   "especificas": 9,
+   "erros_especificos": 0,
+   "precisao_especificas": 1.0,
+   "confusao_erros": {},
+   "stop_R": 0.667,
+   "cedencia_R": 0.5,
+   "limite_R": 0.75,
+   "elementos": {
+    "nao_especificos": 35,
+    "ok": 35,
+    "especificos": 5,
+    "fila": 1,
+    "certo_auto": 2,
+    "certo_fila": 2
+   }
+  }
+ ],
+ "nao_sinal": [
+  {
+   "nao_sinal_min": 0.4,
+   "nao_sinal_apanhados": 33,
+   "reais_marcados": 6
+  },
+  {
+   "nao_sinal_min": 0.5,
+   "nao_sinal_apanhados": 28,
+   "reais_marcados": 5
+  },
+  {
+   "nao_sinal_min": 0.6,
+   "nao_sinal_apanhados": 27,
+   "reais_marcados": 5
+  },
+  {
+   "nao_sinal_min": 0.7,
+   "nao_sinal_apanhados": 25,
+   "reais_marcados": 5
+  },
+  {
+   "nao_sinal_min": 0.8,
+   "nao_sinal_apanhados": 20,
+   "reais_marcados": 4
+  },
+  {
+   "nao_sinal_min": 0.9,
+   "nao_sinal_apanhados": 16,
+   "reais_marcados": 4
+  },
+  {
+   "nao_sinal_min": 1.01,
+   "nao_sinal_apanhados": 0,
+   "reais_marcados": 0
+  }
+ ],
+ "elementos": {
+  "p5": {
+   "nao_especificos": 35,
+   "ok": 35,
+   "especificos": 5,
+   "fila": 2,
+   "certo_auto": 1,
+   "certo_fila": 2
+  },
+  "p6": {
+   "nao_especificos": 35,
+   "ok": 35,
+   "especificos": 5,
+   "fila": 1,
+   "certo_auto": 2,
+   "certo_fila": 2
+  }
+ },
+ "p6_ganha": true,
+ "sonda": "config/m4/sonda.npz",
+ "fora_do_treino": {
+  "1194235824337950_00512": {
+   "rotulo": "nao_sinal",
+   "stop": 0.002,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.264,
+   "costas": 0.35,
+   "nao_sinal": 0.381
+  },
+  "1202840680156839_00533": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.0,
+   "limite": 0.001,
+   "outro_sinal": 0.005,
+   "costas": 0.01,
+   "nao_sinal": 0.983
+  },
+  "127103002827974_00118": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.99,
+   "costas": 0.002,
+   "nao_sinal": 0.007
+  },
+  "127103002827974_00119": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.009,
+   "limite": 0.001,
+   "outro_sinal": 0.98,
+   "costas": 0.002,
+   "nao_sinal": 0.007
+  },
+  "1346415209085203_00321": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.008,
+   "limite": 0.0,
+   "outro_sinal": 0.981,
+   "costas": 0.001,
+   "nao_sinal": 0.009
+  },
+  "1346415209085203_00322": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.006,
+   "limite": 0.001,
+   "outro_sinal": 0.988,
+   "costas": 0.001,
+   "nao_sinal": 0.003
+  },
+  "1362535060784292_00424": {
+   "rotulo": "nao_sinal",
+   "stop": 0.01,
+   "cedencia_passagem": 0.004,
+   "limite": 0.003,
+   "outro_sinal": 0.15,
+   "costas": 0.025,
+   "nao_sinal": 0.808
+  },
+  "1362535060784292_00425": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.006,
+   "costas": 0.0,
+   "nao_sinal": 0.994
+  },
+  "139830181467436_00330": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.995,
+   "costas": 0.0,
+   "nao_sinal": 0.001
+  },
+  "1401895673523017_00506": {
+   "rotulo": "outro_frente",
+   "stop": 0.059,
+   "cedencia_passagem": 0.006,
+   "limite": 0.001,
+   "outro_sinal": 0.847,
+   "costas": 0.056,
+   "nao_sinal": 0.031
+  },
+  "140402778072748_00050": {
+   "rotulo": "outro_frente",
+   "stop": 0.006,
+   "cedencia_passagem": 0.552,
+   "limite": 0.008,
+   "outro_sinal": 0.371,
+   "costas": 0.047,
+   "nao_sinal": 0.017
+  },
+  "140402778072748_00051": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.992,
+   "costas": 0.001,
+   "nao_sinal": 0.004
+  },
+  "140402778072748_00052": {
+   "rotulo": "cedencia",
+   "stop": 0.043,
+   "cedencia_passagem": 0.029,
+   "limite": 0.011,
+   "outro_sinal": 0.232,
+   "costas": 0.311,
+   "nao_sinal": 0.375
+  },
+  "1428507540881609_00383": {
+   "rotulo": "stop",
+   "stop": 0.939,
+   "cedencia_passagem": 0.026,
+   "limite": 0.003,
+   "outro_sinal": 0.014,
+   "costas": 0.011,
+   "nao_sinal": 0.006
+  },
+  "1428507540881609_00384": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.012,
+   "limite": 0.002,
+   "outro_sinal": 0.972,
+   "costas": 0.002,
+   "nao_sinal": 0.011
+  },
+  "1428507540881609_00385": {
+   "rotulo": "nao_sinal",
+   "stop": 0.004,
+   "cedencia_passagem": 0.008,
+   "limite": 0.002,
+   "outro_sinal": 0.02,
+   "costas": 0.878,
+   "nao_sinal": 0.088
+  },
+  "1428507540881609_00386": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.002,
+   "costas": 0.992,
+   "nao_sinal": 0.003
+  },
+  "1428507540881609_00387": {
+   "rotulo": "nao_sinal",
+   "stop": 0.002,
+   "cedencia_passagem": 0.004,
+   "limite": 0.001,
+   "outro_sinal": 0.106,
+   "costas": 0.457,
+   "nao_sinal": 0.43
+  },
+  "1454909068222766_00263": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.001,
+   "costas": 0.998,
+   "nao_sinal": 0.0
+  },
+  "151050097036700_00473": {
+   "rotulo": "costas",
+   "stop": 0.004,
+   "cedencia_passagem": 0.01,
+   "limite": 0.013,
+   "outro_sinal": 0.074,
+   "costas": 0.695,
+   "nao_sinal": 0.204
+  },
+  "161620725985969_00099": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.991,
+   "costas": 0.001,
+   "nao_sinal": 0.005
+  },
+  "161620725985969_00100": {
+   "rotulo": "limite_40",
+   "stop": 0.004,
+   "cedencia_passagem": 0.006,
+   "limite": 0.828,
+   "outro_sinal": 0.13,
+   "costas": 0.02,
+   "nao_sinal": 0.012
+  },
+  "161620725985969_00101": {
+   "rotulo": "limite_40",
+   "stop": 0.003,
+   "cedencia_passagem": 0.002,
+   "limite": 0.041,
+   "outro_sinal": 0.135,
+   "costas": 0.046,
+   "nao_sinal": 0.774
+  },
+  "161620725985969_00102": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.005,
+   "limite": 0.001,
+   "outro_sinal": 0.053,
+   "costas": 0.914,
+   "nao_sinal": 0.027
+  },
+  "161620725985969_00103": {
+   "rotulo": "outro_frente",
+   "stop": 0.007,
+   "cedencia_passagem": 0.021,
+   "limite": 0.027,
+   "outro_sinal": 0.928,
+   "costas": 0.009,
+   "nao_sinal": 0.008
+  },
+  "161620725985969_00104": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.984,
+   "costas": 0.0,
+   "nao_sinal": 0.01
+  },
+  "161620725985969_00105": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.009,
+   "costas": 0.028,
+   "nao_sinal": 0.96
+  },
+  "161620725985969_00106": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.008,
+   "limite": 0.001,
+   "outro_sinal": 0.009,
+   "costas": 0.961,
+   "nao_sinal": 0.021
+  },
+  "176303467780098_00077": {
+   "rotulo": "limite_40",
+   "stop": 0.002,
+   "cedencia_passagem": 0.002,
+   "limite": 0.926,
+   "outro_sinal": 0.059,
+   "costas": 0.001,
+   "nao_sinal": 0.011
+  },
+  "176303467780098_00078": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.999,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "176303467780098_00079": {
+   "rotulo": "outro_frente",
+   "stop": 0.012,
+   "cedencia_passagem": 0.018,
+   "limite": 0.023,
+   "outro_sinal": 0.933,
+   "costas": 0.009,
+   "nao_sinal": 0.006
+  },
+  "176303467780098_00080": {
+   "rotulo": "limite_40",
+   "stop": 0.003,
+   "cedencia_passagem": 0.005,
+   "limite": 0.783,
+   "outro_sinal": 0.134,
+   "costas": 0.006,
+   "nao_sinal": 0.07
+  },
+  "176303467780098_00081": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.001,
+   "costas": 0.981,
+   "nao_sinal": 0.017
+  },
+  "179684627401981_00312": {
+   "rotulo": "outro_frente",
+   "stop": 0.004,
+   "cedencia_passagem": 0.016,
+   "limite": 0.001,
+   "outro_sinal": 0.929,
+   "costas": 0.006,
+   "nao_sinal": 0.044
+  },
+  "179684627401981_00313": {
+   "rotulo": "outro_frente",
+   "stop": 0.024,
+   "cedencia_passagem": 0.023,
+   "limite": 0.01,
+   "outro_sinal": 0.911,
+   "costas": 0.018,
+   "nao_sinal": 0.014
+  },
+  "1924321491055960_00349": {
+   "rotulo": "stop",
+   "stop": 0.986,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.012,
+   "costas": 0.0,
+   "nao_sinal": 0.001
+  },
+  "1924321491055960_00350": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.01,
+   "limite": 0.001,
+   "outro_sinal": 0.983,
+   "costas": 0.001,
+   "nao_sinal": 0.004
+  },
+  "1924321491055960_00351": {
+   "rotulo": "costas",
+   "stop": 0.127,
+   "cedencia_passagem": 0.009,
+   "limite": 0.006,
+   "outro_sinal": 0.492,
+   "costas": 0.147,
+   "nao_sinal": 0.22
+  },
+  "1924321491055960_00352": {
+   "rotulo": "stop",
+   "stop": 0.015,
+   "cedencia_passagem": 0.014,
+   "limite": 0.004,
+   "outro_sinal": 0.888,
+   "costas": 0.014,
+   "nao_sinal": 0.064
+  },
+  "1924321491055960_00353": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.022,
+   "limite": 0.001,
+   "outro_sinal": 0.97,
+   "costas": 0.001,
+   "nao_sinal": 0.004
+  },
+  "221695656639355_00237": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.004,
+   "limite": 0.0,
+   "outro_sinal": 0.994,
+   "costas": 0.001,
+   "nao_sinal": 0.0
+  },
+  "221695656639355_00238": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.005,
+   "costas": 0.994,
+   "nao_sinal": 0.0
+  },
+  "251892116797241_00252": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.007,
+   "limite": 0.002,
+   "outro_sinal": 0.019,
+   "costas": 0.956,
+   "nao_sinal": 0.014
+  },
+  "262929075567708_00439": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.561,
+   "limite": 0.002,
+   "outro_sinal": 0.033,
+   "costas": 0.002,
+   "nao_sinal": 0.401
+  },
+  "262929075567708_00440": {
+   "rotulo": "cedencia",
+   "stop": 0.021,
+   "cedencia_passagem": 0.692,
+   "limite": 0.007,
+   "outro_sinal": 0.039,
+   "costas": 0.044,
+   "nao_sinal": 0.197
+  },
+  "262929075567708_00441": {
+   "rotulo": "cedencia",
+   "stop": 0.0,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.032,
+   "costas": 0.002,
+   "nao_sinal": 0.962
+  },
+  "262929075567708_00442": {
+   "rotulo": "nao_sinal",
+   "stop": 0.003,
+   "cedencia_passagem": 0.015,
+   "limite": 0.002,
+   "outro_sinal": 0.05,
+   "costas": 0.007,
+   "nao_sinal": 0.924
+  },
+  "262929075567708_00443": {
+   "rotulo": "outro_frente",
+   "stop": 0.068,
+   "cedencia_passagem": 0.007,
+   "limite": 0.005,
+   "outro_sinal": 0.518,
+   "costas": 0.345,
+   "nao_sinal": 0.057
+  },
+  "314768113426345_00372": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.007,
+   "limite": 0.001,
+   "outro_sinal": 0.985,
+   "costas": 0.004,
+   "nao_sinal": 0.002
+  },
+  "314768113426345_00373": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.005,
+   "costas": 0.003,
+   "nao_sinal": 0.99
+  },
+  "314768113426345_00374": {
+   "rotulo": "stop",
+   "stop": 0.989,
+   "cedencia_passagem": 0.002,
+   "limite": 0.002,
+   "outro_sinal": 0.004,
+   "costas": 0.002,
+   "nao_sinal": 0.002
+  },
+  "314768113426345_00375": {
+   "rotulo": "nao_sinal",
+   "stop": 0.003,
+   "cedencia_passagem": 0.014,
+   "limite": 0.004,
+   "outro_sinal": 0.164,
+   "costas": 0.467,
+   "nao_sinal": 0.348
+  },
+  "314768113426345_00376": {
+   "rotulo": "costas",
+   "stop": 0.002,
+   "cedencia_passagem": 0.005,
+   "limite": 0.003,
+   "outro_sinal": 0.01,
+   "costas": 0.934,
+   "nao_sinal": 0.046
+  },
+  "314768113426345_00377": {
+   "rotulo": "outro_frente",
+   "stop": 0.015,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.75,
+   "costas": 0.018,
+   "nao_sinal": 0.212
+  },
+  "325387565826990_00000": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.016,
+   "limite": 0.0,
+   "outro_sinal": 0.982,
+   "costas": 0.001,
+   "nao_sinal": 0.0
+  },
+  "325387565826990_00002": {
+   "rotulo": "outro_frente",
+   "stop": 0.013,
+   "cedencia_passagem": 0.074,
+   "limite": 0.003,
+   "outro_sinal": 0.895,
+   "costas": 0.005,
+   "nao_sinal": 0.011
+  },
+  "325387565826990_00003": {
+   "rotulo": "cedencia",
+   "stop": 0.035,
+   "cedencia_passagem": 0.498,
+   "limite": 0.012,
+   "outro_sinal": 0.394,
+   "costas": 0.056,
+   "nao_sinal": 0.005
+  },
+  "325387565826990_00004": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.99,
+   "costas": 0.001,
+   "nao_sinal": 0.006
+  },
+  "325387565826990_00005": {
+   "rotulo": "nao_sinal",
+   "stop": 0.008,
+   "cedencia_passagem": 0.007,
+   "limite": 0.005,
+   "outro_sinal": 0.128,
+   "costas": 0.06,
+   "nao_sinal": 0.791
+  },
+  "332103931769021_00176": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.001,
+   "limite": 0.003,
+   "outro_sinal": 0.989,
+   "costas": 0.001,
+   "nao_sinal": 0.004
+  },
+  "332103931769021_00177": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.987,
+   "costas": 0.004,
+   "nao_sinal": 0.005
+  },
+  "332861158210983_00531": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.002,
+   "costas": 0.005,
+   "nao_sinal": 0.991
+  },
+  "333571651607552_00392": {
+   "rotulo": "stop",
+   "stop": 0.873,
+   "cedencia_passagem": 0.045,
+   "limite": 0.027,
+   "outro_sinal": 0.02,
+   "costas": 0.013,
+   "nao_sinal": 0.022
+  },
+  "333571651607552_00393": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.005,
+   "limite": 0.001,
+   "outro_sinal": 0.983,
+   "costas": 0.001,
+   "nao_sinal": 0.009
+  },
+  "333571651607552_00394": {
+   "rotulo": "costas",
+   "stop": 0.002,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.014,
+   "costas": 0.79,
+   "nao_sinal": 0.19
+  },
+  "333571651607552_00395": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.009,
+   "costas": 0.014,
+   "nao_sinal": 0.974
+  },
+  "345941120216633_00159": {
+   "rotulo": "outro_frente",
+   "stop": 0.005,
+   "cedencia_passagem": 0.003,
+   "limite": 0.004,
+   "outro_sinal": 0.976,
+   "costas": 0.002,
+   "nao_sinal": 0.009
+  },
+  "345941120216633_00160": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.001,
+   "outro_sinal": 0.993,
+   "costas": 0.001,
+   "nao_sinal": 0.005
+  },
+  "345941120216633_00161": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.037,
+   "limite": 0.003,
+   "outro_sinal": 0.005,
+   "costas": 0.001,
+   "nao_sinal": 0.953
+  },
+  "357199595741657_00063": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.011,
+   "limite": 0.001,
+   "outro_sinal": 0.987,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "357199595741657_00064": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.018,
+   "limite": 0.002,
+   "outro_sinal": 0.023,
+   "costas": 0.938,
+   "nao_sinal": 0.018
+  },
+  "358223035931413_00016": {
+   "rotulo": "cedencia",
+   "stop": 0.026,
+   "cedencia_passagem": 0.518,
+   "limite": 0.014,
+   "outro_sinal": 0.403,
+   "costas": 0.031,
+   "nao_sinal": 0.008
+  },
+  "358223035931413_00017": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.994,
+   "costas": 0.001,
+   "nao_sinal": 0.002
+  },
+  "358223035931413_00018": {
+   "rotulo": "outro_frente",
+   "stop": 0.008,
+   "cedencia_passagem": 0.017,
+   "limite": 0.001,
+   "outro_sinal": 0.97,
+   "costas": 0.002,
+   "nao_sinal": 0.001
+  },
+  "358223035931413_00020": {
+   "rotulo": "nao_sinal",
+   "stop": 0.011,
+   "cedencia_passagem": 0.006,
+   "limite": 0.003,
+   "outro_sinal": 0.177,
+   "costas": 0.077,
+   "nao_sinal": 0.726
+  },
+  "358223035931413_00021": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.029,
+   "limite": 0.003,
+   "outro_sinal": 0.036,
+   "costas": 0.651,
+   "nao_sinal": 0.281
+  },
+  "393622815295748_00525": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.003,
+   "costas": 0.005,
+   "nao_sinal": 0.987
+  },
+  "396281794755874_00420": {
+   "rotulo": "nao_sinal",
+   "stop": 0.027,
+   "cedencia_passagem": 0.004,
+   "limite": 0.005,
+   "outro_sinal": 0.1,
+   "costas": 0.029,
+   "nao_sinal": 0.835
+  },
+  "4223581927673228_00399": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.016,
+   "limite": 0.002,
+   "outro_sinal": 0.92,
+   "costas": 0.001,
+   "nao_sinal": 0.06
+  },
+  "4301765876512327_00132": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.986,
+   "costas": 0.004,
+   "nao_sinal": 0.007
+  },
+  "4301765876512327_00133": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.99,
+   "costas": 0.0,
+   "nao_sinal": 0.005
+  },
+  "464745681158829_00244": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.028,
+   "limite": 0.004,
+   "outro_sinal": 0.962,
+   "costas": 0.004,
+   "nao_sinal": 0.002
+  },
+  "464745681158829_00245": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.005,
+   "limite": 0.001,
+   "outro_sinal": 0.006,
+   "costas": 0.984,
+   "nao_sinal": 0.003
+  },
+  "491355092121556_00145": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.991,
+   "costas": 0.001,
+   "nao_sinal": 0.005
+  },
+  "491355092121556_00146": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.993,
+   "costas": 0.0,
+   "nao_sinal": 0.003
+  },
+  "512376593282609_00417": {
+   "rotulo": "outro_frente",
+   "stop": 0.005,
+   "cedencia_passagem": 0.018,
+   "limite": 0.026,
+   "outro_sinal": 0.912,
+   "costas": 0.01,
+   "nao_sinal": 0.028
+  },
+  "512376593282609_00418": {
+   "rotulo": "nao_sinal",
+   "stop": 0.026,
+   "cedencia_passagem": 0.003,
+   "limite": 0.008,
+   "outro_sinal": 0.5,
+   "costas": 0.038,
+   "nao_sinal": 0.426
+  },
+  "541325036871456_00089": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.0,
+   "costas": 0.999,
+   "nao_sinal": 0.001
+  },
+  "541325036871456_00090": {
+   "rotulo": "costas",
+   "stop": 0.0,
+   "cedencia_passagem": 0.009,
+   "limite": 0.001,
+   "outro_sinal": 0.011,
+   "costas": 0.971,
+   "nao_sinal": 0.007
+  },
+  "549710842916356_00211": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.041,
+   "costas": 0.001,
+   "nao_sinal": 0.954
+  },
+  "549710842916356_00212": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "549710842916356_00213": {
+   "rotulo": "costas",
+   "stop": 0.004,
+   "cedencia_passagem": 0.006,
+   "limite": 0.003,
+   "outro_sinal": 0.065,
+   "costas": 0.907,
+   "nao_sinal": 0.016
+  },
+  "556053389113045_00337": {
+   "rotulo": "outro_frente",
+   "stop": 0.003,
+   "cedencia_passagem": 0.02,
+   "limite": 0.003,
+   "outro_sinal": 0.897,
+   "costas": 0.017,
+   "nao_sinal": 0.06
+  },
+  "556053389113045_00338": {
+   "rotulo": "outro_frente",
+   "stop": 0.66,
+   "cedencia_passagem": 0.028,
+   "limite": 0.008,
+   "outro_sinal": 0.241,
+   "costas": 0.03,
+   "nao_sinal": 0.033
+  },
+  "556053389113045_00339": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.007,
+   "limite": 0.001,
+   "outro_sinal": 0.979,
+   "costas": 0.0,
+   "nao_sinal": 0.01
+  },
+  "565606381092155_00495": {
+   "rotulo": "outro_frente",
+   "stop": 0.043,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.791,
+   "costas": 0.134,
+   "nao_sinal": 0.028
+  },
+  "608010640585505_00537": {
+   "rotulo": "cedencia",
+   "stop": 0.101,
+   "cedencia_passagem": 0.202,
+   "limite": 0.035,
+   "outro_sinal": 0.546,
+   "costas": 0.087,
+   "nao_sinal": 0.028
+  },
+  "608010640585505_00538": {
+   "rotulo": "outro_frente",
+   "stop": 0.003,
+   "cedencia_passagem": 0.02,
+   "limite": 0.002,
+   "outro_sinal": 0.967,
+   "costas": 0.005,
+   "nao_sinal": 0.003
+  },
+  "608010640585505_00539": {
+   "rotulo": "nao_sinal",
+   "stop": 0.014,
+   "cedencia_passagem": 0.053,
+   "limite": 0.014,
+   "outro_sinal": 0.444,
+   "costas": 0.076,
+   "nao_sinal": 0.398
+  },
+  "608010640585505_00540": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.994,
+   "costas": 0.001,
+   "nao_sinal": 0.002
+  },
+  "608010640585505_00542": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.171,
+   "costas": 0.003,
+   "nao_sinal": 0.823
+  },
+  "608010640585505_00543": {
+   "rotulo": "costas",
+   "stop": 0.007,
+   "cedencia_passagem": 0.014,
+   "limite": 0.001,
+   "outro_sinal": 0.173,
+   "costas": 0.8,
+   "nao_sinal": 0.004
+  },
+  "627874648178072_00289": {
+   "rotulo": "outro_frente",
+   "stop": 0.131,
+   "cedencia_passagem": 0.05,
+   "limite": 0.003,
+   "outro_sinal": 0.656,
+   "costas": 0.121,
+   "nao_sinal": 0.04
+  },
+  "759446278037143_00360": {
+   "rotulo": "stop",
+   "stop": 0.314,
+   "cedencia_passagem": 0.032,
+   "limite": 0.012,
+   "outro_sinal": 0.568,
+   "costas": 0.041,
+   "nao_sinal": 0.034
+  },
+  "759446278037143_00361": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.022,
+   "costas": 0.019,
+   "nao_sinal": 0.956
+  },
+  "759446278037143_00362": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.004,
+   "limite": 0.001,
+   "outro_sinal": 0.986,
+   "costas": 0.003,
+   "nao_sinal": 0.005
+  },
+  "759446278037143_00363": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.006,
+   "costas": 0.01,
+   "nao_sinal": 0.983
+  },
+  "759446278037143_00364": {
+   "rotulo": "outro_frente",
+   "stop": 0.018,
+   "cedencia_passagem": 0.005,
+   "limite": 0.002,
+   "outro_sinal": 0.704,
+   "costas": 0.145,
+   "nao_sinal": 0.127
+  },
+  "796403697687751_00446": {
+   "rotulo": "cedencia",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.012,
+   "costas": 0.001,
+   "nao_sinal": 0.986
+  },
+  "796403697687751_00447": {
+   "rotulo": "cedencia",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.007,
+   "costas": 0.001,
+   "nao_sinal": 0.99
+  },
+  "796403697687751_00448": {
+   "rotulo": "nao_sinal",
+   "stop": 0.003,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.034,
+   "costas": 0.002,
+   "nao_sinal": 0.959
+  },
+  "796403697687751_00449": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.737,
+   "limite": 0.002,
+   "outro_sinal": 0.029,
+   "costas": 0.002,
+   "nao_sinal": 0.229
+  },
+  "796403697687751_00450": {
+   "rotulo": "nao_sinal",
+   "stop": 0.011,
+   "cedencia_passagem": 0.005,
+   "limite": 0.004,
+   "outro_sinal": 0.203,
+   "costas": 0.006,
+   "nao_sinal": 0.771
+  },
+  "796403697687751_00451": {
+   "rotulo": "nao_sinal",
+   "stop": 0.002,
+   "cedencia_passagem": 0.034,
+   "limite": 0.001,
+   "outro_sinal": 0.003,
+   "costas": 0.009,
+   "nao_sinal": 0.951
+  },
+  "796403697687751_00452": {
+   "rotulo": "outro_frente",
+   "stop": 0.066,
+   "cedencia_passagem": 0.002,
+   "limite": 0.005,
+   "outro_sinal": 0.397,
+   "costas": 0.456,
+   "nao_sinal": 0.074
+  },
+  "796403697687751_00453": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.004,
+   "outro_sinal": 0.074,
+   "costas": 0.002,
+   "nao_sinal": 0.918
+  },
+  "796403697687751_00454": {
+   "rotulo": "nao_sinal",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.001,
+   "costas": 0.005,
+   "nao_sinal": 0.994
+  },
+  "807789379917576_00228": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.995,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "807789379917576_00229": {
+   "rotulo": "nao_sinal",
+   "stop": 0.003,
+   "cedencia_passagem": 0.003,
+   "limite": 0.002,
+   "outro_sinal": 0.028,
+   "costas": 0.051,
+   "nao_sinal": 0.914
+  },
+  "844120776190531_00037": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.995,
+   "costas": 0.001,
+   "nao_sinal": 0.001
+  },
+  "844120776190531_00038": {
+   "rotulo": "cedencia",
+   "stop": 0.015,
+   "cedencia_passagem": 0.571,
+   "limite": 0.019,
+   "outro_sinal": 0.375,
+   "costas": 0.017,
+   "nao_sinal": 0.003
+  },
+  "844120776190531_00040": {
+   "rotulo": "outro_frente",
+   "stop": 0.016,
+   "cedencia_passagem": 0.059,
+   "limite": 0.007,
+   "outro_sinal": 0.906,
+   "costas": 0.009,
+   "nao_sinal": 0.002
+  },
+  "844120776190531_00041": {
+   "rotulo": "costas",
+   "stop": 0.003,
+   "cedencia_passagem": 0.005,
+   "limite": 0.002,
+   "outro_sinal": 0.27,
+   "costas": 0.67,
+   "nao_sinal": 0.05
+  },
+  "861102281195934_00498": {
+   "rotulo": "outro_frente",
+   "stop": 0.107,
+   "cedencia_passagem": 0.013,
+   "limite": 0.002,
+   "outro_sinal": 0.851,
+   "costas": 0.027,
+   "nao_sinal": 0.001
+  },
+  "885588182171496_00465": {
+   "rotulo": "costas",
+   "stop": 0.001,
+   "cedencia_passagem": 0.004,
+   "limite": 0.001,
+   "outro_sinal": 0.013,
+   "costas": 0.914,
+   "nao_sinal": 0.067
+  },
+  "909391203345659_00193": {
+   "rotulo": "cedencia",
+   "stop": 0.033,
+   "cedencia_passagem": 0.166,
+   "limite": 0.02,
+   "outro_sinal": 0.749,
+   "costas": 0.024,
+   "nao_sinal": 0.007
+  },
+  "909391203345659_00194": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "909391203345659_00195": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.999,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "909391203345659_00196": {
+   "rotulo": "nao_sinal",
+   "stop": 0.003,
+   "cedencia_passagem": 0.005,
+   "limite": 0.002,
+   "outro_sinal": 0.11,
+   "costas": 0.017,
+   "nao_sinal": 0.864
+  },
+  "909391203345659_00197": {
+   "rotulo": "outro_frente",
+   "stop": 0.015,
+   "cedencia_passagem": 0.185,
+   "limite": 0.007,
+   "outro_sinal": 0.759,
+   "costas": 0.028,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_000000_00552": {
+   "rotulo": "outro_frente",
+   "stop": 0.121,
+   "cedencia_passagem": 0.062,
+   "limite": 0.028,
+   "outro_sinal": 0.756,
+   "costas": 0.016,
+   "nao_sinal": 0.017
+  },
+  "rua_sw_ne_1117_000252_00562": {
+   "rotulo": "outro_frente",
+   "stop": 0.012,
+   "cedencia_passagem": 0.365,
+   "limite": 0.007,
+   "outro_sinal": 0.417,
+   "costas": 0.127,
+   "nao_sinal": 0.073
+  },
+  "rua_sw_ne_1117_002415_00746": {
+   "rotulo": "outro_frente",
+   "stop": 0.005,
+   "cedencia_passagem": 0.02,
+   "limite": 0.002,
+   "outro_sinal": 0.968,
+   "costas": 0.001,
+   "nao_sinal": 0.004
+  },
+  "rua_sw_ne_1117_002459_00757": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.968,
+   "costas": 0.0,
+   "nao_sinal": 0.031
+  },
+  "rua_sw_ne_1117_002506_00766": {
+   "rotulo": "outro_frente",
+   "stop": 0.006,
+   "cedencia_passagem": 0.008,
+   "limite": 0.017,
+   "outro_sinal": 0.858,
+   "costas": 0.009,
+   "nao_sinal": 0.102
+  },
+  "rua_sw_ne_1117_002506_00767": {
+   "rotulo": "outro_frente",
+   "stop": 0.011,
+   "cedencia_passagem": 0.1,
+   "limite": 0.008,
+   "outro_sinal": 0.862,
+   "costas": 0.011,
+   "nao_sinal": 0.009
+  },
+  "rua_sw_ne_1117_002554_00776": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.316,
+   "outro_sinal": 0.575,
+   "costas": 0.002,
+   "nao_sinal": 0.105
+  },
+  "rua_sw_ne_1117_002554_00780": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.99,
+   "costas": 0.001,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_002554_00781": {
+   "rotulo": "outro_frente",
+   "stop": 0.006,
+   "cedencia_passagem": 0.032,
+   "limite": 0.005,
+   "outro_sinal": 0.934,
+   "costas": 0.004,
+   "nao_sinal": 0.019
+  },
+  "rua_sw_ne_1117_002604_00791": {
+   "rotulo": "outro_frente",
+   "stop": 0.003,
+   "cedencia_passagem": 0.003,
+   "limite": 0.002,
+   "outro_sinal": 0.973,
+   "costas": 0.007,
+   "nao_sinal": 0.013
+  },
+  "rua_sw_ne_1117_002656_00802": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.049,
+   "outro_sinal": 0.935,
+   "costas": 0.005,
+   "nao_sinal": 0.008
+  },
+  "rua_sw_ne_1117_002656_00803": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.983,
+   "costas": 0.0,
+   "nao_sinal": 0.012
+  },
+  "rua_sw_ne_1117_002656_00804": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.972,
+   "costas": 0.004,
+   "nao_sinal": 0.02
+  },
+  "rua_sw_ne_1117_002705_00808": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.014,
+   "limite": 0.036,
+   "outro_sinal": 0.889,
+   "costas": 0.008,
+   "nao_sinal": 0.052
+  },
+  "rua_sw_ne_1117_002705_00809": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.008,
+   "limite": 0.009,
+   "outro_sinal": 0.971,
+   "costas": 0.003,
+   "nao_sinal": 0.007
+  },
+  "rua_sw_ne_1117_002705_00810": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.972,
+   "costas": 0.001,
+   "nao_sinal": 0.024
+  },
+  "rua_sw_ne_1117_002705_00811": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.006,
+   "limite": 0.004,
+   "outro_sinal": 0.776,
+   "costas": 0.042,
+   "nao_sinal": 0.17
+  },
+  "rua_sw_ne_1117_002705_00813": {
+   "rotulo": "nao_sinal",
+   "stop": 0.004,
+   "cedencia_passagem": 0.003,
+   "limite": 0.003,
+   "outro_sinal": 0.305,
+   "costas": 0.031,
+   "nao_sinal": 0.655
+  },
+  "rua_sw_ne_1117_002752_00819": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.991,
+   "costas": 0.001,
+   "nao_sinal": 0.007
+  },
+  "rua_sw_ne_1117_002752_00820": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.005,
+   "limite": 0.003,
+   "outro_sinal": 0.499,
+   "costas": 0.015,
+   "nao_sinal": 0.475
+  },
+  "rua_sw_ne_1117_002796_00827": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.963,
+   "costas": 0.001,
+   "nao_sinal": 0.034
+  },
+  "rua_sw_ne_1117_002796_00828": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.863,
+   "costas": 0.002,
+   "nao_sinal": 0.132
+  },
+  "rua_sw_ne_1117_002796_00830": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.002,
+   "outro_sinal": 0.445,
+   "costas": 0.008,
+   "nao_sinal": 0.542
+  },
+  "rua_sw_ne_1117_002837_00838": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.687,
+   "costas": 0.001,
+   "nao_sinal": 0.311
+  },
+  "rua_sw_ne_1117_002837_00839": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.993,
+   "costas": 0.0,
+   "nao_sinal": 0.003
+  },
+  "rua_sw_ne_1117_002879_00847": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.001,
+   "outro_sinal": 0.919,
+   "costas": 0.0,
+   "nao_sinal": 0.08
+  },
+  "rua_sw_ne_1117_002879_00848": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.0,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.0,
+   "nao_sinal": 0.002
+  },
+  "rua_sw_ne_1117_002921_00856": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.004,
+   "limite": 0.001,
+   "outro_sinal": 0.904,
+   "costas": 0.001,
+   "nao_sinal": 0.089
+  },
+  "rua_sw_ne_1117_002921_00857": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.851,
+   "costas": 0.002,
+   "nao_sinal": 0.144
+  },
+  "rua_sw_ne_1117_002921_00859": {
+   "rotulo": "nao_sinal",
+   "stop": 0.007,
+   "cedencia_passagem": 0.062,
+   "limite": 0.005,
+   "outro_sinal": 0.759,
+   "costas": 0.04,
+   "nao_sinal": 0.127
+  },
+  "rua_sw_ne_1117_003005_00871": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.991,
+   "costas": 0.0,
+   "nao_sinal": 0.006
+  },
+  "rua_sw_ne_1117_003005_00872": {
+   "rotulo": "nao_sinal",
+   "stop": 0.016,
+   "cedencia_passagem": 0.013,
+   "limite": 0.004,
+   "outro_sinal": 0.339,
+   "costas": 0.009,
+   "nao_sinal": 0.619
+  },
+  "rua_sw_ne_1117_003047_00876": {
+   "rotulo": "nao_sinal",
+   "stop": 0.029,
+   "cedencia_passagem": 0.009,
+   "limite": 0.004,
+   "outro_sinal": 0.514,
+   "costas": 0.024,
+   "nao_sinal": 0.42
+  },
+  "rua_sw_ne_1117_003047_00877": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.987,
+   "costas": 0.001,
+   "nao_sinal": 0.01
+  },
+  "rua_sw_ne_1117_003090_00883": {
+   "rotulo": "nao_sinal",
+   "stop": 0.013,
+   "cedencia_passagem": 0.004,
+   "limite": 0.003,
+   "outro_sinal": 0.203,
+   "costas": 0.004,
+   "nao_sinal": 0.772
+  },
+  "rua_sw_ne_1117_003090_00884": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.997,
+   "costas": 0.0,
+   "nao_sinal": 0.001
+  },
+  "rua_sw_ne_1117_003147_00895": {
+   "rotulo": "nao_sinal",
+   "stop": 0.022,
+   "cedencia_passagem": 0.017,
+   "limite": 0.002,
+   "outro_sinal": 0.212,
+   "costas": 0.001,
+   "nao_sinal": 0.746
+  },
+  "rua_sw_ne_1117_003147_00896": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.991,
+   "costas": 0.001,
+   "nao_sinal": 0.007
+  },
+  "rua_sw_ne_1117_003186_00902": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.98,
+   "costas": 0.001,
+   "nao_sinal": 0.016
+  },
+  "rua_sw_ne_1117_003186_00903": {
+   "rotulo": "nao_sinal",
+   "stop": 0.024,
+   "cedencia_passagem": 0.014,
+   "limite": 0.01,
+   "outro_sinal": 0.422,
+   "costas": 0.036,
+   "nao_sinal": 0.493
+  },
+  "rua_sw_ne_1117_003228_00910": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.996,
+   "costas": 0.001,
+   "nao_sinal": 0.003
+  },
+  "rua_sw_ne_1117_003228_00911": {
+   "rotulo": "nao_sinal",
+   "stop": 0.001,
+   "cedencia_passagem": 0.011,
+   "limite": 0.001,
+   "outro_sinal": 0.06,
+   "costas": 0.009,
+   "nao_sinal": 0.918
+  },
+  "rua_sw_ne_1117_003272_00919": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.004,
+   "limite": 0.0,
+   "outro_sinal": 0.985,
+   "costas": 0.005,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_003272_00921": {
+   "rotulo": "outro_frente",
+   "stop": 0.004,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.966,
+   "costas": 0.016,
+   "nao_sinal": 0.013
+  },
+  "rua_sw_ne_1117_003317_00930": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.0,
+   "nao_sinal": 0.001
+  },
+  "rua_sw_ne_1117_003317_00931": {
+   "rotulo": "outro_frente",
+   "stop": 0.004,
+   "cedencia_passagem": 0.001,
+   "limite": 0.001,
+   "outro_sinal": 0.985,
+   "costas": 0.004,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_003380_00939": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.002,
+   "limite": 0.0,
+   "outro_sinal": 0.992,
+   "costas": 0.0,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_003427_00948": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.115,
+   "limite": 0.003,
+   "outro_sinal": 0.871,
+   "costas": 0.004,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_003427_00949": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.992,
+   "costas": 0.002,
+   "nao_sinal": 0.003
+  },
+  "rua_sw_ne_1117_003427_00950": {
+   "rotulo": "outro_frente",
+   "stop": 0.007,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.982,
+   "costas": 0.004,
+   "nao_sinal": 0.005
+  },
+  "rua_sw_ne_1117_003427_00952": {
+   "rotulo": "outro_sinal",
+   "stop": 0.04,
+   "cedencia_passagem": 0.004,
+   "limite": 0.004,
+   "outro_sinal": 0.148,
+   "costas": 0.136,
+   "nao_sinal": 0.668
+  },
+  "rua_sw_ne_1117_003471_00958": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.001,
+   "nao_sinal": 0.0
+  },
+  "rua_sw_ne_1117_003471_00959": {
+   "rotulo": "outro_frente",
+   "stop": 0.007,
+   "cedencia_passagem": 0.007,
+   "limite": 0.002,
+   "outro_sinal": 0.882,
+   "costas": 0.069,
+   "nao_sinal": 0.034
+  },
+  "rua_sw_ne_1117_003471_00960": {
+   "rotulo": "outro_frente",
+   "stop": 0.004,
+   "cedencia_passagem": 0.0,
+   "limite": 0.001,
+   "outro_sinal": 0.992,
+   "costas": 0.001,
+   "nao_sinal": 0.002
+  },
+  "rua_sw_ne_1117_003513_00965": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.998,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "rua_sw_ne_1117_003513_00966": {
+   "rotulo": "outro_frente",
+   "stop": 0.039,
+   "cedencia_passagem": 0.001,
+   "limite": 0.002,
+   "outro_sinal": 0.952,
+   "costas": 0.004,
+   "nao_sinal": 0.003
+  },
+  "rua_sw_ne_1117_003513_00967": {
+   "rotulo": "outro_frente",
+   "stop": 0.004,
+   "cedencia_passagem": 0.006,
+   "limite": 0.003,
+   "outro_sinal": 0.953,
+   "costas": 0.006,
+   "nao_sinal": 0.028
+  },
+  "rua_sw_ne_1117_003552_00972": {
+   "rotulo": "outro_frente",
+   "stop": 0.011,
+   "cedencia_passagem": 0.002,
+   "limite": 0.006,
+   "outro_sinal": 0.962,
+   "costas": 0.007,
+   "nao_sinal": 0.012
+  },
+  "rua_sw_ne_1117_003552_00973": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.001,
+   "limite": 0.0,
+   "outro_sinal": 0.999,
+   "costas": 0.0,
+   "nao_sinal": 0.0
+  },
+  "rua_sw_ne_1117_003552_00974": {
+   "rotulo": "outro_frente",
+   "stop": 0.001,
+   "cedencia_passagem": 0.002,
+   "limite": 0.001,
+   "outro_sinal": 0.984,
+   "costas": 0.002,
+   "nao_sinal": 0.009
+  },
+  "rua_sw_ne_1117_003552_00975": {
+   "rotulo": "outro_frente",
+   "stop": 0.01,
+   "cedencia_passagem": 0.003,
+   "limite": 0.002,
+   "outro_sinal": 0.849,
+   "costas": 0.051,
+   "nao_sinal": 0.085
+  },
+  "rua_sw_ne_1117_003593_00980": {
+   "rotulo": "outro_frente",
+   "stop": 0.0,
+   "cedencia_passagem": 0.004,
+   "limite": 0.0,
+   "outro_sinal": 0.993,
+   "costas": 0.002,
+   "nao_sinal": 0.001
+  },
+  "rua_sw_ne_1117_003593_00981": {
+   "rotulo": "outro_frente",
+   "stop": 0.028,
+   "cedencia_passagem": 0.003,
+   "limite": 0.003,
+   "outro_sinal": 0.897,
+   "costas": 0.005,
+   "nao_sinal": 0.063
+  },
+  "rua_sw_ne_1117_003593_00982": {
+   "rotulo": "outro_frente",
+   "stop": 0.002,
+   "cedencia_passagem": 0.003,
+   "limite": 0.001,
+   "outro_sinal": 0.98,
+   "costas": 0.004,
+   "nao_sinal": 0.01
+  },
+  "rua_sw_ne_1117_003593_00983": {
+   "rotulo": "outro_frente",
+   "stop": 0.043,
+   "cedencia_passagem": 0.031,
+   "limite": 0.021,
+   "outro_sinal": 0.471,
+   "costas": 0.114,
+   "nao_sinal": 0.32
+  }
+ }
+}

@@ -1,0 +1,619 @@
+{
+ "gerado_em": "2026-11-20T13:13:17+00:00",
+ "rotulos_casados": 194,
+ "rotulos_sem_deteccao": 0,
+ "votos": {
+  "especifico": {
+   "resumo": {
+    "nao_especificos": 35,
+    "ok": 35,
+    "especificos": 5,
+    "certo_fila": 2,
+    "certo_auto": 3
+   },
+   "elementos": [
+    {
+     "id": "sin_0067",
+     "rotulos": {
+      "outro_frente": 6
+     },
+     "vistas": {
+      "outro_sinal": 14
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0004",
+     "rotulos": {
+      "nao_sinal": 1,
+      "outro_frente": 9
+     },
+     "vistas": {
+      "outro_sinal": 14
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0005",
+     "rotulos": {
+      "nao_sinal": 1,
+      "costas": 1,
+      "outro_frente": 5
+     },
+     "vistas": {
+      "outro_sinal": 8
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0030",
+     "rotulos": {
+      "outro_frente": 7
+     },
+     "vistas": {
+      "outro_sinal": 8
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0008",
+     "rotulos": {
+      "costas": 1,
+      "nao_sinal": 1,
+      "outro_frente": 5
+     },
+     "vistas": {
+      "outro_sinal": 8
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0061",
+     "rotulos": {
+      "outro_frente": 4,
+      "limite_40": 1,
+      "costas": 1,
+      "nao_sinal": 2
+     },
+     "vistas": {
+      "outro_sinal": 7,
+      "limite_desconhecido": 1
+     },
+     "subtipo": "limite_desconhecido",
+     "incerto": true,
+     "fracao": 0.855,
+     "motivo": "anel vermelho numa vista, valor do limite não lido",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0068",
+     "rotulos": {
+      "outro_frente": 6,
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 7
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0016",
+     "rotulos": {
+      "outro_frente": 4
+     },
+     "vistas": {
+      "outro_sinal": 5
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0069",
+     "rotulos": {
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 2
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0065",
+     "rotulos": {
+      "nao_sinal": 3,
+      "outro_frente": 1,
+      "costas": 1
+     },
+     "vistas": {
+      "outro_sinal": 4,
+      "costas": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0071",
+     "rotulos": {
+      "outro_frente": 4
+     },
+     "vistas": {
+      "outro_sinal": 4
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0020",
+     "rotulos": {
+      "outro_frente": 3,
+      "costas": 1
+     },
+     "vistas": {
+      "outro_sinal": 4,
+      "costas": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0055",
+     "rotulos": {
+      "costas": 2,
+      "cedencia": 1
+     },
+     "vistas": {
+      "outro_sinal": 1,
+      "costas": 1,
+      "cedencia_passagem": 1
+     },
+     "subtipo": "cedencia_passagem",
+     "incerto": true,
+     "fracao": 1.0,
+     "motivo": "cedencia_passagem visto numa só vista certa",
+     "resultado": "certo_fila"
+    },
+    {
+     "id": "sin_0024",
+     "rotulos": {
+      "outro_frente": 2
+     },
+     "vistas": {
+      "outro_sinal": 5
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0021",
+     "rotulos": {
+      "outro_frente": 5,
+      "costas": 1
+     },
+     "vistas": {
+      "outro_sinal": 6
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0075",
+     "rotulos": {
+      "outro_frente": 3
+     },
+     "vistas": {
+      "outro_sinal": 4
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0022",
+     "rotulos": {
+      "costas": 1,
+      "outro_frente": 4
+     },
+     "vistas": {
+      "outro_sinal": 5
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0025",
+     "rotulos": {
+      "cedencia": 4
+     },
+     "vistas": {
+      "cedencia_passagem": 4
+     },
+     "subtipo": "cedencia_passagem",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "certo_auto"
+    },
+    {
+     "id": "sin_0028",
+     "rotulos": {
+      "outro_frente": 3,
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 6
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0076",
+     "rotulos": {
+      "outro_frente": 1
+     },
+     "vistas": {
+      "outro_sinal": 3
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0003",
+     "rotulos": {
+      "outro_frente": 4
+     },
+     "vistas": {
+      "outro_sinal": 5,
+      "limite_desconhecido": 1
+     },
+     "subtipo": "limite_desconhecido",
+     "incerto": true,
+     "fracao": 0.666,
+     "motivo": "valor do limite não lido",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0029",
+     "rotulos": {
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 7
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0032",
+     "rotulos": {
+      "outro_frente": 1,
+      "costas": 5,
+      "nao_sinal": 3
+     },
+     "vistas": {
+      "outro_sinal": 7,
+      "costas": 4
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0033",
+     "rotulos": {
+      "outro_frente": 6
+     },
+     "vistas": {
+      "outro_sinal": 6
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0037",
+     "rotulos": {
+      "nao_sinal": 3
+     },
+     "vistas": {
+      "outro_sinal": 3
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0062",
+     "rotulos": {
+      "nao_sinal": 2,
+      "outro_frente": 2
+     },
+     "vistas": {
+      "outro_sinal": 4
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0038",
+     "rotulos": {
+      "stop": 1
+     },
+     "vistas": {
+      "stop": 1
+     },
+     "subtipo": "stop",
+     "incerto": true,
+     "fracao": 1.0,
+     "motivo": "stop visto numa só vista certa",
+     "resultado": "certo_fila"
+    },
+    {
+     "id": "sin_0039",
+     "rotulos": {
+      "outro_frente": 1
+     },
+     "vistas": {
+      "outro_sinal": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0043",
+     "rotulos": {
+      "outro_frente": 4
+     },
+     "vistas": {
+      "outro_sinal": 5
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0054",
+     "rotulos": {
+      "outro_frente": 2
+     },
+     "vistas": {
+      "outro_sinal": 2
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0040",
+     "rotulos": {
+      "outro_frente": 1
+     },
+     "vistas": {
+      "outro_sinal": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0035",
+     "rotulos": {
+      "outro_frente": 5
+     },
+     "vistas": {
+      "outro_sinal": 5
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0041",
+     "rotulos": {
+      "outro_frente": 2
+     },
+     "vistas": {
+      "outro_sinal": 2
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0042",
+     "rotulos": {
+      "outro_frente": 2
+     },
+     "vistas": {
+      "outro_sinal": 2
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0077",
+     "rotulos": {
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0078",
+     "rotulos": {
+      "nao_sinal": 1
+     },
+     "vistas": {
+      "outro_sinal": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0017",
+     "rotulos": {
+      "nao_sinal": 3,
+      "costas": 3
+     },
+     "vistas": {
+      "outro_sinal": 5,
+      "costas": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": true,
+     "fracao": null,
+     "motivo": "sem votos certos",
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0006",
+     "rotulos": {
+      "costas": 2,
+      "outro_frente": 5
+     },
+     "vistas": {
+      "outro_sinal": 7,
+      "costas": 1
+     },
+     "subtipo": "outro_sinal",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "ok"
+    },
+    {
+     "id": "sin_0001",
+     "rotulos": {
+      "stop": 5,
+      "nao_sinal": 9,
+      "outro_frente": 6
+     },
+     "vistas": {
+      "stop": 5,
+      "outro_sinal": 16,
+      "costas": 1
+     },
+     "subtipo": "stop",
+     "incerto": false,
+     "fracao": 1.0,
+     "motivo": null,
+     "resultado": "certo_auto"
+    },
+    {
+     "id": "sin_0079",
+     "rotulos": {
+      "cedencia": 5,
+      "nao_sinal": 5,
+      "costas": 2,
+      "outro_frente": 1,
+      "limite_40": 3
+     },
+     "vistas": {
+      "outro_sinal": 8,
+      "cedencia_passagem": 5,
+      "costas": 1,
+      "limite_desconhecido": 3
+     },
+     "subtipo": "cedencia_passagem",
+     "incerto": false,
+     "fracao": 0.617,
+     "motivo": null,
+     "resultado": "certo_auto"
+    }
+   ]
+  }
+ }
+}
