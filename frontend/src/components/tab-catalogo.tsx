@@ -61,7 +61,7 @@ export function TabCatalogo({ cat, onPedirLogin }: { cat: Catalogo; onPedirLogin
 
   const linhas = useMemo(() => {
     const q = texto.trim().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
-    const f = cat.elementos.filter(
+    const f = cat.consolidados.filter(
       (e) =>
         (categoria === 'todas' || e.tipo === categoria) &&
         (subtipo === 'todos' || (subtipo === '__sem' ? !e.subtipo : e.subtipo === subtipo)) &&
@@ -92,9 +92,9 @@ export function TabCatalogo({ cat, onPedirLogin }: { cat: Catalogo; onPedirLogin
       const r = typeof x === 'number' && typeof y === 'number' ? x - y : String(x).localeCompare(String(y), 'pt')
       return ordem.asc ? r : -r
     })
-  }, [cat.elementos, texto, categoria, subtipo, estado, rua, rever, ordem])
+  }, [cat.consolidados, texto, categoria, subtipo, estado, rua, rever, ordem])
 
-  const el = cat.elementos.find((e) => e.id === sel)
+  const el = cat.consolidados.find((e) => e.id === sel)
   const porCategoria = useMemo(() => {
     const c: Record<string, number> = {}
     for (const e of linhas) c[e.tipo] = (c[e.tipo] ?? 0) + 1
@@ -116,7 +116,7 @@ export function TabCatalogo({ cat, onPedirLogin }: { cat: Catalogo; onPedirLogin
         <div>
           <h2 className="text-xl font-semibold">Catálogo de mobiliário urbano</h2>
           <p className="text-sm text-muted-foreground">
-            {linhas.length} de {cat.elementos.length} elementos · {TIPOS.map((t) => `${porCategoria[t] ?? 0} ${CATEGORIA_LABEL[t].toLowerCase()}`).join(' · ')}
+            {linhas.length} de {cat.consolidados.length} elementos · {TIPOS.map((t) => `${porCategoria[t] ?? 0} ${CATEGORIA_LABEL[t].toLowerCase()}`).join(' · ')}
           </p>
         </div>
         <div className="flex gap-2">

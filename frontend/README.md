@@ -8,7 +8,7 @@ Front-end e API da plataforma da Câmara Municipal de Aveiro (projeto Ctrl+F Ave
 | **Mapa** (M7) | todos | Marcadores por categoria ou por estado, clusters, filtros (categoria, estado, rua, posição a rever, confiança), pesquisa por rua ou tipo, ficha de cada elemento |
 | **Catálogo** | todos (edição: técnicos) | Tabela de todos os elementos sem duplicados: pesquisa, filtros por categoria, tipo, estado e rua, ordenação, ficha lateral, exportação do que está filtrado |
 | **Exportação** (M9) | todos | Catálogo em GeoJSON e CSV; os técnicos exportam também as validações |
-| **Deteções e validação** (M8) | técnicos | Fila um a um (atalhos, cronometrada, M11) e grelha com todas as deteções: baixa confiança em destaque, aprovar/rejeitar num clique, editar classificação, corrigir coordenadas, ver a imagem original e o recorte |
+| **Deteções e validação** (M8) | técnicos | Fila um a um (atalhos, cronometrada, M11); modo "Todos da zona" para validar todos os elementos e medir a precisão (M10), com "Duplicado de…" (tecla D) e grelha com todas as deteções: baixa confiança em destaque, aprovar/rejeitar num clique, editar classificação, corrigir coordenadas, ver a imagem original e o recorte |
 | **Importação** | técnicos | Fotografias, vídeo + GPX e Mapillary, processados pelo pipeline Python real, com estado (a aguardar, em processamento, concluído, com erros) e progresso por passo |
 | **Registo** | técnicos | Quem validou o quê, e quando |
 

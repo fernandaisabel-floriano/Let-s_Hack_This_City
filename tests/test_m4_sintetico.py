@@ -239,7 +239,12 @@ def test_fuse_main_usa_m4_voto():
     import fuse
     src = inspect.getsource(fuse)
     assert "subtipo(classe, membros, m4)" in src and "usar_deteccao(d)" in src
-    assert "subtipo_incerto" in src and "and not incerto" in src
+    assert "subtipo_incerto" in src and "estado_auto(" in src
+    # subtipo incerto → fila: a regra passou do fuse.py para estado.estado_auto (decisão 3, opção B)
+    from estado import estado_auto
+    p = {"ativo": True, "base": "calibrada", "limiar": 0.5, "min_vistas": 1}
+    assert estado_auto({"confianca": 0.99, "n_vistas": 5, "subtipo_incerto": True}, p) == "pendente"
+    assert estado_auto({"confianca": 0.99, "n_vistas": 5, "subtipo_incerto": False}, p) == "auto"
 
 
 if __name__ == "__main__":

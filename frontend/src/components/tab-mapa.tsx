@@ -1,7 +1,8 @@
-import { Download, FileSpreadsheet, Map as MapIcon, Search, SlidersHorizontal } from 'lucide-react'
+import { Download, FileSpreadsheet, Map as MapIcon, Merge, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { toast } from 'sonner'
 import { FichaPainel } from '@/components/ficha-painel'
+import { UnirDuplicados } from '@/components/unir-duplicados'
 import { aplicarFiltros, Filtros, filtrosAtivos, filtrosIniciais, type CorPor, type FiltrosState } from '@/components/filtros'
 import { MapView } from '@/components/map-view'
 import { Button } from '@/components/ui/button'
@@ -39,6 +40,8 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const [sel, setSel] = useState<string | null>(null)
   const [editarPos, setEditarPos] = useState(false)
   const [corPor, setCorPor] = useState<CorPor>('categoria')
+  /** técnico: unir à mão duplicados que o sistema não detetou (null = desligado) */
+  const [unir, setUnir] = useState<{ ids: string[]; fica: string | null } | null>(null)
 
   // modo lite: no telemóvel junta os marcadores próximos por omissão
   const [agruparEscolha, setAgrupar] = useState<boolean | null>(null)
@@ -46,12 +49,17 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const cfg = cat.base!.config
   const ruas = useMemo(() => nomesVias(cat.base!.vias), [cat.base])
 
-  const visiveis = useMemo(() => aplicarFiltros(cat.elementos, filtros), [cat.elementos, filtros])
+  // a unir duplicados, mostra todos os que não estão rejeitados (um duplicado por unir pode estar por confirmar)
+  const unirAtivo = !!unir
+  const visiveis = useMemo(
+    () => aplicarFiltros(cat.consolidados, unirAtivo ? { ...filtros, estados: ['auto', 'pendente', 'validado', 'corrigido'] } : filtros),
+    [cat.consolidados, filtros, unirAtivo],
+  )
   const contagens = useMemo(() => {
     const tipo: Record<string, number> = {}
     const estado: Record<string, number> = {}
     let rever = 0
-    for (const e of cat.elementos) {
+    for (const e of cat.consolidados) {
       estado[e.estado] = (estado[e.estado] ?? 0) + 1
       if (filtros.estados.includes(e.estado)) {
         tipo[e.tipo] = (tipo[e.tipo] ?? 0) + 1
@@ -59,11 +67,15 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
       }
     }
     return { tipo, estado, rever }
-  }, [cat.elementos, filtros.estados])
-  const el = cat.elementos.find((e) => e.id === sel)
+  }, [cat.consolidados, filtros.estados])
+  const el = cat.consolidados.find((e) => e.id === sel)
   const nAtivos = filtrosAtivos(filtros, tecnico)
 
   const selecionar = (id: string) => {
+    if (unir) {
+      setUnir((u) => (u ? { ...u, ids: u.ids.includes(id) ? u.ids.filter((x) => x !== id) : [...u.ids, id] } : u))
+      return
+    }
     setSel(id)
     setEditarPos(false)
     setVerFiltros(false)
@@ -73,9 +85,9 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const paraExportar = useMemo(
     () => ({
       mapa: separarCatalogo(visiveis, cfg, cat.base!.zona).cat,
-      tudo: separarCatalogo(cat.elementos, cfg, cat.base!.zona).cat,
+      tudo: separarCatalogo(cat.consolidados, cfg, cat.base!.zona).cat,
     }),
-    [visiveis, cat.elementos, cfg, cat.base],
+    [visiveis, cat.consolidados, cfg, cat.base],
   )
   const exportar = (formato: 'geojson' | 'csv', tudo: boolean) => {
     const rows = tudo ? paraExportar.tudo : paraExportar.mapa
@@ -98,7 +110,8 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
         limiar={cfg.limiar_auto}
         agrupar={agrupar}
         corPor={corPor}
-        onMover={tecnico && editarPos ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon }) : undefined}
+        onMover={tecnico && editarPos && !unir ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon }) : undefined}
+        marcados={unir?.ids}
       />
 
       {/* pesquisa + filtros + exportação rápida */}
@@ -131,6 +144,27 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
               </span>
             )}
           </Button>
+          {tecnico && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant={unir ? 'secondary' : 'ghost'}
+                  size="icon-sm"
+                  className="shrink-0"
+                  aria-pressed={!!unir}
+                  aria-label="Unir duplicados: escolher vários marcadores do mesmo objeto"
+                  onClick={() => {
+                    setUnir(unir ? null : { ids: sel ? [sel] : [], fica: null })
+                    setSel(null)
+                    setEditarPos(false)
+                  }}
+                >
+                  <Merge aria-hidden="true" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>Unir duplicados</TooltipContent>
+            </Tooltip>
+          )}
           <DropdownMenu>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -196,8 +230,29 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
         </div>
       )}
 
+      {/* unir duplicados (técnico) */}
+      {unir && (
+        <aside
+          aria-label="Unir duplicados"
+          className={cn('absolute inset-x-3 bottom-3 z-20 flex max-h-[60%] flex-col overflow-hidden sm:inset-x-auto sm:top-3 sm:right-3 sm:bottom-6 sm:max-h-none sm:w-[380px]', flutuante)}
+        >
+          <UnirDuplicados
+            cat={cat}
+            ids={unir.ids}
+            fica={unir.fica}
+            onFica={(id) => setUnir((u) => (u ? { ...u, fica: id } : u))}
+            onRemover={(id) => setUnir((u) => (u ? { ...u, ids: u.ids.filter((x) => x !== id), fica: u.fica === id ? null : u.fica } : u))}
+            onCancelar={() => setUnir(null)}
+            onUnido={(fica, decididos) => {
+              setUnir({ ids: [], fica: null })
+              toast.success(`Unidos em ${fica}`, { action: { label: 'Desfazer', onClick: () => cat.desfazerVarios(decididos) } })
+            }}
+          />
+        </aside>
+      )}
+
       {/* ficha */}
-      {el && (
+      {el && !unir && (
         <aside
           aria-label="Ficha do elemento"
           className={cn(

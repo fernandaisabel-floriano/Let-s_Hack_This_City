@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Corre o pipeline de ponta a ponta sobre as imagens limpas da zona.
 
-    M3 detect → M4 classify_signs → contentores_clip (opcional) → M5 geolocate → M6/M8 fuse → M9 export
+    M3 detect → M4 classify_signs → contentores_clip (opcional) → qualidade (etapa 1) → M5 geolocate → M6/M8 fuse → M9 export
 
 (A recolha — fetch_mapillary.py / ingest_video.py — corre antes, à parte.)
 
@@ -16,7 +16,7 @@ import sys
 import time
 from pathlib import Path
 
-PASSOS = ["detect", "classify_signs", "contentores_clip", "geolocate", "fuse", "export"]
+PASSOS = ["detect", "classify_signs", "contentores_clip", "qualidade", "geolocate", "fuse", "export"]
 
 
 def main() -> None:

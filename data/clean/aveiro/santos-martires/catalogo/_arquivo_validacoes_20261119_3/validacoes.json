@@ -1,0 +1,46 @@
+[
+ {
+  "id": "con_0131",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.9483,
+   0.9421,
+   0.9365,
+   0.8036,
+   0.4993,
+   0.1549,
+   0.1243,
+   0.1207,
+   0.1197,
+   0.0628,
+   0.0603
+  ],
+  "estado": "validado",
+  "tempo_s": 12,
+  "validado_em": "2026-11-19T17:55:55.002Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0132",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8414,
+   0.6691,
+   0.5655,
+   0.4223,
+   0.1627,
+   0.1398,
+   0.0514
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0131",
+  "validado_em": "2026-11-19T17:55:55.007Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ }
+]

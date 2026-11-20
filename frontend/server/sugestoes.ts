@@ -33,7 +33,7 @@ export function sugestoesDaZona(zonaDir: string): Record<string, SugestaoTipo> {
   const fe = path.join(zonaDir, 'catalogo', 'elementos.json')
   const fd = path.join(zonaDir, 'deteccoes', 'deteccoes.json')
   if (!fs.existsSync(fe) || !fs.existsSync(fd)) return {}
-  const chave = `${fs.statSync(fe).mtimeMs}|${fs.statSync(fd).mtimeMs}`
+  const chave = `${zonaDir}|${fs.statSync(fe).mtimeMs}|${fs.statSync(fd).mtimeMs}`
   if (cache?.chave === chave) return cache.valor
 
   const els = JSON.parse(fs.readFileSync(fe, 'utf-8')) as El[]

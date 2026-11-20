@@ -40,7 +40,7 @@ from common import (ROOT, bearing, blur_totals, count_by, haversine,  # noqa: E4
 
 log = logging.getLogger("ingest_video")
 
-VIDEO_DEFAULTS = {"passo_m": 2.0, "fov_lado_maior_deg": 68.0, "heading_offset_deg": 0.0,
+VIDEO_DEFAULTS = {"passo_m": 2.0, "janela_nitidez_m": 0.0, "fov_lado_maior_deg": 68.0, "heading_offset_deg": 0.0,
                   "nitidez_min": 60.0, "velocidade_max_ms": 8.0,
                   "janela_heading_m": 10.0, "suavizar_gps_s": 6.0, "velocidade_min_ms": 0.5, "max_px": 2048,
                   "autor": "equipa"}
@@ -244,6 +244,70 @@ def main() -> None:
     t_start = time.time()
     idx = -1
 
+    # etapa 1: em cada marca de passo_m, avalia os frames dos janela_nitidez_m seguintes e fica com o
+    # mais nítido (variância do Laplaciano a 640 px). 0 = o primeiro frame depois da marca (como antes).
+    janela_m = float(vcfg.get("janela_nitidez_m", 0.0))
+    cand: dict | None = None
+
+    def nitidez_rapida(frame) -> float:
+        s2 = 640 / max(frame.shape[:2])
+        g = cv2.cvtColor(cv2.resize(frame, None, fx=s2, fy=s2, interpolation=cv2.INTER_AREA) if s2 < 1 else frame,
+                         cv2.COLOR_BGR2GRAY)
+        return float(cv2.Laplacian(g, cv2.CV_64F).var())
+
+    def fechar(c: dict) -> bool:
+        """Grava o melhor frame da janela; True quando se atinge --max-frames."""
+        nonlocal anon
+        b = c["melhor"]
+        if b is None:
+            return False
+        head = track.heading_at(b["dist"], float(vcfg["janela_heading_m"]))
+        if head is None:
+            st["sem_heading"] += 1
+            return False
+        head = (head + float(vcfg["heading_offset_deg"])) % 360.0
+        rid = f"{nome}_{b['idx']:06d}"
+        path = img_dir / f"{rid}.jpg"
+        if b["frame"] is None:
+            st["existentes"] += 1
+            from PIL import Image
+            with Image.open(path) as im:
+                w, h = im.size
+        else:
+            frame = b["frame"]
+            s = max_px / max(frame.shape[:2])
+            if s < 1:
+                frame = cv2.resize(frame, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
+            if anon is None:
+                anon = Anonymizer(cfg.get("desfoque"), ROOT)
+            qualidade[rid] = {"nitidez": round(float(cv2.Laplacian(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), cv2.CV_64F).var()), 1),
+                              "nitidez_640": round(b["nit"], 1), "candidatos": c["n"], "t_video_s": round(b["t_v"], 2)}
+            clean, counts = anon(frame)
+            b["frame"] = frame = None  # o original não sai daqui
+            write_jpg(path, clean)
+            blur_log[rid] = counts
+            h, w = clean.shape[:2]
+            st["extraidos"] += 1
+            if st["extraidos"] % 20 == 0:
+                log.info("%d frames extraídos (%.0f m)", st["extraidos"], b["dist"])
+                save_blur_log(out, blur_log)
+        focal_px = (max(w, h) / 2) / math.tan(math.radians(fov / 2))
+        fov_h = math.degrees(2 * math.atan((w / 2) / focal_px))
+        recs.append({
+            "id": rid, "image_id": rid, "view": None, "fonte": "video_proprio",
+            "lon": b["lon"], "lat": b["lat"], "coord_fonte": args.coord_fonte,
+            "heading": head, "heading_fonte": "movimento",
+            "captured_at": datetime.fromtimestamp(b["ts"], timezone.utc).isoformat(),
+            "is_pano": False, "fov_deg": round(fov_h, 2), "focal_norm": focal_px / max(w, h),
+            "sequence": nome, "camera_type": "perspective", "camera_parameters": None,
+            "width": w, "height": h, "ficheiro": f"images/{rid}.jpg",
+            "autor": vcfg["autor"], "autor_id": "", "licenca": "", "atribuicao": "",
+            "url_origem": f"video:{args.video.name}#t={b['t_v']:.3f}",
+            "_dist": b["dist"], **blur_log.get(rid, {}),
+        })
+        return bool(args.max_frames and len(recs) >= args.max_frames)
+
+    parar = False
     while True:
         if not cap.grab():
             break
@@ -256,62 +320,35 @@ def main() -> None:
             st["fora_do_gpx"] += 1
             continue
         lon, lat, dist = track.at_time(ts)
-        if next_mark is None:
-            next_mark = dist
-        if dist < next_mark:
-            continue
-        next_mark = math.floor(dist / passo) * passo + passo  # sem rajadas após saltos
-
-        head = track.heading_at(dist, float(vcfg["janela_heading_m"]))
-        if head is None:
-            st["sem_heading"] += 1
-            continue
-        head = (head + float(vcfg["heading_offset_deg"])) % 360.0
-
-        rid = f"{nome}_{idx:06d}"
-        path = img_dir / f"{rid}.jpg"
-        if path.exists():
-            st["existentes"] += 1
-            from PIL import Image
-            with Image.open(path) as im:
-                w, h = im.size
-        else:
-            ok, frame = cap.retrieve()
-            if not ok:
+        if cand is not None and dist > cand["fim"]:
+            parar = fechar(cand)
+            cand = None
+            if parar:
+                break
+        if cand is None:
+            if next_mark is None:
+                next_mark = dist
+            if dist < next_mark:
                 continue
-            s = max_px / max(frame.shape[:2])
-            if s < 1:
-                frame = cv2.resize(frame, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
-            if anon is None:
-                anon = Anonymizer(cfg.get("desfoque"), ROOT)
-            nitidez = float(cv2.Laplacian(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), cv2.CV_64F).var())
-            qualidade[rid] = {"nitidez": round(nitidez, 1), "t_video_s": round(t_v, 2)}
-            clean, counts = anon(frame)
-            del frame  # o original não sai daqui
-            write_jpg(path, clean)
-            blur_log[rid] = counts
-            h, w = clean.shape[:2]
-            st["extraidos"] += 1
-            if st["extraidos"] % 20 == 0:
-                log.info("%d frames extraídos (%.0f m)", st["extraidos"], dist)
-                save_blur_log(out, blur_log)
-
-        focal_px = (max(w, h) / 2) / math.tan(math.radians(fov / 2))
-        fov_h = math.degrees(2 * math.atan((w / 2) / focal_px))
-        recs.append({
-            "id": rid, "image_id": rid, "view": None, "fonte": "video_proprio",
-            "lon": lon, "lat": lat, "coord_fonte": args.coord_fonte,
-            "heading": head, "heading_fonte": "movimento",
-            "captured_at": datetime.fromtimestamp(ts, timezone.utc).isoformat(),
-            "is_pano": False, "fov_deg": round(fov_h, 2), "focal_norm": focal_px / max(w, h),
-            "sequence": nome, "camera_type": "perspective", "camera_parameters": None,
-            "width": w, "height": h, "ficheiro": f"images/{rid}.jpg",
-            "autor": vcfg["autor"], "autor_id": "", "licenca": "", "atribuicao": "",
-            "url_origem": f"video:{args.video.name}#t={t_v:.3f}",
-            "_dist": dist, **blur_log.get(rid, {}),
-        })
-        if args.max_frames and len(recs) >= args.max_frames:
-            break
+            next_mark = math.floor(dist / passo) * passo + passo  # sem rajadas após saltos
+            cand = {"fim": dist + janela_m, "melhor": None, "n": 0}
+        cand["n"] += 1
+        b = cand["melhor"]
+        if b is not None and b["frame"] is None:
+            continue  # já há um frame desta janela em disco: fica esse (ids estáveis entre execuções)
+        base = {"idx": idx, "t_v": t_v, "ts": ts, "lon": lon, "lat": lat, "dist": dist}
+        if (img_dir / f"{nome}_{idx:06d}.jpg").exists():
+            cand["melhor"] = {**base, "frame": None, "nit": float("inf")}
+            continue
+        ok, frame = cap.retrieve()
+        if not ok:
+            continue
+        nit = nitidez_rapida(frame)
+        if b is None or nit > b["nit"]:
+            cand["melhor"] = {**base, "frame": frame, "nit": nit}
+        del frame
+    if cand is not None and not parar:
+        fechar(cand)
     cap.release()
     save_blur_log(out, blur_log)
     write_catalog(out, recs)

@@ -1,0 +1,51 @@
+{
+ "mu": [
+  4.345076923076923,
+  1.7459999999999998,
+  0.6923076923076923,
+  0.10127692307692307,
+  0.8908215384615387,
+  0.9846153846153847
+ ],
+ "sd": [
+  2.2102774796312192,
+  1.226972259478945,
+  0.46153846253846176,
+  0.17519505780524816,
+  0.06266628807761994,
+  0.12307692407692307
+ ],
+ "w": [
+  -0.28949463780509,
+  0.08221171627764962,
+  -1.3059948214579136,
+  0.5494563538733528,
+  -0.46716590404700087,
+  0.3784720332102839
+ ],
+ "b": -0.02721810960466208,
+ "colunas": [
+  "dist_m",
+  "raio_m",
+  "caixas_distintas",
+  "iou_max",
+  "clip",
+  "mesmo_subtipo"
+ ],
+ "p_sugerir": 0.13,
+ "p_auto": 0.85,
+ "metricas_validacao_cruzada": {
+  "auc": 0.802,
+  "recall_ao_sugerir": 0.907,
+  "precisao_ao_sugerir": 0.487,
+  "negativos_sugeridos": 0.803,
+  "repeticoes": 200
+ },
+ "rotulos": {
+  "mesmo": 29,
+  "nao_mesmo": 36,
+  "nota": "não-mesmo = pares 'são diferentes' + implícitos (dois reais perto que o técnico manteve)"
+ },
+ "treinado_em": "2026-11-19T16:42:28+00:00",
+ "zona": "santos-martires"
+}

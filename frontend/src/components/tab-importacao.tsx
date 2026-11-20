@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { toast } from 'sonner'
+import { NovaZona } from '@/components/nova-zona'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -57,6 +58,7 @@ const TIPO_IMP: Record<TipoImportacao, string> = {
   video: 'Vídeo + GPS',
   mapillary: 'Mapillary',
   demo: 'Demonstração',
+  zona: 'Zona nova',
 }
 
 const bytes = (n: number) => (n > 1e9 ? `${(n / 1e9).toFixed(1)} GB` : n > 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} kB`)
@@ -141,7 +143,7 @@ function Processamento({ j, nomes, onCancelar }: { j: Importacao; nomes: Record<
             {j.demo && <Badge variant="outline" className="gap-1 border-warning/50 font-normal text-warning"><FlaskConical aria-hidden="true" /> Demonstração: nada é processado</Badge>}
           </p>
           <p className="text-xs text-muted-foreground">
-            {j.rua || 'zona piloto'} · {j.criado_por.nome} · {new Date(j.criado_em).toLocaleString('pt-PT')}
+            {j.tipo === 'zona' ? `${j.zona_nome ?? j.rua} · ${j.n_vias ?? '?'} troços de via` : `${j.rua || 'zona piloto'}${j.zona ? ` · zona ${j.zona}` : ''}`} · {j.criado_por.nome} · {new Date(j.criado_em).toLocaleString('pt-PT')}
             {j.ficheiros.length > 0 && <> · {j.ficheiros.length} {j.ficheiros.length === 1 ? 'ficheiro' : 'ficheiros'} ({bytes(j.ficheiros.reduce((a, f) => a + f.bytes, 0))})</>}
           </p>
         </div>
@@ -205,6 +207,7 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
         const antes = anteriores.current[j.id]
         if (antes && antes !== j.estado && j.estado === 'concluido') {
           if (j.demo) toast.info(`Demonstração "${j.nome}" concluída (o catálogo não muda)`)
+          else if (j.tipo === 'zona') toast.success(`Zona "${j.zona_nome ?? j.nome}" pronta: escolha-a no seletor de zonas (menu lateral)`, { duration: 10000 })
           else {
             toast.success(`Processamento "${j.nome}" concluído: catálogo atualizado`)
             recarregar.current()
@@ -419,6 +422,8 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
           </Card>
         </div>
       </div>
+
+      <NovaZona cat={cat} onCriada={() => void atualizar()} />
 
       <section className="flex flex-col gap-3">
         <h3 className="text-base font-semibold">Processamentos</h3>

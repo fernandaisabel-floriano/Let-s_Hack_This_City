@@ -48,26 +48,60 @@ export async function carregarDeteccoes() {
   return dets ? new Map(dets.map((d) => [d.id, d])) : null
 }
 
-/** M10 (pipeline/evaluate.py): métricas contra a referência. Só técnicos. */
+/** M10 (pipeline/evaluate.py → catalogo/metrica.json). Só técnicos. */
 export interface MetricaClasse {
-  referencia: number
-  catalogo: number
-  encontrados: number
+  propostos: number
+  decididos: number
+  por_validar: number
+  reais: number
   falsos: number
   duplicados: number
-  em_falta: number
+  tipo_errado: number
+  /** reais / decididos, pela classe proposta pelo sistema */
   precisao: number | null
+  /** (reais + duplicados) / decididos */
+  precisao_objeto: number | null
+  reais_unicos: number
+  contagem: number | null
   recall: number | null
-  erro_posicao_m: { n: number; mediana: number; p90: number } | null
 }
-export type Metrica = Record<string, MetricaClasse | unknown>
-
-export async function carregarMetrica(): Promise<{ ficheiro: string; dados: Metrica } | null> {
-  for (const f of ['metrica.json', 'metrica_osm.json']) {
-    const dados = await getJson<Metrica>(`/zona/catalogo/${f}`)
-    if (dados) return { ficheiro: f, dados }
+export interface TempoValidacao {
+  decisoes: number
+  elementos?: number
+  tempo_ativo_s?: number
+  s_por_elemento?: number | null
+  relogio_s?: number
+  inicio?: string
+  fim?: string
+  por_tecnico?: Record<string, Omit<TempoValidacao, 'por_tecnico'>>
+}
+export interface EstatDist {
+  n: number
+  mediana: number
+  p90: number
+}
+export interface Metrica {
+  tipo: 'validacao'
+  gerado_em: string
+  todas: MetricaClasse
+  sinal: MetricaClasse
+  candeeiro: MetricaClasse
+  contentor: MetricaClasse
+  sinal_subtipo: Record<'stop' | 'cedencia' | 'limite' | 'outro', { reais_unicos: number; contagem: number | null; recall: number | null }> & {
+    subtipo_certo: number
+    sinais_reais: number
+    precisao_subtipo: number | null
   }
-  return null
+  tempo: TempoValidacao
+  erro_posicao_m?: Record<string, EstatDist | null | unknown> & { todas: EstatDist | null; pontos_referencia: number }
+  avisos: string[]
+  contagem_info?: { contado_por: string | null; contado_em: string | null }
+}
+
+/** Só a métrica da validação (M10); a do OSM (metrica_osm.json) deixou de ser mostrada. */
+export async function carregarMetrica(): Promise<{ ficheiro: string; dados: Metrica } | null> {
+  const dados = await getJson<Metrica>('/zona/catalogo/metrica.json')
+  return dados && dados.tipo === 'validacao' ? { ficheiro: 'metrica.json', dados } : null
 }
 
 export async function carregarBase(): Promise<DadosBase> {

@@ -43,14 +43,19 @@ export interface Agrupamento {
   nAutomaticos: number
 }
 
-const PRIORIDADE_ESTADO: Record<string, number> = { validado: 4, corrigido: 4, rejeitado: 3, auto: 2, pendente: 1 }
+/** Representante do grupo: o confirmado por um técnico; nunca um rejeitado (senão o grupo todo desaparecia). */
+const PRIORIDADE_ESTADO: Record<string, number> = { validado: 4, corrigido: 4, auto: 2, pendente: 1, rejeitado: 0 }
 
 /**
  * Junta os duplicados num só elemento.
- * Ligações: pares "certo" (exceto os que o técnico separou) + pares que o técnico disse serem o mesmo.
+ * Ligações: pares "certo" (exceto os que o técnico separou), pares que o técnico disse serem o mesmo,
+ * e elementos que o técnico marcou como "duplicado de" outro (fica o outro: posição e imagem).
  * Representante: o que já tem decisão do técnico; senão o automático; depois mais vistas e mais confiança.
+ *
+ * consolidar: junta também os pares "possivel" ainda por decidir — vista da Câmara, onde cada
+ * objeto aparece uma só vez enquanto o técnico não decide (se forem diferentes, separa-os).
  */
-export function agrupar(els: Elemento[], pares: ParDuplicado[], decisoes: DecisaoPar[]): Agrupamento {
+export function agrupar(els: Elemento[], pares: ParDuplicado[], decisoes: DecisaoPar[], consolidar = false): Agrupamento {
   const porId = new Map(els.map((e) => [e.id, e]))
   const decisao = new Map(decisoes.map((d) => [chave(d.a, d.b), d.mesmo]))
   const parInfo = new Map(pares.map((p) => [chave(p.a, p.b), p]))
@@ -72,12 +77,13 @@ export function agrupar(els: Elemento[], pares: ParDuplicado[], decisoes: Decisa
   for (const p of pares) {
     const d = decisao.get(chave(p.a, p.b))
     if (d === false) continue
-    if (p.motivo === 'certo' || d === true) {
+    if (p.motivo === 'certo' || d === true || consolidar) {
       unir(p.a, p.b)
       if (p.motivo === 'certo' && d === undefined) automaticas.add(chave(p.a, p.b))
     }
   }
   for (const d of decisoes) if (d.mesmo) unir(d.a, d.b)
+  for (const e of els) if (e.estado === 'rejeitado' && e.duplicado_de) unir(e.id, e.duplicado_de)
 
   const grupos = new Map<string, Elemento[]>()
   for (const e of els) grupos.set(raiz(e.id), [...(grupos.get(raiz(e.id)) ?? []), e])

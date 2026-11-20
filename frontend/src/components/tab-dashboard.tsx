@@ -1,7 +1,6 @@
-import { CircleCheck, Clock, Copy, Globe, History, Layers, ShieldCheck, TriangleAlert } from 'lucide-react'
+import { CircleCheck, Clock, Copy, Globe, Layers, ShieldCheck, TriangleAlert } from 'lucide-react'
 import { useMemo } from 'react'
 import { nomeBonito } from '@/components/app-sidebar'
-import { titulo } from '@/components/ficha'
 import { TabPainel } from '@/components/tab-painel'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Badge } from '@/components/ui/badge'
@@ -9,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { data, fonteLabel } from '@/lib/format'
 import { posicaoARever } from '@/lib/revisao'
-import { CATEGORIA_LABEL, TIPOS, TIPO_COR, type Evento, type Tipo } from '@/lib/types'
+import { CATEGORIA_LABEL, TIPOS, TIPO_COR, type Tipo } from '@/lib/types'
 import type { Catalogo } from '@/hooks/use-catalogo'
 
 function Kpi({ label, valor, nota, icon, cor }: { label: string; valor: number; nota?: React.ReactNode; icon: React.ReactNode; cor?: string }) {
@@ -67,31 +66,12 @@ const ESTADO_GRUPO = [
   { k: 'pendente', label: 'Pendentes', cor: 'var(--warning)', estados: ['pendente'] },
 ] as const
 
-function relativo(iso: string) {
-  const s = (Date.now() - new Date(iso).getTime()) / 1000
-  if (s < 60) return 'agora mesmo'
-  if (s < 3600) return `há ${Math.round(s / 60)} min`
-  if (s < 86400) return `há ${Math.round(s / 3600)} h`
-  return new Date(iso).toLocaleDateString('pt-PT')
-}
-
-function descricaoEvento(e: Evento, nome: (id?: string) => string) {
-  if (e.acao === 'limpar') return 'apagou todas as decisões'
-  if (e.acao === 'desfazer') return `desfez a decisão sobre ${nome(e.id)}`
-  if (e.acao === 'par') return `${e.mesmo ? 'juntou como duplicados' : 'separou'} ${e.a} e ${e.b}`
-  const v = e.validacao!
-  if (v.estado === 'rejeitado') return `rejeitou ${nome(e.id)}`
-  if (v.lat !== undefined) return `corrigiu a posição de ${nome(e.id)}`
-  if (v.estado === 'corrigido') return `corrigiu a classificação de ${nome(e.id)}`
-  return `validou ${nome(e.id)}`
-}
-
 export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 'deteccoes' | 'catalogo' | 'importacao') => void }) {
   const cfg = cat.base!.config
   const tecnico = !!cat.tecnico
 
   const r = useMemo(() => {
-    const ativos = cat.elementos.filter((e) => e.estado !== 'rejeitado')
+    const ativos = cat.consolidados.filter((e) => e.estado !== 'rejeitado')
     const porTipo = (t: Tipo) => ativos.filter((e) => e.tipo === t)
     return {
       total: ativos.length,
@@ -102,17 +82,12 @@ export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 
       pendentes: ativos.filter((e) => e.estado === 'pendente').length,
       aprovadas: ativos.filter((e) => e.estado === 'validado' || e.estado === 'corrigido').length,
       auto: ativos.filter((e) => e.estado === 'auto').length,
-      rejeitadas: cat.elementos.length - ativos.length,
+      rejeitadas: cat.consolidados.length - ativos.length,
       rever: ativos.filter((e) => posicaoARever(e) && (e.estado === 'pendente' || e.estado === 'auto')).length,
       fundidos: cat.duplicados.nAutomaticos,
     }
-  }, [cat.elementos, cat.duplicados])
+  }, [cat.consolidados, cat.duplicados])
 
-  const nomeEl = (id?: string) => {
-    const e = id ? cat.todos.find((x) => x.id === id) : undefined
-    return e ? `${titulo(e)} (${e.id})` : (id ?? '')
-  }
-  const recentes = [...cat.registo].reverse().slice(0, 8)
 
   // fontes de imagens: última data de captura por fonte
   const fontes = useMemo(() => {
@@ -181,37 +156,7 @@ export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 
           </CardContent>
         </Card>
 
-        {tecnico ? (
-          <Card>
-            <CardHeader className="flex flex-row items-start justify-between">
-              <div>
-                <CardTitle className="flex items-center gap-2 text-base font-medium"><History className="size-4" aria-hidden="true" /> Atividade recente</CardTitle>
-                <CardDescription>Últimas decisões dos técnicos</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              {recentes.length ? (
-                <ol className="flex flex-col gap-3">
-                  {recentes.map((e) => (
-                    <li key={`${e.seq}-${e.quando}`} className="flex items-start gap-3 text-sm">
-                      <span
-                        className="mt-1.5 size-2 shrink-0 rounded-full"
-                        style={{ background: e.validacao?.estado === 'rejeitado' ? 'var(--destructive)' : e.acao === 'decisao' ? 'var(--success)' : 'var(--muted-foreground)' }}
-                        aria-hidden="true"
-                      />
-                      <span className="min-w-0 flex-1">
-                        <span className="font-medium">{e.tecnico.nome}</span> {descricaoEvento(e, nomeEl)}
-                        <span className="block text-xs text-muted-foreground">{relativo(e.quando)}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <p className="text-sm text-muted-foreground">Ainda não há decisões registadas.</p>
-              )}
-            </CardContent>
-          </Card>
-        ) : (
+        {/* "Atividade recente" saiu do dashboard (19/11): está em Registo, para técnicos */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base font-medium"><Globe className="size-4" aria-hidden="true" /> Fontes das imagens</CardTitle>
@@ -233,7 +178,6 @@ export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 
               {!fontes.length && <p className="text-muted-foreground">Sem informação de proveniência.</p>}
             </CardContent>
           </Card>
-        )}
       </section>
 
       {tecnico && (r.rever > 0 || cat.duplicados.porDecidir.length > 0) && (

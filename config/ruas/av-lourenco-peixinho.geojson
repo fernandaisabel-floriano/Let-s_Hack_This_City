@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"via": "Avenida Doutor Lourenço Peixinho", "osm_id": 182176861, "highway": "secondary"}, "geometry": {"type": "LineString", "coordinates": [[-8.6467083, 40.6430468], [-8.6467754, 40.642999], [-8.6473312, 40.6428859], [-8.6479786, 40.6427578]]}}]}

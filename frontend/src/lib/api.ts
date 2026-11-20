@@ -50,12 +50,16 @@ export const obterImagens = () => pedir<{ imagens: Record<string, InfoImagem>; t
 
 // ------------------------------------------------------------------ importação e processamento
 
-export type TipoImportacao = 'fotos' | 'video' | 'mapillary' | 'demo'
+export type TipoImportacao = 'fotos' | 'video' | 'mapillary' | 'demo' | 'zona'
 export type EstadoImportacao = 'rascunho' | 'a_aguardar' | 'em_processamento' | 'concluido' | 'erro' | 'cancelado'
 
 export interface Importacao {
   id: string
   tipo: TipoImportacao
+  /** zona em que corre; numa importação "zona", a zona criada */
+  zona?: string
+  zona_nome?: string
+  n_vias?: number
   nome: string
   rua: string
   offset_s?: number
@@ -90,6 +94,48 @@ export const obterMotor = () => pedir<EstadoMotor>('/api/motor')
 export const listarImportacoes = () => pedir<Importacao[]>('/api/importacoes')
 export const criarImportacao = (dados: { tipo: TipoImportacao; nome: string; rua: string; offset_s?: number }) =>
   post<Importacao>('/api/importacoes', dados)
+
+/** Etapa 5: zona nova a partir das vias escolhidas (GeoJSON) e, opcionalmente, do polígono de um bairro. */
+export const criarZona = (dados: { zona_nome: string; vias: GeoFC; poligono?: GeoFC | null }) =>
+  post<Importacao>('/api/importacoes', { tipo: 'zona', nome: dados.zona_nome, ...dados })
+
+export interface GeoFeature {
+  type: 'Feature'
+  geometry: { type: string; coordinates: unknown }
+  properties: { tipo?: 'rua' | 'area'; name?: string; highway?: string; osm_id?: number; osm_type?: string; local?: string; [k: string]: unknown }
+}
+export type GeoFC = { type: 'FeatureCollection'; features: GeoFeature[] }
+
+export interface ZonaInfo {
+  id: string
+  nome: string
+  bbox: number[] | null
+  /** elementos no catálogo (null = ainda não processada) */
+  elementos: number | null
+}
+export async function obterZonas(): Promise<{ atual: string; zonas: ZonaInfo[] }> {
+  const r = await fetch(`${BASE}/api/zonas`)
+  if (!r.ok) throw new Error(`Erro ${r.status}`)
+  return r.json()
+}
+/** escolhe a zona (cookie) e recarrega a app com os dados dela */
+export async function escolherZona(id: string) {
+  await post('/api/zona', { id })
+  window.location.reload()
+}
+export async function procurarOsm(q: string): Promise<GeoFC> {
+  const r = await fetch(`${BASE}/api/osm/procurar?q=${encodeURIComponent(q)}`)
+  const j = await r.json()
+  if (!r.ok) throw new Error(j.erro ?? `Erro ${r.status}`)
+  return j
+}
+export async function ruaNoPonto(lat: number, lon: number): Promise<GeoFeature | null> {
+  const r = await fetch(`${BASE}/api/osm/inversa?lat=${lat}&lon=${lon}`)
+  if (r.status === 404) return null
+  const j = await r.json()
+  if (!r.ok) throw new Error(j.erro ?? `Erro ${r.status}`)
+  return j
+}
 export const iniciarImportacao = (id: string) => post<Importacao>(`/api/importacoes/${id}/iniciar`)
 export const cancelarImportacao = (id: string) => post<Importacao>(`/api/importacoes/${id}/cancelar`)
 

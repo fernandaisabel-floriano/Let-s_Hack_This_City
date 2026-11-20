@@ -4,6 +4,7 @@ municipio: aveiro
 
 # Nome da zona (rua piloto). Saída em <saida>/<municipio>/<zona>/<fonte>/
 zona: santos-martires
+nome_zona: Santos Mártires   # nome mostrado na app. Outras zonas: config/zonas/<id>.yaml (pipeline/nova_zona.py)
 saida: data/clean
 
 # Zona piloto v3 ("bairro"): Rua dos Santos Mártires (181 m) + rotunda da ponta
@@ -56,6 +57,7 @@ desfoque:
 # Vídeo próprio (P1.1): pipeline/ingest_video.py
 video:
   passo_m: 2.0                # 1 frame a cada X m percorridos
+  janela_nitidez_m: 1.0       # etapa 1: em cada marca, o frame mais nítido do metro seguinte (0 = o primeiro)
   fov_lado_maior_deg: 68      # FOV do lado maior do sensor (vale na horizontal e na vertical)
   nitidez_min: 60             # variância do Laplaciano abaixo disto → frame tremido
   velocidade_max_ms: 8        # GPS: salto entre pontos acima disto → "GPS a saltar"
@@ -133,6 +135,18 @@ contentores_clip:
   recorte: justo            # justo (AUC 0,86) | largo (0,81)
   margem_justo: 0.10
 
+# Etapa 1 — qualidade das vistas (pipeline/qualidade.py). As fracas ficam de lado (não entram
+# no agrupamento nem na escolha da imagem), não se apagam. Medido a 19/11 (reports/qualidade/medicao.md):
+# o tamanho é o que separa — contentores < 43 px: tira 54 % dos falsos, perde 5 % dos verdadeiros.
+# Nitidez, brilho e contraste quase não separam: ficam só para os casos extremos.
+qualidade:
+  ativo: true
+  lado_min_px: {sinal: 30, candeeiro: 30, contentor: 42}   # candeeiros sem rótulos: o mesmo dos sinais
+  nitidez_min: 100          # variância do Laplaciano (tremido). 19/11: acima de 100 só põe de lado mais reais (150: 9 % das vistas reais, os falsos quase não sobem)
+  brilho_min: 15            # quase preto (noite)
+  brilho_max: 245           # queimado
+  contraste_min: 0
+
 # M5 — coordenadas de cada deteção (pipeline/geolocate.py)
 m5:
   sinal_tamanho_m: 0.7      # lado da placa assumido
@@ -160,6 +174,11 @@ m6:
   largura_por_highway: {primary: 10, secondary: 8, tertiary: 7, residential: 6, unclassified: 6, living_street: 5, service: 4, pedestrian: 4}
   edificios_geojson: config/ruas/santos-martires-v3-edificios.geojson
   calibrar_video: true      # δ heading e τ tempo por vídeo, contra o Mapillary
+  # etapa 2: juntar dois elementos quando as direções de todas as fotos se cruzam num só ponto
+  # (19/11: duplicados juntados 13 → 18 de 29, sem juntar nenhum par que o técnico manteve separado)
+  fundir_dist_m: 8          # 0 = desligado
+  fundir_tol_m: 2.0         # resíduo mediano máximo dos raios no ponto comum, em cada um dos dois
+  fundir_sobreposicao_x: 0.7   # na mesma foto, as caixas têm de apontar na mesma direção
   calib_min_elementos: 5    # elementos partilhados com o Mapillary para estimar δ
   calib_tau_min_elementos: 10   # ...e para estimar também τ (senão τ = 0)
 
@@ -169,5 +188,6 @@ m9:
 
 # M10 — avaliação contra a contagem manual (referencia.csv; pipeline/referencia.py)
 m10:
-  referencia: data/clean/aveiro/santos-martires/referencia.csv
+  contagem: data/clean/aveiro/santos-martires/contagem.json     # contagem manual por tipo → recall
+  referencia: data/clean/aveiro/santos-martires/referencia.csv  # opcional: pontos → erro de posição
   dist_max_m: 8             # encontrado = mesma classe a ≤ X m (um a um), dentro do polígono, sem papeleiras

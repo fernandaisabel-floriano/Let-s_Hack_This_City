@@ -18,12 +18,50 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config/municipio.yaml"
 
 
-def load_config(path: Path = CONFIG) -> dict:
+ZONAS_DIR = ROOT / "config/zonas"
+
+
+def _juntar(base: dict, extra: dict) -> dict:
+    """Junta extra em base (dicionários aninhados); um valor null apaga a chave."""
+    out = dict(base)
+    for k, v in extra.items():
+        if v is None:
+            out.pop(k, None)
+        elif isinstance(v, dict) and isinstance(out.get(k), dict):
+            out[k] = _juntar(out[k], v)
+        else:
+            out[k] = v
+    return out
+
+
+def load_config(path: Path = CONFIG, zona: str | None = None) -> dict:
     """Lê a config. CTRLF_CONFIG=outro.yaml substitui a config por omissão
-    (usado pelos testes em tests/, para não tocar em data/ nem em reports/)."""
+    (usado pelos testes em tests/, para não tocar em data/ nem em reports/).
+
+    Etapa 5 (várias zonas): CTRLF_ZONA=<id> (ou `zona`) junta config/zonas/<id>.yaml à config do
+    município — zona, nome_zona, bbox, rua_geojson, zona_avaliacao_geojson, m6.edificios_geojson…
+    Sem isso (ou com a zona do municipio.yaml), fica a zona por omissão."""
     if Path(path).resolve() == CONFIG and os.environ.get("CTRLF_CONFIG"):
         path = Path(os.environ["CTRLF_CONFIG"])
-    return yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    cfg = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    zona = zona or os.environ.get("CTRLF_ZONA")
+    if zona and zona != cfg.get("zona"):
+        f = ZONAS_DIR / f"{zona}.yaml"
+        if not f.exists():
+            raise SystemExit(f"zona desconhecida: {zona} (falta {f.relative_to(ROOT)})")
+        cfg = _juntar(cfg, yaml.safe_load(f.read_text(encoding="utf-8")) or {})
+    return cfg
+
+
+def zonas_disponiveis(cfg_base: dict | None = None) -> list[dict]:
+    """A zona do municipio.yaml e as de config/zonas/*.yaml: [{id, nome, bbox}]."""
+    base = cfg_base or yaml.safe_load(CONFIG.read_text(encoding="utf-8"))
+    out = [{"id": base["zona"], "nome": base.get("nome_zona") or base["zona"], "bbox": base.get("bbox")}]
+    for f in sorted(ZONAS_DIR.glob("*.yaml")):
+        z = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+        if z.get("zona") and z["zona"] != base["zona"]:
+            out.append({"id": z["zona"], "nome": z.get("nome_zona") or z["zona"], "bbox": z.get("bbox")})
+    return out
 
 
 def zone_dir(cfg: dict, zona: str | None = None, out_root: Path | None = None) -> Path:

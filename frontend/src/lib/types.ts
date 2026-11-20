@@ -30,6 +30,14 @@ export interface Elemento {
   lat: number
   confianca: number | null
   confianca_max_vista?: number
+  /** etapa 1: visto só em vistas fracas (pequenas, tremidas, escuras): vai sempre para a fila */
+  so_vistas_fracas?: boolean
+  /** imagens com vista boa (não fraca): é o que conta para a entrada automática */
+  n_vistas_boas?: number
+  /** nitidez (variância do Laplaciano) do recorte escolhido */
+  nitidez_imagem?: number | null
+  /** contentores: 2.ª opinião do CLIP (média das melhores imagens), para o limiar com base "clip" */
+  confianca_clip?: number | null
   confianca_subtipo?: number | null
   n_vistas: number
   estado: Estado
@@ -44,6 +52,8 @@ export interface Elemento {
   ajustado_edificio?: boolean
   /** rua mais próxima (calculada no cliente a partir das vias da zona) */
   rua?: string | null
+  /** decisão do técnico: rejeitado por ser duplicado deste id (M10) */
+  duplicado_de?: string
   /** ids dos duplicados fundidos neste elemento (lib/duplicados.ts) */
   fundidos?: string[]
   /** versões antigas do fuse.py */
@@ -64,6 +74,8 @@ export interface Validacao {
   validado_em: string
   validado_por?: Tecnico
   tempo_s?: number
+  /** rejeitado por ser o mesmo objeto que outro elemento (M10) */
+  duplicado_de?: string
 }
 
 export interface Tecnico {
@@ -88,6 +100,8 @@ export interface Evento {
 export interface MunicipioConfig {
   municipio: string
   zona: string
+  /** nome da zona para mostrar (municipio.yaml ou config/zonas/<id>.yaml) */
+  nome_zona?: string | null
   saida: string
   bbox: number[] | null
   rua_geojson: string | null

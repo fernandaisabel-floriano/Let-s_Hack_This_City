@@ -1,0 +1,71 @@
+{
+  "municipio": "aveiro",
+  "zona": "av-lourenco-peixinho",
+  "fonte": "mapillary",
+  "bbox": [
+    -8.648378,
+    40.642357,
+    -8.646233,
+    40.643415
+  ],
+  "desde": "2019-01-01",
+  "rua_geojson": "config/ruas/av-lourenco-peixinho.geojson",
+  "buffer_rua_m": 30.0,
+  "incluir_panoramicas": true,
+  "executado_em": "2026-11-19T18:09:15+00:00",
+  "duracao_s": 244.7,
+  "quadrados": 2,
+  "pedidos_api": 10,
+  "subdivisoes": 0,
+  "quadrados_truncados": 0,
+  "tentativas_repetidas": 0,
+  "devolvidas_api": 318,
+  "duplicados_removidos": 0,
+  "excluidas": {
+    "panoramicas": 0,
+    "antes_desde": 0,
+    "sem_coordenadas": 0,
+    "sem_heading": 0,
+    "fora_bbox": 41,
+    "longe_da_rua": 43
+  },
+  "imagens_origem": 234,
+  "imagens_origem_planas": 0,
+  "imagens_origem_panoramicas": 234,
+  "imagens": 936,
+  "sequencias": 3,
+  "autores": {
+    "dangomezm": 508,
+    "jneiva": 428
+  },
+  "coord_fonte": {
+    "computed": 936
+  },
+  "heading_fonte": {
+    "computed": 936
+  },
+  "camera_type": {
+    "spherical": 936
+  },
+  "captura_de": "2026-05-12T13:01:11.069000+00:00",
+  "captura_ate": "2026-07-16T15:46:39.490000+00:00",
+  "processamento": {
+    "processadas": 53,
+    "existentes": 181,
+    "erro": 0
+  },
+  "desfoque_total": {
+    "rostos": 112,
+    "matriculas": 93,
+    "cabecas": 2560,
+    "imagens_com_desfoque": 806
+  },
+  "desfoque_nesta_execucao": {
+    "rostos": 30,
+    "matriculas": 13,
+    "cabecas": 684,
+    "imagens_com_desfoque": 193
+  },
+  "licenca": "CC BY-SA 4.0",
+  "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

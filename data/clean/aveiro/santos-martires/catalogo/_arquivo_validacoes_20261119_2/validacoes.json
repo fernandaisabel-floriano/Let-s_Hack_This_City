@@ -1,0 +1,1834 @@
+[
+ {
+  "id": "can_0116",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6798,
+   0.6406,
+   0.5744,
+   0.5169,
+   0.5012,
+   0.4471,
+   0.3802
+  ],
+  "estado": "rejeitado",
+  "validado_em": "2026-11-19T17:36:39.819Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0054",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.7705,
+   0.6668,
+   0.6234,
+   0.5975,
+   0.5328,
+   0.3442,
+   0.2489,
+   0.2464,
+   0.2377,
+   0.228,
+   0.11
+  ],
+  "estado": "validado",
+  "validado_em": "2026-11-19T17:37:21.381Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0069",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.9063,
+   0.6915,
+   0.6855,
+   0.3867,
+   0.2839,
+   0.1641,
+   0.1255
+  ],
+  "estado": "validado",
+  "validado_em": "2026-11-19T17:37:23.313Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0131",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.9483,
+   0.9421,
+   0.9365,
+   0.8036,
+   0.4993,
+   0.1549,
+   0.1243,
+   0.1207,
+   0.1197,
+   0.0628,
+   0.0603
+  ],
+  "estado": "validado",
+  "tempo_s": 71.7,
+  "validado_em": "2026-11-19T17:39:01.938Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0132",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8414,
+   0.6691,
+   0.5655,
+   0.4223,
+   0.1627,
+   0.1398,
+   0.0514
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0131",
+  "validado_em": "2026-11-19T17:39:01.943Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0133",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.184,
+   0.1688,
+   0.0886,
+   0.0885,
+   0.0796,
+   0.0722,
+   0.0632,
+   0.0618,
+   0.0612,
+   0.0587,
+   0.0521
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 5.9,
+  "validado_em": "2026-11-19T17:39:08.029Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0134",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.3447,
+   0.0786,
+   0.078,
+   0.0591,
+   0.0561
+  ],
+  "estado": "validado",
+  "tempo_s": 5.4,
+  "validado_em": "2026-11-19T17:39:13.717Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0135",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2552,
+   0.2051,
+   0.0606,
+   0.0557
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0134",
+  "validado_em": "2026-11-19T17:39:13.718Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0136",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8135,
+   0.3141,
+   0.0612,
+   0.0608
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 5.1,
+  "validado_em": "2026-11-19T17:39:19.008Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0137",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.7851,
+   0.1763,
+   0.1354,
+   0.108,
+   0.0893,
+   0.0759,
+   0.0549,
+   0.0522,
+   0.0517
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.4,
+  "validado_em": "2026-11-19T17:39:20.776Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0138",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5309,
+   0.381,
+   0.2093,
+   0.1949,
+   0.1301,
+   0.0903
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.3,
+  "validado_em": "2026-11-19T17:39:22.279Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0139",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.342,
+   0.2763,
+   0.2094,
+   0.0713,
+   0.068
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.9,
+  "validado_em": "2026-11-19T17:39:23.342Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0140",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.7457,
+   0.6852,
+   0.3238,
+   0.3063,
+   0.1502,
+   0.0794,
+   0.0777
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 4.6,
+  "validado_em": "2026-11-19T17:39:28.215Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0141",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1685,
+   0.0964,
+   0.0903,
+   0.0793,
+   0.0733,
+   0.0663,
+   0.0572,
+   0.0543
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.6,
+  "validado_em": "2026-11-19T17:39:32.035Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0142",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2824,
+   0.2087,
+   0.135,
+   0.1278,
+   0.0837,
+   0.0757,
+   0.0541
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2,
+  "validado_em": "2026-11-19T17:39:34.314Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0143",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2762,
+   0.1196,
+   0.0965,
+   0.0725,
+   0.0713,
+   0.0649
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.8,
+  "validado_em": "2026-11-19T17:39:35.353Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0144",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1655,
+   0.1626,
+   0.1384,
+   0.0765,
+   0.0577
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:39:36.066Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0145",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6046,
+   0.3347,
+   0.235,
+   0.1275
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 9.1,
+  "validado_em": "2026-11-19T17:44:39.512Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0146",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6045,
+   0.2525,
+   0.0983,
+   0.0704
+  ],
+  "estado": "validado",
+  "tempo_s": 20.3,
+  "validado_em": "2026-11-19T17:45:00.130Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0159",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.4163,
+   0.1381,
+   0.118,
+   0.0783,
+   0.0541
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0146",
+  "validado_em": "2026-11-19T17:45:00.132Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0160",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1969,
+   0.1451,
+   0.1019,
+   0.0599
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0146",
+  "validado_em": "2026-11-19T17:45:00.134Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0147",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2709,
+   0.1729,
+   0.0842,
+   0.0769
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.5,
+  "validado_em": "2026-11-19T17:45:01.857Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0148",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8023,
+   0.3889,
+   0.0536
+  ],
+  "estado": "corrigido",
+  "lat": 40.6377164,
+  "lon": -8.6581143,
+  "tempo_s": 36.5,
+  "validado_em": "2026-11-19T17:45:38.614Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0149",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.7818,
+   0.093,
+   0.0601
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 56.4,
+  "validado_em": "2026-11-19T17:46:46.737Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0150",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.4091,
+   0.2622,
+   0.1474,
+   0.134,
+   0.102,
+   0.072,
+   0.0636
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.2,
+  "validado_em": "2026-11-19T17:46:48.233Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0151",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0983,
+   0.0868,
+   0.0729
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:46:49.423Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0152",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5677,
+   0.5414,
+   0.4387,
+   0.1346
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.9,
+  "validado_em": "2026-11-19T17:46:50.545Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0153",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.4756,
+   0.1427,
+   0.085
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.6,
+  "validado_em": "2026-11-19T17:46:54.401Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0154",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2824,
+   0.2628,
+   0.0598
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2.6,
+  "validado_em": "2026-11-19T17:46:57.263Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0155",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.7485,
+   0.7469,
+   0.1101,
+   0.092,
+   0.0635
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.8,
+  "validado_em": "2026-11-19T17:46:58.181Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0156",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0962,
+   0.0845,
+   0.0783,
+   0.0697
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 4.7,
+  "validado_em": "2026-11-19T17:47:03.055Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0157",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8514,
+   0.7459,
+   0.7238,
+   0.5528,
+   0.541,
+   0.2268,
+   0.0776,
+   0.061,
+   0.0555
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 28.4,
+  "validado_em": "2026-11-19T17:47:38.118Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0158",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1769,
+   0.1512,
+   0.1254,
+   0.0761,
+   0.0697
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.3,
+  "validado_em": "2026-11-19T17:47:39.622Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0161",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8554,
+   0.6336,
+   0.3658,
+   0.2595
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:47:40.791Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0162",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.9052,
+   0.5594,
+   0.311,
+   0.2391
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:47:41.993Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0163",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2358,
+   0.2312,
+   0.073
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.4,
+  "validado_em": "2026-11-19T17:47:43.571Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0164",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6081,
+   0.2529,
+   0.0718
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:47:44.635Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0165",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0616,
+   0.0556
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.4,
+  "validado_em": "2026-11-19T17:47:46.178Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0166",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6857,
+   0.5486,
+   0.302,
+   0.0882,
+   0.081,
+   0.055
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.3,
+  "validado_em": "2026-11-19T17:47:47.703Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0167",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.9137,
+   0.8666,
+   0.85,
+   0.8382,
+   0.6344,
+   0.5923,
+   0.0572
+  ],
+  "estado": "validado",
+  "subtipo_corrigido": "ilha_reciclagem",
+  "tempo_s": 20,
+  "validado_em": "2026-11-19T17:48:07.908Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0169",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.683,
+   0.233,
+   0.0832,
+   0.0802
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0167",
+  "validado_em": "2026-11-19T17:48:07.909Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0168",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8525,
+   0.4569
+  ],
+  "estado": "corrigido",
+  "subtipo_corrigido": "indiferenciado",
+  "tempo_s": 2.7,
+  "validado_em": "2026-11-19T17:48:11.017Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0170",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6726,
+   0.6038,
+   0.2027,
+   0.1133,
+   0.0919
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.7,
+  "validado_em": "2026-11-19T17:48:14.848Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0171",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.62
+  ],
+  "estado": "validado",
+  "tempo_s": 8.5,
+  "validado_em": "2026-11-19T17:48:23.548Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0189",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0981
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0171",
+  "validado_em": "2026-11-19T17:48:23.550Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0172",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.4879,
+   0.4326,
+   0.0852,
+   0.0681
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.1,
+  "validado_em": "2026-11-19T17:48:26.804Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0173",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.291,
+   0.1178,
+   0.0629
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.8,
+  "validado_em": "2026-11-19T17:48:27.758Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0174",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.281
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.5,
+  "validado_em": "2026-11-19T17:48:28.455Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0175",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2682,
+   0.0895,
+   0.067,
+   0.0638
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.8,
+  "validado_em": "2026-11-19T17:48:29.490Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0176",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2398
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:48:30.375Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0177",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2345,
+   0.0589
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:31.183Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0178",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2018,
+   0.0693
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.5,
+  "validado_em": "2026-11-19T17:48:31.831Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0179",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1882
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-19T17:48:33.133Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0180",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.184
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:33.923Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0181",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1738,
+   0.1258,
+   0.0503
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2,
+  "validado_em": "2026-11-19T17:48:36.105Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0182",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1691
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:48:36.871Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0183",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1663
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:37.701Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0184",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1406
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:38.400Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0185",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1297
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.5,
+  "validado_em": "2026-11-19T17:48:39.033Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0186",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1281
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.4,
+  "validado_em": "2026-11-19T17:48:39.650Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0187",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.12
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:40.358Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0188",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0992,
+   0.0875,
+   0.0812,
+   0.0568,
+   0.0544
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.4,
+  "validado_em": "2026-11-19T17:48:40.885Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0190",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0847
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.3,
+  "validado_em": "2026-11-19T17:48:42.276Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0191",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0795
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.8,
+  "validado_em": "2026-11-19T17:48:43.281Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0192",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0716
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:48:44.127Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0193",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0616
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:48:44.877Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0194",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.057
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.5,
+  "validado_em": "2026-11-19T17:48:45.606Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0195",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0531
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.4,
+  "validado_em": "2026-11-19T17:48:46.193Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0196",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.0503
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:48:47.060Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0130",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.1225
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2.2,
+  "validado_em": "2026-11-19T17:48:51.883Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0129",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.1433
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.3,
+  "validado_em": "2026-11-19T17:49:31.651Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0106",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.1937,
+   0.1357,
+   0.1116
+  ],
+  "estado": "corrigido",
+  "classe_corrigida": "sinal",
+  "subtipo_corrigido": "outro_sinal",
+  "tempo_s": 11.1,
+  "validado_em": "2026-11-19T17:49:42.983Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0128",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.1809
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.3,
+  "validado_em": "2026-11-19T17:49:46.543Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0104",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.2142,
+   0.1799,
+   0.1693,
+   0.1523,
+   0.1285
+  ],
+  "estado": "corrigido",
+  "subtipo_corrigido": "poste_iluminacao",
+  "tempo_s": 9.8,
+  "validado_em": "2026-11-19T17:49:56.588Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0126",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.2772,
+   0.206,
+   0.1127
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 17.1,
+  "validado_em": "2026-11-19T17:50:13.794Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0105",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.2924,
+   0.1623,
+   0.156,
+   0.1385,
+   0.119
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.7,
+  "validado_em": "2026-11-19T17:50:15.703Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0093",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.2695,
+   0.2525,
+   0.1114
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 16.3,
+  "validado_em": "2026-11-19T17:50:32.205Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0099",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.3491,
+   0.1676,
+   0.1605,
+   0.1529
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.7,
+  "validado_em": "2026-11-19T17:50:36.067Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0124",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.3104,
+   0.1531
+  ],
+  "estado": "corrigido",
+  "lat": 40.6376098,
+  "lon": -8.6579682,
+  "tempo_s": 18,
+  "validado_em": "2026-11-19T17:50:54.162Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0050",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.0515
+  ],
+  "estado": "validado",
+  "tempo_s": 2.7,
+  "validado_em": "2026-11-19T17:50:57.426Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0049",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.052
+  ],
+  "estado": "validado",
+  "tempo_s": 7,
+  "validado_em": "2026-11-19T17:51:04.343Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0127",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.2483
+  ],
+  "estado": "validado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-19T17:51:05.704Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0048",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.0576
+  ],
+  "estado": "validado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:51:06.905Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0066",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.385,
+   0.2637,
+   0.1589,
+   0.1274,
+   0.1239,
+   0.1149
+  ],
+  "estado": "validado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:51:07.767Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0047",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.0742,
+   0.0562
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2.3,
+  "validado_em": "2026-11-19T17:51:10.292Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0125",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.279
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.4,
+  "validado_em": "2026-11-19T17:51:11.796Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0122",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.3722,
+   0.2419
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-19T17:51:13.199Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0108",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.4737,
+   0.1613
+  ],
+  "estado": "validado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:51:14.405Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0123",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.335
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.2,
+  "validado_em": "2026-11-19T17:51:15.805Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0061",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.3569,
+   0.3481,
+   0.3154,
+   0.2715,
+   0.2543,
+   0.1885,
+   0.1827,
+   0.1791,
+   0.1483
+  ],
+  "estado": "validado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:51:16.566Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0056",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.5472,
+   0.534,
+   0.4616,
+   0.4166,
+   0.4135,
+   0.3203,
+   0.262,
+   0.2411,
+   0.1607,
+   0.1535,
+   0.1084
+  ],
+  "estado": "validado",
+  "tempo_s": 11.2,
+  "validado_em": "2026-11-19T17:51:27.881Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0053",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.4417,
+   0.3394,
+   0.276,
+   0.2644,
+   0.1901,
+   0.1701,
+   0.1535
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "can_0056",
+  "validado_em": "2026-11-19T17:51:27.883Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0052",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.7306,
+   0.4554,
+   0.4354,
+   0.4065,
+   0.3716,
+   0.3131,
+   0.3028,
+   0.2447,
+   0.2182,
+   0.1469,
+   0.1417,
+   0.1052
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "can_0056",
+  "validado_em": "2026-11-19T17:51:27.889Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0065",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.4325,
+   0.3986,
+   0.2363,
+   0.2088,
+   0.1898,
+   0.1416,
+   0.124,
+   0.1233,
+   0.1003
+  ],
+  "estado": "validado",
+  "tempo_s": 11.1,
+  "validado_em": "2026-11-19T17:51:39.330Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0063",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.8963,
+   0.4908,
+   0.4709,
+   0.3701,
+   0.2873,
+   0.2488,
+   0.2252,
+   0.2116,
+   0.2069,
+   0.1463,
+   0.1221,
+   0.121
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "can_0065",
+  "validado_em": "2026-11-19T17:51:39.331Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0082",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6839,
+   0.198,
+   0.193
+  ],
+  "estado": "validado",
+  "tempo_s": 3.3,
+  "validado_em": "2026-11-19T17:51:42.794Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0098",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.7473,
+   0.2089,
+   0.1296
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 2.2,
+  "validado_em": "2026-11-19T17:51:45.113Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0088",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6223,
+   0.2489,
+   0.2264
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 4.4,
+  "validado_em": "2026-11-19T17:51:49.640Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0037",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.155,
+   0.0971,
+   0.0695
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1,
+  "validado_em": "2026-11-19T17:51:53.173Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0118",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.631,
+   0.1359
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-19T17:51:53.184Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0101",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6241,
+   0.4079,
+   0.1294
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:51:54.252Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0102",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6908,
+   0.3529,
+   0.1373
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.6,
+  "validado_em": "2026-11-19T17:51:54.981Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0059",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.4793,
+   0.3872,
+   0.3332,
+   0.3078,
+   0.2913,
+   0.162,
+   0.1262,
+   0.1177
+  ],
+  "estado": "validado",
+  "tempo_s": 5.6,
+  "validado_em": "2026-11-19T17:52:03.064Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0121",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.402
+  ],
+  "estado": "validado",
+  "tempo_s": 1.2,
+  "validado_em": "2026-11-19T17:52:04.486Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0067",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.8115,
+   0.2996,
+   0.101
+  ],
+  "estado": "validado",
+  "tempo_s": 0.7,
+  "validado_em": "2026-11-19T17:52:08.277Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "sin_0029",
+  "classe": "sinal",
+  "confiancas_vistas": [
+   0.1502,
+   0.1459,
+   0.0867,
+   0.0808,
+   0.0781,
+   0.0609,
+   0.0572
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 0.3,
+  "validado_em": "2026-11-19T17:52:08.726Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0119",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.5856,
+   0.5066,
+   0.1234
+  ],
+  "estado": "validado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-19T17:52:09.937Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "can_0115",
+  "classe": "candeeiro",
+  "confiancas_vistas": [
+   0.6857,
+   0.1306
+  ],
+  "estado": "validado",
+  "tempo_s": 0.9,
+  "validado_em": "2026-11-19T17:52:11.000Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ }
+]
