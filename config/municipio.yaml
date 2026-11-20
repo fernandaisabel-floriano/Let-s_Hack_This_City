@@ -172,13 +172,20 @@ m6:
   base_video_min_m: 8       # ...e entre frames do mesmo vídeo
   tol_m: 1.0                # raio passa no ponto se a distância ≤ max(tol_m, tol_frac × alcance)
   tol_frac: 0.05
+  # sinais: raios de famílias M4 certas diferentes não se juntam (placas empilhadas no mesmo poste).
+  # 20/11, por recorte rotulado: específicos certos sem fila 2 → 9; placas "outro" em elemento específico 14 → 4
+  separar_familias: true
+  fundir_especificos_m: 4   # sinais da mesma família específica (STOP, cedência, limite) a ≤ X m juntam-se (0 = não)
   modo_por_fonte: {mapillary: carro, video_proprio: pe}
   lado_m: 2.0               # a pé/bicicleta: paralela ao trajeto, do lado do objeto
   margem_lancil_m: 0.5      # de carro: lancil = meia largura da via + margem
   largura_via_m: 3.0        # por faixa, quando a via OSM tem lanes=*
   largura_por_highway: {primary: 10, secondary: 8, tertiary: 7, residential: 6, unclassified: 6, living_street: 5, service: 4, pedestrian: 4}
   edificios_geojson: config/ruas/santos-martires-v3-edificios.geojson
-  calibrar_video: true      # δ heading e τ tempo por vídeo, contra o Mapillary
+  # δ heading e τ tempo por vídeo, contra o Mapillary: true = estima; fixa = usa video/<seq>/calibracao.json.
+  # 20/11: a estimativa salta entre soluções (+6,5° / −4,5° / +5,0°) conforme os elementos que entram nela;
+  # contra as validações, −4,5° junta melhor candeeiros (misturados 18 → 10, partidos 10 → 0) e sinais.
+  calibrar_video: fixa
   # etapa 2: juntar dois elementos quando as direções de todas as fotos se cruzam num só ponto
   # (19/11: duplicados juntados 13 → 18 de 29, sem juntar nenhum par que o técnico manteve separado)
   fundir_dist_m: 8          # 0 = desligado

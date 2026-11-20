@@ -1,9 +1,11 @@
 {
- "delta_heading_graus": 6.5,
+ "delta_heading_graus": -4.5,
  "tau_s": 0.0,
  "tau_estimado": false,
- "erro_mediano_antes_m": 4.3,
- "erro_mediano_depois_m": 2.91,
- "n_raios": 33,
- "n_elementos": 7
+ "erro_mediano_antes_m": 3.77,
+ "erro_mediano_depois_m": 2.25,
+ "n_raios": 22,
+ "n_elementos": 5,
+ "fixada_em": "2026-11-20",
+ "nota": "fixada à mão: melhor contra as validações (ver config/municipio.yaml m6.calibrar_video)"
 }

@@ -85,6 +85,54 @@ def test_mesma_foto_direcoes_diferentes_nao_junta():
     assert fuse.fundir_coerentes([a, b], P, PROJ, EDIF)[1] == 0
 
 
+def test_familias_diferentes_nao_juntam():
+    """Placas empilhadas no mesmo poste (STOP + outra): mesmo x, y — só a família as separa."""
+    a = objeto(ALVO, CAMS_A, "a", classe="sinal", desvio=(-1, 0))
+    b = objeto(ALVO, CAMS_B, "b", classe="sinal", desvio=(1, 0))
+    for r in a["membros"]:
+        r["fam"] = "stop"
+    for r in b["membros"]:
+        r["fam"] = "outro_sinal"
+    assert fuse.fundir_coerentes([a, b], P, PROJ, EDIF)[1] == 0
+    for r in b["membros"]:
+        r["fam"] = ""            # incertas / de costas: neutras, juntam
+    assert fuse.fundir_coerentes([a, b], P, PROJ, EDIF)[1] == 1
+
+
+def test_triangulacao_separa_placas_empilhadas():
+    """As mesmas 5 fotos veem o STOP e a placa de baixo: dois pontos no mesmo sítio, um por família."""
+    cams = CAMS_A + CAMS_B
+    rays = []
+    for k, c in enumerate(cams):
+        for fam in ("stop", "outro_sinal"):
+            r = raio(c, ALVO, f"i{k}")
+            r.update(fam=fam, fonte="mapillary", det={"bbox": [100, 100, 140, 200], "extra": {}})
+            rays.append(r)
+    tri, used = fuse.triangulate(rays, P)
+    assert len(tri) == 2 and len(used) == 10
+    for t in tri:
+        assert len({rays[m]["fam"] for m in t["membros"]}) == 1 and len(t["membros"]) == 5
+
+
+def test_especificos_iguais_perto_juntam():
+    """O mesmo STOP triangulado em dois pedaços a 2 m: junta. Cedência + STOP: não. Na mesma foto lado a lado: não."""
+    a = objeto(ALVO, CAMS_A, "a", classe="sinal")
+    b = objeto((X0 + 2, Y0), CAMS_B, "b", classe="sinal")
+    for r in a["membros"] + b["membros"]:
+        r["fam"] = "stop"
+    out, n = fuse.fundir_especificos([a, b], P, PROJ)
+    assert n == 1 and len(out) == 1 and len(out[0]["membros"]) == 5
+    for r in b["membros"]:
+        r["fam"] = "cedencia_passagem"
+    assert fuse.fundir_especificos([a, b], P, PROJ)[1] == 0
+    for r in b["membros"]:
+        r["fam"] = "stop"
+    lado = raio(CAMS_A[0], (X0 + 2, Y0), "a0", bbox=(300, 100, 340, 200))   # mesma foto, outra caixa
+    lado["fam"] = "stop"
+    b["membros"].append(lado)
+    assert fuse.fundir_especificos([a, b], P, PROJ)[1] == 0
+
+
 def test_desligado():
     a = objeto(ALVO, CAMS_A, "a", desvio=(-2.5, 0))
     b = objeto(ALVO, CAMS_B, "b", desvio=(2.5, 0))
