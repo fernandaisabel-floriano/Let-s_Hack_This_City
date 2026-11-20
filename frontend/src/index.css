@@ -218,3 +218,14 @@ kbd {
 /* Recurso sem WebGL: mosaicos OSM em tons de cinzento, para manter o aspeto cartográfico sóbrio */
 .ctrlf-recurso { filter: grayscale(1) contrast(0.8) brightness(1.1); }
 .dark .ctrlf-recurso { filter: grayscale(1) invert(1) contrast(0.8) brightness(0.9); }
+
+/* Ecrã de entrada (ecra-entrada.tsx): bolhas decorativas a flutuar.
+   Anima "translate" para não colidir com o posicionamento. */
+@keyframes ctrlf-flutuar {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+.ctrlf-bolha { animation: ctrlf-flutuar 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .ctrlf-bolha { animation: none; }
+}

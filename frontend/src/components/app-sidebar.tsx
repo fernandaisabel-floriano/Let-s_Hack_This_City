@@ -70,6 +70,8 @@ interface Props {
   onTema: () => void
   onEntrar: () => void
   onSair: () => void
+  /** volta ao ecrã de entrada (setup do município) */
+  onInicio: () => void
 }
 
 /** Nome legível do município ou da zona, com os acentos tirados dos nomes das vias. */
@@ -80,7 +82,7 @@ export function nomeBonito(z: string, cat?: Catalogo) {
   return nomeLegivel(z, vias)
 }
 
-export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSair }: Props) {
+export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSair, onInicio }: Props) {
   const fileRef = useRef<HTMLInputElement>(null)
   const cfg = cat.base!.config
   const pendentes = cat.elementos.filter((e) => e.estado === 'pendente').length
@@ -114,7 +116,7 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
       <SidebarHeader className="border-b border-sidebar-border">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" className="pointer-events-none">
+            <SidebarMenuButton size="lg" onClick={onInicio} tooltip="Voltar ao setup do município" aria-label="Voltar ao início: setup do município">
               <div className="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground" aria-hidden="true">
                 <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21Z" />

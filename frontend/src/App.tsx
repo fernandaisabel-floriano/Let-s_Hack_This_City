@@ -1,6 +1,7 @@
 import { CircleHelp, FlaskConical, Loader2, LogIn, Menu, Moon, Sun } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
 import { AppSidebar, VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
+import { EcraEntrada } from '@/components/ecra-entrada'
 import { PaginaLogin } from '@/components/pagina-login'
 import { TabCatalogo } from '@/components/tab-catalogo'
 import { TabDashboard } from '@/components/tab-dashboard'
@@ -48,6 +49,24 @@ function useTema() {
   return [escuro, alternar] as const
 }
 
+/** o setup do município (ecrã de entrada) já foi feito nesta sessão do browser (separador) */
+const CHAVE_ENTRADA = 'ctrlf:zona-escolhida'
+function lerEntrada() {
+  try {
+    return sessionStorage.getItem(CHAVE_ENTRADA) === '1'
+  } catch {
+    return false
+  }
+}
+function marcarEntrada(v: boolean) {
+  try {
+    if (v) sessionStorage.setItem(CHAVE_ENTRADA, '1')
+    else sessionStorage.removeItem(CHAVE_ENTRADA)
+  } catch {
+    /* ignore */
+  }
+}
+
 type Rota = Vista | 'login'
 
 function lerRota(): Rota {
@@ -78,9 +97,11 @@ export default function App() {
   /** para onde ir depois de entrar, e porquê se pediu o login */
   const [login, setLogin] = useState<{ destino?: Vista; motivo?: string }>({})
   const [tour, setTour] = useState(false)
+  /** ecrã de entrada: setup do município antes do mapa (ligações diretas a #login também passam por ele) */
+  const [entrou, setEntrou] = useState(lerEntrada)
   const tourChave = tecnico ? 'tecnico' : 'publico'
   const tourVisto = useTourVisto(tourChave)
-  const pronto = sessao.estado.tipo !== 'a-carregar' && !!cat.base
+  const pronto = entrou && sessao.estado.tipo !== 'a-carregar' && !!cat.base
 
   useEffect(() => {
     const onHash = () => setRota(lerRota())
@@ -146,6 +167,18 @@ export default function App() {
     if (info?.restrito) irPara('mapa')
   }
 
+  if (!entrou) {
+    return (
+      <EcraEntrada
+        onConcluir={() => {
+          // protótipo: os dados do município não vão para o servidor; abre a app com o config real
+          marcarEntrada(true)
+          setEntrou(true)
+        }}
+      />
+    )
+  }
+
   if (!pronto) {
     return (
       <div className="flex h-svh">
@@ -198,6 +231,10 @@ export default function App() {
         onTema={alternarTema}
         onEntrar={() => pedirLogin()}
         onSair={sair}
+        onInicio={() => {
+          marcarEntrada(false)
+          setEntrou(false)
+        }}
       />
       <SidebarInset className="h-svh min-w-0 overflow-hidden">
         <header className="flex h-14 shrink-0 items-center gap-3 border-b bg-card px-3">
