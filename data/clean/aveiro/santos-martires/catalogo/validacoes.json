@@ -1,0 +1,247 @@
+[
+ {
+  "id": "con_0134",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5377,
+   0.4993,
+   0.3447,
+   0.1688,
+   0.1354,
+   0.0903,
+   0.078,
+   0.0612
+  ],
+  "estado": "validado",
+  "tempo_s": 2.6,
+  "validado_em": "2026-11-20T09:28:20.480Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0170",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8382,
+   0.2027,
+   0.1348,
+   0.1133,
+   0.0796,
+   0.0572
+  ],
+  "estado": "validado",
+  "tempo_s": 33.4,
+  "validado_em": "2026-11-20T09:33:36.191Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0140",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.7818,
+   0.7457,
+   0.6852,
+   0.3238,
+   0.3063,
+   0.1502,
+   0.0601
+  ],
+  "estado": "validado",
+  "tempo_s": 0.4,
+  "validado_em": "2026-11-20T09:33:36.665Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0142",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8135,
+   0.2824,
+   0.2709,
+   0.2093,
+   0.2087,
+   0.135,
+   0.1258,
+   0.0757,
+   0.0541
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 57.6,
+  "validado_em": "2026-11-20T09:34:34.279Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0131",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.9483,
+   0.9421,
+   0.9365,
+   0.8414,
+   0.8036,
+   0.6726,
+   0.6691,
+   0.6038,
+   0.1243,
+   0.1197,
+   0.0786
+  ],
+  "estado": "validado",
+  "tempo_s": 3.3,
+  "validado_em": "2026-11-20T09:34:37.604Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0135",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5655,
+   0.0681,
+   0.0591,
+   0.0557
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0131",
+  "validado_em": "2026-11-20T09:34:37.606Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0188",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.381,
+   0.3141,
+   0.291,
+   0.2763,
+   0.0992,
+   0.0875
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 3.6,
+  "validado_em": "2026-11-20T09:34:41.258Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0143",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.2762,
+   0.0783,
+   0.0713,
+   0.0704,
+   0.0649
+  ],
+  "estado": "rejeitado",
+  "duplicado_de": "con_0160",
+  "validado_em": "2026-11-20T09:34:58.130Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0160",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.6045,
+   0.1451,
+   0.1019,
+   0.0599
+  ],
+  "estado": "validado",
+  "tempo_s": 16.8,
+  "validado_em": "2026-11-20T09:34:58.130Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0144",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.1969,
+   0.1685,
+   0.1655,
+   0.1626,
+   0.1384,
+   0.0725
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 5.5,
+  "validado_em": "2026-11-20T09:35:03.675Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0139",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5309,
+   0.342,
+   0.068,
+   0.0522
+  ],
+  "estado": "rejeitado",
+  "tempo_s": 1.1,
+  "validado_em": "2026-11-20T09:35:04.894Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0148",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.8023,
+   0.3889,
+   0.0536
+  ],
+  "estado": "validado",
+  "tempo_s": 2.5,
+  "validado_em": "2026-11-20T09:54:24.493Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ },
+ {
+  "id": "con_0145",
+  "classe": "contentor",
+  "confiancas_vistas": [
+   0.5594,
+   0.4091,
+   0.3347
+  ],
+  "estado": "validado",
+  "tempo_s": 2.3,
+  "validado_em": "2026-11-20T09:54:26.877Z",
+  "validado_por": {
+   "utilizador": "marioh.com",
+   "nome": "Mario"
+  }
+ }
+]

@@ -39,6 +39,8 @@ interface Props {
   agrupar?: boolean
   /** cor dos marcadores: categoria (omissão) ou estado de validação */
   corPor?: CorPor
+  /** marcadores assinalados (ex.: escolhidos para unir duplicados), com um visto */
+  marcados?: string[]
 }
 
 // ------------------------------------------------------------------ confiança
@@ -156,14 +158,16 @@ function MapaBase({ escuro, onPronto }: { escuro: boolean; onPronto: () => void 
  */
 const escaparAttr = (t: string) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 
-function pin(e: Elemento, opts: { selecionado?: boolean; arrastar?: boolean; limiar?: number; corPor?: CorPor }) {
+type PinOpts = { selecionado?: boolean; arrastar?: boolean; limiar?: number; corPor?: CorPor; marcado?: boolean }
+
+function pin(e: Elemento, opts: PinOpts) {
   const Icon = iconeDe(e.tipo, e.subtipo)
   const porEstado = opts.corPor === 'estado'
   const cor = porEstado ? ESTADO_COR_VAR[e.estado] : TIPO_COR[e.tipo]
   // por estado, a cor já diz "pendente": o marcador fica cheio
   const porConfirmar = e.estado === 'pendente' && !porEstado
   const rejeitado = e.estado === 'rejeitado'
-  const w = opts.selecionado ? 36 : 27
+  const w = opts.selecionado || opts.marcado ? 36 : 27
   const h = Math.round(w * 1.36)
   const icone = renderToStaticMarkup(<Icon size={w * 0.48} strokeWidth={2.4} color={porConfirmar ? cor : 'white'} aria-hidden="true" />)
   const ponto = Math.round(w * 0.36)
@@ -181,6 +185,9 @@ function pin(e: Elemento, opts: { selecionado?: boolean; arrastar?: boolean; lim
       ${extra ? `<span style="position:absolute;left:-${w * 0.32}px;top:-${w * 0.22}px;min-width:${w * 0.62}px;height:${w * 0.52}px;padding:0 3px;border-radius:999px;
         background:var(--foreground);color:var(--background);font:600 ${Math.round(w * 0.36)}px/1 var(--font-sans);display:flex;align-items:center;justify-content:center;
         border:1.5px solid white;box-sizing:border-box">+${extra}</span>` : ''}
+      ${opts.marcado ? `<span style="position:absolute;left:-${w * 0.2}px;bottom:${w * 0.25}px;width:${w * 0.55}px;height:${w * 0.55}px;border-radius:50%;
+        background:var(--primary);color:var(--primary-foreground);border:2px solid white;box-sizing:border-box;display:flex;align-items:center;justify-content:center;
+        font:700 ${Math.round(w * 0.36)}px/1 var(--font-sans)">✓</span>` : ''}
     </div>`
   return L.divIcon({ className: 'ctrlf-marcador', html, iconSize: [w, h], iconAnchor: [w / 2, h - 1], tooltipAnchor: [0, -h + 4] })
 }
@@ -191,8 +198,8 @@ function pin(e: Elemento, opts: { selecionado?: boolean; arrastar?: boolean; lim
  * arrastar a meio e voltava a desenhar todos os marcadores.
  */
 const ICONES = new Map<string, L.DivIcon>()
-function pinCache(e: Elemento, opts: { selecionado?: boolean; arrastar?: boolean; limiar?: number; corPor?: CorPor }) {
-  const k = [e.id, e.tipo, e.subtipo, e.estado, e.confianca, e.fundidos?.length ?? 0, descricaoElemento(e), opts.selecionado, opts.arrastar, opts.limiar, opts.corPor].join('|')
+function pinCache(e: Elemento, opts: PinOpts) {
+  const k = [e.id, e.tipo, e.subtipo, e.estado, e.confianca, e.fundidos?.length ?? 0, descricaoElemento(e), opts.selecionado, opts.arrastar, opts.limiar, opts.corPor, opts.marcado].join('|')
   let i = ICONES.get(k)
   if (!i) {
     if (ICONES.size > 2000) ICONES.clear()
@@ -234,7 +241,8 @@ function Rotulo({ e }: { e: Elemento }) {
   )
 }
 
-export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, onMover, escuro = false, compacto, limiar = 0.9, agrupar, corPor = 'categoria' }: Props) {
+export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, onMover, escuro = false, compacto, limiar = 0.9, agrupar, corPor = 'categoria', marcados }: Props) {
+  const marc = useMemo(() => new Set(marcados ?? []), [marcados])
   const sel = useMemo(() => elementos.find((e) => e.id === selecionado), [elementos, selecionado])
   // eslint-disable-next-line react-hooks/exhaustive-deps -- recalcula quando o tema muda
   const primaria = useMemo(() => corTema('--primary'), [escuro])
@@ -252,7 +260,7 @@ export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, on
       <Marker
         key={e.id}
         position={[e.lat, e.lon]}
-        icon={pinCache(e, { limiar, corPor })}
+        icon={pinCache(e, { limiar, corPor, marcado: marc.has(e.id) })}
         // o Leaflet torna o marcador focável (role=button, Enter abre); o nome vem do role=img dentro do ícone
         eventHandlers={{ click: () => onSelect(e.id) }}
       >
