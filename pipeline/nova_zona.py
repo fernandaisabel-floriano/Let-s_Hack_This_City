@@ -157,7 +157,10 @@ def main() -> None:
     else:
         print("edifícios do OSM (Overpass)…", flush=True)
         ed = edificios(cfg_zona["bbox"])
-        if ed is None:
+        if ed is None and edif_path.exists():
+            print(f"  Overpass indisponível — fica o ficheiro de edifícios que já existia ({edif_path.name})")
+            cfg_zona["m6"] = {"edificios_geojson": str(edif_path.relative_to(ROOT))}
+        elif ed is None:
             print("  AVISO: Overpass indisponível — a zona fica sem edifícios (os pontos não são afastados das fachadas)")
             cfg_zona["m6"] = {"edificios_geojson": None}
         else:

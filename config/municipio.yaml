@@ -142,7 +142,7 @@ contentores_clip:
 qualidade:
   ativo: true
   lado_min_px: {sinal: 30, candeeiro: 30, contentor: 42}   # candeeiros sem rótulos: o mesmo dos sinais
-  nitidez_min: 50           # variância do Laplaciano: só o muito tremido
+  nitidez_min: 100          # variância do Laplaciano (tremido). 19/11: acima de 100 só põe de lado mais reais (150: 9 % das vistas reais, os falsos quase não sobem)
   brilho_min: 15            # quase preto (noite)
   brilho_max: 245           # queimado
   contraste_min: 0

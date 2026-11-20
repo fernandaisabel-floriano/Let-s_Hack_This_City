@@ -1,9 +1,9 @@
 {
- "delta_heading_graus": -4.5,
+ "delta_heading_graus": 6.5,
  "tau_s": 0.0,
  "tau_estimado": false,
- "erro_mediano_antes_m": 4.13,
- "erro_mediano_depois_m": 2.66,
- "n_raios": 29,
+ "erro_mediano_antes_m": 4.3,
+ "erro_mediano_depois_m": 2.91,
+ "n_raios": 33,
  "n_elementos": 7
 }

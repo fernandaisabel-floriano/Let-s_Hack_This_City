@@ -107,7 +107,8 @@ def evaluation_polygon(cfg: dict):
     inv = Transformer.from_crs(crs, "EPSG:4326", always_xy=True).transform
     # linemerge junta troços contíguos (a rotunda fica um anel fechado), para que
     # as pontas planas só existam onde as vias acabam e não nas junções.
-    lines = linemerge(unary_union([transform(fwd, LineString(ln)) for _, ln in _lines(cfg)]))
+    u = unary_union([transform(fwd, LineString(ln)) for _, ln in _lines(cfg)])
+    lines = u if u.geom_type == "LineString" else linemerge(u)   # uma só via: o linemerge falha
     buf = float(z["buffer_avaliacao_m"])
     poly = lines.buffer(buf, cap_style=2 if z["pontas"] == "planas" else 1)
     # Pontas redondas só em extremos escolhidos (p.ex. para incluir um ecoponto
