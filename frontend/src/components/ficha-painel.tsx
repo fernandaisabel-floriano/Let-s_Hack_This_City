@@ -1,6 +1,7 @@
 import { Lock, X } from 'lucide-react'
 import { useState } from 'react'
 import { Duplicados } from '@/components/duplicados'
+import { ReportarProblema } from '@/components/reportar-problema'
 import { Acoes, CoordenadasEditor, Detalhes, Recorte, titulo } from '@/components/ficha'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Button } from '@/components/ui/button'
@@ -68,13 +69,15 @@ export function FichaPainel({ cat, el, onFechar, onPedirLogin, editarPosicao, on
               {verCoords && <CoordenadasEditor el={el} onGuardar={(lat, lon) => cat.decidir(el.id, 'corrigido', { lat, lon })} />}
             </div>
           ) : (
-            el.estado === 'pendente' &&
-            onPedirLogin && (
-              <button onClick={onPedirLogin} className="flex items-center gap-2 rounded-md bg-muted px-3 py-2 text-left text-xs text-muted-foreground hover:bg-accent">
-                <Lock className="size-3.5 shrink-0" aria-hidden="true" />
-                Este elemento ainda não foi confirmado por um técnico. É técnico da Câmara? Entre para validar.
-              </button>
-            )
+            <>
+              <ReportarProblema cat={cat} id={el.id} />
+              {el.estado === 'pendente' && onPedirLogin && (
+                <button onClick={onPedirLogin} className="flex items-center gap-2 rounded-md bg-muted px-3 py-2 text-left text-xs text-muted-foreground hover:bg-accent">
+                  <Lock className="size-3.5 shrink-0" aria-hidden="true" />
+                  Este elemento ainda não foi confirmado por um técnico. É técnico da Câmara? Entre para validar.
+                </button>
+              )}
+            </>
           )}
           <Duplicados cat={cat} el={el} />
           <Detalhes

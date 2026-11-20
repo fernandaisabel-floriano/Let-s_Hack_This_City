@@ -7,19 +7,199 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6570835,
-     40.6388106
+     -8.6572507,
+     40.638757
+    ]
+   },
+   "properties": {
+    "id": "sin_0067",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44338.8,
+    "y": 107893.92,
+    "epsg_local": 3763,
+    "confianca": 0.912,
+    "n_vistas": 14,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:11+00:00",
+    "ultima_vista": "2026-11-17T16:15:57.760000+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002752.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002752_00819.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6571231,
+     40.6388243
     ]
    },
    "properties": {
     "id": "sin_0004",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44324.62,
-    "y": 107899.79,
+    "x": -44327.96,
+    "y": 107901.33,
     "epsg_local": 3763,
-    "confianca": 0.976,
-    "n_vistas": 19,
+    "confianca": 0.954,
+    "n_vistas": 14,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:11+00:00",
+    "ultima_vista": "2026-11-17T16:16:04.393133+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003427.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003427_00948.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6570838,
+     40.6388242
+    ]
+   },
+   "properties": {
+    "id": "sin_0005",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44324.64,
+    "y": 107901.3,
+    "epsg_local": 3763,
+    "confianca": 0.83,
+    "n_vistas": 8,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:12+00:00",
+    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00981.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572859,
+     40.6387377
+    ]
+   },
+   "properties": {
+    "id": "sin_0030",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44341.79,
+    "y": 107891.79,
+    "epsg_local": 3763,
+    "confianca": 0.982,
+    "n_vistas": 8,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:12+00:00",
+    "ultima_vista": "2026-11-17T16:15:55.060078+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002921.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002921_00856.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6570824,
+     40.6388243
+    ]
+   },
+   "properties": {
+    "id": "sin_0008",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44324.52,
+    "y": 107901.31,
+    "epsg_local": 3763,
+    "confianca": 0.864,
+    "n_vistas": 8,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:12+00:00",
+    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00974.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658679,
+     40.6378267
+    ]
+   },
+   "properties": {
+    "id": "sin_0061",
+    "tipo": "sinal",
+    "subtipo": "limite_desconhecido",
+    "x": -44460.24,
+    "y": 107791.33,
+    "epsg_local": 3763,
+    "confianca": 0.922,
+    "n_vistas": 8,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:37+00:00",
+    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
+    "imagem": "mapillary/images/541325036871456.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/541325036871456_00089.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": true,
+    "subtipo_motivo": "anel vermelho numa vista, valor do limite não lido"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657015,
+     40.638864
+    ]
+   },
+   "properties": {
+    "id": "sin_0068",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44318.79,
+    "y": 107905.68,
+    "epsg_local": 3763,
+    "confianca": 0.935,
+    "n_vistas": 7,
     "estado": "auto",
     "primeira_vista": "2019-08-09T15:39:11+00:00",
     "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
@@ -37,26 +217,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6570723,
-     40.6388192
+     -8.6572461,
+     40.6387864
     ]
    },
    "properties": {
-    "id": "sin_0005",
+    "id": "sin_0016",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44323.67,
-    "y": 107900.74,
+    "x": -44338.39,
+    "y": 107897.18,
     "epsg_local": 3763,
-    "confianca": 0.967,
-    "n_vistas": 12,
+    "confianca": 0.95,
+    "n_vistas": 5,
     "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:12+00:00",
-    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
+    "primeira_vista": "2019-08-09T15:39:08+00:00",
+    "ultima_vista": "2026-11-17T16:15:50.326911+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002921.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00973.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002921_00857.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -67,116 +247,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6570829,
-     40.6388247
+     -8.6570345,
+     40.6388757
     ]
    },
    "properties": {
-    "id": "sin_0006",
+    "id": "sin_0069",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44324.56,
-    "y": 107901.35,
+    "x": -44320.43,
+    "y": 107906.99,
     "epsg_local": 3763,
-    "confianca": 0.946,
-    "n_vistas": 10,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:12+00:00",
-    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00972.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6572158,
-     40.6387337
-    ]
-   },
-   "properties": {
-    "id": "sin_0001",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44335.86,
-    "y": 107891.31,
-    "epsg_local": 3763,
-    "confianca": 0.922,
-    "n_vistas": 16,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:15:55.060078+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003047.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003047_00876.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6572118,
-     40.6387367
-    ]
-   },
-   "properties": {
-    "id": "sin_0002",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44335.52,
-    "y": 107891.64,
-    "epsg_local": 3763,
-    "confianca": 0.951,
-    "n_vistas": 8,
+    "confianca": 0.904,
+    "n_vistas": 2,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:15:55.060078+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003090.jpg",
+    "ultima_vista": "2026-11-17T16:16:00.726578+00:00",
+    "imagem": "mapillary/images/759446278037143.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003090_00883.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "vistas discordam ({'stop': 1.341425, 'outro_sinal': 1.294314})"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6570519,
-     40.6388339
-    ]
-   },
-   "properties": {
-    "id": "sin_0030",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44321.93,
-    "y": 107902.36,
-    "epsg_local": 3763,
-    "confianca": 0.732,
-    "n_vistas": 4,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:15+00:00",
-    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00983.jpg",
+    "recorte": "deteccoes/recortes/759446278037143_00361.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -187,149 +277,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572761,
-     40.638725
+     -8.6586842,
+     40.6378807
     ]
    },
    "properties": {
-    "id": "sin_0029",
+    "id": "sin_0065",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44340.97,
-    "y": 107890.38,
+    "x": -44460.64,
+    "y": 107797.33,
     "epsg_local": 3763,
     "confianca": 0.942,
-    "n_vistas": 8,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:12+00:00",
-    "ultima_vista": "2026-11-17T16:15:55.060078+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003147.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003147_00895.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6572441,
-     40.6387434
-    ]
-   },
-   "properties": {
-    "id": "sin_0051",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44338.25,
-    "y": 107892.41,
-    "epsg_local": 3763,
-    "confianca": 0.935,
-    "n_vistas": 4,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:15+00:00",
-    "ultima_vista": "2026-11-17T16:15:56.360044+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003186.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003186_00902.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6586867,
-     40.6378438
-    ]
-   },
-   "properties": {
-    "id": "sin_0010",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44460.88,
-    "y": 107793.23,
-    "epsg_local": 3763,
-    "confianca": 0.88,
-    "n_vistas": 6,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:38+00:00",
-    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
-    "imagem": "mapillary/images/909391203345659.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/909391203345659_00193.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6570215,
-     40.6388272
-    ]
-   },
-   "properties": {
-    "id": "sin_0008",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44319.36,
-    "y": 107901.6,
-    "epsg_local": 3763,
-    "confianca": 0.855,
-    "n_vistas": 4,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:15+00:00",
-    "ultima_vista": "2026-11-17T16:16:07.259711+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003513.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003513_00965.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.658651,
-     40.6378361
-    ]
-   },
-   "properties": {
-    "id": "sin_0017",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44457.87,
-    "y": 107792.36,
-    "epsg_local": 3763,
-    "confianca": 0.871,
-    "n_vistas": 4,
+    "n_vistas": 5,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:37+00:00",
-    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
-    "imagem": "mapillary/images/608010640585505.jpg",
+    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
+    "imagem": "mapillary/images/549710842916356.jpg",
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/608010640585505_00537.jpg",
+    "recorte": "deteccoes/recortes/549710842916356_00211.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
+    "subtipo_incerto": true,
+    "subtipo_motivo": "sem votos certos"
    }
   },
   {
@@ -342,7 +312,7 @@
     ]
    },
    "properties": {
-    "id": "sin_0019",
+    "id": "sin_0071",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
     "x": -44463.86,
@@ -367,29 +337,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6584768,
-     40.6379073
+     -8.6573694,
+     40.6388819
     ]
    },
    "properties": {
-    "id": "sin_0023",
+    "id": "sin_0020",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44443.08,
-    "y": 107800.18,
+    "x": -44348.76,
+    "y": 107907.85,
     "epsg_local": 3763,
-    "confianca": 0.904,
-    "n_vistas": 3,
+    "confianca": 0.863,
+    "n_vistas": 5,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:37+00:00",
-    "ultima_vista": "2020-07-28T21:06:21+00:00",
-    "imagem": "mapillary/images/262929075567708.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/262929075567708_00440.jpg",
+    "primeira_vista": "2019-08-09T15:39:04+00:00",
+    "ultima_vista": "2026-11-17T16:15:35.294022+00:00",
+    "imagem": "mapillary/images/1924321491055960.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/1924321491055960_00351.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573822,
+     40.6388839
+    ]
+   },
+   "properties": {
+    "id": "sin_0024",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44349.84,
+    "y": 107908.08,
+    "epsg_local": 3763,
+    "confianca": 0.939,
+    "n_vistas": 5,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:01+00:00",
+    "ultima_vista": "2026-11-17T16:15:33.695755+00:00",
+    "imagem": "mapillary/images/556053389113045.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/556053389113045_00338.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
    }
   },
   {
@@ -408,18 +408,18 @@
     "x": -44440.84,
     "y": 107787.85,
     "epsg_local": 3763,
-    "confianca": 0.922,
+    "confianca": 0.899,
     "n_vistas": 6,
     "estado": "pendente",
     "primeira_vista": "2021-05-17T15:08:14.903000+00:00",
     "ultima_vista": "2021-08-28T18:22:20.217000+00:00",
-    "imagem": "mapillary/images/844120776190531.jpg",
+    "imagem": "mapillary/images/549710842916356.jpg",
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/844120776190531_00038.jpg",
+    "recorte": "deteccoes/recortes/549710842916356_00212.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "vistas discordam ({'outro_sinal': 0.980756, 'cedencia_passagem': 0.8320239999999994})"
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
    }
   },
   {
@@ -427,56 +427,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.657314,
-     40.6388329
+     -8.6584404,
+     40.6377806
     ]
    },
    "properties": {
-    "id": "sin_0016",
+    "id": "sin_0075",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44344.1,
-    "y": 107902.38,
+    "x": -44440.09,
+    "y": 107786.09,
     "epsg_local": 3763,
-    "confianca": 0.845,
+    "confianca": 0.945,
     "n_vistas": 4,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:06+00:00",
-    "ultima_vista": "2026-11-17T16:15:35.294022+00:00",
-    "imagem": "mapillary/images/556053389113045.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/556053389113045_00338.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6570326,
-     40.6388679
-    ]
-   },
-   "properties": {
-    "id": "sin_0009",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44320.28,
-    "y": 107906.12,
-    "epsg_local": 3763,
-    "confianca": 0.93,
-    "n_vistas": 5,
     "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:16:04.393133+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003228.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003228_00911.jpg",
+    "primeira_vista": "2021-05-17T15:08:23.406000+00:00",
+    "ultima_vista": "2021-08-28T18:22:21.023000+00:00",
+    "imagem": "mapillary/images/464745681158829.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/464745681158829_00244.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -517,86 +487,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6584588,
-     40.6377833
-    ]
-   },
-   "properties": {
-    "id": "sin_0027",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44441.64,
-    "y": 107786.4,
-    "epsg_local": 3763,
-    "confianca": 0.915,
-    "n_vistas": 5,
-    "estado": "auto",
-    "primeira_vista": "2021-05-17T15:08:17.869000+00:00",
-    "ultima_vista": "2021-08-28T18:22:20.217000+00:00",
-    "imagem": "mapillary/images/221695656639355.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/221695656639355_00237.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6573904,
-     40.638629
-    ]
-   },
-   "properties": {
-    "id": "sin_0031",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44350.7,
-    "y": 107879.78,
-    "epsg_local": 3763,
-    "confianca": 0.916,
-    "n_vistas": 5,
-    "estado": "auto",
-    "primeira_vista": "2026-11-17T16:15:32.129122+00:00",
-    "ultima_vista": "2026-11-17T16:15:40.327200+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002705.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002705_00808.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6585625,
-     40.6377346
+     -8.6585628,
+     40.6377341
     ]
    },
    "properties": {
     "id": "sin_0025",
     "tipo": "sinal",
     "subtipo": "cedencia_passagem",
-    "x": -44450.45,
-    "y": 107781.05,
+    "x": -44450.47,
+    "y": 107780.99,
     "epsg_local": 3763,
-    "confianca": 0.825,
-    "n_vistas": 2,
-    "estado": "pendente",
+    "confianca": 0.9,
+    "n_vistas": 4,
+    "estado": "auto",
     "primeira_vista": "2021-05-17T15:08:14.903000+00:00",
     "ultima_vista": "2021-05-17T15:08:23.406000+00:00",
-    "imagem": "mapillary/images/140402778072748.jpg",
+    "imagem": "mapillary/images/844120776190531.jpg",
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/140402778072748_00052.jpg",
+    "recorte": "deteccoes/recortes/844120776190531_00038.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -607,59 +517,89 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572519,
-     40.6387914
+     -8.6586692,
+     40.6376875
     ]
    },
    "properties": {
-    "id": "sin_0052",
+    "id": "sin_0076",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44338.88,
-    "y": 107897.74,
+    "x": -44459.5,
+    "y": 107775.87,
     "epsg_local": 3763,
-    "confianca": 0.729,
-    "n_vistas": 5,
+    "confianca": 0.84,
+    "n_vistas": 3,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:06+00:00",
+    "primeira_vista": "2021-05-17T15:08:14.903000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/608010640585505.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/608010640585505_00540.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6571224,
+     40.6387788
+    ]
+   },
+   "properties": {
+    "id": "sin_0003",
+    "tipo": "sinal",
+    "subtipo": "limite_desconhecido",
+    "x": -44327.93,
+    "y": 107896.27,
+    "epsg_local": 3763,
+    "confianca": 0.913,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:38.693922+00:00",
+    "ultima_vista": "2026-11-17T16:15:59.226622+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002705.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002705_00809.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": true,
+    "subtipo_motivo": "valor do limite não lido"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573373,
+     40.6387473
+    ]
+   },
+   "properties": {
+    "id": "sin_0029",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44346.13,
+    "y": 107892.89,
+    "epsg_local": 3763,
+    "confianca": 0.787,
+    "n_vistas": 7,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:30.662511+00:00",
     "ultima_vista": "2026-11-17T16:15:48.960267+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002921.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "fonte": "video_proprio",
+    "atribuicao": "",
     "recorte": "deteccoes/recortes/rua_sw_ne_1117_002921_00859.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6584588,
-     40.6378669
-    ]
-   },
-   "properties": {
-    "id": "sin_0034",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44441.59,
-    "y": 107795.68,
-    "epsg_local": 3763,
-    "confianca": 0.807,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2021-05-17T15:08:28.074000+00:00",
-    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
-    "imagem": "mapillary/images/549710842916356.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/549710842916356_00213.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
    }
   },
   {
@@ -688,68 +628,8 @@
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/512376593282609_00418.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.65705,
-     40.638879
-    ]
-   },
-   "properties": {
-    "id": "sin_0053",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44321.74,
-    "y": 107907.37,
-    "epsg_local": 3763,
-    "confianca": 0.914,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:15:57.760000+00:00",
-    "imagem": "mapillary/images/759446278037143.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/759446278037143_00361.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6583621,
-     40.6379673
-    ]
-   },
-   "properties": {
-    "id": "sin_0054",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44433.34,
-    "y": 107806.79,
-    "epsg_local": 3763,
-    "confianca": 0.894,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2020-07-28T21:06:22+00:00",
-    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00552.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
+    "subtipo_incerto": true,
+    "subtipo_motivo": "sem votos certos"
    }
   },
   {
@@ -762,24 +642,24 @@
     ]
    },
    "properties": {
-    "id": "sin_0055",
+    "id": "sin_0062",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
     "x": -44452.09,
     "y": 107805.71,
     "epsg_local": 3763,
-    "confianca": 0.807,
-    "n_vistas": 2,
+    "confianca": 0.795,
+    "n_vistas": 4,
     "estado": "pendente",
-    "primeira_vista": "2020-07-28T21:06:23+00:00",
+    "primeira_vista": "2020-07-28T21:06:21+00:00",
     "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
-    "imagem": "mapillary/images/608010640585505.jpg",
+    "imagem": "mapillary/images/565606381092155.jpg",
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/608010640585505_00539.jpg",
+    "recorte": "deteccoes/recortes/565606381092155_00495.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
    }
   },
   {
@@ -794,7 +674,7 @@
    "properties": {
     "id": "sin_0038",
     "tipo": "sinal",
-    "subtipo": "outro_sinal",
+    "subtipo": "stop",
     "x": -44355.22,
     "y": 107921.94,
     "epsg_local": 3763,
@@ -809,7 +689,7 @@
     "recorte": "deteccoes/recortes/1924321491055960_00349.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
+    "subtipo_motivo": "stop visto numa só vista certa"
    }
   },
   {
@@ -817,29 +697,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6574161,
-     40.6386263
+     -8.6574264,
+     40.6386402
     ]
    },
    "properties": {
     "id": "sin_0043",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44352.88,
-    "y": 107879.49,
+    "x": -44353.74,
+    "y": 107881.04,
     "epsg_local": 3763,
-    "confianca": 0.921,
-    "n_vistas": 6,
+    "confianca": 0.924,
+    "n_vistas": 5,
     "estado": "auto",
     "primeira_vista": "2026-11-17T16:15:29.162544+00:00",
-    "ultima_vista": "2026-11-17T16:15:43.360444+00:00",
+    "ultima_vista": "2026-11-17T16:15:44.727067+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002705.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002705_00809.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002705_00808.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583482,
+     40.6379761
+    ]
+   },
+   "properties": {
+    "id": "sin_0054",
+    "tipo": "sinal",
+    "subtipo": "outro_sinal",
+    "x": -44432.16,
+    "y": 107807.76,
+    "epsg_local": 3763,
+    "confianca": 0.925,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:14:10.030000+00:00",
+    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00552.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": true,
+    "subtipo_motivo": "sem votos certos"
    }
   },
   {
@@ -907,232 +817,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6573959,
-     40.6388993
+     -8.6576036,
+     40.6385211
     ]
    },
    "properties": {
-    "id": "sin_0020",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44350.99,
-    "y": 107909.79,
-    "epsg_local": 3763,
-    "confianca": 0.866,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:01+00:00",
-    "ultima_vista": "2019-08-09T15:39:05+00:00",
-    "imagem": "mapillary/images/139830181467436.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/139830181467436_00330.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6572824,
-     40.6389018
-    ]
-   },
-   "properties": {
-    "id": "sin_0057",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44341.38,
-    "y": 107910.01,
-    "epsg_local": 3763,
-    "confianca": 0.853,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:08+00:00",
-    "ultima_vista": "2019-08-09T15:39:08+00:00",
-    "imagem": "mapillary/images/1924321491055960.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/1924321491055960_00351.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "só visto de costas"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6573759,
-     40.6386473
-    ]
-   },
-   "properties": {
-    "id": "sin_0058",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44349.46,
-    "y": 107881.8,
-    "epsg_local": 3763,
-    "confianca": 0.747,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:38.693922+00:00",
-    "ultima_vista": "2026-11-17T16:15:40.327200+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002656.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002656_00804.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6587064,
-     40.6376894
-    ]
-   },
-   "properties": {
-    "id": "sin_0048",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44462.65,
-    "y": 107776.1,
-    "epsg_local": 3763,
-    "confianca": 0.655,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2021-05-17T15:08:17.869000+00:00",
-    "ultima_vista": "2021-05-17T15:08:17.869000+00:00",
-    "imagem": "mapillary/images/358223035931413.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/358223035931413_00021.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "sem votos certos"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6586975,
-     40.6379915
-    ]
-   },
-   "properties": {
-    "id": "sin_0047",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44461.7,
-    "y": 107809.64,
-    "epsg_local": 3763,
-    "confianca": 0.65,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2021-08-28T18:22:12.103000+00:00",
-    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
-    "imagem": "mapillary/images/608010640585505.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/608010640585505_00543.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": true,
-    "subtipo_motivo": "só visto de costas"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6577938,
-     40.6383672
-    ]
-   },
-   "properties": {
-    "id": "can_0120",
+    "id": "can_0051",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44385.0,
-    "y": 107850.91,
+    "x": -44368.81,
+    "y": 107867.9,
     "epsg_local": 3763,
-    "confianca": 0.86,
-    "n_vistas": 18,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:26+00:00",
-    "ultima_vista": "2026-11-17T16:15:10.796456+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001774.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001774_00686.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6578284,
-     40.6383554
-    ]
-   },
-   "properties": {
-    "id": "can_0131",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44387.93,
-    "y": 107849.61,
-    "epsg_local": 3763,
-    "confianca": 0.819,
-    "n_vistas": 9,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:29+00:00",
-    "ultima_vista": "2026-11-17T16:15:10.796456+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001731.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001731_00677.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.657587,
-     40.6385266
-    ]
-   },
-   "properties": {
-    "id": "can_0069",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44367.4,
-    "y": 107868.5,
-    "epsg_local": 3763,
-    "confianca": 0.967,
-    "n_vistas": 15,
+    "confianca": 0.961,
+    "n_vistas": 20,
     "estado": "auto",
     "primeira_vista": "2019-08-09T15:39:22+00:00",
-    "ultima_vista": "2026-11-17T16:15:32.129122+00:00",
+    "ultima_vista": "2026-11-17T16:15:29.162544+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002324.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
@@ -1147,56 +847,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6579731,
-     40.6382571
+     -8.6575518,
+     40.6385581
     ]
    },
    "properties": {
-    "id": "can_0061",
+    "id": "can_0052",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44400.24,
-    "y": 107838.77,
+    "x": -44364.4,
+    "y": 107871.98,
     "epsg_local": 3763,
-    "confianca": 0.906,
-    "n_vistas": 14,
-    "estado": "auto",
-    "primeira_vista": "2026-11-17T16:14:33.430933+00:00",
-    "ultima_vista": "2026-11-17T16:14:59.963455+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001289.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001289_00644.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6575483,
-     40.6385599
-    ]
-   },
-   "properties": {
-    "id": "can_0056",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44364.1,
-    "y": 107872.18,
-    "epsg_local": 3763,
-    "confianca": 0.89,
-    "n_vistas": 9,
+    "confianca": 0.863,
+    "n_vistas": 12,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:22+00:00",
     "ultima_vista": "2026-11-17T16:15:32.129122+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002459.jpg",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002415.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002459_00760.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002415_00749.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1207,26 +877,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6578162,
-     40.6383614
+     -8.6575366,
+     40.6385772
     ]
    },
    "properties": {
     "id": "can_0053",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44386.9,
-    "y": 107850.27,
+    "x": -44363.1,
+    "y": 107874.1,
     "epsg_local": 3763,
-    "confianca": 0.875,
-    "n_vistas": 6,
+    "confianca": 0.748,
+    "n_vistas": 7,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:03.430011+00:00",
-    "ultima_vista": "2026-11-17T16:15:13.794689+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001910.jpg",
+    "primeira_vista": "2026-11-17T16:15:07.829878+00:00",
+    "ultima_vista": "2026-11-17T16:15:35.294022+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002554.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001910_00696.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002554_00783.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1237,56 +907,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6578353,
-     40.6383522
+     -8.6577114,
+     40.6384418
     ]
    },
    "properties": {
-    "id": "can_0118",
+    "id": "can_0054",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44388.52,
-    "y": 107849.26,
+    "x": -44377.98,
+    "y": 107859.15,
     "epsg_local": 3763,
-    "confianca": 0.911,
-    "n_vistas": 6,
+    "confianca": 0.921,
+    "n_vistas": 11,
     "estado": "auto",
-    "primeira_vista": "2026-11-17T16:14:43.663955+00:00",
-    "ultima_vista": "2026-11-17T16:15:15.294644+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001731.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001731_00676.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.657555,
-     40.6385617
-    ]
-   },
-   "properties": {
-    "id": "can_0111",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44364.67,
-    "y": 107872.38,
-    "epsg_local": 3763,
-    "confianca": 0.93,
-    "n_vistas": 10,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:24+00:00",
-    "ultima_vista": "2026-11-17T16:15:32.129122+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002459.jpg",
+    "primeira_vista": "2019-08-09T15:39:26+00:00",
+    "ultima_vista": "2026-11-17T16:15:18.194556+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001999.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002459_00758.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001999_00706.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1297,26 +937,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.657713,
-     40.6384242
+     -8.6576551,
+     40.6384879
     ]
    },
    "properties": {
-    "id": "can_0051",
+    "id": "can_0158",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44378.13,
-    "y": 107857.2,
+    "x": -44373.19,
+    "y": 107864.24,
     "epsg_local": 3763,
-    "confianca": 0.857,
-    "n_vistas": 6,
+    "confianca": 0.852,
+    "n_vistas": 9,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:15.294644+00:00",
-    "ultima_vista": "2026-11-17T16:15:22.794411+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002042.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002042_00710.jpg",
+    "primeira_vista": "2019-08-09T15:39:24+00:00",
+    "ultima_vista": "2026-11-17T16:15:19.661167+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002086.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002086_00716.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1327,56 +967,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6577283,
-     40.6383852
+     -8.6575448,
+     40.6385614
     ]
    },
    "properties": {
-    "id": "can_0055",
+    "id": "can_0056",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44379.45,
-    "y": 107852.87,
+    "x": -44363.81,
+    "y": 107872.35,
     "epsg_local": 3763,
-    "confianca": 0.769,
-    "n_vistas": 6,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:14:58.196856+00:00",
-    "ultima_vista": "2026-11-17T16:15:12.329733+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001442.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001442_00654.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.657376,
-     40.6386933
-    ]
-   },
-   "properties": {
-    "id": "can_0075",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44349.44,
-    "y": 107886.91,
-    "epsg_local": 3763,
-    "confianca": 0.82,
+    "confianca": 0.851,
     "n_vistas": 11,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:33.695755+00:00",
-    "ultima_vista": "2026-11-17T16:15:48.960267+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002921.jpg",
+    "primeira_vista": "2026-11-17T16:15:15.294644+00:00",
+    "ultima_vista": "2026-11-17T16:15:35.294022+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002506.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002921_00860.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002506_00771.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1387,18 +997,78 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6584594,
-     40.6377863
+     -8.6585614,
+     40.637801
+    ]
+   },
+   "properties": {
+    "id": "can_0058",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44450.31,
+    "y": 107788.42,
+    "epsg_local": 3763,
+    "confianca": 0.908,
+    "n_vistas": 9,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:38+00:00",
+    "ultima_vista": "2021-08-28T18:22:19.128000+00:00",
+    "imagem": "mapillary/images/807789379917576.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/807789379917576_00232.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6574277,
+     40.6386512
+    ]
+   },
+   "properties": {
+    "id": "can_0059",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44353.84,
+    "y": 107882.26,
+    "epsg_local": 3763,
+    "confianca": 0.783,
+    "n_vistas": 8,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:29.162544+00:00",
+    "ultima_vista": "2026-11-17T16:15:46.127033+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002879.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002879_00851.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584515,
+     40.6377902
     ]
    },
    "properties": {
     "id": "can_0060",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44441.69,
-    "y": 107786.73,
+    "x": -44441.02,
+    "y": 107787.16,
     "epsg_local": 3763,
-    "confianca": 0.932,
+    "confianca": 0.938,
     "n_vistas": 9,
     "estado": "auto",
     "primeira_vista": "2019-08-09T15:39:37+00:00",
@@ -1407,6 +1077,96 @@
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/221695656639355_00240.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6578257,
+     40.6383838
+    ]
+   },
+   "properties": {
+    "id": "can_0159",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44387.69,
+    "y": 107852.77,
+    "epsg_local": 3763,
+    "confianca": 0.738,
+    "n_vistas": 9,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:14:42.230667+00:00",
+    "ultima_vista": "2026-11-17T16:15:06.363256+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001599.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001599_00662.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.658161,
+     40.6381148
+    ]
+   },
+   "properties": {
+    "id": "can_0063",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44416.23,
+    "y": 107823.06,
+    "epsg_local": 3763,
+    "confianca": 0.897,
+    "n_vistas": 12,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:30+00:00",
+    "ultima_vista": "2026-11-17T16:14:38.064122+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000591.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000591_00596.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6581806,
+     40.6380957
+    ]
+   },
+   "properties": {
+    "id": "can_0065",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44417.9,
+    "y": 107820.95,
+    "epsg_local": 3763,
+    "confianca": 0.751,
+    "n_vistas": 9,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:30+00:00",
+    "ultima_vista": "2026-11-17T16:14:36.597511+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000699.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000699_00600.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1447,36 +1207,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6579004,
-     40.6382794
-    ]
-   },
-   "properties": {
-    "id": "can_0063",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44394.07,
-    "y": 107841.21,
-    "epsg_local": 3763,
-    "confianca": 0.691,
-    "n_vistas": 10,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:30+00:00",
-    "ultima_vista": "2026-11-17T16:14:54.696944+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001337.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001337_00648.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -8.6584337,
      40.6377884
     ]
@@ -1507,26 +1237,86 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572558,
-     40.6387751
+     -8.6588018,
+     40.6379449
     ]
    },
    "properties": {
-    "id": "can_0083",
+    "id": "can_0068",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44339.22,
-    "y": 107895.93,
+    "x": -44470.55,
+    "y": 107804.52,
     "epsg_local": 3763,
-    "confianca": 0.886,
-    "n_vistas": 10,
+    "confianca": 0.837,
+    "n_vistas": 7,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:15:59.226622+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003005.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003005_00873.jpg",
+    "primeira_vista": "2021-05-17T15:08:17.869000+00:00",
+    "ultima_vista": "2021-08-28T18:22:12.103000+00:00",
+    "imagem": "mapillary/images/127103002827974.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/127103002827974_00123.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6576505,
+     40.638526
+    ]
+   },
+   "properties": {
+    "id": "can_0069",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44372.77,
+    "y": 107868.47,
+    "epsg_local": 3763,
+    "confianca": 0.944,
+    "n_vistas": 7,
+    "estado": "auto",
+    "primeira_vista": "2026-11-17T16:15:03.430011+00:00",
+    "ultima_vista": "2026-11-17T16:15:16.761267+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001955.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001955_00701.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6585756,
+     40.6378079
+    ]
+   },
+   "properties": {
+    "id": "can_0070",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44451.51,
+    "y": 107789.19,
+    "epsg_local": 3763,
+    "confianca": 0.907,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2021-05-17T15:08:23.406000+00:00",
+    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
+    "imagem": "mapillary/images/176303467780098.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/176303467780098_00083.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1567,36 +1357,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6585762,
-     40.6378074
-    ]
-   },
-   "properties": {
-    "id": "can_0070",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44451.56,
-    "y": 107789.14,
-    "epsg_local": 3763,
-    "confianca": 0.907,
-    "n_vistas": 5,
-    "estado": "auto",
-    "primeira_vista": "2021-05-17T15:08:23.406000+00:00",
-    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
-    "imagem": "mapillary/images/176303467780098.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/176303467780098_00083.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -8.6586414,
      40.6377229
     ]
@@ -1617,36 +1377,6 @@
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/357199595741657_00067.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6588023,
-     40.6379513
-    ]
-   },
-   "properties": {
-    "id": "can_0133",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44470.59,
-    "y": 107805.23,
-    "epsg_local": 3763,
-    "confianca": 0.912,
-    "n_vistas": 5,
-    "estado": "auto",
-    "primeira_vista": "2021-05-17T15:08:17.869000+00:00",
-    "ultima_vista": "2021-05-17T15:08:46.079000+00:00",
-    "imagem": "mapillary/images/491355092121556.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/491355092121556_00147.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1687,26 +1417,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.657509,
-     40.6390268
+     -8.6572487,
+     40.6388813
     ]
    },
    "properties": {
-    "id": "can_0079",
+    "id": "can_0075",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44360.47,
-    "y": 107924.01,
+    "x": -44338.55,
+    "y": 107907.72,
     "epsg_local": 3763,
-    "confianca": 0.946,
-    "n_vistas": 6,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:38:37+00:00",
-    "ultima_vista": "2019-08-09T15:39:08+00:00",
-    "imagem": "mapillary/images/556053389113045.jpg",
-    "fonte": "mapillary",
+    "confianca": 0.823,
+    "n_vistas": 13,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:06+00:00",
+    "ultima_vista": "2026-11-17T16:15:50.326911+00:00",
+    "imagem": "mapillary/images/1428507540881609.jpg",
+    "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/556053389113045_00340.jpg",
+    "recorte": "deteccoes/recortes/1428507540881609_00388.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1747,16 +1477,166 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6575011,
-     40.6390164
+     -8.657509,
+     40.6390268
+    ]
+   },
+   "properties": {
+    "id": "can_0079",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44360.47,
+    "y": 107924.01,
+    "epsg_local": 3763,
+    "confianca": 0.946,
+    "n_vistas": 6,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:38:37+00:00",
+    "ultima_vista": "2019-08-09T15:39:08+00:00",
+    "imagem": "mapillary/images/556053389113045.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/556053389113045_00340.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657413,
+     40.638713
+    ]
+   },
+   "properties": {
+    "id": "can_0080",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44352.56,
+    "y": 107889.11,
+    "epsg_local": 3763,
+    "confianca": 0.953,
+    "n_vistas": 6,
+    "estado": "auto",
+    "primeira_vista": "2026-11-17T16:15:35.294022+00:00",
+    "ultima_vista": "2026-11-17T16:15:43.360444+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002796.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002796_00831.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.657309,
+     40.6388253
+    ]
+   },
+   "properties": {
+    "id": "can_0141",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44343.68,
+    "y": 107901.53,
+    "epsg_local": 3763,
+    "confianca": 0.813,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:06+00:00",
+    "ultima_vista": "2026-11-17T16:15:48.960267+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002964.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002964_00868.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6584685,
+     40.6377811
+    ]
+   },
+   "properties": {
+    "id": "can_0142",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44442.46,
+    "y": 107786.16,
+    "epsg_local": 3763,
+    "confianca": 0.753,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:38+00:00",
+    "ultima_vista": "2021-08-28T18:22:20.217000+00:00",
+    "imagem": "mapillary/images/221695656639355.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/221695656639355_00239.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572285,
+     40.6388716
+    ]
+   },
+   "properties": {
+    "id": "can_0083",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44336.84,
+    "y": 107906.63,
+    "epsg_local": 3763,
+    "confianca": 0.881,
+    "n_vistas": 9,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:06+00:00",
+    "ultima_vista": "2026-11-17T16:15:59.226622+00:00",
+    "imagem": "mapillary/images/333571651607552.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/333571651607552_00396.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6575115,
+     40.6390244
     ]
    },
    "properties": {
     "id": "can_0085",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44359.81,
-    "y": 107922.85,
+    "x": -44360.68,
+    "y": 107923.74,
     "epsg_local": 3763,
     "confianca": 0.888,
     "n_vistas": 5,
@@ -1777,16 +1657,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6587284,
-     40.6379234
+     -8.6587337,
+     40.6379434
     ]
    },
    "properties": {
     "id": "can_0086",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44464.35,
-    "y": 107802.1,
+    "x": -44464.79,
+    "y": 107804.32,
     "epsg_local": 3763,
     "confianca": 0.938,
     "n_vistas": 5,
@@ -1807,72 +1687,12 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572233,
-     40.6388694
-    ]
-   },
-   "properties": {
-    "id": "can_0080",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44336.41,
-    "y": 107906.39,
-    "epsg_local": 3763,
-    "confianca": 0.953,
-    "n_vistas": 9,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:08+00:00",
-    "ultima_vista": "2026-11-17T16:15:44.727067+00:00",
-    "imagem": "mapillary/images/333571651607552.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/333571651607552_00396.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.657648,
-     40.6384902
-    ]
-   },
-   "properties": {
-    "id": "can_0054",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44372.58,
-    "y": 107864.49,
-    "epsg_local": 3763,
-    "confianca": 0.868,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:03.430011+00:00",
-    "ultima_vista": "2026-11-17T16:15:18.194556+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001999.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001999_00706.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -8.6584425,
      40.6378787
     ]
    },
    "properties": {
-    "id": "can_0088",
+    "id": "can_0160",
     "tipo": "candeeiro",
     "subtipo": null,
     "x": -44440.2,
@@ -1897,26 +1717,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6583806,
-     40.637968
+     -8.6583786,
+     40.6379699
     ]
    },
    "properties": {
     "id": "can_0089",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44434.9,
-    "y": 107806.87,
+    "x": -44434.73,
+    "y": 107807.08,
     "epsg_local": 3763,
-    "confianca": 0.845,
-    "n_vistas": 8,
+    "confianca": 0.833,
+    "n_vistas": 6,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:34+00:00",
-    "ultima_vista": "2026-11-17T16:14:20.229667+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000252.jpg",
+    "primeira_vista": "2019-08-09T15:39:35+00:00",
+    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00564.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00554.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -1927,52 +1747,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572186,
-     40.6388393
-    ]
-   },
-   "properties": {
-    "id": "can_0096",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44336.03,
-    "y": 107903.04,
-    "epsg_local": 3763,
-    "confianca": 0.942,
-    "n_vistas": 10,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:13+00:00",
-    "ultima_vista": "2026-11-17T16:16:02.826522+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003317.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003317_00933.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6572987,
-     40.6388143
+     -8.6573579,
+     40.6388594
     ]
    },
    "properties": {
     "id": "can_0091",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44342.82,
-    "y": 107900.31,
+    "x": -44347.8,
+    "y": 107905.34,
     "epsg_local": 3763,
-    "confianca": 0.894,
-    "n_vistas": 5,
+    "confianca": 0.884,
+    "n_vistas": 4,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:06+00:00",
-    "ultima_vista": "2026-11-17T16:15:41.893822+00:00",
+    "primeira_vista": "2019-08-09T15:39:05+00:00",
+    "ultima_vista": "2026-11-17T16:15:36.960633+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002554.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
@@ -1987,56 +1777,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6585689,
-     40.6378645
+     -8.6571703,
+     40.6389134
     ]
    },
    "properties": {
-    "id": "can_0098",
+    "id": "can_0092",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44450.9,
-    "y": 107795.47,
+    "x": -44331.89,
+    "y": 107911.25,
     "epsg_local": 3763,
-    "confianca": 0.771,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2021-05-17T15:08:25.159000+00:00",
-    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
-    "imagem": "mapillary/images/357199595741657.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/357199595741657_00065.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6581238,
-     40.6381446
-    ]
-   },
-   "properties": {
-    "id": "can_0065",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44413.06,
-    "y": 107826.35,
-    "epsg_local": 3763,
-    "confianca": 0.845,
+    "confianca": 0.807,
     "n_vistas": 5,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:30+00:00",
-    "ultima_vista": "2026-11-17T16:14:38.064122+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000794.jpg",
+    "primeira_vista": "2019-08-09T15:39:08+00:00",
+    "ultima_vista": "2026-11-17T16:15:53.160133+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003005.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000794_00606.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003005_00873.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2047,26 +1807,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6584116,
-     40.6378959
+     -8.6571563,
+     40.6388104
     ]
    },
    "properties": {
-    "id": "can_0093",
+    "id": "can_0096",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44437.57,
-    "y": 107798.88,
+    "x": -44330.78,
+    "y": 107899.8,
     "epsg_local": 3763,
-    "confianca": 0.724,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:38+00:00",
-    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
-    "imagem": "mapillary/images/796403697687751.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/796403697687751_00459.jpg",
+    "confianca": 0.939,
+    "n_vistas": 8,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:13+00:00",
+    "ultima_vista": "2026-11-17T16:16:00.726578+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003317.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003317_00933.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2107,26 +1867,86 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6573857,
-     40.6389532
+     -8.6585657,
+     40.637868
     ]
    },
    "properties": {
-    "id": "can_0092",
+    "id": "can_0098",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44350.09,
-    "y": 107915.77,
+    "x": -44450.63,
+    "y": 107795.86,
     "epsg_local": 3763,
-    "confianca": 0.559,
+    "confianca": 0.756,
     "n_vistas": 3,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:05+00:00",
-    "ultima_vista": "2019-08-09T15:39:11+00:00",
-    "imagem": "mapillary/images/759446278037143.jpg",
+    "primeira_vista": "2021-05-17T15:08:25.159000+00:00",
+    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
+    "imagem": "mapillary/images/357199595741657.jpg",
     "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/357199595741657_00065.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572908,
+     40.6387281
+    ]
+   },
+   "properties": {
+    "id": "can_0100",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44342.21,
+    "y": 107890.73,
+    "epsg_local": 3763,
+    "confianca": 0.849,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:22+00:00",
+    "ultima_vista": "2026-11-17T16:15:55.060078+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003147.jpg",
+    "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/759446278037143_00366.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003147_00899.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572598,
+     40.6389284
+    ]
+   },
+   "properties": {
+    "id": "can_0103",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44339.45,
+    "y": 107912.96,
+    "epsg_local": 3763,
+    "confianca": 0.845,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:08+00:00",
+    "ultima_vista": "2026-11-17T16:15:44.727067+00:00",
+    "imagem": "mapillary/images/1924321491055960.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/1924321491055960_00355.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2167,36 +1987,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6571534,
-     40.6388913
-    ]
-   },
-   "properties": {
-    "id": "can_0103",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44330.48,
-    "y": 107908.78,
-    "epsg_local": 3763,
-    "confianca": 0.891,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:08+00:00",
-    "ultima_vista": "2019-08-09T15:39:12+00:00",
-    "imagem": "mapillary/images/314768113426345.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/314768113426345_00378.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -8.6586847,
      40.6378831
     ]
@@ -2217,6 +2007,36 @@
     "fonte": "mapillary",
     "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/549710842916356_00218.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6570349,
+     40.6388701
+    ]
+   },
+   "properties": {
+    "id": "can_0161",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44320.47,
+    "y": 107906.37,
+    "epsg_local": 3763,
+    "confianca": 0.718,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:12+00:00",
+    "ultima_vista": "2026-11-17T16:16:02.826522+00:00",
+    "imagem": "mapillary/images/314768113426345.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/314768113426345_00378.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2257,21 +2077,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6574641,
-     40.6386314
+     -8.6575187,
+     40.6386243
     ]
    },
    "properties": {
-    "id": "can_0135",
+    "id": "can_0162",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44356.93,
-    "y": 107880.08,
+    "x": -44361.56,
+    "y": 107879.32,
     "epsg_local": 3763,
-    "confianca": 0.82,
-    "n_vistas": 2,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:27.627600+00:00",
+    "confianca": 0.935,
+    "n_vistas": 4,
+    "estado": "auto",
+    "primeira_vista": "2026-11-17T16:15:29.162544+00:00",
     "ultima_vista": "2026-11-17T16:15:36.960633+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002604.jpg",
     "fonte": "video_proprio",
@@ -2287,26 +2107,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6579659,
-     40.6382853
+     -8.6579844,
+     40.638291
     ]
    },
    "properties": {
     "id": "can_0116",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44399.61,
-    "y": 107841.9,
+    "x": -44401.17,
+    "y": 107842.54,
     "epsg_local": 3763,
-    "confianca": 0.885,
-    "n_vistas": 6,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:14:40.830711+00:00",
-    "ultima_vista": "2026-11-17T16:14:56.363567+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001146.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001146_00632.jpg",
+    "confianca": 0.901,
+    "n_vistas": 7,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:29+00:00",
+    "ultima_vista": "2026-11-17T16:14:53.097011+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001289.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001289_00644.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2347,6 +2167,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -8.6578024,
+     40.638403
+    ]
+   },
+   "properties": {
+    "id": "can_0118",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44385.7,
+    "y": 107854.89,
+    "epsg_local": 3763,
+    "confianca": 0.772,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:04.929967+00:00",
+    "ultima_vista": "2026-11-17T16:15:07.829878+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001644.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001644_00666.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -8.6575716,
      40.6390889
     ]
@@ -2377,26 +2227,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6573872,
-     40.6386966
+     -8.6578802,
+     40.6383452
     ]
    },
    "properties": {
-    "id": "can_0059",
+    "id": "can_0120",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44350.39,
-    "y": 107887.28,
+    "x": -44392.32,
+    "y": 107848.51,
     "epsg_local": 3763,
-    "confianca": 0.685,
-    "n_vistas": 2,
+    "confianca": 0.83,
+    "n_vistas": 5,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:33.695755+00:00",
-    "ultima_vista": "2026-11-17T16:15:35.294022+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002554.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002554_00783.jpg",
+    "primeira_vista": "2019-08-09T15:39:28+00:00",
+    "ultima_vista": "2026-11-17T16:14:56.363567+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001337.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001337_00647.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2407,22 +2257,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6574724,
-     40.6390249
+     -8.6574854,
+     40.6390333
     ]
    },
    "properties": {
     "id": "can_0122",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44357.38,
-    "y": 107923.78,
+    "x": -44358.47,
+    "y": 107924.72,
     "epsg_local": 3763,
-    "confianca": 0.651,
-    "n_vistas": 3,
+    "confianca": 0.708,
+    "n_vistas": 2,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:04+00:00",
-    "ultima_vista": "2019-08-09T15:39:08+00:00",
+    "ultima_vista": "2019-08-09T15:39:06+00:00",
     "imagem": "mapillary/images/556053389113045.jpg",
     "fonte": "mapillary",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
@@ -2437,26 +2287,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6583516,
-     40.637974
+     -8.658277,
+     40.6380234
     ]
    },
    "properties": {
-    "id": "can_0126",
+    "id": "can_0163",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44432.45,
-    "y": 107807.52,
+    "x": -44426.1,
+    "y": 107812.97,
     "epsg_local": 3763,
-    "confianca": 0.573,
-    "n_vistas": 2,
+    "confianca": 0.734,
+    "n_vistas": 1,
     "estado": "pendente",
     "primeira_vista": "2026-11-17T16:14:18.529722+00:00",
-    "ultima_vista": "2026-11-17T16:14:20.229667+00:00",
+    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000252.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00565.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00564.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2467,26 +2317,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6576898,
-     40.6384089
+     -8.6575194,
+     40.6386291
     ]
    },
    "properties": {
-    "id": "can_0136",
+    "id": "can_0146",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44376.17,
-    "y": 107855.48,
+    "x": -44361.61,
+    "y": 107879.85,
     "epsg_local": 3763,
-    "confianca": 0.653,
-    "n_vistas": 3,
+    "confianca": 0.68,
+    "n_vistas": 1,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:07.829878+00:00",
-    "ultima_vista": "2026-11-17T16:15:15.294644+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_001910.jpg",
+    "primeira_vista": "2026-11-17T16:15:30.662511+00:00",
+    "ultima_vista": "2026-11-17T16:15:30.662511+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002415.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_001910_00698.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002415_00750.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6583406,
+     40.6379808
+    ]
+   },
+   "properties": {
+    "id": "can_0126",
+    "tipo": "candeeiro",
+    "subtipo": null,
+    "x": -44431.51,
+    "y": 107808.27,
+    "epsg_local": 3763,
+    "confianca": 0.579,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:14:10.030000+00:00",
+    "ultima_vista": "2026-11-17T16:14:20.229667+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000252.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00565.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2527,66 +2407,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6581701,
-     40.6379691
-    ]
-   },
-   "properties": {
-    "id": "can_0138",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44417.1,
-    "y": 107806.89,
-    "epsg_local": 3763,
-    "confianca": 0.59,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:14:10.030000+00:00",
-    "ultima_vista": "2026-11-17T16:14:10.030000+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00555.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.658356,
-     40.6379713
-    ]
-   },
-   "properties": {
-    "id": "can_0139",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44432.82,
-    "y": 107807.23,
-    "epsg_local": 3763,
-    "confianca": 0.585,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:14:18.529722+00:00",
-    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000252.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00566.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -8.6576675,
      40.6391495
     ]
@@ -2617,116 +2437,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6574474,
-     40.6390088
+     -8.6570905,
+     40.638822
     ]
    },
    "properties": {
-    "id": "can_0140",
-    "tipo": "candeeiro",
+    "id": "con_0131",
+    "tipo": "contentor",
     "subtipo": null,
-    "x": -44355.27,
-    "y": 107921.98,
+    "x": -44325.2,
+    "y": 107901.06,
     "epsg_local": 3763,
-    "confianca": 0.425,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:06+00:00",
-    "ultima_vista": "2019-08-09T15:39:06+00:00",
-    "imagem": "mapillary/images/556053389113045.jpg",
-    "fonte": "mapillary",
+    "confianca": null,
+    "n_vistas": 9,
+    "estado": "validado",
+    "primeira_vista": "2019-08-09T15:39:15+00:00",
+    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
+    "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/556053389113045_00345.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6574474,
-     40.6385906
-    ]
-   },
-   "properties": {
-    "id": "can_0052",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44355.55,
-    "y": 107875.54,
-    "epsg_local": 3763,
-    "confianca": 0.399,
-    "n_vistas": 1,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:27.627600+00:00",
-    "ultima_vista": "2026-11-17T16:15:27.627600+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002324.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002324_00736.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6571592,
-     40.6387775
-    ]
-   },
-   "properties": {
-    "id": "con_0134",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44331.04,
-    "y": 107896.15,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 8,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:35.294022+00:00",
-    "ultima_vista": "2026-11-17T16:16:04.393133+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003427.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003427_00955.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6571106,
-     40.6387767
-    ]
-   },
-   "properties": {
-    "id": "con_0170",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44326.93,
-    "y": 107896.04,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 6,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:56.360044+00:00",
-    "ultima_vista": "2026-11-17T16:16:05.859756+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003471.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003471_00961.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00976.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2767,56 +2497,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572952,
-     40.6388221
+     -8.6570238,
+     40.6388339
     ]
    },
    "properties": {
-    "id": "con_0142",
+    "id": "con_0169",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44342.52,
-    "y": 107901.17,
+    "x": -44319.55,
+    "y": 107902.34,
     "epsg_local": 3763,
     "confianca": null,
     "n_vistas": 9,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:06+00:00",
-    "ultima_vista": "2026-11-17T16:15:53.160133+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003090.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003090_00891.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6570427,
-     40.6388391
-    ]
-   },
-   "properties": {
-    "id": "con_0135",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44321.15,
-    "y": 107902.93,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 4,
-    "estado": "pendente",
+    "estado": "validado",
     "primeira_vista": "2019-08-09T15:39:11+00:00",
     "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003471.jpg",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003471_00962.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00985.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2827,116 +2527,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6573186,
-     40.6387762
-    ]
-   },
-   "properties": {
-    "id": "con_0188",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44344.53,
-    "y": 107896.09,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 6,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:32.129122+00:00",
-    "ultima_vista": "2026-11-17T16:15:53.160133+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003090.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003090_00890.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6574185,
-     40.6386605
+     -8.6574683,
+     40.6386241
     ]
    },
    "properties": {
     "id": "con_0139",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44353.06,
-    "y": 107883.29,
+    "x": -44357.29,
+    "y": 107879.27,
     "epsg_local": 3763,
     "confianca": null,
-    "n_vistas": 4,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:22+00:00",
-    "ultima_vista": "2026-11-17T16:15:46.127033+00:00",
-    "imagem": "mapillary/images/305249601261906.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/305249601261906_00408.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6583551,
-     40.6379832
-    ]
-   },
-   "properties": {
-    "id": "con_0145",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44432.74,
-    "y": 107808.55,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:35+00:00",
-    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000252.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000252_00568.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6574017,
-     40.6386407
-    ]
-   },
-   "properties": {
-    "id": "con_0163",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44351.65,
-    "y": 107881.08,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 5,
+    "n_vistas": 6,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:22+00:00",
     "ultima_vista": "2026-11-17T16:15:41.893822+00:00",
-    "imagem": "mapillary/images/305249601261906.jpg",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002604.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/305249601261906_00403.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002604_00798.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -2947,19 +2557,79 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.657849,
-     40.638366
+     -8.6573542,
+     40.638867
+    ]
+   },
+   "properties": {
+    "id": "con_0142",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44347.48,
+    "y": 107906.19,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 6,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:05+00:00",
+    "ultima_vista": "2026-11-17T16:15:40.327200+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002705.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002705_00818.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6573985,
+     40.6386823
+    ]
+   },
+   "properties": {
+    "id": "con_0201",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44351.35,
+    "y": 107885.7,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 7,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:22+00:00",
+    "ultima_vista": "2026-11-17T16:15:47.526978+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002796.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002796_00834.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6578897,
+     40.6383577
     ]
    },
    "properties": {
     "id": "con_0157",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44389.67,
-    "y": 107850.8,
+    "x": -44393.12,
+    "y": 107849.9,
     "epsg_local": 3763,
     "confianca": null,
-    "n_vistas": 11,
+    "n_vistas": 9,
     "estado": "pendente",
     "primeira_vista": "2019-08-09T15:39:29+00:00",
     "ultima_vista": "2026-11-17T16:15:06.363256+00:00",
@@ -2967,6 +2637,66 @@
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/rua_sw_ne_1117_001549_00660.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6569811,
+     40.638927
+    ]
+   },
+   "properties": {
+    "id": "con_0211",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44315.88,
+    "y": 107912.66,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 5,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:57.760000+00:00",
+    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00989.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.65737,
+     40.638672
+    ]
+   },
+   "properties": {
+    "id": "con_0163",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44348.95,
+    "y": 107884.54,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 4,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:22+00:00",
+    "ultima_vista": "2026-11-17T16:15:41.893822+00:00",
+    "imagem": "mapillary/images/305249601261906.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/305249601261906_00403.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -3007,6 +2737,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -8.6580878,
+     40.6381493
+    ]
+   },
+   "properties": {
+    "id": "con_0152",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44410.01,
+    "y": 107826.86,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 3,
+    "estado": "pendente",
+    "primeira_vista": "2019-08-09T15:39:30+00:00",
+    "ultima_vista": "2026-11-17T16:14:10.030000+00:00",
+    "imagem": "mapillary/images/948680345953651.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/948680345953651_00431.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -8.6586893,
      40.6378905
     ]
@@ -3037,26 +2797,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6581094,
-     40.6380158
+     -8.6582892,
+     40.6380372
     ]
    },
    "properties": {
-    "id": "con_0152",
+    "id": "con_0161",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44411.93,
-    "y": 107812.04,
+    "x": -44427.13,
+    "y": 107814.51,
     "epsg_local": 3763,
     "confianca": null,
     "n_vistas": 4,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:30+00:00",
-    "ultima_vista": "2026-11-17T16:14:18.529722+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
+    "primeira_vista": "2019-08-09T15:39:35+00:00",
+    "ultima_vista": "2026-11-17T16:14:21.729622+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000348.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00557.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000348_00579.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -3097,21 +2857,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6580777,
-     40.6381559
+     -8.6581516,
+     40.6381163
     ]
    },
    "properties": {
-    "id": "con_0151",
+    "id": "con_0212",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44409.16,
-    "y": 107827.59,
+    "x": -44415.43,
+    "y": 107823.23,
     "epsg_local": 3763,
     "confianca": null,
-    "n_vistas": 2,
+    "n_vistas": 3,
     "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:30+00:00",
+    "primeira_vista": "2019-08-09T15:39:34+00:00",
     "ultima_vista": "2026-11-17T16:14:36.597511+00:00",
     "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000794.jpg",
     "fonte": "mapillary+video_proprio",
@@ -3127,86 +2887,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6569901,
-     40.6388197
+     -8.6568726,
+     40.6388987
     ]
    },
    "properties": {
-    "id": "con_0167",
+    "id": "con_0168",
     "tipo": "contentor",
     "subtipo": null,
-    "x": -44316.71,
-    "y": 107900.75,
+    "x": -44306.72,
+    "y": 107909.46,
     "epsg_local": 3763,
     "confianca": null,
-    "n_vistas": 4,
+    "n_vistas": 2,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:16:04.393133+00:00",
+    "primeira_vista": "2026-11-17T16:16:08.559667+00:00",
     "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
     "fonte": "video_proprio",
     "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00985.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6583128,
-     40.6380142
-    ]
-   },
-   "properties": {
-    "id": "con_0161",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44429.14,
-    "y": 107811.97,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 5,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:34+00:00",
-    "ultima_vista": "2026-11-17T16:14:21.729622+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000348.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000348_00579.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6569247,
-     40.6388564
-    ]
-   },
-   "properties": {
-    "id": "con_0169",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44311.16,
-    "y": 107904.79,
-    "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 3,
-    "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:16:05.859756+00:00",
-    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003513.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003513_00969.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00978.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -3247,6 +2947,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -8.6572802,
+     40.6387269
+    ]
+   },
+   "properties": {
+    "id": "con_0188",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44341.31,
+    "y": 107890.59,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 2,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:51.726856+00:00",
+    "ultima_vista": "2026-11-17T16:15:53.160133+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003090.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003090_00890.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -8.6577013,
      40.6391728
     ]
@@ -3267,6 +2997,36 @@
     "fonte": "mapillary",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
     "recorte": "deteccoes/recortes/1115955858888401_00308.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6572961,
+     40.6387618
+    ]
+   },
+   "properties": {
+    "id": "con_0202",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44342.64,
+    "y": 107894.47,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:15:53.160133+00:00",
+    "ultima_vista": "2026-11-17T16:15:53.160133+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003090.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003090_00891.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -3307,6 +3067,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -8.6583067,
+     40.6380135
+    ]
+   },
+   "properties": {
+    "id": "con_0203",
+    "tipo": "contentor",
+    "subtipo": null,
+    "x": -44428.62,
+    "y": 107811.89,
+    "epsg_local": 3763,
+    "confianca": null,
+    "n_vistas": 1,
+    "estado": "pendente",
+    "primeira_vista": "2026-11-17T16:14:10.030000+00:00",
+    "ultima_vista": "2026-11-17T16:14:10.030000+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_000000.jpg",
+    "fonte": "video_proprio",
+    "atribuicao": "",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_000000_00560.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -8.6584615,
      40.6377405
     ]
@@ -3337,29 +3127,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6573463,
-     40.6386657
+     -8.6586964,
+     40.6378314
     ]
    },
    "properties": {
-    "id": "sin_0003",
+    "id": "sin_0017",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44346.95,
-    "y": 107883.83,
+    "x": -44461.71,
+    "y": 107791.86,
     "epsg_local": 3763,
-    "confianca": 0.849,
-    "n_vistas": 3,
+    "confianca": 0.788,
+    "n_vistas": 4,
     "estado": "pendente",
-    "primeira_vista": "2026-11-17T16:15:40.327200+00:00",
-    "ultima_vista": "2026-11-17T16:15:43.360444+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_002796.jpg",
-    "fonte": "video_proprio",
-    "atribuicao": "",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_002796_00828.jpg",
+    "primeira_vista": "2019-08-09T15:39:38+00:00",
+    "ultima_vista": "2021-05-17T15:08:35.026000+00:00",
+    "imagem": "mapillary/images/161620725985969.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/161620725985969_00102.jpg",
     "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
+    "subtipo_incerto": true,
+    "subtipo_motivo": "sem votos certos"
    }
   },
   {
@@ -3397,46 +3187,16 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6586778,
-     40.6378353
-    ]
-   },
-   "properties": {
-    "id": "sin_0007",
-    "tipo": "sinal",
-    "subtipo": "outro_sinal",
-    "x": -44460.13,
-    "y": 107792.29,
-    "epsg_local": 3763,
-    "confianca": 0.93,
-    "n_vistas": 9,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:37+00:00",
-    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
-    "imagem": "mapillary/images/161620725985969.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/161620725985969_00100.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6584604,
-     40.637825
+     -8.6584636,
+     40.6378218
     ]
    },
    "properties": {
     "id": "can_0076",
     "tipo": "candeeiro",
     "subtipo": null,
-    "x": -44441.75,
-    "y": 107791.03,
+    "x": -44442.02,
+    "y": 107790.68,
     "epsg_local": 3763,
     "confianca": 0.943,
     "n_vistas": 8,
@@ -3457,56 +3217,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6572689,
-     40.6387177
+     -8.6570978,
+     40.6388352
     ]
    },
    "properties": {
-    "id": "can_0100",
-    "tipo": "candeeiro",
-    "subtipo": null,
-    "x": -44340.36,
-    "y": 107889.56,
-    "epsg_local": 3763,
-    "confianca": 0.849,
-    "n_vistas": 15,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:22+00:00",
-    "ultima_vista": "2026-11-17T16:15:56.360044+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003147.jpg",
-    "fonte": "mapillary+video_proprio",
-    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003147_00899.jpg",
-    "espalhamento_m": null,
-    "subtipo_incerto": false,
-    "subtipo_motivo": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -8.6586821,
-     40.637859
-    ]
-   },
-   "properties": {
-    "id": "sin_0014",
+    "id": "sin_0006",
     "tipo": "sinal",
     "subtipo": "outro_sinal",
-    "x": -44460.48,
-    "y": 107794.92,
+    "x": -44325.81,
+    "y": 107902.53,
     "epsg_local": 3763,
-    "confianca": 0.926,
+    "confianca": 0.933,
     "n_vistas": 7,
-    "estado": "auto",
-    "primeira_vista": "2019-08-09T15:39:37+00:00",
-    "ultima_vista": "2021-08-28T18:22:16.126000+00:00",
-    "imagem": "mapillary/images/549710842916356.jpg",
-    "fonte": "mapillary",
-    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/549710842916356_00211.jpg",
+    "estado": "validado",
+    "primeira_vista": "2019-08-09T15:39:15+00:00",
+    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003552.jpg",
+    "fonte": "mapillary+video_proprio",
+    "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003552_00972.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null
@@ -3517,26 +3247,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8.6570292,
-     40.6388446
+     -8.6572441,
+     40.6387679
     ]
    },
    "properties": {
-    "id": "con_0131",
-    "tipo": "contentor",
-    "subtipo": null,
-    "x": -44320.0,
-    "y": 107903.53,
+    "id": "sin_0001",
+    "tipo": "sinal",
+    "subtipo": "stop",
+    "x": -44338.23,
+    "y": 107895.13,
     "epsg_local": 3763,
-    "confianca": null,
-    "n_vistas": 11,
-    "estado": "pendente",
-    "primeira_vista": "2019-08-09T15:39:11+00:00",
-    "ultima_vista": "2026-11-17T16:16:09.926300+00:00",
-    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003593.jpg",
+    "confianca": 0.968,
+    "n_vistas": 19,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:08+00:00",
+    "ultima_vista": "2026-11-17T16:15:57.760000+00:00",
+    "imagem": "video/rua_sw_ne_1117/images/rua_sw_ne_1117_003228.jpg",
     "fonte": "mapillary+video_proprio",
     "atribuicao": "© msevilla00 / Mapillary, CC BY-SA 4.0",
-    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003593_00986.jpg",
+    "recorte": "deteccoes/recortes/rua_sw_ne_1117_003228_00910.jpg",
+    "espalhamento_m": null,
+    "subtipo_incerto": false,
+    "subtipo_motivo": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.6586777,
+     40.6378408
+    ]
+   },
+   "properties": {
+    "id": "sin_0079",
+    "tipo": "sinal",
+    "subtipo": "cedencia_passagem",
+    "x": -44460.12,
+    "y": 107792.9,
+    "epsg_local": 3763,
+    "confianca": 0.933,
+    "n_vistas": 9,
+    "estado": "auto",
+    "primeira_vista": "2019-08-09T15:39:37+00:00",
+    "ultima_vista": "2021-08-28T18:22:14.221000+00:00",
+    "imagem": "mapillary/images/161620725985969.jpg",
+    "fonte": "mapillary",
+    "atribuicao": "© hedgiept / Mapillary, CC BY-SA 4.0; © msevilla00 / Mapillary, CC BY-SA 4.0",
+    "recorte": "deteccoes/recortes/161620725985969_00100.jpg",
     "espalhamento_m": null,
     "subtipo_incerto": false,
     "subtipo_motivo": null

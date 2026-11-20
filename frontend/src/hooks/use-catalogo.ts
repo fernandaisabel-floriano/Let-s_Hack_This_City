@@ -43,6 +43,16 @@ function gravarStorage(key: string, v: unknown) {
   }
 }
 
+/** Aviso aberto mais recente por elemento (igual a tickets_abertos() em pipeline/estado.py). */
+export function ticketsAbertos(reg: Evento[]) {
+  const abertos: Record<string, { quando: string; motivo: string; texto: string }> = {}
+  for (const e of reg) {
+    if (e.acao === 'limpar') for (const k of Object.keys(abertos)) delete abertos[k]
+    else if (e.acao === 'ticket' && e.id && e.ticket) abertos[e.id] = { quando: e.quando, ...e.ticket }
+  }
+  return abertos
+}
+
 /** Igual a estadoAtual() em server/api.ts. */
 export function estadoAtual(reg: Evento[]) {
   const atual: Record<string, Validacao> = {}
@@ -170,6 +180,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   const publico = origem === 'pipeline' && !tecnico
   const validacoes = useMemo(() => (publico ? estadoPublico.elementos : estadoAtual(registo)), [publico, estadoPublico, registo])
   const decisoesPares = useMemo(() => (publico ? estadoPublico.pares : paresDecididos(registo)), [publico, estadoPublico, registo])
+  const tickets = useMemo(() => ticketsAbertos(registo), [registo])
 
   const enviar = useCallback(
     async (a: Acao) => {
@@ -226,12 +237,15 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
       brutos.map((e) => {
         const v = validacoes[e.id]
         // estado calculado aqui (estado.ts): decisão do técnico > ticket > limiares > por confirmar
-        const estado = estadoEfetivo(e, v, undefined, limZona[e.tipo] ?? limZona.sinal)
+        // aviso aberto depois da última decisão: volta a pendente e mostra-se ao técnico
+        const t = tickets[e.id] && (!v || tickets[e.id].quando > v.validado_em) ? tickets[e.id] : undefined
+        const estado = estadoEfetivo(e, v, t, limZona[e.tipo] ?? limZona.sinal)
         const el = !v
-          ? { ...e, estado }
+          ? { ...e, estado, ticket: t }
           : {
               ...e,
               estado,
+              ticket: t,
               tipo: v.classe_corrigida ?? e.tipo,
               subtipo: v.subtipo_corrigido !== undefined ? v.subtipo_corrigido : e.subtipo,
               lat: v.lat ?? e.lat,
@@ -240,7 +254,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
             }
         return { ...el, rua: ruaDe(el.lon, el.lat) }
       }),
-    [brutos, validacoes, ruaDe, limZona],
+    [brutos, validacoes, tickets, ruaDe, limZona],
   )
 
   /** um elemento por objeto: duplicados fundidos (lib/duplicados.ts) */
@@ -345,6 +359,16 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
   )
   const limparValidacoes = useCallback(() => enviar({ acao: 'limpar' }), [enviar])
 
+  /** quem consulta o catálogo (sem sessão): aviso sobre um elemento, que volta à fila do técnico */
+  const reportar = useCallback(
+    async (id: string, motivo: string, texto: string) => {
+      if (origem !== 'pipeline') throw new Error('Os avisos só funcionam com o catálogo do servidor.')
+      const r = await fetch('/api/tickets', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, motivo, texto }) })
+      if (!r.ok) throw new Error(((await r.json().catch(() => ({}))) as { erro?: string }).erro ?? `Erro ${r.status}`)
+    },
+    [origem],
+  )
+
   const carregarFicheiro = useCallback(async (f: File) => {
     try {
       const els = lerFicheiroElementos(await f.text())
@@ -398,6 +422,7 @@ export function useCatalogo(tecnico: Tecnico | null, onExpirou: () => void) {
     decidirPar,
     decidirPares,
     limparValidacoes,
+    reportar,
     carregarFicheiro,
     usarDemo,
     usarPipeline,

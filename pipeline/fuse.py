@@ -32,6 +32,13 @@ Mapillary): desvio constante de heading δ e desvio residual de tempo τ que
 minimizam a distância entre os raios do vídeo e a posição Mapillary do mesmo
 elemento. Guardado em <zona>/video/<seq>/calibracao.json e aplicado.
 
+Sinais — família (m6.separar_familias): cada raio leva a família CERTA da M4 (stop,
+cedência, limite, outro; incertos e de costas são neutros). Raios de famílias
+certas diferentes nunca entram no mesmo ponto (triangulação, junção a pontos
+triangulados, vistas únicas e fusão coerente): placas empilhadas no mesmo poste
+têm o mesmo x, y e só assim ficam um elemento cada. 20/11: antes a triangulação
+trocava-as (a cedência de uma foto ia com a placa de baixo de outra).
+
 Subtipo (M4, m4_voto.py): voto das vistas por elemento; subtipo incerto →
 sempre "pendente". Deteções com extra.clip_rejeitado (filtro CLIP dos
 contentores) não entram.
@@ -77,6 +84,8 @@ DEFAULTS = {
                             "unclassified": 6, "living_street": 5, "service": 4, "pedestrian": 4},
     "via_max_dist_camera_m": 15.0,
     "edificios_geojson": None,
+    "separar_familias": True,
+    "fundir_especificos_m": 4.0,
     "calibrar_video": True, "calib_min_elementos": 5, "calib_tau_min_elementos": 10,
 }
 
@@ -118,10 +127,34 @@ def ls_point(C: np.ndarray, U: np.ndarray) -> np.ndarray:
     return np.linalg.solve(A + 1e-9 * np.eye(2), b)
 
 
+# ------------------------------------------------------- família (sinais, M4)
+
+def familia_raio(d: dict) -> str:
+    """Família CERTA de um sinal na M4 ("stop", "cedencia_passagem", "limite", "outro_sinal"),
+    ou "" (neutra: outras classes, de costas, incerta). Placas empilhadas no mesmo poste
+    têm o mesmo x, y: só a família as separa (20/11: a triangulação trocava-as entre
+    elementos — a cedência de uma foto juntava-se à placa de baixo de outra)."""
+    if d["classe"] != "sinal":
+        return ""
+    s, e = d.get("subclasse") or "", d["extra"]
+    if not s or s == "costas" or e.get("m4_incerto"):
+        return ""
+    return "limite" if s.startswith("limite_") else s
+
+
+def familias(rs) -> set[str]:
+    return {r.get("fam", "") for r in rs} - {""}
+
+
+def conflito(a: set[str], b: set[str]) -> bool:
+    return len(a | b) > 1
+
+
 # --------------------------------------------------------------------- dados
 
-def load_rays(dets: list[dict], proj: Proj, calib_video: dict) -> list[dict]:
-    """Uma entrada por deteção com câmara (x, y), direção u e metadados."""
+def load_rays(dets: list[dict], proj: Proj, calib_video: dict, p_sep: bool = True) -> list[dict]:
+    """Uma entrada por deteção com câmara (x, y), direção u e metadados.
+    fam = família certa do sinal (m6.separar_familias), "" = neutra."""
     rays = []
     for d in dets:
         e = d["extra"]
@@ -140,7 +173,7 @@ def load_rays(dets: list[dict], proj: Proj, calib_video: dict) -> list[dict]:
         rays.append({"det": d, "c": np.array([cx, cy]), "u": unit(bearing),
                      "heading": heading, "off": ((bearing - heading + 180) % 360) - 180,
                      "img": e["imagem_id"], "fonte": e["fonte"], "classe": d["classe"],
-                     "conf": d["confianca"]})
+                     "conf": d["confianca"], "fam": familia_raio(d) if p_sep else ""})
     return rays
 
 
@@ -170,12 +203,13 @@ def triangulate(rays: list[dict], p: dict) -> tuple[list[dict], set[int]]:
     U = np.array([r["u"] for r in rays])
     imgs = np.array([r["img"] for r in rays])
     video = np.array([r["fonte"] == "video_proprio" for r in rays])
+    F = np.array([r.get("fam", "") for r in rays], dtype=object)
     sin_min = math.sin(math.radians(p["angulo_min_graus"]))
     dmin, dmax = p["dist_min_m"], p["dist_max_m"]
 
     # candidatos: interseções de pares
     I, J = np.triu_indices(n, 1)
-    keep = imgs[I] != imgs[J]
+    keep = (imgs[I] != imgs[J]) & ((F[I] == "") | (F[J] == "") | (F[I] == F[J]))
     base = np.linalg.norm(C[I] - C[J], axis=1)
     bmin = np.where(video[I] & video[J], p["base_video_min_m"], p["base_min_m"])
     keep &= (base >= bmin) & (base <= 2 * dmax)
@@ -192,11 +226,14 @@ def triangulate(rays: list[dict], p: dict) -> tuple[list[dict], set[int]]:
         return [], set()
     P = C[I] + t1[:, None] * U[I]
 
-    def support(pt: np.ndarray, livres: np.ndarray) -> list[int]:
+    def support(pt: np.ndarray, livres: np.ndarray, fam: str = "") -> list[int]:
+        """Raios que passam no ponto (um por imagem); com fam, só os dessa família ou neutros."""
         d = pt - C
         t = (d * U).sum(1)
         perp = np.abs(cross(d, U))
         ok = livres & (t >= dmin) & (t <= dmax) & (perp <= np.maximum(p["tol_m"], p["tol_frac"] * t))
+        if fam:
+            ok &= (F == "") | (F == fam)
         best: dict[str, tuple[float, int]] = {}
         for k in np.nonzero(ok)[0]:
             if imgs[k] not in best or perp[k] < best[imgs[k]][0]:
@@ -237,11 +274,17 @@ def triangulate(rays: list[dict], p: dict) -> tuple[list[dict], set[int]]:
             break
         if not (livres[I[q]] and livres[J[q]]):
             continue
-        m = support(P[q], livres)
+        fam = F[I[q]] or F[J[q]]
+        m = support(P[q], livres, fam)
+        if not fam:   # par neutro: fica a família certa mais vista entre os raios do ponto
+            fs = Counter(F[k] for k in m if F[k])
+            if fs:
+                fam = fs.most_common(1)[0][0]
+                m = support(P[q], livres, fam)
         if len(m) < 2:
             continue
         pt = ls_point(C[m], U[m])
-        m = support(pt, livres)
+        m = support(pt, livres, fam)
         if len(m) < 2:
             continue
         pt = ls_point(C[m], U[m])
@@ -347,6 +390,62 @@ class Edificios:
         return pt, False
 
 
+# ------------------------------------------------------- sinais específicos
+
+ESPECIFICAS = {"stop", "cedencia_passagem", "limite"}
+
+
+def fundir_especificos(els: list[dict], p: dict, proj: Proj) -> tuple[list[dict], int]:
+    """Junta elementos de sinal com a MESMA família específica certa (STOP, cedência, limite) a
+    ≤ fundir_especificos_m: o mesmo sinal triangulado em pedaços (20/11, p6: 3 elementos STOP a ≤ 3,7 m,
+    3 cedências a ≤ 3,1 m). Não junta se uma foto os mostra em caixas separadas (dois sinais iguais
+    lado a lado; só contam as vistas certas dessa família — as outras placas do poste aparecem nas
+    mesmas fotos). Fica o ponto do que tem mais vistas certas dessa família."""
+    dmax = float(p.get("fundir_especificos_m") or 0)
+    if dmax <= 0:
+        return els, 0
+
+    def fam(e):
+        f = familias(e["membros"]) & ESPECIFICAS
+        return next(iter(f)) if len(f) == 1 and not (familias(e["membros"]) - ESPECIFICAS) else None
+
+    def separados_na_mesma_foto(a, b, f):
+        """Uma foto mostra os dois, com vistas certas desta família em caixas que não se sobrepõem."""
+        for r in a["membros"]:
+            for q in b["membros"]:
+                if r["img"] == q["img"] and r["fam"] == f and q["fam"] == f:
+                    x, y = r["det"]["bbox"], q["det"]["bbox"]
+                    if min(x[2], y[2]) - max(x[0], y[0]) <= 0:
+                        return True
+        return False
+
+    n = 0
+    while True:
+        best = None
+        for i, a in enumerate(els):
+            fa = a["classe"] == "sinal" and fam(a)
+            if not fa:
+                continue
+            pa = np.array(proj.xy(a["lon"], a["lat"]))
+            for j in range(i + 1, len(els)):
+                b = els[j]
+                if b["classe"] != "sinal" or fam(b) != fa:
+                    continue
+                d = float(np.linalg.norm(pa - np.array(proj.xy(b["lon"], b["lat"]))))
+                if d <= dmax and (best is None or d < best[0]) and not separados_na_mesma_foto(a, b, fa):
+                    best = (d, i, j)
+        if best is None:
+            return els, n
+        _, i, j = best
+        a, b = els[i], els[j]
+        na = sum(r["fam"] in ESPECIFICAS for r in a["membros"])
+        nb = sum(r["fam"] in ESPECIFICAS for r in b["membros"])
+        base = a if na >= nb else b
+        novo = {**base, "membros": a["membros"] + b["membros"]}
+        els = [e for k, e in enumerate(els) if k not in (i, j)] + [novo]
+        n += 1
+
+
 # ------------------------------------------------------------------ elementos
 
 def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj: Proj) -> list[dict]:
@@ -364,6 +463,8 @@ def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj:
             best = None
             for g, pt in zip(groups, tri_pts):
                 if any(R[m]["img"] == r["img"] for m in g["membros"]):
+                    continue
+                if conflito(familias(R[m] for m in g["membros"]), familias([r])):
                     continue
                 d = pt - r["c"]
                 t = float(d @ r["u"])
@@ -387,6 +488,8 @@ def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj:
             for g in singles:
                 if any(R[m]["img"] == R[k]["img"] for m in g["membros"]):
                     continue
+                if conflito(familias(R[m] for m in g["membros"]), familias([R[k]])):
+                    continue
                 dd = float(np.linalg.norm(g["ponto"] - pt))
                 if dd <= raio and (best is None or dd < best[0]):
                     best = (dd, g)
@@ -407,6 +510,8 @@ def build_elements(rays: list[dict], p: dict, ruas: Ruas, edif: Edificios, proj:
             best = None
             for t in groups:
                 if imgs_g & {R[m]["img"] for m in t["membros"]}:
+                    continue
+                if conflito(familias(R[m] for m in g["membros"]), familias(R[m] for m in t["membros"])):
                     continue
                 dd = float(np.linalg.norm(t["ponto"] - g["ponto"]))
                 if dd <= raio and (best is None or dd < best[0]):
@@ -466,7 +571,7 @@ def fundir_coerentes(els: list[dict], p: dict, proj: Proj, edif: "Edificios") ->
             pa = np.array(proj.xy(a["lon"], a["lat"]))
             for j in range(i + 1, len(els)):
                 b = els[j]
-                if b["classe"] != a["classe"]:
+                if b["classe"] != a["classe"] or conflito(familias(a["membros"]), familias(b["membros"])):
                     continue
                 ib = {r["img"] for r in b["membros"]}
                 if len(ib) < 2 or not compativeis(a, b, ia & ib):
@@ -624,8 +729,14 @@ def main() -> None:
         d["extra"]["velocidade_ms"] = vel.get(d["extra"]["imagem_id"], 0.0)
 
     cal_video = {}
-    if p["calibrar_video"] and any(d["extra"]["fonte"] == "video_proprio" for d in dets):
-        els0 = build_elements(load_rays(dets, proj, {}), p, ruas, edif, proj)
+    if p["calibrar_video"] == "fixa":
+        # usa a calibração guardada em <zona>/video/<seq>/calibracao.json (não recalcula): a estimada
+        # salta entre soluções conforme os elementos que entram nela (20/11: +6,5° / −4,5° / +5,0°)
+        for cp in sorted(zdir.glob("video/*/calibracao.json")):
+            cal_video[cp.parent.name] = json.loads(cp.read_text())
+            print(f"calibração {cp.parent.name} (fixa): δ heading {cal_video[cp.parent.name]['delta_heading_graus']:+.1f}°")
+    elif p["calibrar_video"] and any(d["extra"]["fonte"] == "video_proprio" for d in dets):
+        els0 = build_elements(load_rays(dets, proj, {}, p["separar_familias"]), p, ruas, edif, proj)
         cal_video = calibrate_video(els0, p, zdir)
         for seq, c in cal_video.items():
             print(f"calibração {seq}: δ heading {c['delta_heading_graus']:+.1f}°, τ {c['tau_s']:+.2f} s — "
@@ -638,10 +749,13 @@ def main() -> None:
     # agrupamento desfazia duplicados juntados (contentores: 6 → 1 de 9) e perdia reais. Ficam de
     # lado onde confundem: não são a imagem escolhida e não contam para a entrada automática
     # (n_vistas_boas); um objeto só com vistas fracas vai sempre para a fila.
-    groups = build_elements(load_rays(dets, proj, cal_video), p, ruas, edif, proj)
+    groups = build_elements(load_rays(dets, proj, cal_video, p["separar_familias"]), p, ruas, edif, proj)
     groups, n_fund = fundir_coerentes(groups, p, proj, edif)
     if n_fund:
         print(f"fusão coerente: {n_fund} pares de elementos juntados (as direções das fotos cruzam-se num só ponto)")
+    groups, n_esp = fundir_especificos(groups, p, proj)
+    if n_esp:
+        print(f"sinais específicos: {n_esp} pares juntados (mesma família a ≤ {p['fundir_especificos_m']:g} m)")
     n_fracas = sum(bool(d["extra"].get("fraca")) for d in dets)
     if n_fracas:
         print(f"qualidade: {n_fracas} de {len(dets)} vistas fracas (só geometria: não são imagem nem confirmação)")

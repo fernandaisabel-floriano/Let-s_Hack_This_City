@@ -1,4 +1,4 @@
-import { Check, Merge, TriangleAlert, X } from 'lucide-react'
+import { Check, Merge, MousePointerClick, Trash2, TriangleAlert, X } from 'lucide-react'
 import { Recorte, titulo } from '@/components/ficha'
 import { melhorDoGrupo } from '@/components/qual-fica'
 import { Button } from '@/components/ui/button'
@@ -13,18 +13,23 @@ interface Props {
   ids: string[]
   fica: string | null
   onFica: (id: string) => void
+  /** posição arrastada no mapa para o que fica (null = a dele) */
+  pos: { lat: number; lon: number } | null
+  onRepor: () => void
   onRemover: (id: string) => void
   /** decididos = ids com decisão nova (para desfazer) */
   onUnido: (fica: string, decididos: string[]) => void
+  onRejeitados: (decididos: string[]) => void
   onCancelar: () => void
 }
 
 /**
- * Afinamento final: o técnico junta à mão duplicados que o sistema não detetou. Escolhe no mapa os
- * marcadores do mesmo objeto e o que fica (posição e imagem); os outros, e os que já estavam
- * fundidos neles, ficam "duplicado de" esse.
+ * Selecionar vários (técnico, mapa): escolhe marcadores no mapa e
+ *  - une-os como duplicados: escolhe o que fica (imagem) e a posição (a dele, ou arrastada no mapa);
+ *    os outros, e os que já estavam fundidos neles, ficam "duplicado de" esse;
+ *  - ou rejeita-os todos de uma vez (igual ao ✗ da fila: estado rejeitado).
  */
-export function UnirDuplicados({ cat, ids, fica, onFica, onRemover, onUnido, onCancelar }: Props) {
+export function UnirDuplicados({ cat, ids, fica, pos, onRepor, onFica, onRemover, onUnido, onRejeitados, onCancelar }: Props) {
   const porId = new Map(cat.consolidados.map((e) => [e.id, e]))
   const sel = ids.map((i) => porId.get(i)).filter((e): e is Elemento => !!e)
   const esc = sel.find((e) => e.id === fica) ?? (sel.length ? melhorDoGrupo(sel) : null)
@@ -34,25 +39,32 @@ export function UnirDuplicados({ cat, ids, fica, onFica, onRemover, onUnido, onC
   const unir = () => {
     if (!esc || sel.length < 2) return
     const outros = sel.filter((e) => e.id !== esc.id).flatMap((e) => [e.id, ...(e.fundidos ?? [])])
-    const confirmarFica = !(esc.estado === 'validado' || esc.estado === 'corrigido')
+    // o que fica: confirmado (mantém correções de tipo/posição que já tivesse); posição arrastada → corrigido
+    const decidirFica = !!pos || !(esc.estado === 'validado' || esc.estado === 'corrigido')
     cat.decidirVarios([
-      // o que fica: confirmado (mantém correções de tipo/posição que já tivesse)
-      ...(confirmarFica ? [{ id: esc.id, estado: 'validado' as const }] : []),
+      ...(pos ? [{ id: esc.id, estado: 'corrigido' as const, opts: pos }] : decidirFica ? [{ id: esc.id, estado: 'validado' as const }] : []),
       ...outros.map((id) => ({ id, estado: 'rejeitado' as const, opts: { duplicado_de: esc.id } })),
     ])
-    onUnido(esc.id, [...(confirmarFica ? [esc.id] : []), ...outros])
+    onUnido(esc.id, [...(decidirFica ? [esc.id] : []), ...outros])
+  }
+
+  const rejeitar = () => {
+    const todos = sel.flatMap((e) => [e.id, ...(e.fundidos ?? [])])
+    if (!todos.length) return
+    cat.decidirVarios(todos.map((id) => ({ id, estado: 'rejeitado' as const })))
+    onRejeitados(todos)
   }
 
   return (
     <div className="flex h-full min-h-0 flex-col">
       <div className="flex items-start justify-between gap-2 border-b p-3">
         <div>
-          <p className="flex items-center gap-2 font-medium"><Merge className="size-4" aria-hidden="true" /> Unir duplicados</p>
+          <p className="flex items-center gap-2 font-medium"><MousePointerClick className="size-4" aria-hidden="true" /> Selecionar vários</p>
           <p className="text-xs text-muted-foreground">
-            Clique no mapa nos marcadores do mesmo objeto. Escolha aqui o que fica (posição e imagem); os outros passam a duplicados dele.
+            Clique no mapa nos marcadores. Para unir duplicados, escolha aqui o que fica; a posição é a dele ou arraste-o no mapa. Os outros passam a duplicados dele.
           </p>
         </div>
-        <Button variant="ghost" size="icon-sm" aria-label="Sair de unir duplicados" onClick={onCancelar}><X /></Button>
+        <Button variant="ghost" size="icon-sm" aria-label="Sair de selecionar vários" onClick={onCancelar}><X /></Button>
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto p-3">
@@ -88,6 +100,11 @@ export function UnirDuplicados({ cat, ids, fica, onFica, onRemover, onUnido, onC
             })}
           </ul>
         )}
+        {esc && sel.length > 1 && (
+          <p className="mt-3 text-xs text-muted-foreground">
+            Posição: {pos ? <>ajustada no mapa · <button className="text-primary hover:underline" onClick={onRepor}>repor a de {esc.id}</button></> : <>a de {esc.id} (arraste o marcador para ajustar)</>}
+          </p>
+        )}
         {tipos.size > 1 && (
           <p className="mt-3 flex gap-1.5 text-xs text-warning"><TriangleAlert className="size-3.5 shrink-0" /> Tipos diferentes: fica o tipo do escolhido.</p>
         )}
@@ -98,8 +115,10 @@ export function UnirDuplicados({ cat, ids, fica, onFica, onRemover, onUnido, onC
         )}
       </div>
 
-      <div className="flex justify-end gap-2 border-t p-3">
-        <Button variant="ghost" onClick={onCancelar}>Cancelar</Button>
+      <div className="flex flex-wrap justify-end gap-2 border-t p-3">
+        <Button variant="outline" onClick={rejeitar} disabled={sel.length < 1} className="mr-auto border-destructive text-destructive hover:text-destructive dark:border-destructive">
+          <Trash2 /> {sel.length < 1 ? 'Rejeitar' : `Rejeitar ${sel.length}`}
+        </Button>
         <Button onClick={unir} disabled={sel.length < 2}>
           <Merge /> {sel.length < 2 ? 'Escolha 2 ou mais' : `Unir ${sel.length} em 1`}
         </Button>

@@ -54,6 +54,8 @@ export interface Elemento {
   rua?: string | null
   /** decisão do técnico: rejeitado por ser duplicado deste id (M10) */
   duplicado_de?: string
+  /** aviso da Câmara aberto (depois da última decisão do técnico) */
+  ticket?: { quando: string; motivo: string; texto: string }
   /** ids dos duplicados fundidos neste elemento (lib/duplicados.ts) */
   fundidos?: string[]
   /** versões antigas do fuse.py */
@@ -88,8 +90,10 @@ export interface Evento {
   seq: number
   quando: string
   tecnico: Tecnico
-  acao: 'decisao' | 'desfazer' | 'limpar' | 'par'
+  acao: 'decisao' | 'desfazer' | 'limpar' | 'par' | 'ticket'
   id?: string
+  /** acao "ticket": aviso de quem consulta o catálogo (volta à fila do técnico) */
+  ticket?: { motivo: string; texto: string }
   validacao?: Omit<Validacao, 'validado_em' | 'validado_por'>
   /** acao "par": a e b são (mesmo = true) ou não são (false) o mesmo objeto */
   a?: string
@@ -179,4 +183,13 @@ export function raioFusao(cfg: MunicipioConfig, tipo?: Tipo) {
   if (tipo && r[tipo] !== undefined) return r[tipo]
   const vs = Object.values(r)
   return vs.length ? Math.max(...vs) : 8
+}
+
+/** Motivos de um aviso (igual a MOTIVOS_TICKET em server/api.ts; avisos da Câmara, components/reportar-problema.tsx). */
+export const MOTIVOS_TICKET = ['nao_existe', 'tipo_errado', 'posicao_errada', 'outro'] as const
+export const MOTIVO_LABEL: Record<string, string> = {
+  nao_existe: 'Já não existe',
+  tipo_errado: 'Tipo errado',
+  posicao_errada: 'Posição errada',
+  outro: 'Outro problema',
 }

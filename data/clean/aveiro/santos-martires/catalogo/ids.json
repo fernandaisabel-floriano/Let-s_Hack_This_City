@@ -1,8 +1,8 @@
 {
  "ultimo": {
-  "sin": 59,
-  "can": 140,
-  "con": 200
+  "sin": 79,
+  "can": 163,
+  "con": 213
  },
  "execucoes": [
   {
@@ -121,6 +121,322 @@
    "novos": [],
    "desaparecidos": [],
    "fundidos_em": {},
+   "deslocamento_mediano_m": 0.0
+  },
+  {
+   "quando": "2026-11-20T11:19:27+00:00",
+   "antes": 183,
+   "depois": 183,
+   "herdados": 183,
+   "por_regra": {
+    "deteccoes": 183,
+    "posicao": 0
+   },
+   "novos": [],
+   "desaparecidos": [],
+   "fundidos_em": {},
+   "deslocamento_mediano_m": 0.0
+  },
+  {
+   "quando": "2026-11-20T11:52:44+00:00",
+   "antes": 183,
+   "depois": 174,
+   "herdados": 164,
+   "por_regra": {
+    "deteccoes": 164,
+    "posicao": 0
+   },
+   "novos": [
+    "sin_0060",
+    "can_0141",
+    "can_0142",
+    "can_0143",
+    "can_0144",
+    "can_0145",
+    "can_0146",
+    "con_0201",
+    "con_0202",
+    "con_0203"
+   ],
+   "desaparecidos": [
+    "can_0093",
+    "can_0131",
+    "can_0132",
+    "can_0133",
+    "can_0134",
+    "can_0135",
+    "can_0136",
+    "can_0137",
+    "can_0138",
+    "can_0139",
+    "can_0140",
+    "con_0198",
+    "sin_0010",
+    "sin_0023",
+    "sin_0047",
+    "sin_0051",
+    "sin_0052",
+    "sin_0056",
+    "sin_0058"
+   ],
+   "fundidos_em": {
+    "sin_0051": "sin_0001",
+    "sin_0010": "sin_0017",
+    "sin_0023": "sin_0055",
+    "sin_0052": "sin_0029",
+    "sin_0056": "sin_0032",
+    "sin_0058": "sin_0003",
+    "sin_0047": "sin_0014",
+    "can_0131": "can_0120",
+    "can_0132": "can_0062",
+    "can_0133": "can_0087",
+    "can_0134": "can_0090",
+    "can_0093": "can_0086",
+    "can_0135": "can_0111",
+    "can_0136": "can_0055",
+    "can_0137": "can_0063",
+    "can_0138": "can_0126",
+    "can_0139": "can_0089",
+    "can_0140": "can_0085",
+    "con_0198": "con_0142"
+   },
+   "deslocamento_mediano_m": 0.47
+  },
+  {
+   "quando": "2026-11-20T11:54:52+00:00",
+   "antes": 174,
+   "depois": 174,
+   "herdados": 174,
+   "por_regra": {
+    "deteccoes": 174,
+    "posicao": 0
+   },
+   "novos": [],
+   "desaparecidos": [],
+   "fundidos_em": {},
+   "deslocamento_mediano_m": 0.0
+  },
+  {
+   "quando": "2026-11-20T13:06:30+00:00",
+   "antes": 174,
+   "depois": 184,
+   "herdados": 161,
+   "por_regra": {
+    "deteccoes": 161,
+    "posicao": 0
+   },
+   "novos": [
+    "sin_0061",
+    "sin_0062",
+    "sin_0063",
+    "sin_0064",
+    "sin_0065",
+    "can_0147",
+    "can_0148",
+    "can_0149",
+    "can_0150",
+    "can_0151",
+    "can_0152",
+    "can_0153",
+    "can_0154",
+    "can_0155",
+    "can_0156",
+    "can_0157",
+    "con_0204",
+    "con_0205",
+    "con_0206",
+    "con_0207",
+    "con_0208",
+    "con_0209",
+    "sin_0066"
+   ],
+   "desaparecidos": [
+    "can_0055",
+    "can_0061",
+    "can_0088",
+    "can_0111",
+    "can_0144",
+    "can_0145",
+    "con_0135",
+    "con_0151",
+    "con_0158",
+    "con_0192",
+    "sin_0048",
+    "sin_0053",
+    "sin_0060"
+   ],
+   "fundidos_em": {
+    "sin_0060": "sin_0029",
+    "sin_0048": "sin_0034",
+    "can_0055": "can_0118",
+    "can_0061": "can_0120",
+    "can_0088": "can_0102",
+    "can_0144": "can_0103",
+    "can_0111": "can_0080",
+    "can_0145": "can_0089",
+    "con_0158": "con_0201",
+    "con_0135": "con_0131",
+    "con_0151": "con_0203",
+    "con_0192": "con_0197",
+    "sin_0053": "sin_0008"
+   },
+   "deslocamento_mediano_m": 0.56
+  },
+  {
+   "quando": "2026-11-20T13:07:05+00:00",
+   "antes": 184,
+   "depois": 179,
+   "herdados": 162,
+   "por_regra": {
+    "deteccoes": 162,
+    "posicao": 0
+   },
+   "novos": [
+    "sin_0067",
+    "sin_0068",
+    "sin_0069",
+    "sin_0070",
+    "sin_0071",
+    "sin_0072",
+    "sin_0073",
+    "can_0158",
+    "can_0159",
+    "can_0160",
+    "can_0161",
+    "can_0162",
+    "can_0163",
+    "con_0210",
+    "con_0211",
+    "con_0212",
+    "con_0213"
+   ],
+   "desaparecidos": [
+    "can_0147",
+    "can_0148",
+    "can_0149",
+    "can_0150",
+    "can_0151",
+    "can_0152",
+    "can_0153",
+    "can_0154",
+    "can_0155",
+    "can_0156",
+    "can_0157",
+    "con_0204",
+    "con_0205",
+    "con_0206",
+    "con_0207",
+    "con_0208",
+    "con_0209",
+    "sin_0007",
+    "sin_0027",
+    "sin_0059",
+    "sin_0063",
+    "sin_0064"
+   ],
+   "fundidos_em": {
+    "sin_0007": "sin_0061",
+    "sin_0027": "sin_0032",
+    "sin_0063": "sin_0020",
+    "sin_0064": "sin_0004",
+    "sin_0059": "sin_0037",
+    "can_0147": "can_0069",
+    "can_0148": "can_0120",
+    "can_0149": "can_0103",
+    "can_0150": "can_0058",
+    "can_0151": "can_0095",
+    "can_0152": "can_0102",
+    "can_0153": "can_0083",
+    "can_0154": "can_0063",
+    "can_0155": "can_0126",
+    "can_0156": "can_0089",
+    "can_0157": "can_0085",
+    "con_0204": "con_0169",
+    "con_0205": "con_0148",
+    "con_0206": "con_0142",
+    "con_0207": "con_0143",
+    "con_0208": "con_0165",
+    "con_0209": "con_0201"
+   },
+   "deslocamento_mediano_m": 0.87
+  },
+  {
+   "quando": "2026-11-20T13:12:08+00:00",
+   "antes": 179,
+   "depois": 177,
+   "herdados": 171,
+   "por_regra": {
+    "deteccoes": 171,
+    "posicao": 0
+   },
+   "novos": [
+    "sin_0074",
+    "sin_0075",
+    "sin_0076",
+    "sin_0077",
+    "sin_0078",
+    "sin_0079"
+   ],
+   "desaparecidos": [
+    "sin_0009",
+    "sin_0019",
+    "sin_0031",
+    "sin_0034",
+    "sin_0057",
+    "sin_0070",
+    "sin_0072",
+    "sin_0073"
+   ],
+   "fundidos_em": {
+    "sin_0009": "sin_0068",
+    "sin_0070": "sin_0043",
+    "sin_0034": "sin_0065",
+    "sin_0019": "sin_0071",
+    "sin_0072": "sin_0021",
+    "sin_0031": "sin_0003",
+    "sin_0073": "sin_0037",
+    "sin_0057": "sin_0020"
+   },
+   "deslocamento_mediano_m": 0.0
+  },
+  {
+   "quando": "2026-11-20T13:12:54+00:00",
+   "antes": 177,
+   "depois": 176,
+   "herdados": 176,
+   "por_regra": {
+    "deteccoes": 176,
+    "posicao": 0
+   },
+   "novos": [],
+   "desaparecidos": [
+    "sin_0074"
+   ],
+   "fundidos_em": {
+    "sin_0074": "sin_0002"
+   },
+   "deslocamento_mediano_m": 0.0
+  },
+  {
+   "quando": "2026-11-20T13:13:17+00:00",
+   "antes": 176,
+   "depois": 173,
+   "herdados": 173,
+   "por_regra": {
+    "deteccoes": 173,
+    "posicao": 0
+   },
+   "novos": [],
+   "desaparecidos": [
+    "sin_0002",
+    "sin_0014",
+    "sin_0066"
+   ],
+   "fundidos_em": {
+    "sin_0066": "sin_0079",
+    "sin_0014": "sin_0079",
+    "sin_0002": "sin_0001"
+   },
    "deslocamento_mediano_m": 0.0
   }
  ]

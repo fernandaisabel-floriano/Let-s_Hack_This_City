@@ -12,6 +12,7 @@ import { download } from '@/lib/export'
 import { duracao, iniciais, subtipoLabel } from '@/lib/format'
 import { TIPO_LABEL, type Evento } from '@/lib/types'
 import type { Catalogo } from '@/hooks/use-catalogo'
+import { MOTIVO_LABEL } from '@/lib/types'
 
 function descricao(e: Evento) {
   if (e.acao === 'limpar') return <span className="text-muted-foreground">apagou todas as decisões</span>
@@ -22,7 +23,10 @@ function descricao(e: Evento) {
         {e.mesmo ? 'juntou como o mesmo objeto' : 'marcou como objetos diferentes'}: <span className="font-mono">{e.a}</span> e <span className="font-mono">{e.b}</span>
       </span>
     )
-  const v = e.validacao!
+  if (e.acao === 'ticket')
+    return <span className="text-xs">aviso: {MOTIVO_LABEL[e.ticket?.motivo ?? ''] ?? e.ticket?.motivo}{e.ticket?.texto ? ` — «${e.ticket.texto}»` : ''}</span>
+  if (!e.validacao) return null
+  const v = e.validacao
   return (
     <div className="flex flex-wrap items-center gap-1.5">
       <EstadoBadge estado={v.estado} />

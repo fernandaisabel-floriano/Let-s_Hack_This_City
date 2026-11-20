@@ -11,7 +11,7 @@ import { motivosPosicao } from '@/lib/revisao'
 import { coord, data, fonteLabel, pct, subtipoLabel } from '@/lib/format'
 import { toLocal } from '@/lib/geo'
 import { cn } from '@/lib/utils'
-import { CATEGORIA_LABEL, METODO_LABEL, SUBTIPOS, TIPOS, TIPOS_CONTENTOR, TIPO_LABEL, TIPO_PLURAL, type Elemento, type Tipo, type Validacao } from '@/lib/types'
+import { CATEGORIA_LABEL, METODO_LABEL, MOTIVO_LABEL, SUBTIPOS, TIPOS, TIPOS_CONTENTOR, TIPO_LABEL, TIPO_PLURAL, type Elemento, type Tipo, type Validacao } from '@/lib/types'
 import type { DecisaoOpts } from '@/hooks/use-catalogo'
 
 export function Recorte({ el, className }: { el: Elemento; className?: string }) {
@@ -86,6 +86,18 @@ export function Detalhes({ el, crs, limiar, validacao, tecnico, sugestao, imagem
   const xy = tecnico ? toLocal(el.lon, el.lat, crs) : null
   return (
     <dl className="divide-y divide-border/60">
+      {tecnico && el.ticket && (
+        <Campo label="Aviso da Câmara">
+          <span className="flex items-start gap-1.5 text-warning">
+            <TriangleAlert className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />
+            <span>
+              {MOTIVO_LABEL[el.ticket.motivo] ?? el.ticket.motivo}
+              {el.ticket.texto && <span className="block text-xs text-foreground">«{el.ticket.texto}»</span>}
+              <span className="block text-xs text-muted-foreground">{data(el.ticket.quando)} · fecha com a sua decisão</span>
+            </span>
+          </span>
+        </Campo>
+      )}
       <Campo label="Categoria">{CATEGORIA_LABEL[el.tipo]}</Campo>
       <Campo label="Tipo">
         {TIPO_LABEL[el.tipo]}

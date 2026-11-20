@@ -130,7 +130,8 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
     )
     // sem calibração (null) = mais duvidoso
     const k = (c: number | null) => c ?? -1
-    return p.sort((a, b) => (ordem === 'asc' ? k(a.confianca) - k(b.confianca) : k(b.confianca) - k(a.confianca)))
+    // avisos da Câmara primeiro
+    return p.sort((a, b) => Number(!!b.ticket) - Number(!!a.ticket) || (ordem === 'asc' ? k(a.confianca) - k(b.confianca) : k(b.confianca) - k(a.confianca)))
   }, [modo, naZona, fracas, cat.validacoes, cat.elementos, cat.duplicados, ordem])
 
   const feitos = modo === 'zona' ? naZona.length - fila.length : modo === 'fracas' ? fracas.length - fila.length : Object.keys(cat.validacoes).length
