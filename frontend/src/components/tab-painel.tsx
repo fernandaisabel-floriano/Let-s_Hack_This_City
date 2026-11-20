@@ -30,7 +30,7 @@ function Barras({ itens, total }: { itens: { label: React.ReactNode; n: number; 
 
 function Numero({ label, valor, nota }: { label: string; valor: React.ReactNode; nota?: string }) {
   return (
-    <div className="flex flex-col gap-1 border-l-2 border-primary/50 pl-4">
+    <div className="flex flex-col gap-1 border-t pt-3">
       <span className="text-xs text-muted-foreground">{label}</span>
       <span className="font-heading text-3xl font-semibold tabular-nums">{valor}</span>
       {nota && <span className="text-xs text-muted-foreground">{nota}</span>}
@@ -71,7 +71,12 @@ function CartaoM10({ cat }: { cat: Catalogo }) {
         </Button>
       </CardHeader>
       <CardContent className="flex flex-col gap-6">
-        {erro && <pre className="overflow-x-auto rounded-md bg-destructive/10 p-3 text-xs text-destructive">{erro}</pre>}
+        {erro && (
+          <div role="alert" className="flex items-start gap-2 rounded-md bg-destructive/10 p-3 text-xs text-destructive">
+            <TriangleAlert className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+            <pre className="min-w-0 overflow-x-auto">{erro}</pre>
+          </div>
+        )}
         {!m ? (
           <p className="text-sm text-muted-foreground">
             Ainda sem métricas. Valide os elementos na fila (modo "Todos da zona"), preencha <code className="text-xs">contagem.json</code> e

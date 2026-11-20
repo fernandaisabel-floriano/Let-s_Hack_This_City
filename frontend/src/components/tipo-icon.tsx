@@ -16,8 +16,8 @@ export function iconeDe(tipo: Tipo, subtipo?: string | null): LucideIcon {
 export function TipoIcon({ tipo, subtipo, className }: { tipo: Tipo; subtipo?: string | null; className?: string }) {
   return (
     <span
-      className={cn('inline-flex size-7 shrink-0 items-center justify-center rounded-md text-white', className)}
-      style={{ background: TIPO_COR[tipo] }}
+      className={cn('inline-flex size-7 shrink-0 items-center justify-center rounded-md', className)}
+      style={{ background: TIPO_COR[tipo], color: '#ffffff' }}
     >
       {createElement(iconeDe(tipo, subtipo), { className: 'size-4', strokeWidth: 2.25 })}
     </span>

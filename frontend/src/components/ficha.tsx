@@ -215,10 +215,10 @@ export function Acoes({ el, validado, onDecidir, onDesfazer, editarPosicao, onEd
         </div>
       )}
       <div className="grid grid-cols-2 gap-2">
-        <Button className="bg-success text-white hover:bg-success/90" onClick={() => onDecidir('validado')}>
+        <Button className="bg-success text-primary-foreground hover:bg-success/90" onClick={() => onDecidir('validado')}>
           <Check /> Confirmar {atalhos && <kbd className="border-white/30">V</kbd>}
         </Button>
-        <Button variant="outline" className="text-destructive hover:text-destructive" onClick={() => onDecidir('rejeitado')}>
+        <Button variant="outline" className="border-destructive text-destructive hover:text-destructive dark:border-destructive" onClick={() => onDecidir('rejeitado')}>
           <X /> Rejeitar {atalhos && <kbd>X</kbd>}
         </Button>
       </div>

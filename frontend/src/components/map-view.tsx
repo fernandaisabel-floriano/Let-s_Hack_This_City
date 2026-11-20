@@ -11,6 +11,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { GeoJSON, MapContainer, Marker, TileLayer, Tooltip, useMap, ZoomControl } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
+import type { ZonaNova } from '@/components/adicionar-zona'
 import { ESTADO_COR_VAR } from '@/components/badges'
 import type { CorPor } from '@/components/filtros'
 import { iconeDe } from '@/components/tipo-icon'
@@ -41,11 +42,15 @@ interface Props {
   corPor?: CorPor
   /** marcadores assinalados (ex.: escolhidos para unir duplicados), com um visto */
   marcados?: string[]
+  /** ruas acrescentadas no botão "+" (zonas por processar), tracejado #7A5C48 */
+  zonasNovas?: ZonaNova[]
+  /** muda quando se escolhe uma zona nova: enquadra a zona base e essa rua */
+  enquadrar?: { id: string; n: number } | null
 }
 
 // ------------------------------------------------------------------ confiança
 
-/** Cor da confiança: verde ≥ limiar, amarelo ≥ 50 %, vermelho abaixo, cinzento sem calibração. */
+/** Cor da confiança: azul-tinta (#2F4A6D) ≥ limiar, azul-petróleo (#006E90) ≥ 50 %, vermelho-escuro (#8B2E2E) abaixo, cinzento sem calibração. */
 export function corConfianca(c: number | null | undefined, limiar = 0.9) {
   if (c === null || c === undefined) return 'var(--muted-foreground)'
   if (c >= limiar) return 'var(--success)'
@@ -71,6 +76,21 @@ function FitBounds({ bbox }: { bbox: number[] | null }) {
   useEffect(() => {
     if (bbox?.length === 4) map.fitBounds([[bbox[1], bbox[0]], [bbox[3], bbox[2]]], { padding: [16, 16] })
   }, [bbox, map])
+  return null
+}
+
+/** Enquadra a zona base (polígono, vias ou bbox) e a rua nova escolhida, com margem. */
+function EnquadrarNova({ alvo, zonas, base, bbox }: { alvo: { id: string; n: number } | null | undefined; zonas: ZonaNova[]; base: FeatureCollection | null; bbox: number[] | null }) {
+  const map = useMap()
+  useEffect(() => {
+    const z = alvo && zonas.find((x) => x.id === alvo.id)
+    if (!z) return
+    const b = L.geoJSON({ type: 'Feature', geometry: z.geometry, properties: {} } as GeoJSON.Feature).getBounds()
+    if (base) b.extend(L.geoJSON(base as unknown as GeoJSON.GeoJsonObject).getBounds())
+    else if (bbox?.length === 4) b.extend([[bbox[1], bbox[0]], [bbox[3], bbox[2]]])
+    if (b.isValid()) map.fitBounds(b, { paddingTopLeft: [40, 80], paddingBottomRight: [300, 40], maxZoom: 18 })
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só quando se escolhe uma zona
+  }, [alvo?.n, map])
   return null
 }
 
@@ -153,7 +173,7 @@ function MapaBase({ escuro, onPronto }: { escuro: boolean; onPronto: () => void 
 /**
  * Marcador em gota, ao estilo do Google Maps, com:
  *  - o ícone do tipo;
- *  - um ponto de cor com a confiança (verde / amarelo / vermelho / cinzento);
+ *  - um ponto de cor com a confiança (azul-tinta / azul-petróleo / vermelho-escuro / cinzento-azulado);
  *  - um badge "+N" quando junta duplicados.
  */
 const escaparAttr = (t: string) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
@@ -169,19 +189,26 @@ function pin(e: Elemento, opts: PinOpts) {
   const rejeitado = e.estado === 'rejeitado'
   const w = opts.selecionado || opts.marcado ? 36 : 27
   const h = Math.round(w * 1.36)
-  const icone = renderToStaticMarkup(<Icon size={w * 0.48} strokeWidth={2.4} color={porConfirmar ? cor : 'white'} aria-hidden="true" />)
+  const glifo = porConfirmar ? cor : 'white'
+  const contorno = porConfirmar ? cor : 'white'
+  const larguraContorno = porConfirmar ? 2 : 1.4
+  // sinais (#4B533C, escuros): no tema escuro a borda branca passa a 2 px (--borda-sinal), senão desaparecem no mapa escuro
+  const estiloContorno = !porEstado && e.tipo === 'sinal' && !porConfirmar ? 'style="stroke-width:var(--borda-sinal)"' : ''
+  const corPonto = corConfianca(e.confianca, opts.limiar)
+  const bordaPonto = 'white'
+  const icone = renderToStaticMarkup(<Icon size={w * 0.48} strokeWidth={2.4} color={glifo} aria-hidden="true" />)
   const ponto = Math.round(w * 0.36)
   const extra = e.fundidos?.length ?? 0
   const html = `
     <div class="ctrlf-pin" role="img" aria-label="${escaparAttr(`${descricaoElemento(e)}${opts.selecionado ? ' (selecionado)' : ''}`)}" style="position:relative;width:${w}px;height:${h}px;opacity:${rejeitado ? 0.45 : 1};${opts.arrastar ? 'cursor:grab' : ''};filter:drop-shadow(0 1px 2px rgb(0 0 0 / .35))">
       <svg width="${w}" height="${h}" viewBox="0 0 24 33" style="position:absolute;inset:0;overflow:visible">
         <path d="M12 32.2C12 32.2 1 19.6 1 11.6A11 11 0 0 1 23 11.6C23 19.6 12 32.2 12 32.2Z"
-          fill="${porConfirmar ? 'white' : cor}" stroke="${porConfirmar ? cor : 'white'}" stroke-width="${porConfirmar ? 2 : 1.4}"
+          fill="${porConfirmar ? 'white' : cor}" stroke="${contorno}" stroke-width="${larguraContorno}" ${estiloContorno}
           ${porConfirmar ? 'stroke-dasharray="3 2"' : ''}/>
       </svg>
       <div style="position:absolute;left:0;top:0;width:${w}px;height:${w * 0.96}px;display:flex;align-items:center;justify-content:center">${icone}</div>
       <span style="position:absolute;right:-${ponto * 0.25}px;top:-${ponto * 0.2}px;width:${ponto}px;height:${ponto}px;border-radius:50%;
-        background:${corConfianca(e.confianca, opts.limiar)};border:2px solid white;box-sizing:border-box"></span>
+        background:${corPonto};border:2px solid ${bordaPonto};box-sizing:border-box"></span>
       ${extra ? `<span style="position:absolute;left:-${w * 0.32}px;top:-${w * 0.22}px;min-width:${w * 0.62}px;height:${w * 0.52}px;padding:0 3px;border-radius:999px;
         background:var(--foreground);color:var(--background);font:600 ${Math.round(w * 0.36)}px/1 var(--font-sans);display:flex;align-items:center;justify-content:center;
         border:1.5px solid white;box-sizing:border-box">+${extra}</span>` : ''}
@@ -217,14 +244,14 @@ function iconeGrupo(cluster: { getChildCount(): number }) {
     className: 'ctrlf-marcador',
     iconSize: [s, s],
     html: `<div role="img" aria-label="${n} elementos agrupados; amplie para ver" style="width:${s}px;height:${s}px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);
-      display:flex;align-items:center;justify-content:center;font:600 13px/1 var(--font-sans);border:3px solid color-mix(in srgb, var(--primary) 30%, white);
-      box-shadow:0 1px 4px rgb(0 0 0 / .3)">${n}</div>`,
+      display:flex;align-items:center;justify-content:center;font:600 13px/1 var(--font-sans);border:3px solid var(--realce);
+      box-shadow:0 1px 2px rgb(0 0 0 / .2)">${n}</div>`,
   })
 }
 
 /** Lê um token de cor do tema (os atributos SVG do Leaflet não aceitam var()). */
 function corTema(nome: string) {
-  return getComputedStyle(document.documentElement).getPropertyValue(nome).trim() || '#1a73e8'
+  return getComputedStyle(document.documentElement).getPropertyValue(nome).trim() || '#2f4a6d'
 }
 
 function Rotulo({ e }: { e: Elemento }) {
@@ -241,7 +268,7 @@ function Rotulo({ e }: { e: Elemento }) {
   )
 }
 
-export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, onMover, escuro = false, compacto, limiar = 0.9, agrupar, corPor = 'categoria', marcados }: Props) {
+export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, onMover, escuro = false, compacto, limiar = 0.9, agrupar, corPor = 'categoria', marcados, zonasNovas, enquadrar }: Props) {
   const marc = useMemo(() => new Set(marcados ?? []), [marcados])
   const sel = useMemo(() => elementos.find((e) => e.id === selecionado), [elementos, selecionado])
   // eslint-disable-next-line react-hooks/exhaustive-deps -- recalcula quando o tema muda
@@ -315,6 +342,19 @@ export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, on
             interactive={false}
           />
         )}
+        {zonasNovas?.map((z) => (
+          <GeoJSON
+            key={`nova-${z.id}`}
+            data={{ type: 'Feature', geometry: z.geometry, properties: {} } as unknown as GeoJSON.GeoJsonObject}
+            style={{ color: '#7a5c48', weight: 4, dashArray: '8 6', opacity: 0.95 }}
+            interactive={false}
+          >
+            <Tooltip permanent direction="top" className="ctrlf-zona-nova">
+              {z.nome} · Zona por processar
+            </Tooltip>
+          </GeoJSON>
+        ))}
+        {zonasNovas && <EnquadrarNova alvo={enquadrar} zonas={zonasNovas} base={zona ?? vias} bbox={bbox} />}
         {vias && <GeoJSON key={`vias-${primaria}`} data={vias as unknown as GeoJSON.GeoJsonObject} style={{ color: primaria, weight: 2, opacity: 0.2 }} interactive={false} />}
         {agrupar ? (
           <MarkerClusterGroup
@@ -351,7 +391,7 @@ export function MapView({ elementos, vias, zona, bbox, selecionado, onSelect, on
 
       {!compacto && !pronto && (
         <div className="pointer-events-none absolute inset-0 z-[5] flex items-center justify-center" role="status" aria-live="polite">
-          <div className="flex items-center gap-2 rounded-full border bg-card/95 px-4 py-2 text-sm text-muted-foreground shadow-lg">
+          <div className="flex items-center gap-2 rounded-md border bg-card px-4 py-2 text-sm text-muted-foreground shadow-sm">
             <Loader2 className="size-4 animate-spin text-primary" aria-hidden="true" />A carregar o mapa…
           </div>
         </div>

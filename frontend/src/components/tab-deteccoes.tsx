@@ -85,14 +85,14 @@ function Grelha({ cat }: { cat: Catalogo }) {
             <article
               key={e.id}
               className={cn(
-                'group flex flex-col overflow-hidden rounded-xl border bg-card shadow-xs transition-shadow hover:shadow-md',
+                'group flex flex-col overflow-hidden rounded-md border bg-card transition-colors hover:border-realce',
                 destaque && 'border-destructive/50 ring-1 ring-destructive/20',
               )}
             >
               <button className="relative text-left" onClick={() => setSel(e.id)} aria-label={`Abrir ${titulo(e)} ${e.id}`}>
                 <Recorte el={e} className="aspect-[4/3] w-full rounded-none" />
                 {destaque && (
-                  <span className="absolute top-2 left-2 rounded-full bg-destructive px-2 py-0.5 text-[10px] font-medium text-white shadow">Baixa confiança</span>
+                  <span className="absolute top-2 left-2 rounded-full bg-destructive px-2 py-0.5 text-[10px] font-medium text-primary-foreground">Baixa confiança</span>
                 )}
                 {e.estado === 'pendente' && semCalibracao(e) && (
                   <span className="absolute top-2 left-2 rounded-full bg-foreground/75 px-2 py-0.5 text-[10px] font-medium text-background shadow" title="Ainda não há calibração para esta categoria: um técnico confirma sempre">
@@ -123,10 +123,10 @@ function Grelha({ cat }: { cat: Catalogo }) {
                 </div>
                 {(e.estado === 'pendente' || e.estado === 'auto') && (
                   <div className="mt-auto grid grid-cols-2 gap-1.5 pt-1">
-                    <Button size="sm" className="h-7 bg-success text-xs text-white hover:bg-success/90" onClick={() => cat.decidir(e.id, 'validado')}>
+                    <Button size="sm" className="h-7 bg-success text-xs text-primary-foreground hover:bg-success/90" onClick={() => cat.decidir(e.id, 'validado')}>
                       <Check aria-hidden="true" /> Aprovar
                     </Button>
-                    <Button size="sm" variant="outline" className="h-7 text-xs text-destructive hover:text-destructive" onClick={() => cat.decidir(e.id, 'rejeitado')}>
+                    <Button size="sm" variant="outline" className="h-7 border-destructive text-xs text-destructive hover:text-destructive dark:border-destructive" onClick={() => cat.decidir(e.id, 'rejeitado')}>
                       <X aria-hidden="true" /> Rejeitar
                     </Button>
                   </div>

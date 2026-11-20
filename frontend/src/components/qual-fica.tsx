@@ -113,7 +113,7 @@ export function QualFica({ cat, grupo, escolhido, pos, onEscolher, onMover, onCo
       </ul>
 
       <div className="flex flex-wrap items-center gap-2">
-        <Button onClick={onConfirmar} className="bg-success text-white hover:bg-success/90">
+        <Button onClick={onConfirmar} className="bg-success text-primary-foreground hover:bg-success/90">
           <Check /> Ficar com {esc.id} <kbd className="border-white/30">Enter</kbd>
         </Button>
         <Button variant="outline" onClick={onDiferentes}>

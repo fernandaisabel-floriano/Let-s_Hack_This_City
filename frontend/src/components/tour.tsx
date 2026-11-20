@@ -12,11 +12,11 @@ export interface Passo {
 }
 
 export const PASSOS_PUBLICO: Passo[] = [
-  { alvo: 'menu', titulo: 'Menu', texto: 'Abre a barra lateral: Mapa, Painel com os números do inventário, Exportar os dados e a área do técnico.' },
+  { alvo: 'menu', titulo: 'Navegação', texto: 'Na barra de cima: Mapa, Dashboard com os números do inventário, Catálogo, Exportação e a área do técnico.' },
   { alvo: 'pesquisa', titulo: 'Procurar', texto: 'Escreva um tipo de sinal (ex.: "stop") ou o identificador de um elemento.' },
   { alvo: 'filtros', titulo: 'Filtros e legenda', texto: 'Escolha o que ver: sinais, candeeiros, contentores, e se quer incluir os que ainda estão por confirmar. A legenda explica as cores dos marcadores.' },
   { alvo: 'exportar', titulo: 'Transferir', texto: 'Descarregue em GeoJSON ou CSV o que está no mapa, ou o catálogo completo, sem mudar de vista.' },
-  { alvo: 'mapa', titulo: 'Os marcadores', texto: 'Cada ícone é um elemento. O ponto colorido indica a confiança da deteção (verde alta, amarelo média, vermelho baixa) e "+N" diz que vários duplicados foram juntados num só. Clique para abrir a ficha com a fotografia.' },
+  { alvo: 'mapa', titulo: 'Os marcadores', texto: 'Cada ícone é um elemento. O ponto colorido indica a confiança da deteção (azul-tinta alta, azul-petróleo média, vermelho-escuro baixa) e "+N" diz que vários duplicados foram juntados num só. Clique para abrir a ficha com a fotografia.' },
   { alvo: 'tecnico', titulo: 'Área do técnico', texto: 'Os técnicos da Câmara entram aqui para validar as deteções duvidosas, corrigir posições e ver o registo.' },
 ]
 
@@ -28,6 +28,11 @@ export const PASSOS_TECNICO: Passo[] = [
   { alvo: 'filtros', titulo: 'Filtros de técnico', texto: 'Como técnico pode filtrar por estado (incluindo rejeitados) e por confiança mínima.' },
 ]
 
+/** o primeiro elemento visível com esse alvo (a navegação existe em menu e em barra, conforme a largura) */
+function alvoVisivel(alvo: string) {
+  return [...document.querySelectorAll<HTMLElement>(`[data-tour="${alvo}"]`)].find((el) => el.getClientRects().length > 0) ?? null
+}
+
 interface Props {
   aberto: boolean
   passos: Passo[]
@@ -38,11 +43,11 @@ export function Tour({ aberto, passos, onFechar }: Props) {
   const [i, setI] = useState(0)
   const [rect, setRect] = useState<DOMRect | null>(null)
   const cartao = useRef<HTMLDivElement>(null)
-  const visiveis = passos.filter((p) => !aberto || document.querySelector(`[data-tour="${p.alvo}"]`))
+  const visiveis = passos.filter((p) => !aberto || alvoVisivel(p.alvo))
   const passo = visiveis[i]
 
   const medir = useCallback(() => {
-    const el = passo && document.querySelector<HTMLElement>(`[data-tour="${passo.alvo}"]`)
+    const el = passo && alvoVisivel(passo.alvo)
     setRect(el ? el.getBoundingClientRect() : null)
   }, [passo])
 
@@ -105,7 +110,7 @@ export function Tour({ aberto, passos, onFechar }: Props) {
         aria-modal="true"
         aria-labelledby="tour-titulo"
         aria-describedby="tour-texto"
-        className="absolute flex flex-col gap-3 rounded-xl border bg-popover p-4 text-popover-foreground shadow-xl outline-none"
+        className="absolute flex flex-col gap-3 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none"
         style={{ left, top, width: W }}
       >
         <p className="text-xs text-muted-foreground">

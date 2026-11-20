@@ -6,7 +6,7 @@ import { ESTADO_LABEL, TIPO_COR, TIPO_LABEL, type Estado, type Tipo } from '@/li
 /** Verde = validado (pelo técnico, com ou sem correção), laranja = pendente, vermelho = rejeitado, azul = automático. */
 export const ESTADO_COR_VAR: Record<Estado, string> = {
   auto: 'var(--estado-auto)',
-  pendente: 'var(--warning)',
+  pendente: 'var(--pendente)',
   validado: 'var(--success)',
   corrigido: 'var(--success)',
   rejeitado: 'var(--destructive)',
@@ -14,7 +14,7 @@ export const ESTADO_COR_VAR: Record<Estado, string> = {
 
 const ESTADO_PONTO: Record<Estado, string> = {
   auto: 'bg-estado-auto',
-  pendente: 'bg-warning',
+  pendente: 'bg-pendente',
   validado: 'bg-success',
   corrigido: 'bg-success',
   rejeitado: 'bg-destructive',

@@ -159,3 +159,31 @@ export function enviarFicheiro(id: string, f: File, onProgresso: (fracao: number
     x.send(f)
   })
 }
+
+// ------------------------------------------------------------------ atualizar dados (esqueleto)
+
+export interface RespostaAtualizar {
+  implementado: boolean
+  mensagem: string
+}
+
+/** POST /api/atualizar — por agora o servidor responde 501 ("em desenvolvimento"); devolve a mensagem dele. */
+export async function atualizarDados(): Promise<RespostaAtualizar> {
+  const r = await fetch(BASE + '/api/atualizar', { method: 'POST' })
+  const j = (await r.json().catch(() => ({}))) as Partial<RespostaAtualizar> & { erro?: string }
+  if (r.status === 501) return { implementado: false, mensagem: j.mensagem ?? 'Atualização automática em desenvolvimento.' }
+  if (!r.ok) throw new Error(j.erro ?? `Erro ${r.status}`)
+  return { implementado: j.implementado ?? true, mensagem: j.mensagem ?? 'Dados atualizados.' }
+}
+
+// ------------------------------------------------------------------ zonas por processar (botão "+" do mapa)
+
+export interface RuaOsm {
+  type: 'Feature'
+  geometry: { type: 'LineString' | 'MultiLineString'; coordinates: number[][] | number[][][] }
+  properties: { osm_id: number; osm_type: string; name: string; freguesia: string | null; concelho: string | null }
+}
+
+/** GET /api/osm/ruas — ruas de Portugal com a geometria (Nominatim pelo servidor, ≤ 1 pedido/s). */
+export const procurarRuas = (q: string, signal?: AbortSignal) =>
+  pedir<{ type: 'FeatureCollection'; features: RuaOsm[] }>(`/api/osm/ruas?q=${encodeURIComponent(q)}`, { signal })
