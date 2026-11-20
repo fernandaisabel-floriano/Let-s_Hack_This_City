@@ -1,19 +1,20 @@
 {
- "gerado_em": "2026-11-20T14:00:22+00:00",
+ "gerado_em": "2026-11-20T14:00:23+00:00",
  "municipio": "aveiro",
  "zona": "santos-martires",
  "crs_local": "EPSG:3763",
  "elementos_total": 173,
- "no_catalogo": 112,
- "fora_da_zona": 61,
+ "no_catalogo": 110,
+ "fora_da_zona": 63,
  "por_tipo": {
   "sinal": 31,
   "candeeiro": 55,
-  "contentor": 26
+  "contentor": 24
  },
  "por_estado": {
-  "auto": 30,
-  "pendente": 82
+  "auto": 29,
+  "pendente": 78,
+  "validado": 3
  },
  "por_subtipo_sinal": {
   "outro_sinal": 25,
@@ -22,15 +23,15 @@
   "stop": 2
  },
  "por_fonte": {
-  "mapillary+video_proprio": 41,
+  "mapillary+video_proprio": 40,
   "mapillary": 50,
-  "video_proprio": 21
+  "video_proprio": 20
  },
  "vistas_por_elemento": {
   "1": 12,
   "2": 10,
   "3": 15,
-  "4": 13,
-  "5": 62
+  "4": 12,
+  "5": 61
  }
 }

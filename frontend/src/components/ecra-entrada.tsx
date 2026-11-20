@@ -15,23 +15,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
  * continua a mostrar os dados reais (config/municipio.yaml e a zona piloto). Os valores
  * escritos ficam só no sessionStorage, para voltarem preenchidos ao recarregar a página.
  *
- * As bolhas em degradê são só decoração de fundo.
+ * O fundo (ArteFundo) é só decoração.
  */
-
-/**
- * Bolhas decorativas: posição (% do ecrã), diâmetro (px), degradê e atraso da animação (s).
- * Cores da paleta da app (index.css): laranja da marca, azul-tinta, azul-petróleo, verde e oliva.
- */
-const BOLHAS: { x: number; y: number; d: number; de: string; para: string; atraso: number }[] = [
-  { x: 8, y: 14, d: 180, de: 'var(--destaque)', para: 'var(--marca)', atraso: 0 },
-  { x: 84, y: 12, d: 130, de: '#7d93b2', para: '#2f4a6d', atraso: -1.5 },
-  { x: 90, y: 64, d: 210, de: 'var(--tipo-candeeiro)', para: '#2f4a6d', atraso: -3 },
-  { x: 5, y: 74, d: 150, de: 'var(--tipo-contentor)', para: 'var(--tipo-candeeiro)', atraso: -4.5 },
-  { x: 22, y: 42, d: 64, de: '#ffb07a', para: 'var(--destaque)', atraso: -2 },
-  { x: 72, y: 34, d: 56, de: 'var(--tipo-contentor)', para: 'var(--tipo-sinal)', atraso: -5 },
-  { x: 58, y: 88, d: 100, de: '#90a4ae', para: '#2f4a6d', atraso: -2.5 },
-  { x: 32, y: 90, d: 44, de: 'var(--marca)', para: '#f2b33d', atraso: -3.5 },
-]
 
 const DISTRITOS = [
   'Aveiro', 'Beja', 'Braga', 'Bragança', 'Castelo Branco', 'Coimbra', 'Évora', 'Faro', 'Guarda', 'Leiria',
@@ -104,27 +89,96 @@ function paraYaml(d: DadosMunicipio) {
   return linhas.join('\n')
 }
 
-function Bolhas() {
+/**
+ * Fundo abstrato a partir do logotipo: contornos concêntricos com a silhueta do pin (como curvas de
+ * nível de um mapa), uma malha de ruas e pontos ao longo dela (as "sementes" do logotipo e os
+ * elementos detetados). Só cores da paleta (index.css), por isso segue o tema claro/escuro.
+ */
+function pinPath(cx: number, cy: number, r: number, d = 1.75) {
+  // pin de raio r com a ponta a d·r abaixo do centro; tangentes da ponta ao círculo
+  const k = 1 / d
+  const px = r * Math.sqrt(1 - k * k)
+  const py = r * k
+  const f = (n: number) => n.toFixed(1)
+  return `M${f(cx)} ${f(cy + d * r)} L${f(cx + px)} ${f(cy + py)} A${f(r)} ${f(r)} 0 1 0 ${f(cx - px)} ${f(cy + py)} Z`
+}
+
+/** anéis em pin: centro que deriva um pouco a cada anel, para não ficarem mecânicos */
+function aneis(cx: number, cy: number, r0: number, n: number, passo: number, deriva: [number, number]) {
+  return Array.from({ length: n }, (_, i) => ({
+    d: pinPath(cx + deriva[0] * i, cy + deriva[1] * i, r0 + passo * i),
+    cor: i % 3 === 2 ? 'var(--tipo-contentor)' : 'var(--marca)',
+    op: Math.max(0.06, 0.5 - i * 0.045),
+  }))
+}
+
+const RUAS: [number, number][][] = [
+  [[-40, 690], [260, 610], [520, 640], [800, 560], [1120, 600], [1640, 470]],
+  [[180, -40], [250, 260], [330, 520], [420, 1040]],
+  [[1040, -40], [1000, 220], [1110, 480], [1180, 760], [1240, 1040]],
+  [[-40, 250], [300, 210], [640, 280], [980, 230]],
+  [[620, 1040], [700, 820], [800, 560]],
+  [[1240, 1040], [1400, 860], [1640, 820]],
+]
+
+/** pontos ao longo das ruas, a intervalos regulares; um em cada 5 em laranja */
+function pontosDasRuas(espaco = 70) {
+  const out: { x: number; y: number; laranja: boolean }[] = []
+  let k = 0
+  for (const rua of RUAS)
+    for (let s = 0; s < rua.length - 1; s++) {
+      const [a, b] = [rua[s], rua[s + 1]]
+      const len = Math.hypot(b[0] - a[0], b[1] - a[1])
+      for (let t = espaco / 2; t < len; t += espaco) {
+        const x = a[0] + ((b[0] - a[0]) * t) / len
+        const y = a[1] + ((b[1] - a[1]) * t) / len
+        // de lado da rua, alternando, como o mobiliário urbano
+        const nx = -(b[1] - a[1]) / len
+        const ny = (b[0] - a[0]) / len
+        const lado = k % 2 ? 9 : -9
+        out.push({ x: x + nx * lado, y: y + ny * lado, laranja: k % 5 === 0 })
+        k++
+      }
+    }
+  return out
+}
+
+const ANEIS = [...aneis(1290, 300, 34, 11, 30, [6, -4]), ...aneis(250, 820, 22, 7, 26, [-5, 3])]
+const PONTOS = pontosDasRuas()
+const SEMENTES = Array.from({ length: 7 }, (_, i) => {
+  const a = (i / 7) * Math.PI * 2
+  return { x: 1290 + Math.cos(a) * 14, y: 300 + Math.sin(a) * 14 }
+})
+
+function ArteFundo() {
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      {BOLHAS.map((b, i) => (
-        <span
-          key={i}
-          className="ctrlf-bolha absolute rounded-full opacity-80 dark:opacity-60"
-          style={{
-            left: `${b.x}%`,
-            top: `${b.y}%`,
-            width: b.d,
-            height: b.d,
-            marginLeft: -b.d / 2,
-            marginTop: -b.d / 2,
-            background: `radial-gradient(circle at 30% 25%, rgb(255 255 255 / 0.5), transparent 45%), linear-gradient(135deg, ${b.de}, ${b.para})`,
-            boxShadow: `0 18px 40px -16px color-mix(in srgb, ${b.para} 60%, transparent)`,
-            animationDelay: `${b.atraso}s`,
-          }}
-        />
+    <svg
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 size-full"
+      viewBox="0 0 1600 1000"
+      // ancorado à direita: em ecrãs estreitos (telemóvel) fica à vista o pin grande
+      preserveAspectRatio="xMaxYMid slice"
+    >
+      <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {RUAS.map((r, i) => (
+          <polyline key={i} points={r.map((p) => p.join(',')).join(' ')} stroke="var(--primary)" strokeOpacity={0.12} strokeWidth={14} />
+        ))}
+        {RUAS.map((r, i) => (
+          <polyline key={`e${i}`} points={r.map((p) => p.join(',')).join(' ')} stroke="var(--primary)" strokeOpacity={0.22} strokeWidth={1.2} strokeDasharray="2 10" />
+        ))}
+        {ANEIS.map((a, i) => (
+          <path key={i} d={a.d} stroke={a.cor} strokeOpacity={a.op} strokeWidth={1.4} />
+        ))}
+      </g>
+      {PONTOS.map((p, i) => (
+        <circle key={i} cx={p.x} cy={p.y} r={p.laranja ? 4.5 : 3} fill={p.laranja ? 'var(--marca)' : 'var(--titulo)'} fillOpacity={p.laranja ? 0.7 : 0.22} />
       ))}
-    </div>
+      {/* o centro com as sementes, como no logotipo (igual nos dois temas) */}
+      <circle cx={1290} cy={300} r={22} fill="#263238" stroke="var(--marca)" strokeWidth={2} />
+      {SEMENTES.map((p, i) => (
+        <circle key={i} cx={p.x} cy={p.y} r={2.6} fill="#f6f7f9" />
+      ))}
+    </svg>
   )
 }
 
@@ -147,7 +201,7 @@ export function EcraEntrada({ onConcluir }: { onConcluir: (dados: DadosMunicipio
 
   return (
     <div className="relative flex min-h-svh items-center justify-center overflow-hidden bg-background px-4 py-12">
-      <Bolhas />
+      <ArteFundo />
 
       <main className="relative z-10 w-full max-w-lg rounded-lg border-t-4 border-t-destaque border bg-card/90 p-6 shadow-xl backdrop-blur-md sm:p-8">
         <div className="mb-4 flex items-start justify-between gap-3">
