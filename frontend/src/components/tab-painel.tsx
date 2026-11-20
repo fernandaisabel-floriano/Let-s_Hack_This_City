@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Calculator, TriangleAlert } from 'lucide-react'
-import { nomeBonito } from '@/components/app-sidebar'
+import { nomeBonito } from '@/lib/vistas'
 import { TipoIcon } from '@/components/tipo-icon'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'

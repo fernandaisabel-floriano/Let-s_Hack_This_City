@@ -1,6 +1,6 @@
 import { MapPinned } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { nomeBonito } from '@/components/app-sidebar'
+import { nomeBonito } from '@/lib/vistas'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { escolherZona, obterZonas, type ZonaInfo } from '@/lib/api'
 import type { Catalogo } from '@/hooks/use-catalogo'

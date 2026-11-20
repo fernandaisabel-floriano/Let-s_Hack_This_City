@@ -1,6 +1,6 @@
 import { Check, ChevronDown, Database, FlaskConical, FolderOpen, Lock, LogIn, LogOut, Menu, Moon, Sun, Upload } from 'lucide-react'
 import { useRef, type ReactNode } from 'react'
-import { VISTAS, type Vista } from '@/components/app-sidebar'
+import { VISTAS, type Vista } from '@/lib/vistas'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
