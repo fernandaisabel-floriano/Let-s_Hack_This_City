@@ -1,4 +1,5 @@
-import { ArrowLeft, CircleCheck, Loader2, LogIn, ShieldCheck, UserPlus } from 'lucide-react'
+import pin from '@/assets/mapeya-pin.png'
+import { ArrowLeft, CircleCheck, Loader2, LogIn, ShieldCheck, TriangleAlert, UserPlus } from 'lucide-react'
 import { useState } from 'react'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -17,15 +18,12 @@ interface Props {
 export function Marca({ claro }: { claro?: boolean }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex size-10 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground shadow-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21Z" />
-          <circle cx="12" cy="10.5" r="2.2" />
-        </svg>
-      </div>
+      <img src={pin} alt="" className="h-10 w-auto" />
       <div className="leading-tight">
-        <p className={claro ? 'text-lg font-semibold text-white' : 'text-lg font-semibold'}>Aveiro Smart City</p>
-        <p className={claro ? 'text-xs text-white/60' : 'text-xs text-muted-foreground'}>Câmara Municipal de Aveiro</p>
+        <p className={claro ? 'font-marca text-2xl font-semibold text-white' : 'font-marca text-2xl font-semibold'}>
+          Mape<span className="text-marca">ya</span>
+        </p>
+        <p className={claro ? 'text-xs text-white/80' : 'text-xs text-muted-foreground'}>Câmara Municipal de Aveiro</p>
       </div>
     </div>
   )
@@ -58,27 +56,22 @@ export function PaginaLogin({ motivo, primeiraConta, semServidor, onEntrar, onCr
   return (
     <div className="grid min-h-svh bg-background lg:grid-cols-[1.05fr_1fr]">
       <aside className="relative hidden flex-col justify-between overflow-hidden bg-navy p-10 text-white lg:flex">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-[0.07]"
-          style={{ backgroundImage: 'linear-gradient(var(--sidebar-border) 1px, transparent 1px), linear-gradient(90deg, var(--sidebar-border) 1px, transparent 1px)', backgroundSize: '40px 40px' }}
-        />
         <Marca claro />
         <div className="relative flex max-w-md flex-col gap-6">
-          <h1 className="text-3xl leading-tight font-semibold">Plataforma de gestão do mobiliário urbano</h1>
-          <p className="text-white/70">
+          <h1 className="text-3xl leading-tight font-semibold text-white">Plataforma de gestão do mobiliário urbano</h1>
+          <p className="text-white/85">
             Sinais de trânsito, iluminação pública e contentores identificados a partir de imagens de fontes abertas e de vídeos gravados na rua. A IA deteta; o técnico supervisiona
             e valida.
           </p>
           <ul className="flex flex-col gap-2.5 text-sm text-white/80">
             {['Deteção local, sem APIs comerciais', 'Rostos e matrículas desfocados antes de gravar', 'Cada validação fica registada com o nome do técnico'].map((t) => (
               <li key={t} className="flex items-center gap-2">
-                <CircleCheck className="size-4 text-sidebar-primary" aria-hidden="true" /> {t}
+                <CircleCheck className="size-4 text-realce" aria-hidden="true" /> {t}
               </li>
             ))}
           </ul>
         </div>
-        <p className="relative text-xs text-white/50">Protótipo · zona piloto Santos Mártires · Aveiro Tech City Hackathon 2026</p>
+        <p className="relative text-xs text-white/80">Protótipo · zona piloto Santos Mártires · Aveiro Tech City Hackathon 2026</p>
       </aside>
 
       <main className="flex items-center justify-center p-6">
@@ -100,12 +93,12 @@ export function PaginaLogin({ motivo, primeiraConta, semServidor, onEntrar, onCr
             )}
             {primeiraConta && (
               <div className="flex flex-col gap-2">
-                <Label htmlFor="nome">Nome completo</Label>
+                <Label htmlFor="nome" className="etiqueta">Nome completo</Label>
                 <Input id="nome" autoComplete="name" required value={nome} onChange={(e) => setNome(e.target.value)} />
               </div>
             )}
             <div className="flex flex-col gap-2">
-              <Label htmlFor="utilizador">Utilizador</Label>
+              <Label htmlFor="utilizador" className="etiqueta">Utilizador</Label>
               <Input
                 id="utilizador"
                 autoComplete="username"
@@ -121,7 +114,7 @@ export function PaginaLogin({ motivo, primeiraConta, semServidor, onEntrar, onCr
               />
             </div>
             <div className="flex flex-col gap-2">
-              <Label htmlFor="password">Palavra-passe</Label>
+              <Label htmlFor="password" className="etiqueta">Palavra-passe</Label>
               <Input
                 id="password"
                 type="password"
@@ -134,12 +127,13 @@ export function PaginaLogin({ motivo, primeiraConta, semServidor, onEntrar, onCr
             </div>
             {primeiraConta && (
               <div className="flex flex-col gap-2">
-                <Label htmlFor="password2">Repetir palavra-passe</Label>
+                <Label htmlFor="password2" className="etiqueta">Repetir palavra-passe</Label>
                 <Input id="password2" type="password" autoComplete="new-password" required value={password2} onChange={(e) => setPassword2(e.target.value)} />
               </div>
             )}
             {erro && (
               <Alert variant="destructive" role="alert">
+                <TriangleAlert aria-hidden="true" />
                 <AlertDescription>{erro}</AlertDescription>
               </Alert>
             )}

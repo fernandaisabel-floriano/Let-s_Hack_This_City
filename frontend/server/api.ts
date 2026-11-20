@@ -18,10 +18,12 @@
  *   GET  /api/motor, /api/importacoes…   técnicos: importação e processamento (server/importacoes.ts)
  *   POST /api/decisoes {acao: "par", a, b, mesmo}   o técnico decide um possível duplicado
  *   POST /api/metrica          técnicos: corre pipeline/evaluate.py (M10) e devolve a saída
+ *   POST /api/atualizar        técnicos: atualizar a zona com imagens novas (esqueleto: responde 501, ainda não implementado)
  *   GET  /api/zonas            público: zonas do município (municipio.yaml + config/zonas/*.yaml)
  *   POST /api/zona             público: {id} escolhe a zona que a app mostra (cookie ctrlf_zona)
  *   GET  /api/osm/procurar?q=  técnicos: ruas e bairros no OpenStreetMap (Nominatim, 1 pedido/s, cache)
  *   GET  /api/osm/inversa?lat=&lon=  técnicos: a rua num ponto do mapa
+ *   GET  /api/osm/ruas?q=      público: ruas de Portugal com a geometria (botão "+" do mapa; Nominatim, 1 pedido/s, cache)
  *   GET  /api/limiares         limiares de entrada automática (config/limiares.json); o histórico só para técnicos
  *   POST /api/limiares         técnicos: {zona, tipo, valores: {ativo, limiar, min_vistas} | null} (null = repor o padrão)
  *   /zona/ público só para o catálogo e as imagens (ZONA_PUBLICA); o resto exige sessão
@@ -465,7 +467,36 @@ async function nominatim(caminho: string, params: Record<string, string>) {
   return v
 }
 
-type ResultadoOsm = { osm_type: string; osm_id: number; category: string; type: string; name?: string; display_name: string; lat: string; lon: string; geojson?: { type: string } }
+type ResultadoOsm = {
+  osm_type: string
+  osm_id: number
+  category: string
+  type: string
+  name?: string
+  display_name: string
+  lat: string
+  lon: string
+  geojson?: { type: string }
+  address?: Record<string, string>
+}
+
+/** Ruas de um resultado do Nominatim com freguesia e concelho (botão "+" do mapa: só desenha, não grava nada). */
+function ruaOsm(x: ResultadoOsm) {
+  const g = x.geojson
+  if (!g || x.category !== 'highway' || (g.type !== 'LineString' && g.type !== 'MultiLineString')) return null
+  const a = x.address ?? {}
+  return {
+    type: 'Feature',
+    geometry: g,
+    properties: {
+      osm_id: x.osm_id,
+      osm_type: x.osm_type,
+      name: x.name || a.road || x.display_name.split(',')[0],
+      freguesia: a.city_district ?? a.suburb ?? a.village ?? a.town ?? a.quarter ?? null,
+      concelho: a.municipality ?? a.city ?? a.town ?? a.county ?? null,
+    },
+  }
+}
 
 /** Ruas (LineString) e bairros (Polygon) de um resultado do Nominatim, como Features. */
 function featureOsm(x: ResultadoOsm) {
@@ -581,6 +612,17 @@ function handler() {
         const raio = (t: string) => (typeof r === 'number' ? r : (r[t] ?? 8))
         return json(res, 200, duplicadosDaZona(zonaDir(), raio))
       }
+      // pesquisa de ruas (botão "+" do mapa): pública, só leitura; a fila de nominatim() garante ≤ 1 pedido/s
+      if (url === '/api/osm/ruas' && metodo === 'GET') {
+        const q = new URL(req.url ?? '', 'http://x').searchParams.get('q')?.trim() ?? ''
+        if (q.length < 3 || q.length > 120) return json(res, 400, { erro: 'pesquisa entre 3 e 120 caracteres' })
+        const c = readMunicipio()
+        const ref = (c.bbox ?? [-8.66, 40.63, -8.64, 40.65]) as number[]
+        const vb = [ref[0] - 0.3, ref[3] + 0.3, ref[2] + 0.3, ref[1] - 0.3].join(',') // prefere o concelho, sem o impor
+        const r = (await nominatim('search', { q, countrycodes: 'pt', layer: 'address', polygon_geojson: '1', addressdetails: '1', limit: '15', viewbox: vb })) as ResultadoOsm[]
+        const feats = r.map(ruaOsm).filter(Boolean)
+        return json(res, 200, { type: 'FeatureCollection', features: feats })
+      }
       if (url.startsWith('/zona/') && ZONA_PUBLICA.test(decodeURIComponent(url.slice('/zona/'.length))))
         return serveFile(zonaDir(), url.slice('/zona/'.length), res)
 
@@ -679,6 +721,33 @@ function handler() {
         const x = (await nominatim('reverse', { lat: lat.toFixed(6), lon: lon.toFixed(6), zoom: '17', polygon_geojson: '1' })) as ResultadoOsm
         const f = x && featureOsm(x)
         return f ? json(res, 200, f) : json(res, 404, { erro: 'sem rua neste ponto' })
+      }
+
+      /*
+       * Atualizar dados — ESQUELETO, ainda não implementado (responde 501).
+       *
+       * Passos futuros, só sobre as imagens novas da zona atual:
+       *   1. data da última recolha: a imagem mais recente já processada (max captured_at das imagens
+       *      da zona; catalogo/resumo.json gerado_em como recurso);
+       *   2. descarregar do Mapillary as imagens da zona (bbox/polígono da config) com captured_at
+       *      posterior a essa data (pipeline/fetch_mapillary.py com um filtro de data);
+       *   3. desfoque de rostos e matrículas antes de gravar (como na M1/M2);
+       *   4. deteção (M3) → classificação dos sinais (M4) e filtro dos contentores → posição (M5);
+       *   5. fusão (M6) com o catálogo EXISTENTE: as deteções novas juntam-se aos elementos já
+       *      conhecidos (mais vistas, ultima_vista atualizada) ou criam elementos novos;
+       *   6. exportação (M9) e resumo da atualização (imagens novas, elementos novos/alterados).
+       *
+       * Regra obrigatória: uma atualização NUNCA apaga nem reescreve as validações do técnico
+       * (catalogo/validacoes.json e catalogo/registo_validacoes.jsonl). Elementos já validados,
+       * corrigidos ou rejeitados mantêm a decisão; só os elementos novos, ou os que mudaram (ex.:
+       * subtipo diferente nas imagens novas), vão para a fila como "pendente".
+       * Correr como trabalho em segundo plano, como as importações (server/importacoes.ts).
+       */
+      if (url === '/api/atualizar' && metodo === 'POST') {
+        return json(res, 501, {
+          implementado: false,
+          mensagem: 'Atualização automática em desenvolvimento. Os dados não foram alterados.',
+        })
       }
 
       // M10: recalcula catalogo/metrica.json a partir do registo e de contagem.json

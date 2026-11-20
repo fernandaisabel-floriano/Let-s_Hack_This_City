@@ -1,6 +1,8 @@
-import { CircleHelp, FlaskConical, Loader2, LogIn, Menu, Moon, Sun } from 'lucide-react'
+import { CircleHelp, FlaskConical, Loader2, TriangleAlert } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
-import { AppSidebar, VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
+import { VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
+import { AtualizarDados } from '@/components/atualizar-dados'
+import { BarraSuperior, botaoBarra } from '@/components/barra-superior'
 import { PaginaLogin } from '@/components/pagina-login'
 import { TabCatalogo } from '@/components/tab-catalogo'
 import { TabDashboard } from '@/components/tab-dashboard'
@@ -12,7 +14,6 @@ import { TabRegisto } from '@/components/tab-registo'
 import { PASSOS_PUBLICO, PASSOS_TECNICO, Tour, useTourVisto } from '@/components/tour'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { SidebarInset, SidebarProvider, useSidebar } from '@/components/ui/sidebar'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { useCatalogo } from '@/hooks/use-catalogo'
@@ -55,18 +56,6 @@ function lerRota(): Rota {
   if (h === 'login') return 'login'
   if (VISTA_ALIAS[h]) return VISTA_ALIAS[h]
   return VISTAS.some((v) => v.id === h) ? (h as Vista) : 'mapa'
-}
-
-/** Botão do menu com texto, para se perceber que há uma barra lateral. */
-function BotaoMenu() {
-  const { toggleSidebar, open, openMobile, isMobile } = useSidebar()
-  const aberto = isMobile ? openMobile : open
-  return (
-    <Button data-tour="menu" variant="ghost" size="sm" onClick={toggleSidebar} aria-expanded={aberto} aria-label={aberto ? 'Fechar o menu' : 'Abrir o menu'} className="-ml-1 gap-2">
-      <Menu aria-hidden="true" />
-      <span className="hidden sm:inline">Menu</span>
-    </Button>
-  )
 }
 
 export default function App() {
@@ -148,18 +137,17 @@ export default function App() {
 
   if (!pronto) {
     return (
-      <div className="flex h-svh">
-        <Skeleton className="hidden h-full w-64 rounded-none bg-navy md:block" />
-        <div className="flex flex-1 flex-col">
-          <div className="flex h-14 items-center gap-3 border-b px-3">
-            <Skeleton className="h-8 w-20" />
-            <Skeleton className="h-5 w-40" />
-          </div>
-          <div className="relative flex-1 bg-muted">
-            <div className="absolute inset-0 flex items-center justify-center" role="status" aria-live="polite">
-              <div className="flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-sm text-muted-foreground shadow-lg">
-                <Loader2 className="size-4 animate-spin text-primary" aria-hidden="true" />A carregar a plataforma…
-              </div>
+      <div className="flex h-svh flex-col">
+        <div className="flex h-14 shrink-0 items-center gap-3 border-b-2 border-destaque bg-card px-4">
+          <span className="font-marca text-2xl leading-none font-semibold text-titulo">
+            Mape<span className="text-marca">ya</span>
+          </span>
+          <Skeleton className="h-5 w-40" />
+        </div>
+        <div className="relative flex-1 bg-muted">
+          <div className="absolute inset-0 flex items-center justify-center" role="status" aria-live="polite">
+            <div className="flex items-center gap-2 rounded-md border bg-card px-4 py-2 text-sm text-muted-foreground">
+              <Loader2 className="size-4 animate-spin text-primary" aria-hidden="true" />A carregar a plataforma…
             </div>
           </div>
         </div>
@@ -189,59 +177,40 @@ export default function App() {
   const contentor = 'mx-auto w-full max-w-[1400px] p-4 sm:p-6'
 
   return (
-    <SidebarProvider defaultOpen>
-      <AppSidebar
-        cat={cat}
-        vista={mostrar}
-        onVista={escolherVista}
-        escuro={escuro}
-        onTema={alternarTema}
-        onEntrar={() => pedirLogin()}
-        onSair={sair}
-      />
-      <SidebarInset className="h-svh min-w-0 overflow-hidden">
-        <header className="flex h-14 shrink-0 items-center gap-3 border-b bg-card px-3">
-          <BotaoMenu />
-          <div className="h-5 w-px bg-border" />
-          <div className="min-w-0 flex-1 leading-tight">
-            <h1 className="truncate text-base font-semibold">{v.titulo}</h1>
-            <p className="hidden truncate text-xs text-muted-foreground sm:block">{v.descricao}</p>
-          </div>
-          {cat.origem !== 'pipeline' && (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Badge variant="outline" className="gap-1 border-warning/50 font-normal text-warning">
-                  <FlaskConical aria-hidden="true" /> {cat.origem === 'demo' ? 'Dados fictícios de demonstração' : cat.nomeFicheiro}
-                </Badge>
-              </TooltipTrigger>
-              <TooltipContent>
-                {cat.origem === 'demo' ? 'Não foi encontrado o catálogo do pipeline: estes dados são gerados e não são deteções reais.' : 'Ficheiro carregado neste browser.'}
-              </TooltipContent>
-            </Tooltip>
-          )}
-          {mostrar === 'mapa' && (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon-sm" onClick={() => setTour(true)} aria-label="Ajuda: visita guiada">
-                  <CircleHelp aria-hidden="true" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>Visita guiada</TooltipContent>
-            </Tooltip>
-          )}
-          {!tecnico && (
-            <>
-              <Button variant="ghost" size="icon-sm" onClick={alternarTema} aria-label={escuro ? 'Mudar para tema claro' : 'Mudar para tema escuro'}>
-                {escuro ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+    <div className="flex h-svh min-w-0 flex-col overflow-hidden">
+      <BarraSuperior cat={cat} vista={mostrar} onVista={escolherVista} escuro={escuro} onTema={alternarTema} onEntrar={() => pedirLogin()} onSair={sair}>
+        {cat.origem !== 'pipeline' && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="outline" className="h-8 gap-1 font-normal">
+                <FlaskConical aria-hidden="true" /> {cat.origem === 'demo' ? 'Dados fictícios de demonstração' : cat.nomeFicheiro}
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent>
+              {cat.origem === 'demo' ? 'Não foi encontrado o catálogo do pipeline: estes dados são gerados e não são deteções reais.' : 'Ficheiro carregado neste browser.'}
+            </TooltipContent>
+          </Tooltip>
+        )}
+        <AtualizarDados cat={cat} onEntrar={() => pedirLogin()} />
+        {mostrar === 'mapa' && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon" className={botaoBarra} onClick={() => setTour(true)} aria-label="Ajuda: visita guiada">
+                <CircleHelp aria-hidden="true" />
               </Button>
-              <Button data-tour="tecnico" size="sm" onClick={() => pedirLogin()} aria-label="Entrar na área do técnico">
-                <LogIn aria-hidden="true" /> <span className="hidden sm:inline">Entrar</span>
-              </Button>
-            </>
-          )}
-        </header>
+            </TooltipTrigger>
+            <TooltipContent>Visita guiada</TooltipContent>
+          </Tooltip>
+        )}
+      </BarraSuperior>
+      <h1 className="sr-only">{v.titulo}: {v.descricao}</h1>
 
-        {cat.erro && <div role="alert" className="border-b bg-destructive/10 px-4 py-2 text-xs text-destructive">{cat.erro}</div>}
+        {cat.erro && (
+          <div role="alert" className="flex items-center gap-2 border-b bg-destructive/10 px-4 py-2 text-xs text-destructive">
+            <TriangleAlert className="size-4 shrink-0" aria-hidden="true" />
+            {cat.erro}
+          </div>
+        )}
 
         <main className={ecraInteiro ? 'relative min-h-0 flex-1' : 'min-h-0 flex-1 overflow-auto bg-background'}>
           {mostrar === 'mapa' && <TabMapa key={tecnico ? 't' : 'p'} cat={cat} escuro={escuro} onPedirLogin={() => pedirLogin('deteccoes')} />}
@@ -252,9 +221,8 @@ export default function App() {
           {mostrar === 'importacao' && <div className={contentor}><TabImportacao cat={cat} /></div>}
           {mostrar === 'registo' && <div className={contentor}><TabRegisto cat={cat} /></div>}
         </main>
-      </SidebarInset>
 
       <Tour aberto={tour && mostrar === 'mapa'} passos={tecnico ? PASSOS_TECNICO : PASSOS_PUBLICO} onFechar={fecharTour} />
-    </SidebarProvider>
+    </div>
   )
 }

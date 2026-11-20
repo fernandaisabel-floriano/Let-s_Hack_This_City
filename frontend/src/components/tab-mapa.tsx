@@ -1,6 +1,8 @@
 import { Download, FileSpreadsheet, Map as MapIcon, Merge, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { toast } from 'sonner'
+import { AdicionarZona, ListaZonasNovas, useZonasNovas } from '@/components/adicionar-zona'
+import { ZonaSeletor } from '@/components/zona-seletor'
 import { FichaPainel } from '@/components/ficha-painel'
 import { UnirDuplicados } from '@/components/unir-duplicados'
 import { aplicarFiltros, Filtros, filtrosAtivos, filtrosIniciais, type CorPor, type FiltrosState } from '@/components/filtros'
@@ -30,7 +32,7 @@ interface Props {
   onPedirLogin: () => void
 }
 
-const flutuante = 'rounded-xl border bg-card/95 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-card/85'
+const flutuante = 'rounded-[4px] border bg-card'
 
 export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const tecnico = !!cat.tecnico
@@ -42,6 +44,8 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const [corPor, setCorPor] = useState<CorPor>('categoria')
   /** técnico: unir à mão duplicados que o sistema não detetou (null = desligado) */
   const [unir, setUnir] = useState<{ ids: string[]; fica: string | null } | null>(null)
+  /** ruas acrescentadas no "+" (só no browser) */
+  const zonasNovas = useZonasNovas()
 
   // modo lite: no telemóvel junta os marcadores próximos por omissão
   const [agruparEscolha, setAgrupar] = useState<boolean | null>(null)
@@ -112,10 +116,24 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
         corPor={corPor}
         onMover={tecnico && editarPos && !unir ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon }) : undefined}
         marcados={unir?.ids}
+        zonasNovas={zonasNovas.zonas}
+        enquadrar={zonasNovas.enquadrar}
       />
+
+      {/* zonas por processar (canto superior direito; a ficha, quando aberta, fica no lugar dela) */}
+      {!el && !unir && zonasNovas.zonas.length > 0 && (
+        <div className="absolute top-3 right-3 z-10 hidden sm:block">
+          <ListaZonasNovas zonas={zonasNovas} />
+        </div>
+      )}
 
       {/* pesquisa + filtros + exportação rápida */}
       <div className="pointer-events-none absolute inset-x-3 top-3 z-10 flex flex-col items-start gap-2 sm:right-auto sm:w-96">
+        {/* zona atual + adicionar zona (canto superior esquerdo) */}
+        <div className="flex w-full min-w-0 items-center gap-2 sm:w-max sm:max-w-[min(40rem,calc(100vw-1.5rem))]">
+          <ZonaSeletor cat={cat} />
+          <AdicionarZona zonas={zonasNovas} />
+        </div>
         <div className={cn('pointer-events-auto flex w-full items-center gap-1 p-1', flutuante)} role="search">
           <Search className="ml-2 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
           <Input
@@ -195,6 +213,12 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
+        {/* em ecrãs estreitos, a lista das zonas por processar fica nesta coluna */}
+        {!el && !unir && zonasNovas.zonas.length > 0 && !verFiltros && (
+          <div className="sm:hidden">
+            <ListaZonasNovas zonas={zonasNovas} />
+          </div>
+        )}
         {verFiltros && (
           <div id="painel-filtros" className={cn('pointer-events-auto max-h-[calc(100svh-12rem)] w-full overflow-y-auto p-4', flutuante)}>
             <Filtros
