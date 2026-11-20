@@ -2,6 +2,7 @@ import { CircleHelp, FlaskConical, Loader2, TriangleAlert } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
 import { VISTAS, VISTA_ALIAS, type Vista } from '@/components/app-sidebar'
 import { AtualizarDados } from '@/components/atualizar-dados'
+import { EcraEntrada } from '@/components/ecra-entrada'
 import { BarraSuperior, botaoBarra } from '@/components/barra-superior'
 import { PaginaLogin } from '@/components/pagina-login'
 import { TabCatalogo } from '@/components/tab-catalogo'
@@ -67,9 +68,11 @@ export default function App() {
   /** para onde ir depois de entrar, e porquê se pediu o login */
   const [login, setLogin] = useState<{ destino?: Vista; motivo?: string }>({})
   const [tour, setTour] = useState(false)
+  /** ecrã de entrada: setup do município, sempre que a app abre (protótipo: não grava nada) */
+  const [entrou, setEntrou] = useState(false)
   const tourChave = tecnico ? 'tecnico' : 'publico'
   const tourVisto = useTourVisto(tourChave)
-  const pronto = sessao.estado.tipo !== 'a-carregar' && !!cat.base
+  const pronto = entrou && sessao.estado.tipo !== 'a-carregar' && !!cat.base
 
   useEffect(() => {
     const onHash = () => setRota(lerRota())
@@ -133,6 +136,17 @@ export default function App() {
   const sair = async () => {
     await sessao.sair()
     if (info?.restrito) irPara('mapa')
+  }
+
+  if (!entrou) {
+    return (
+      <EcraEntrada
+        onConcluir={() => {
+          // protótipo: os dados do município não vão para o servidor; abre a app com o config real
+          setEntrou(true)
+        }}
+      />
+    )
   }
 
   if (!pronto) {
