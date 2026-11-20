@@ -1,4 +1,4 @@
-import { ArrowDownWideNarrow, ArrowUpNarrowWide, Calculator, Copy, CircleCheck, Timer, Undo2 } from 'lucide-react'
+import { ArrowDownWideNarrow, ArrowUpNarrowWide, Calculator, Copy, CircleCheck, Timer, TriangleAlert, Undo2 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Acoes, CoordenadasEditor, Detalhes, Recorte, titulo } from '@/components/ficha'
 import { bboxDe } from '@/components/ficha-painel'
@@ -295,7 +295,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
               <li key={e.id}>
                 <button
                   onClick={() => setAtualId(e.id)}
-                  className={cn('flex w-full items-center gap-2.5 rounded-md px-2 py-1.5 text-left text-sm hover:bg-accent', atual?.id === e.id && 'bg-accent')}
+                  className={cn('flex w-full items-center gap-2.5 rounded-md px-2 py-1.5 text-left text-sm hover:bg-accent', atual?.id === e.id && 'bg-selecao font-medium text-titulo shadow-[inset_2px_0_0_var(--realce)] hover:bg-selecao')}
                 >
                   <span className="w-5 text-right text-xs text-muted-foreground tabular-nums">{i + 1}</span>
                   <TipoIcon tipo={e.tipo} subtipo={e.subtipo} className="size-6" />
@@ -433,6 +433,7 @@ export function TabFila({ cat, escuro }: { cat: Catalogo; escuro?: boolean }) {
             </div>
             {msgMetrica && (
               <pre className={cn('max-w-xl overflow-x-auto rounded-md bg-muted p-3 text-left text-[11px]', !msgMetrica.ok && 'text-destructive')}>
+                {!msgMetrica.ok && <TriangleAlert className="mr-1.5 inline size-3.5 align-[-2px]" aria-label="Erro" />}
                 {msgMetrica.ok ? 'Métricas atualizadas: veja o Dashboard.\n\n' : ''}
                 {msgMetrica.saida}
               </pre>

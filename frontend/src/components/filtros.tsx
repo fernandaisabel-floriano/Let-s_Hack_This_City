@@ -75,7 +75,9 @@ function alternar<T>(lista: T[], v: T) {
 }
 
 function Legenda({ limiar, corPor }: { limiar: number; corPor: CorPor }) {
-  const ponto = (cor: string) => <span className="inline-block size-2.5 shrink-0 rounded-full ring-2 ring-card" style={{ background: cor }} aria-hidden="true" />
+  const ponto = (cor: string) => (
+    <span className={cn('inline-block size-2.5 shrink-0 rounded-full ring-2', 'ring-card')} style={{ background: cor }} aria-hidden="true" />
+  )
   return (
     <section className="flex flex-col gap-1.5 rounded-lg bg-muted/60 p-3 text-xs" aria-labelledby="legenda-titulo">
       <h3 id="legenda-titulo" className="mb-0.5 font-medium text-muted-foreground">Legenda</h3>
@@ -83,7 +85,7 @@ function Legenda({ limiar, corPor }: { limiar: number; corPor: CorPor }) {
         <>
           <p className="flex items-center gap-2">{ponto('var(--success)')} Validado por técnico</p>
           <p className="flex items-center gap-2">{ponto('var(--estado-auto)')} Aceite automaticamente (confiança alta)</p>
-          <p className="flex items-center gap-2">{ponto('var(--warning)')} Pendente de validação</p>
+          <p className="flex items-center gap-2">{ponto('var(--pendente)')} Pendente de validação</p>
           <p className="flex items-center gap-2">{ponto('var(--destructive)')} Rejeitado</p>
           <p className="mt-1 text-muted-foreground">Ponto no canto: confiança da IA</p>
         </>

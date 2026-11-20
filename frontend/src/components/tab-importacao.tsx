@@ -15,6 +15,7 @@ import {
   Square,
   Upload,
   X,
+  TriangleAlert,
 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { toast } from 'sonner'
@@ -134,7 +135,7 @@ function Passos({ j, nomes }: { j: Importacao; nomes: Record<string, string> }) 
 function Processamento({ j, nomes, onCancelar }: { j: Importacao; nomes: Record<string, string>; onCancelar: () => void }) {
   const ativo = j.estado === 'a_aguardar' || j.estado === 'em_processamento'
   return (
-    <li className="flex flex-col gap-3 rounded-xl border bg-card p-4">
+    <li className="flex flex-col gap-3 rounded-md border bg-card p-4">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="flex flex-wrap items-center gap-2 font-medium">
@@ -162,7 +163,12 @@ function Processamento({ j, nomes, onCancelar }: { j: Importacao; nomes: Record<
           <Passos j={j} nomes={nomes} />
         </>
       )}
-      {j.erro && <p className="rounded-md bg-destructive/10 px-3 py-2 text-xs text-destructive">{j.erro}</p>}
+      {j.erro && (
+        <p className="flex items-start gap-2 rounded-md bg-destructive/10 px-3 py-2 text-xs text-destructive">
+          <TriangleAlert className="mt-px size-3.5 shrink-0" aria-hidden="true" />
+          {j.erro}
+        </p>
+      )}
       {j.originais_apagados && (
         <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
           <ShieldCheck className="size-3.5 text-success" aria-hidden="true" /> Ficheiros originais apagados do servidor; só ficam as imagens desfocadas.
@@ -308,11 +314,11 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="imp-nome">Nome da recolha</Label>
+                  <Label htmlFor="imp-nome" className="etiqueta">Nome da recolha</Label>
                   <Input id="imp-nome" placeholder="ex.: santos_martires_nov" value={nome} onChange={(e) => setNome(e.target.value)} />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="imp-rua">Rua ou zona de Aveiro</Label>
+                  <Label htmlFor="imp-rua" className="etiqueta">Rua ou zona de Aveiro</Label>
                   <Select value={rua} onValueChange={setRua}>
                     <SelectTrigger id="imp-rua" className="w-full"><SelectValue placeholder="Escolher" /></SelectTrigger>
                     <SelectContent>
@@ -327,7 +333,7 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
               <TabsContent value="fotos" className="flex flex-col gap-3">
                 <label
                   className={cn(
-                    'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed px-4 py-8 text-center transition-colors hover:border-primary hover:bg-primary/5',
+                    'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-md border-2 border-dashed px-4 py-8 text-center transition-colors hover:border-primary hover:bg-primary/5',
                     !disponivel && 'pointer-events-none opacity-50',
                   )}
                 >
@@ -341,15 +347,15 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
               <TabsContent value="video" className="flex flex-col gap-3">
                 <div className="grid gap-3 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="imp-video">Vídeo</Label>
+                    <Label htmlFor="imp-video" className="etiqueta">Vídeo</Label>
                     <Input id="imp-video" type="file" accept=".mp4,.mov,.avi,.mkv" disabled={!disponivel} onChange={(e) => setVideo(e.target.files?.[0] ?? null)} />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="imp-gpx">Trilha GPS (.gpx)</Label>
+                    <Label htmlFor="imp-gpx" className="etiqueta">Trilha GPS (.gpx)</Label>
                     <Input id="imp-gpx" type="file" accept=".gpx" disabled={!disponivel} onChange={(e) => setGpx(e.target.files?.[0] ?? null)} />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="imp-offset">Desfasamento GPS ↔ vídeo (segundos)</Label>
+                    <Label htmlFor="imp-offset" className="etiqueta">Desfasamento GPS ↔ vídeo (segundos)</Label>
                     <Input id="imp-offset" inputMode="decimal" value={offset} onChange={(e) => setOffset(e.target.value)} disabled={!disponivel} />
                   </div>
                 </div>
@@ -359,7 +365,7 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
               </TabsContent>
 
               <TabsContent value="abertas" className="grid gap-3 sm:grid-cols-2">
-                <div className="flex flex-col gap-2 rounded-xl border p-4">
+                <div className="flex flex-col gap-2 rounded-md border p-4">
                   <p className="flex items-center gap-2 font-medium"><Globe className="size-4 text-primary" aria-hidden="true" /> Mapillary</p>
                   <p className="text-xs text-muted-foreground">
                     Imagens de rua abertas (licença CC BY-SA 4.0, com atribuição obrigatória). A recolha usa a API oficial com token próprio, respeita os limites de pedidos e guarda
@@ -368,7 +374,7 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
                   {totaisMap && <p className="text-xs">Já recolhidas na zona: <strong>{totaisMap.imagens}</strong> imagens ({totaisMap.com_desfoque} com desfocagem aplicada).</p>}
                   {!motor?.mapillary_token && <p className="text-xs text-warning">Falta o token (MAPILLARY_TOKEN no ficheiro .env do servidor).</p>}
                 </div>
-                <div className="flex flex-col gap-2 rounded-xl border border-dashed p-4 opacity-80">
+                <div className="flex flex-col gap-2 rounded-md border border-dashed p-4 opacity-80">
                   <p className="flex items-center gap-2 font-medium"><Route className="size-4 text-muted-foreground" aria-hidden="true" /> KartaView</p>
                   <p className="text-xs text-muted-foreground">
                     Ainda não integrado. Será um módulo de recolha com o mesmo formato de saída do Mapillary, se houver cobertura na zona e respeitando as condições de utilização da
@@ -434,7 +440,7 @@ export function TabImportacao({ cat }: { cat: Catalogo }) {
             ))}
           </ul>
         ) : (
-          <p className="rounded-xl border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">Ainda não há processamentos.</p>
+          <p className="rounded-md border border-dashed px-4 py-8 text-center text-sm text-muted-foreground">Ainda não há processamentos.</p>
         )}
       </section>
 

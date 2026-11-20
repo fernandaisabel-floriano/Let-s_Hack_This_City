@@ -116,7 +116,7 @@ export function UnirDuplicados({ cat, ids, fica, pos, onRepor, onFica, onRemover
       </div>
 
       <div className="flex flex-wrap justify-end gap-2 border-t p-3">
-        <Button variant="destructive" onClick={rejeitar} disabled={sel.length < 1} className="mr-auto">
+        <Button variant="outline" onClick={rejeitar} disabled={sel.length < 1} className="mr-auto border-destructive text-destructive hover:text-destructive dark:border-destructive">
           <Trash2 /> {sel.length < 1 ? 'Rejeitar' : `Rejeitar ${sel.length}`}
         </Button>
         <Button onClick={unir} disabled={sel.length < 2}>

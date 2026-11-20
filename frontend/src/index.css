@@ -1,13 +1,25 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/fredoka";
+@import "@fontsource-variable/jetbrains-mono";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
     --font-heading: var(--font-sans);
-    --font-sans: 'Geist Variable', system-ui, sans-serif;
+    --font-sans: 'Inter Variable', system-ui, sans-serif;
+    --font-marca: 'Fredoka Variable', 'Inter Variable', sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+    --color-destaque: var(--destaque);
+    --color-destaque-foreground: var(--destaque-foreground);
+    --color-selecao: var(--selecao);
+    --color-realce: var(--realce);
+    --color-zona-nova: var(--zona-nova);
+    --color-titulo: var(--titulo);
+    --color-marca: var(--marca);
+    --color-pendente: var(--pendente);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,105 +59,159 @@
     --color-tipo-sinal: var(--tipo-sinal);
     --color-tipo-candeeiro: var(--tipo-candeeiro);
     --color-tipo-contentor: var(--tipo-contentor);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+    --radius-sm: 4px;
+    --radius-md: 4px;
+    --radius-lg: 4px;
+    --radius-xl: 4px;
+    --radius-2xl: 4px;
+    --radius-3xl: 4px;
+    --radius-4xl: 4px;
+    --shadow-xs: 0 0 #0000;
+    --shadow-sm: 0 1px 1px rgb(15 23 42 / 0.04);
+    --shadow-md: 0 1px 2px rgb(15 23 42 / 0.06);
+    --shadow-lg: 0 2px 4px rgb(15 23 42 / 0.06);
+    --shadow-xl: 0 2px 6px rgb(15 23 42 / 0.08);
 }
 
 /*
- * Paleta ao estilo do Google Maps: superfícies brancas, azul como cor de ação,
- * cinzentos neutros para texto e contornos, e cores de categoria sóbrias.
+ * Mapeya — aspeto de ferramenta técnica: neutros frios, azul-tinta para a interação e laranja como acento único.
+ *   #37474F texto principal · #263238 títulos · #526A76 texto secundário, etiquetas e cabeçalhos de tabela
+ *     (o #607D8B pedido dá 4,4:1 sobre branco e 4,1:1 sobre #F6F7F9: usa-se o mesmo cinzento-azulado mais escuro)
+ *   #F6F7F9 fundo · #FFFFFF painéis e barra superior · #E2E6EA bordas e separadores (1 px)
+ *   #EDEFF7 linha selecionada na fila, com barra de 2 px #2F4A6D à esquerda
+ *   #2F4A6D ligações, foco, seleção, interruptores, caixas de seleção e botões (secundários: contorno e texto)
+ *   #F47A3A só em: "Atualizar dados", "+ Adicionar zona", sublinhado do item ativo e linha da base da barra
+ *   #E8662A "ya" do nome (como no logótipo; só em texto grande, ≥ 24 px)
+ *   #8B2E2E rejeitar e mensagens de erro (sempre com ícone) · #8A4B00 aviso
+ *   estados: validado #2F4A6D · automático #7D93B2 · pendente #90A4AE (só cor de ponto/barra, nunca texto)
+ *   marcadores: sinais #4B533C, candeeiros #006E90 e contentores #6E9F3C (o único verde),
+ *     todos com ícone e contorno brancos (no tema escuro, a borda dos sinais passa a 2 px) · confiança média #006E90 · zona por processar #7A5C48 (tracejado)
+ *
+ * Contrastes do texto (WCAG 2.x), tema claro:
+ *   #37474F / #FFFFFF 9,7 · / #F6F7F9 9,0 · / #EDEFF7 8,4 · / #EEF1F4 8,5
+ *   #263238 / #FFFFFF 13,2 · / #F6F7F9 12,3 · / #EDEFF7 11,5 · / #F47A3A 4,8 (texto dos botões laranja)
+ *   #526A76 / #FFFFFF 5,7 · / #F6F7F9 5,3 · / #EDEFF7 5,0 · / #EEF1F4 5,0
+ *   #2F4A6D / #FFFFFF 9,1 · / #F6F7F9 8,4 · / #EDEFF7 7,9 · branco / #2F4A6D 9,1
+ *   #8B2E2E / #FFFFFF 8,3 · / #F6F7F9 7,8 · / #EDEFF7 7,2 · #8A4B00 / #FFFFFF 6,8 · / #F6F7F9 6,4
+ *   "ya" #E8662A / #FFFFFF 3,3 (texto grande, 24 px: mínimo 3:1)
+ *   marcadores (não texto, ≥ 3:1): branco / #4B533C 8,1 · branco / #006E90 5,8 · branco / #6E9F3C 3,1
+ *   marcadores sobre o mapa claro (#F6F6F6–#DEDEDE): #4B533C 6,0–7,5 ·
+ *     #006E90 4,3–5,4 · #6E9F3C 2,3–2,9 (ambos com contorno branco) · entre si: #4B533C/#006E90 1,4 (distinguem-se pelo tom, verde-oliva / azul-petróleo, e pelo ícone) · #4B533C/#6E9F3C 2,6 ·
+ *     #006E90/#6E9F3C 1,8 (distinguem-se pelo tom, azul-petróleo / verde, e pelo ícone, lâmpada / caixote)
+ *   no mapa escuro: #006E90 2,0–3,0 (com contorno branco)
+ *   sublinhado do item ativo #F47A3A / branco 2,7 (o estado também se lê pelo texto preto e por aria-current)
+ *
+ * Tema escuro (fundo #1E272C, painéis e barra #263238, texto #ECEFF1):
+ *   #ECEFF1 / #1E272C 13,9 · / #263238 12,0 · / #37474F 8,8 · / #2C3E50 (linha selecionada) 10,0
+ *   #B0BEC5 (secundário) / #263238 6,9 · / #37474F 5,1
+ *   azul-tinta claro #9DB4D4 (ligações, foco, botões) / #263238 6,2 · / #37474F 4,6 · #1E272C / #9DB4D4 7,2
+ *   erro e rejeitar #EF9A9A / #263238 6,1 · aviso #F2B33D / #263238 7,1 · #263238 / #F47A3A 4,8 (ações)
+ *   "ya" #E8662A / #263238 4,0 (texto grande)
+ *   marcadores dos sinais #4B533C sobre o mapa escuro: 1,4–2,1 — por isso borda branca de 2 px (--borda-sinal)
  */
 :root {
-    /* Aveiro Smart City: azul-escuro institucional, azul de interação, base branca e cinzentos */
-    --background: #f4f6f9;
-    --foreground: #0f1b2d;
+    --background: #f6f7f9;
+    --foreground: #37474f;
+    --titulo: #263238;
     --card: #ffffff;
-    --card-foreground: #0f1b2d;
+    --card-foreground: #37474f;
     --popover: #ffffff;
-    --popover-foreground: #0f1b2d;
-    --primary: #1d5fd6;
+    --popover-foreground: #37474f;
+    --primary: #2f4a6d;
     --primary-foreground: #ffffff;
-    --secondary: #e8effc;
-    --secondary-foreground: #174ea6;
-    --muted: #eef1f5;
-    --muted-foreground: #5b6779;
-    --accent: #eef2f8;
-    --accent-foreground: #0f1b2d;
-    --destructive: #d23f31;
-    --border: #dde3eb;
-    --input: #d3dae4;
-    --ring: #1d5fd6;
-    --navy: #0b2545;
+    --realce: #2f4a6d;
+    --secondary: #eef1f4;
+    --secondary-foreground: #37474f;
+    --muted: #eef1f4;
+    --muted-foreground: #526a76;
+    --accent: #eef1f4;
+    --accent-foreground: #263238;
+    --destructive: #8b2e2e;
+    --border: #e2e6ea;
+    --input: #cfd6dc;
+    --ring: #2f4a6d;
+    --navy: #263238;
+    --destaque: #f47a3a;
+    --destaque-foreground: #263238;
+    --marca: #e8662a;
+    --selecao: #edeff7;
+    --zona-nova: #7a5c48;
+    --borda-sinal: 1.4px;
     /* estados de validação */
-    --success: #1e8e4e;
-    --warning: #e8710a;
-    --gold: #e0a800;
-    --estado-auto: #1d5fd6;
-    /* categorias (distintas das cores de estado) */
-    --tipo-sinal: #4f46e5;
-    --tipo-candeeiro: #b7791f;
-    --tipo-contentor: #0f8a83;
-    --chart-1: #4f46e5;
-    --chart-2: #b7791f;
-    --chart-3: #0f8a83;
-    --chart-4: #1d5fd6;
-    --chart-5: #e8710a;
-    --radius: 0.625rem;
-    --sidebar: #0b2545;
-    --sidebar-foreground: #c9d5e6;
-    --sidebar-primary: #3b82f6;
+    --success: #2f4a6d;
+    --warning: #8a4b00;
+    --gold: #006e90;
+    --estado-auto: #7d93b2;
+    --pendente: #90a4ae;
+    /* categorias (marcadores) */
+    --tipo-sinal: #4b533c;
+    --tipo-candeeiro: #006e90;
+    --tipo-contentor: #6e9f3c;
+    --chart-1: #4b533c;
+    --chart-2: #006e90;
+    --chart-3: #6e9f3c;
+    --chart-4: #2f4a6d;
+    --chart-5: #90a4ae;
+    --radius: 0.25rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #37474f;
+    --sidebar-primary: #2f4a6d;
     --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #13325c;
-    --sidebar-accent-foreground: #ffffff;
-    --sidebar-border: #1a3a66;
-    --sidebar-ring: #3b82f6;
+    --sidebar-accent: #eef1f4;
+    --sidebar-accent-foreground: #263238;
+    --sidebar-border: #e2e6ea;
+    --sidebar-ring: #2f4a6d;
 }
 
 .dark {
-    --background: #0b1220;
-    --foreground: #e6ebf2;
-    --card: #121b2c;
-    --card-foreground: #e6ebf2;
-    --popover: #121b2c;
-    --popover-foreground: #e6ebf2;
-    --primary: #6aa1ff;
-    --primary-foreground: #0b1220;
-    --secondary: #1b2a44;
-    --secondary-foreground: #cfe0ff;
-    --muted: #18233a;
-    --muted-foreground: #93a1b5;
-    --accent: #1b2840;
-    --accent-foreground: #e6ebf2;
-    --destructive: #f07167;
-    --border: #233149;
-    --input: #2c3b56;
-    --ring: #6aa1ff;
-    --navy: #06162b;
-    --success: #4cc38a;
-    --warning: #ffa24d;
-    --gold: #f5c542;
-    --estado-auto: #6aa1ff;
-    --tipo-sinal: #8b85ff;
-    --tipo-candeeiro: #e0a64a;
-    --tipo-contentor: #3cc2b8;
-    --chart-1: #8b85ff;
-    --chart-2: #e0a64a;
-    --chart-3: #3cc2b8;
-    --chart-4: #6aa1ff;
-    --chart-5: #ffa24d;
-    --sidebar: #06162b;
-    --sidebar-foreground: #b6c3d6;
-    --sidebar-primary: #6aa1ff;
-    --sidebar-primary-foreground: #06162b;
-    --sidebar-accent: #102a4d;
-    --sidebar-accent-foreground: #ffffff;
-    --sidebar-border: #14305a;
-    --sidebar-ring: #6aa1ff;
+    --background: #1e272c;
+    --foreground: #eceff1;
+    --titulo: #eceff1;
+    --card: #263238;
+    --card-foreground: #eceff1;
+    --popover: #263238;
+    --popover-foreground: #eceff1;
+    --primary: #9db4d4;
+    --primary-foreground: #1e272c;
+    --realce: #9db4d4;
+    --secondary: #37474f;
+    --secondary-foreground: #eceff1;
+    --muted: #37474f;
+    --muted-foreground: #b0bec5;
+    --accent: #37474f;
+    --accent-foreground: #eceff1;
+    --destructive: #ef9a9a;
+    --border: #3d4f58;
+    --input: #546e7a;
+    --ring: #9db4d4;
+    --navy: #263238;
+    --destaque: #f47a3a;
+    --destaque-foreground: #263238;
+    --marca: #e8662a;
+    --selecao: #2c3e50;
+    --zona-nova: #90a4ae;
+    --borda-sinal: 2px;
+    --success: #9db4d4;
+    --warning: #f2b33d;
+    --gold: #006e90;
+    --estado-auto: #7d93b2;
+    --pendente: #607d8b;
+    --tipo-sinal: #4b533c;
+    --tipo-candeeiro: #006e90;
+    --tipo-contentor: #6e9f3c;
+    --chart-1: #4b533c;
+    --chart-2: #006e90;
+    --chart-3: #6e9f3c;
+    --chart-4: #9db4d4;
+    --chart-5: #607d8b;
+    --sidebar: #263238;
+    --sidebar-foreground: #eceff1;
+    --sidebar-primary: #9db4d4;
+    --sidebar-primary-foreground: #1e272c;
+    --sidebar-accent: #37474f;
+    --sidebar-accent-foreground: #eceff1;
+    --sidebar-border: #3d4f58;
+    --sidebar-ring: #9db4d4;
 }
 
 @layer base {
@@ -157,6 +223,14 @@
   }
   html {
     @apply font-sans;
+  }
+  /* números alinhados (contagens, confiança, distâncias) */
+  body {
+    font-variant-numeric: tabular-nums;
+  }
+  /* títulos em #263238 (especificidade zero: uma classe no próprio título ganha) */
+  :where(h1, h2, h3, [data-slot="card-title"], [data-slot="dialog-title"]) {
+    color: var(--titulo);
   }
 }
 
@@ -177,7 +251,7 @@
   border: 0 !important;
   border-radius: 8px !important;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.25) !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15) !important;
 }
 .leaflet-bar a {
   background: var(--card);
@@ -192,7 +266,7 @@
   border: 0;
   background: var(--popover);
   color: var(--popover-foreground);
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.25);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
 }
 .leaflet-tooltip-top::before { border-top-color: var(--popover); }
 
@@ -218,3 +292,44 @@ kbd {
 /* Recurso sem WebGL: mosaicos OSM em tons de cinzento, para manter o aspeto cartográfico sóbrio */
 .ctrlf-recurso { filter: grayscale(1) contrast(0.8) brightness(1.1); }
 .dark .ctrlf-recurso { filter: grayscale(1) invert(1) contrast(0.8) brightness(0.9); }
+
+/* etiqueta das ruas acrescentadas no botão "+" (zona por processar) */
+.leaflet-tooltip.ctrlf-zona-nova {
+  border: 1px solid var(--zona-nova);
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+/* etiquetas de campo e cabeçalhos de tabela: 11–12 px, maiúsculas, 0,06em, texto secundário */
+.etiqueta,
+[data-slot="table-head"] {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* coordenadas em letra monoespaçada */
+.coordenada {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+/* cabeçalhos com ordenação: o texto está num botão, que não herda as maiúsculas por omissão */
+[data-slot="table-head"] button {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+/* Ecrã de entrada (ecra-entrada.tsx): bolhas decorativas a flutuar.
+   Anima "translate" para não colidir com o posicionamento. */
+@keyframes ctrlf-flutuar {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+.ctrlf-bolha { animation: ctrlf-flutuar 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .ctrlf-bolha { animation: none; }
+}

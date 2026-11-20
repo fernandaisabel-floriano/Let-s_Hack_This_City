@@ -128,7 +128,7 @@ export function AppSidebar({ cat, vista, onVista, escuro, onTema, onEntrar, onSa
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
-        <ZonaSeletor atual={cfg.zona} />
+        <ZonaSeletor cat={cat} />
       </SidebarHeader>
 
       <SidebarContent>
