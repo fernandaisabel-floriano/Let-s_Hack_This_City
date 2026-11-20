@@ -49,22 +49,6 @@ Fotografias   ─┘   rostos e    3 tipos    (forma + CLIP    das vistas    rai
 
 ## Estado das user stories
 
-### MVP
-
-| # | História | Está feito quando | Estado |
-|---|---|---|---|
-| M1 | Descarregar as imagens Mapillary da rua piloto | Script guarda imagens + posição + direção da câmara para uma bounding box | ✅ `fetch_mapillary.py` |
-| M2 | Nenhum rosto ou matrícula guardado | Desfoque corre antes de gravar; só se guarda o recorte do elemento | ✅ `anonymize.py` |
-| M3 | Detetar os 3 tipos | Sinais, candeeiros e contentores detetados com confiança | ✅ `detect.py` |
-| M4 | Saber que sinal é | STOP, cedência e limites de velocidade classificados | ✅ `classify_signs.py` (variante p6) |
-| M5 | Coordenadas de cada deteção | Posição da câmara + ângulo + distância | ✅ `geolocate.py` + triangulação em `fuse.py` |
-| M6 | Sem duplicados | Deteções da mesma classe fundidas; "visto em N imagens" | ✅ `fuse.py` |
-| M7 | Ver tudo num mapa | Ficha com imagem, coordenadas, tipo, confiança, n.º de vistas | ✅ app, aba Mapa |
-| M8 | Validar os casos duvidosos | Fila ordenada por confiança com ✓ / ✗ / mudar tipo | ✅ app, aba Deteções e validação |
-| M9 | Levar os dados para o SIG | Exportação GeoJSON e CSV | ✅ `export.py` e aba Exportação |
-| M10 | Provar a precisão | Contagem manual + script que calcula encontrados / falsos / em falta | 🟡 `evaluate.py` feito; contagem manual da Rua feita; falta validar os propostos |
-| M11 | Tempo de validação | Validação completa cronometrada por alguém que não programou | 🟡 a fila cronometra cada decisão; falta a sessão |
-
 ### P1
 
 | # | História | Está feito quando | Estado |
