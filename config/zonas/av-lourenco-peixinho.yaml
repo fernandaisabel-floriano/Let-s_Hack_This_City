@@ -6,5 +6,5 @@ zona_avaliacao_geojson: config/ruas/av-lourenco-peixinho-zona.geojson
 zona_piloto:
   pontas_redondas: []
 m10: {contagem: null, referencia: null}
-bbox: [-8.648812, 40.642202, -8.64366, 40.643946]
+bbox: [-8.648378, 40.642357, -8.646233, 40.643415]
 m6: {edificios_geojson: config/ruas/av-lourenco-peixinho-edificios.geojson}
