@@ -1,7 +1,8 @@
-import { Download, FileSpreadsheet, Map as MapIcon, Merge, Search, SlidersHorizontal } from 'lucide-react'
+import { Download, FileSpreadsheet, Map as MapIcon, MousePointerClick, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { toast } from 'sonner'
 import { FichaPainel } from '@/components/ficha-painel'
+import { melhorDoGrupo } from '@/components/qual-fica'
 import { UnirDuplicados } from '@/components/unir-duplicados'
 import { aplicarFiltros, Filtros, filtrosAtivos, filtrosIniciais, type CorPor, type FiltrosState } from '@/components/filtros'
 import { MapView } from '@/components/map-view'
@@ -40,8 +41,8 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const [sel, setSel] = useState<string | null>(null)
   const [editarPos, setEditarPos] = useState(false)
   const [corPor, setCorPor] = useState<CorPor>('categoria')
-  /** técnico: unir à mão duplicados que o sistema não detetou (null = desligado) */
-  const [unir, setUnir] = useState<{ ids: string[]; fica: string | null } | null>(null)
+  /** técnico: selecionar vários para unir duplicados ou rejeitar em massa (null = desligado); pos = posição arrastada do que fica */
+  const [unir, setUnir] = useState<{ ids: string[]; fica: string | null; pos: { lat: number; lon: number } | null } | null>(null)
 
   // modo lite: no telemóvel junta os marcadores próximos por omissão
   const [agruparEscolha, setAgrupar] = useState<boolean | null>(null)
@@ -54,6 +55,17 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   const visiveis = useMemo(
     () => aplicarFiltros(cat.consolidados, unirAtivo ? { ...filtros, estados: ['auto', 'pendente', 'validado', 'corrigido'] } : filtros),
     [cat.consolidados, filtros, unirAtivo],
+  )
+  // a unir: o que fica (escolhido ou o melhor) é o marcador selecionado e arrastável no mapa
+  const ficaId = useMemo(() => {
+    if (!unir || unir.ids.length < 2) return null
+    const g = cat.consolidados.filter((e) => unir.ids.includes(e.id))
+    return (unir.fica && unir.ids.includes(unir.fica) ? unir.fica : g.length ? melhorDoGrupo(g).id : null) ?? null
+  }, [unir, cat.consolidados])
+  const posFica = unir?.pos ?? null
+  const noMapa = useMemo(
+    () => (ficaId && posFica ? visiveis.map((e) => (e.id === ficaId ? { ...e, ...posFica } : e)) : visiveis),
+    [visiveis, ficaId, posFica],
   )
   const contagens = useMemo(() => {
     const tipo: Record<string, number> = {}
@@ -73,7 +85,7 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
 
   const selecionar = (id: string) => {
     if (unir) {
-      setUnir((u) => (u ? { ...u, ids: u.ids.includes(id) ? u.ids.filter((x) => x !== id) : [...u.ids, id] } : u))
+      setUnir((u) => (u ? { ...u, ids: u.ids.includes(id) ? u.ids.filter((x) => x !== id) : [...u.ids, id], pos: u.ids.includes(id) && id === ficaId ? null : u.pos } : u))
       return
     }
     setSel(id)
@@ -100,17 +112,25 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
   return (
     <div className="relative size-full" data-tour="mapa">
       <MapView
-        elementos={visiveis}
+        elementos={noMapa}
         vias={cat.base!.vias}
         zona={cat.base!.zona}
         bbox={cfg.bbox}
-        selecionado={sel}
+        selecionado={unir ? ficaId : sel}
         onSelect={selecionar}
         escuro={escuro}
         limiar={cfg.limiar_auto}
         agrupar={agrupar}
         corPor={corPor}
-        onMover={tecnico && editarPos && !unir ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon }) : undefined}
+        onMover={
+          unir
+            ? ficaId
+              ? (id, lat, lon) => id === ficaId && setUnir((u) => (u ? { ...u, pos: { lat, lon } } : u))
+              : undefined
+            : tecnico && editarPos
+              ? (id, lat, lon) => cat.decidir(id, 'corrigido', { lat, lon })
+              : undefined
+        }
         marcados={unir?.ids}
       />
 
@@ -152,17 +172,17 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
                   size="icon-sm"
                   className="shrink-0"
                   aria-pressed={!!unir}
-                  aria-label="Unir duplicados: escolher vários marcadores do mesmo objeto"
+                  aria-label="Selecionar vários marcadores: unir duplicados ou rejeitar"
                   onClick={() => {
-                    setUnir(unir ? null : { ids: sel ? [sel] : [], fica: null })
+                    setUnir(unir ? null : { ids: sel ? [sel] : [], fica: null, pos: null })
                     setSel(null)
                     setEditarPos(false)
                   }}
                 >
-                  <Merge aria-hidden="true" />
+                  <MousePointerClick aria-hidden="true" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Unir duplicados</TooltipContent>
+              <TooltipContent>Selecionar vários</TooltipContent>
             </Tooltip>
           )}
           <DropdownMenu>
@@ -230,22 +250,30 @@ export function TabMapa({ cat, escuro, onPedirLogin }: Props) {
         </div>
       )}
 
-      {/* unir duplicados (técnico) */}
+      {/* selecionar vários: unir duplicados ou rejeitar (técnico) */}
       {unir && (
         <aside
-          aria-label="Unir duplicados"
+          aria-label="Selecionar vários"
           className={cn('absolute inset-x-3 bottom-3 z-20 flex max-h-[60%] flex-col overflow-hidden sm:inset-x-auto sm:top-3 sm:right-3 sm:bottom-6 sm:max-h-none sm:w-[380px]', flutuante)}
         >
           <UnirDuplicados
             cat={cat}
             ids={unir.ids}
-            fica={unir.fica}
-            onFica={(id) => setUnir((u) => (u ? { ...u, fica: id } : u))}
-            onRemover={(id) => setUnir((u) => (u ? { ...u, ids: u.ids.filter((x) => x !== id), fica: u.fica === id ? null : u.fica } : u))}
+            fica={ficaId}
+            pos={unir.pos}
+            onRepor={() => setUnir((u) => (u ? { ...u, pos: null } : u))}
+            onFica={(id) => setUnir((u) => (u ? { ...u, fica: id, pos: id === ficaId ? u.pos : null } : u))}
+            onRemover={(id) => setUnir((u) => (u ? { ...u, ids: u.ids.filter((x) => x !== id), fica: u.fica === id ? null : u.fica, pos: id === ficaId ? null : u.pos } : u))}
             onCancelar={() => setUnir(null)}
             onUnido={(fica, decididos) => {
-              setUnir({ ids: [], fica: null })
+              setUnir({ ids: [], fica: null, pos: null })
               toast.success(`Unidos em ${fica}`, { action: { label: 'Desfazer', onClick: () => cat.desfazerVarios(decididos) } })
+            }}
+            onRejeitados={(decididos) => {
+              setUnir({ ids: [], fica: null, pos: null })
+              toast.success(`${decididos.length} ${decididos.length === 1 ? 'elemento rejeitado' : 'elementos rejeitados'}`, {
+                action: { label: 'Desfazer', onClick: () => cat.desfazerVarios(decididos) },
+              })
             }}
           />
         </aside>

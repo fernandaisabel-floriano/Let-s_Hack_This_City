@@ -626,7 +626,7 @@ function handler() {
           if (!v) return json(res, 400, { erro: 'validação inválida' })
           return json(res, 200, acrescentar({ tecnico, acao: 'decisao', id: v.id, validacao: v }))
         }
-        if (b.acao === 'lote' && Array.isArray(b.acoes) && b.acoes.length && b.acoes.length <= 50) {
+        if (b.acao === 'lote' && Array.isArray(b.acoes) && b.acoes.length && b.acoes.length <= 500) {
           // decisões e desfazer, validadas todas antes de gravar a primeira
           const evs = (b.acoes as Record<string, unknown>[]).map((x) => {
             if (x?.acao === 'desfazer' && typeof x.id === 'string') return { acao: 'desfazer' as const, id: x.id }
