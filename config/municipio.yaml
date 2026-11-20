@@ -93,7 +93,13 @@ m3:
 # Prioridade à precisão: o incerto vai para a fila como outro_sinal ou
 # limite_desconhecido. Limiares iniciais por afinar com pipeline/m4_medir.py.
 m4:
-  variante: p5              # atual | p1 | p3 | p4 | p5 (m4_medir.py compara todas)
+  variante: p6              # atual | p1 | p3 | p4 | p5 | p6 (m4_medir.py compara p1–p5; retreino.py compara p5 × p6)
+  # p6: sonda linear sobre o CLIP (pipeline/retreino.py --sinteticos → config/m4/sonda.npz; limiares escolhidos
+  # por ele, ver reports/m4/retreino.md). 20/11, fora do treino (194 rótulos + 72 sintéticos), por elemento:
+  # certos sem fila 1 → 2, 0 falsos sem fila; por recorte STOP R 0,50 → 0,67–0,83, limite R 0,25 → 0,75
+  # (às vezes 1 recorte errado em ~11, que sozinho vai para a fila). "Não é sinal" apanha ~28 de 39 (marca
+  # ~5 de 134 reais, que só se abstêm do voto). Poucos dados: os números variam um pouco entre treinos.
+  sonda: {ficheiro: config/m4/sonda.npz, especifica_min: 0.9, nao_sinal_min: 0.5, sugere_min: 0.5}
   prompt_stop: stop sign    # p5: deteção vinda deste prompt da M3 = indício forte de STOP
   cedencia_segunda_min: 0.3 # p5: outro_sinal com cedência em 2.º no CLIP (P ≥ X) → fila (18/11: +2 na fila, 0 erros)
   limiar: 0.25              # só "atual": confiança da classe abaixo disto → outro_sinal

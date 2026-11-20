@@ -19,6 +19,14 @@ Variantes (cumulativas; m4.variante, ou --variante; m4_medir.py compara todas):
          vez do CLIP; lado < m4.lado_min_numero_px →
          limite_desconhecido. Anel + algarismos lidos com certeza também resolvem
          um CLIP indeciso (mas nunca contrariam um CLIP confiante noutra família).
+  p6     + sonda (retreino.py): regressão logística sobre o vetor CLIP do recorte
+         justo, treinada com os rótulos e as validações (config/m4/sonda.npz).
+         A forma continua a abrir a porta (específico da p5 fica). Depois:
+           P(não é sinal) ≥ m4.sonda.nao_sinal_min → incerto (abstém-se do voto, fila);
+           P(stop|cedência|limite) ≥ m4.sonda.especifica_min → essa família
+             (limite: valor pelos algarismos, senão limite_desconhecido);
+           ≥ m4.sonda.sugere_min → incerto ("sonda: possível X", fila).
+         Sem sonda.npz, p6 = p5.
   p5     + prompt "stop sign" do YOLO-World (m4.prompt_stop) como indício forte
          de STOP: com octógono vermelho é STOP (como em p4); sem octógono o
          filtro A veta e o sinal vai para a fila, exceto se a forma for a
@@ -49,7 +57,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, lado_px, load_config, zone_dir  # noqa: E402
 
-VARIANTES = ("atual", "p1", "p3", "p4", "p5")
+VARIANTES = ("atual", "p1", "p3", "p4", "p5", "p6")
 FAMILIAS = ("stop", "cedencia_passagem", "limite", "outro_sinal", "costas")
 VALORES_LIMITE = (20, 30, 40, 50, 60, 70, 80, 90, 100, 120)
 
@@ -95,13 +103,45 @@ DEFAULTS = {
     "lado_min_numero_px": 30,
     "forma": {},
     "algarismos": {},
+    "sonda": {"ficheiro": "config/m4/sonda.npz", "nao_sinal_min": 0.7, "especifica_min": 0.8, "sugere_min": 0.5},
 }
 
 
 def m4_cfg(cfg: dict) -> dict:
     m4 = {**DEFAULTS, **(cfg.get("m4") or {})}
     m4["limiar_familia"] = {**DEFAULTS["limiar_familia"], **((cfg.get("m4") or {}).get("limiar_familia") or {})}
+    m4["sonda"] = {**DEFAULTS["sonda"], **((cfg.get("m4") or {}).get("sonda") or {})}
     return m4
+
+
+# --------------------------------------------------------------------- sonda
+
+CLASSES_SONDA = ("stop", "cedencia_passagem", "limite", "outro_sinal", "costas", "nao_sinal")
+
+
+class Sonda:
+    """Regressão logística multinomial sobre o vetor CLIP normalizado (retreino.py)."""
+
+    def __init__(self, W: np.ndarray, b: np.ndarray, classes=CLASSES_SONDA, meta: dict | None = None):
+        self.W, self.b, self.classes, self.meta = W, b, tuple(classes), meta or {}
+
+    @classmethod
+    def carregar(cls, path: Path) -> "Sonda | None":
+        if not path.exists():
+            return None
+        z = np.load(path, allow_pickle=False)
+        return cls(z["W"], z["b"], [str(c) for c in z["classes"]], json.loads(str(z["meta"])))
+
+    def guardar(self, path: Path) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(path, W=self.W.astype(np.float32), b=self.b.astype(np.float32),
+                            classes=np.array(self.classes), meta=json.dumps(self.meta, ensure_ascii=False))
+
+    def probs(self, X: np.ndarray) -> np.ndarray:
+        z = X @ self.W + self.b
+        z -= z.max(axis=1, keepdims=True)
+        e = np.exp(z)
+        return e / e.sum(axis=1, keepdims=True)
 
 
 # ------------------------------------------------------------------ recortes
@@ -137,8 +177,8 @@ class ClipSignClassifier:
             t = self.model.encode_text(clip.tokenize([f"a photo of {s}" for s in frases])).float()
         return t / t.norm(dim=-1, keepdim=True)
 
-    def probs(self, imgs_bgr: list[np.ndarray], conjunto: str) -> np.ndarray:
-        """Probabilidades (softmax) de cada frase do conjunto ("atual" | "fam")."""
+    def embed(self, imgs_bgr: list[np.ndarray]) -> np.ndarray:
+        """Vetor CLIP normalizado de cada imagem (512)."""
         from PIL import Image
         torch = self.torch
         out = []
@@ -147,9 +187,17 @@ class ClipSignClassifier:
                                  for im in imgs_bgr[k:k + 32]])
             with torch.no_grad():
                 im = self.model.encode_image(batch).float()
-                im /= im.norm(dim=-1, keepdim=True)
-                out.append((100.0 * im @ self.text[conjunto].T).softmax(dim=-1).numpy())
-        return np.concatenate(out) if out else np.zeros((0, len(LABELS if conjunto == "atual" else LABELS_FAM)))
+                out.append((im / im.norm(dim=-1, keepdim=True)).numpy())
+        return np.concatenate(out) if out else np.zeros((0, 512), np.float32)
+
+    def probs_de(self, emb: np.ndarray, conjunto: str) -> np.ndarray:
+        if not len(emb):
+            return np.zeros((0, len(LABELS if conjunto == "atual" else LABELS_FAM)))
+        return self.torch.from_numpy(100.0 * emb @ self.text[conjunto].numpy().T).softmax(dim=-1).numpy()
+
+    def probs(self, imgs_bgr: list[np.ndarray], conjunto: str) -> np.ndarray:
+        """Probabilidades (softmax) de cada frase do conjunto ("atual" | "fam")."""
+        return self.probs_de(self.embed(imgs_bgr), conjunto)
 
 
 # ------------------------------------------------------------------ contexto
@@ -161,7 +209,8 @@ def contextos(dets: list[dict], zdir: Path, m4: dict, clip: ClipSignClassifier,
     from m4_forma import analisar, para_analise
     precisa_largo = "atual" in variantes
     precisa_justo = any(v != "atual" for v in variantes)
-    precisa_forma = any(v in ("p3", "p4", "p5") for v in variantes)
+    precisa_forma = any(v in ("p3", "p4", "p5", "p6") for v in variantes)
+    sonda = Sonda.carregar(ROOT / m4["sonda"]["ficheiro"]) if "p6" in variantes else None
     ctx = [{"lado": lado_px(d["bbox"]), "prompt": d["extra"].get("prompt")} for d in dets]
 
     if precisa_largo:
@@ -175,9 +224,14 @@ def contextos(dets: list[dict], zdir: Path, m4: dict, clip: ClipSignClassifier,
             if ip not in cache:
                 cache = {ip: cv2.imread(str(ip))}  # deteções vêm agrupadas por imagem
             justos.append(recorte_justo(cache[ip], d["bbox"], float(m4["recorte_margem"])))
-        for c, p, im in zip(ctx, clip.probs(justos, "fam"), justos):
+        emb = clip.embed(justos)
+        ps = sonda.probs(emb) if sonda is not None else None
+        for k, (c, p, im) in enumerate(zip(ctx, clip.probs_de(emb, "fam"), justos)):
             c["p_fam"] = p
             c["justo"] = im
+            c["emb"] = emb[k]
+            if ps is not None:
+                c["p_sonda"] = dict(zip(sonda.classes, map(float, ps[k])))
         if precisa_forma:
             for c, im in zip(ctx, justos):
                 f = analisar(im, m4["forma"])
@@ -340,7 +394,42 @@ def _decide_p5(c: dict, m4: dict) -> dict:
     return decide_p4(c, m4)
 
 
-DECIDE = {"atual": decide_atual, "p1": decide_p1, "p3": decide_p3, "p4": decide_p4, "p5": decide_p5}
+ESPECIFICAS_SONDA = ("stop", "cedencia_passagem", "limite")
+DESC = {"stop": "STOP", "cedencia_passagem": "cedência de passagem"}
+
+
+def decide_p6(c: dict, m4: dict) -> dict:
+    r = decide_p5(c, m4)
+    ps = c.get("p_sonda")
+    if not ps:
+        return r
+    s = m4.get("sonda") or DEFAULTS["sonda"]
+    sub = r["subclasse"]
+    # a forma (ou os algarismos) abriu a porta a um específico: fica
+    if not r["incerto"] and (sub in ("stop", "cedencia_passagem") or (sub.startswith("limite_") and sub != "limite_desconhecido")):
+        return r
+    if ps["nao_sinal"] >= float(s["nao_sinal_min"]) and sub != "limite_desconhecido":
+        return _res("outro_sinal", ps["nao_sinal"], "provavelmente não é sinal", True,
+                    f"sonda: não é sinal ({ps['nao_sinal']:.2f})")
+    fam = max(ESPECIFICAS_SONDA, key=lambda f: ps[f])
+    p = ps[fam]
+    if p >= float(s["especifica_min"]):
+        if fam != "limite":
+            return _res(fam, p, DESC[fam], motivo=f"sonda ({p:.2f})")
+        n = c.get("num") or {}
+        if n.get("valor"):
+            return _res(f"limite_{n['valor']}", min(p, n["score"]), f"limite {n['valor']} km/h", motivo=f"sonda ({p:.2f}) + algarismos")
+        return _res("limite_desconhecido", p, "limite (valor desconhecido)", True, f"sonda: limite ({p:.2f}), valor por ler")
+    if sub == "limite_desconhecido":   # a p5 viu o anel vermelho: não perde a família
+        return r
+    if p >= float(s["sugere_min"]):
+        if fam == "limite":
+            return _res("limite_desconhecido", p, "limite (valor desconhecido)", True, f"sonda: possível limite ({p:.2f})")
+        return _res("outro_sinal", p, "incerto", True, f"sonda: possível {fam} ({p:.2f})")
+    return r
+
+
+DECIDE = {"atual": decide_atual, "p1": decide_p1, "p3": decide_p3, "p4": decide_p4, "p5": decide_p5, "p6": decide_p6}
 
 
 # ---------------------------------------------------------------------- main
@@ -366,6 +455,8 @@ def main() -> None:
             e["m4_forma"] = c["forma"]["forma"]
         if "num" in c:
             e["m4_algarismos"] = c["num"]
+        if "p_sonda" in c:
+            e["m4_sonda"] = {k: round(v, 3) for k, v in c["p_sonda"].items()}
     json.dump(dets, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print(f"{len(sinais)} sinais classificados (variante {variante}): {dict(Counter(d['subclasse'] for d in sinais))}")
     print(f"   incertos (para a fila): {sum(bool(d['extra']['m4_incerto']) for d in sinais)}")
