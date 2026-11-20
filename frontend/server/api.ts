@@ -12,6 +12,8 @@
  *   /config/<caminho>           ficheiros de config/
  *
  *   GET  /api/estado            público: estado atual de cada elemento e pares decididos, sem nomes
+ *   POST /api/tickets           público: {id, motivo, texto} aviso da Câmara sobre um elemento → volta à fila do técnico
+ *                               (acao "ticket" no registo; aberto até à decisão seguinte do técnico: estado.py / estado.ts)
  *   GET  /api/duplicados        público: pares de elementos duplicados (server/duplicados.ts)
  *   GET  /api/sugestoes         público: tipo de contentor sugerido pelo CLIP (server/sugestoes.ts)
  *   GET  /api/imagens           público: proveniência, licença e desfocagem de cada imagem (server/imagens.ts)
@@ -247,9 +249,11 @@ interface Evento {
   seq: number
   quando: string
   tecnico: { utilizador: string; nome: string }
-  acao: 'decisao' | 'desfazer' | 'limpar' | 'par'
+  acao: 'decisao' | 'desfazer' | 'limpar' | 'par' | 'ticket'
   id?: string
   validacao?: Omit<Validacao, 'validado_em' | 'validado_por'>
+  /** acao "ticket": aviso de quem consulta o catálogo (sem sessão) */
+  ticket?: { motivo: string; texto: string }
   /** acao "par": a e b são (mesmo = true) ou não são (false) o mesmo objeto */
   a?: string
   b?: string
@@ -417,6 +421,18 @@ function serveFile(base: string, rel: string, res: ServerResponse) {
   fs.createReadStream(file).pipe(res)
 }
 
+/** Motivos de um aviso (igual a MOTIVOS_TICKET em src/lib/types.ts). */
+const MOTIVOS_TICKET = ['nao_existe', 'tipo_errado', 'posicao_errada', 'outro']
+const avisosPorIp = new Map<string, number[]>()
+function idsDaZona(): Set<string> {
+  try {
+    const els = JSON.parse(fs.readFileSync(path.join(zonaDir(), 'catalogo', 'elementos.json'), 'utf-8')) as { id: string }[]
+    return new Set(els.map((e) => e.id))
+  } catch {
+    return new Set()
+  }
+}
+
 function lerCorpo(req: IncomingMessage): Promise<Record<string, unknown>> {
   return new Promise((resolve, reject) => {
     let body = ''
@@ -569,6 +585,23 @@ function handler() {
           publico[id] = { estado: v.estado, classe: v.classe, classe_corrigida: v.classe_corrigida, subtipo_corrigido: v.subtipo_corrigido, lat: v.lat, lon: v.lon }
         }
         return json(res, 200, { elementos: publico, pares: paresDecididos(lerRegisto()) })
+      }
+      // aviso (ticket) de quem consulta o catálogo: público, com limite por IP; o elemento volta à fila do técnico
+      if (url === '/api/tickets' && metodo === 'POST') {
+        const ip = req.socket.remoteAddress ?? '?'
+        const agora = Date.now()
+        const recentes = (avisosPorIp.get(ip) ?? []).filter((t) => agora - t < 10 * 60_000)
+        if (recentes.length >= 10) return json(res, 429, { erro: 'Demasiados avisos seguidos. Tente de novo dentro de alguns minutos.' })
+        const b = await lerCorpo(req)
+        const id = typeof b.id === 'string' ? b.id : ''
+        const motivo = typeof b.motivo === 'string' && MOTIVOS_TICKET.includes(b.motivo) ? b.motivo : null
+        const texto = typeof b.texto === 'string' ? b.texto.trim().slice(0, 500) : ''
+        if (!motivo) return json(res, 400, { erro: 'motivo inválido' })
+        if (motivo === 'outro' && !texto) return json(res, 400, { erro: 'descreva o problema' })
+        if (!idsDaZona().has(id)) return json(res, 404, { erro: 'elemento desconhecido' })
+        avisosPorIp.set(ip, [...recentes, agora])
+        acrescentar({ tecnico: { utilizador: 'publico', nome: 'Aviso da Câmara' }, acao: 'ticket', id, ticket: { motivo, texto } })
+        return json(res, 200, { ok: true })
       }
       // proveniência e desfocagem de cada imagem (atribuição CC BY-SA, privacidade): público
       if (url === '/api/imagens' && metodo === 'GET') return json(res, 200, imagensDaZona(zonaDir()))
