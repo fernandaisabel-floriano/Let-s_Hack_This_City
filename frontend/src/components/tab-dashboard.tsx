@@ -39,19 +39,11 @@ function Anel({ valores }: { valores: { tipo: Tipo; n: number }[] }) {
       {total > 0 &&
         valores.map((v, i) => {
           const frac = v.n / total
+          const arco = { cx: 70, cy: 70, r, fill: 'none', strokeDasharray: `${Math.max(0, frac * c - 2)} ${c}`, strokeDashoffset: -inicios[i] * c, transform: 'rotate(-90 70 70)' }
           return (
-            <circle
-              key={v.tipo}
-              cx="70"
-              cy="70"
-              r={r}
-              fill="none"
-              stroke={TIPO_COR[v.tipo]}
-              strokeWidth="18"
-              strokeDasharray={`${Math.max(0, frac * c - 2)} ${c}`}
-              strokeDashoffset={-inicios[i] * c}
-              transform="rotate(-90 70 70)"
-            />
+            <g key={v.tipo}>
+              <circle {...arco} stroke={TIPO_COR[v.tipo]} strokeWidth="18" />
+            </g>
           )
         })}
       <text x="70" y="66" textAnchor="middle" className="fill-foreground text-[22px] font-semibold">{total}</text>
@@ -63,7 +55,7 @@ function Anel({ valores }: { valores: { tipo: Tipo; n: number }[] }) {
 const ESTADO_GRUPO = [
   { k: 'validado', label: 'Validados', cor: 'var(--success)', estados: ['validado', 'corrigido'] },
   { k: 'auto', label: 'Automáticos', cor: 'var(--estado-auto)', estados: ['auto'] },
-  { k: 'pendente', label: 'Pendentes', cor: 'var(--warning)', estados: ['pendente'] },
+  { k: 'pendente', label: 'Pendentes', cor: 'var(--pendente)', estados: ['pendente'] },
 ] as const
 
 export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 'deteccoes' | 'catalogo' | 'importacao') => void }) {
@@ -136,7 +128,7 @@ export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 
                 return (
                   <div key={t} className="flex flex-col gap-1.5">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="flex items-center gap-2"><span className="size-2.5 rounded-full" style={{ background: TIPO_COR[t] }} aria-hidden="true" />{CATEGORIA_LABEL[t]}</span>
+                      <span className="flex items-center gap-2"><span className={`size-2.5 rounded-full `} style={{ background: TIPO_COR[t] }} aria-hidden="true" />{CATEGORIA_LABEL[t]}</span>
                       <span className="tabular-nums">{r.porTipo[t]}</span>
                     </div>
                     <div className="flex h-2 overflow-hidden rounded-full bg-muted" role="img" aria-label={ESTADO_GRUPO.map((g) => `${g.label}: ${r.porTipoEstado[t][g.k]}`).join(', ')}>
@@ -183,13 +175,13 @@ export function TabDashboard({ cat, onIr }: { cat: Catalogo; onIr: (v: 'mapa' | 
       {tecnico && (r.rever > 0 || cat.duplicados.porDecidir.length > 0) && (
         <section className="grid gap-3 md:grid-cols-2">
           {r.rever > 0 && (
-            <button onClick={() => onIr('deteccoes')} className="flex items-center gap-3 rounded-xl border border-warning/40 bg-warning/5 p-4 text-left text-sm hover:bg-warning/10">
+            <button onClick={() => onIr('deteccoes')} className="flex items-center gap-3 rounded-md border border-warning/40 bg-warning/5 p-4 text-left text-sm hover:bg-warning/10">
               <TriangleAlert className="size-5 shrink-0 text-warning" aria-hidden="true" />
               <span><strong>{r.rever}</strong> elementos com posição a rever (localização incerta)</span>
             </button>
           )}
           {cat.duplicados.porDecidir.length > 0 && (
-            <button onClick={() => onIr('deteccoes')} className="flex items-center gap-3 rounded-xl border p-4 text-left text-sm hover:bg-accent">
+            <button onClick={() => onIr('deteccoes')} className="flex items-center gap-3 rounded-md border p-4 text-left text-sm hover:bg-accent">
               <Copy className="size-5 shrink-0 text-primary" aria-hidden="true" />
               <span><strong>{cat.duplicados.porDecidir.length}</strong> possíveis duplicados à espera de decisão</span>
             </button>

@@ -177,15 +177,15 @@ export function NovaZona({ cat, onCriada }: { cat: Catalogo; onCriada: (j: Impor
               <Clique onClique={clicarMapa} />
               <Enquadrar alvo={resultados.length ? resultados : vias} />
               {bairro && (
-                <GeoJSON key={`b-${chave(bairro)}`} data={bairro as unknown as GeoJSON.GeoJsonObject} style={{ color: '#6b7280', weight: 1.5, dashArray: '5 4', fillOpacity: 0.06 }} interactive={false} />
+                <GeoJSON key={`b-${chave(bairro)}`} data={bairro as unknown as GeoJSON.GeoJsonObject} style={{ color: '#607d8b', weight: 1.5, dashArray: '5 4', fillOpacity: 0.06 }} interactive={false} />
               )}
               {resultados
                 .filter((f) => f.properties.tipo === 'rua' && !escolhidas.has(chave(f)))
                 .map((f) => (
-                  <GeoJSON key={`c-${chave(f)}`} data={f as unknown as GeoJSON.GeoJsonObject} style={{ color: '#9ca3af', weight: 5, opacity: 0.7 }} eventHandlers={{ click: (e) => (L.DomEvent.stopPropagation(e), alternar(f)) }} />
+                  <GeoJSON key={`c-${chave(f)}`} data={f as unknown as GeoJSON.GeoJsonObject} style={{ color: '#90a4ae', weight: 5, opacity: 0.7 }} eventHandlers={{ click: (e) => (L.DomEvent.stopPropagation(e), alternar(f)) }} />
                 ))}
               {vias.map((f) => (
-                <GeoJSON key={`v-${chave(f)}`} data={f as unknown as GeoJSON.GeoJsonObject} style={{ color: '#1a73e8', weight: 6 }} eventHandlers={{ click: (e) => (L.DomEvent.stopPropagation(e), alternar(f)) }} />
+                <GeoJSON key={`v-${chave(f)}`} data={f as unknown as GeoJSON.GeoJsonObject} style={{ color: '#2f4a6d', weight: 6 }} eventHandlers={{ click: (e) => (L.DomEvent.stopPropagation(e), alternar(f)) }} />
               ))}
             </MapContainer>
             {aClicar && (
@@ -194,12 +194,12 @@ export function NovaZona({ cat, onCriada }: { cat: Catalogo; onCriada: (j: Impor
               </div>
             )}
           </div>
-          <p className="text-xs text-muted-foreground">Azul = escolhido · cinzento = encontrado na pesquisa. Clique num troço para o juntar ou tirar.</p>
+          <p className="text-xs text-muted-foreground">Verde = escolhido · cinzento = encontrado na pesquisa. Clique num troço para o juntar ou tirar.</p>
         </div>
 
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="nz-nome">Nome da zona</Label>
+            <Label htmlFor="nz-nome" className="etiqueta">Nome da zona</Label>
             <Input id="nz-nome" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Ex.: Av. Lourenço Peixinho" />
           </div>
           <div className="flex flex-col gap-1.5 text-sm">
